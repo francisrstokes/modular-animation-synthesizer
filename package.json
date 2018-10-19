@@ -1,0 +1,15 @@
+{
+  "name": "modular-animation-synth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "microcan-fp": "^0.0.1",
+    "parcel-bundler": "^1.10.3",
+    "vec-la-fp": "^1.7.0"
+  },
+  "scripts": {
+    "build": "parcel index.html",
+    "watch": "parcel watch index.html"
+  }
+}

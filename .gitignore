@@ -1,0 +1,8 @@
+node_modules/
+.vscode/
+reports/
+npm-debug.*
+.npmignore
+_next.js_
+dist/
+.cache/
