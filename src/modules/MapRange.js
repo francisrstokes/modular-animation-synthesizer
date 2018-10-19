@@ -1,3 +1,5 @@
+const mapRange = (fromA,fromB,toA,toB,value) => (value-fromA)/(fromB-fromA) * (toB-toA) + toA;
+
 export const MapRange = {
 	name: 'MapRange',
 	inputs: {
@@ -8,9 +10,11 @@ export const MapRange = {
     value: 'Number'
 	},
 	outputs: {
-		mapped: 'Number'
+		output: 'Number'
   },
 	fn: ({ fromA,fromB,toA,toB,value }) => ({
-    mapped: (value-fromA)/(fromB-fromA) * (toB-toA) + toA
+    output: Array.isArray(value)
+      ? value.mapRange(v => mapRange(fromA,fromB,toA,toB,v))
+      : mapRange(fromA,fromB,toA,toB,value)
   })
 };

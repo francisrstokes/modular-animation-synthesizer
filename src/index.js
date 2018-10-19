@@ -44,7 +44,7 @@ const inputsToString = inputs => {
     .reduce((acc, [k, v]) => {
       return [
         ...acc,
-        `${k}: ${Array.isArray(v) ? v.join('.') : v}`
+        `${k}: ${v.type === 'connection' ? `${v.module}.${v.property}` : v.value}`
       ]
     }, [])
     .join(', ');
@@ -79,19 +79,15 @@ const generateAnimationFn = rack => {
     unevaluated = getUnevaluatedModules(copy)
   }
 
-  fnStr += '\nconsole.log(p1);'
-  return fnStr;
-  // console.log(fnStr);
+  return eval(`() => {\n${fnStr}\n}`);
 }
 
-// generateAnimationFn(rack)
 const aniFn = generateAnimationFn(rack);
 const draw = () => {
   mc.background([0,0,0,1]);
   mc.fill([255, 255, 255, 1]);
-  // mc.drawPolygon(mc.poly(6, 100, C));
 
-  eval(aniFn);
+  aniFn();
 
   incTime();
   requestAnimationFrame(draw);

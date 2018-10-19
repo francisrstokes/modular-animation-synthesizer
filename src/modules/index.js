@@ -1,7 +1,7 @@
 import {Time} from './Time';
 import {Multiply} from './Multiply';
 import {Polygon} from './Polygon';
-import {Sine} from './Sine';
+import {Wave} from './Wave';
 import {VectorScale} from './VectorScale';
 import {VectorTranslate} from './VectorTranslate';
 import {DrawPolygon} from './DrawPolygon';
@@ -12,7 +12,7 @@ export const getModules = mc => {
     Time,
     Multiply,
     Polygon,
-    Sine,
+    Wave,
     VectorScale,
     VectorTranslate,
     MapRange,
@@ -22,4 +22,4 @@ export const getModules = mc => {
 
 export const findModule = (moduleName, modules) => {
   return modules.find(m => m.name === moduleName);
-}
+};
