@@ -16,7 +16,9 @@ const ctx = document.getElementById('main').getContext('2d');
 const mc = microcan(ctx, wh);
 const modules = getModules(mc);
 
-checkForCycles(rack, modules);
+if (checkForCycles(rack, modules)) {
+  throw new Error('Cycle found');
+}
 
 const aniFn = generateAnimationFn(rack, modules);
 const draw = () => {
