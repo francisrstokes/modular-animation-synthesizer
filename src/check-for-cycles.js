@@ -21,9 +21,6 @@ const checkInputs = (moduleDef, rack, seen) => {
 
 export const checkForCycles = (rack, modules) => {
   for (const moduleDef of rack) {
-    const module = findModule(moduleDef.module, modules);
-    if (!module) throw new Error(`No module found with name ${moduleDef.module}`);
-
     const seen = [moduleDef.name];
     if (checkInputs(moduleDef, rack, seen)) {
       // found a cycle

@@ -31,8 +31,6 @@ const getEvaluatableModule = (rack, knownVariables) => {
 
 export const generateAnimationFn = (rack, modules) => {
   const copy = JSON.parse(JSON.stringify(rack)).map(moduleDef => {
-    moduleDef.moduleName = moduleDef.module;
-    moduleDef.module = findModule(moduleDef.module, modules);
     moduleDef.isEvaluated = false;
     return moduleDef;
   });
