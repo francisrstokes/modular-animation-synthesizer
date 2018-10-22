@@ -170,3 +170,38 @@ toggleModeButton.addEventListener('click', () => {
   setModeButtonText(toggleModeButton, mode);
 });
 
+const pointInRect = ([x, y], [w, h], [px, py]) => {
+  return px > x && px < x + w && py > y && py < y + h;
+}
+
+const mouseState = {
+  isDragging: false,
+  draggedModule: null
+};
+
+canvas.addEventListener('mousedown', ({ x, y }) => {
+  if (mode === 'edit') {
+    rack.some(md => {
+      const pos = md.drawingValues.position;
+      const dim = [md.drawingValues.dimensions[0], 30];
+      if (pointInRect(pos, dim, [x, y])) {
+        mouseState.isDragging = true;
+        mouseState.draggedModule = md;
+        return true;
+      }
+    })
+  }
+})
+
+canvas.addEventListener('mousemove', ({ x, y }) => {
+  if (mode === 'edit' && mouseState.isDragging) {
+    mouseState.draggedModule.drawingValues.position = [x, y];
+  }
+})
+
+canvas.addEventListener('mouseup', () => {
+  if (mode === 'edit' && mouseState.isDragging) {
+    mouseState.isDragging = false;
+    mouseState.draggedModule = null;
+  }
+})
