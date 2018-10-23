@@ -5,7 +5,7 @@ export const getRack = (w, h) => [
     inputs: {},
 
     drawingValues: {
-      position: [0,0],
+      position: [88, 91],
       textPosition: [0,0],
       inPosition: [0,0],
       outPosition: [0,0],
@@ -26,7 +26,7 @@ export const getRack = (w, h) => [
     },
 
     drawingValues: {
-      position: [300, 150],
+      position: [248, 65],
       textPosition: [0,0],
       dimensions: [0,0],
       inputPositions: {},
@@ -44,7 +44,7 @@ export const getRack = (w, h) => [
       }
     },
     drawingValues: {
-      position: [200, 250],
+      position: [241, 300],
       textPosition: [0,0],
       dimensions: [0,0],
       inputPositions: {},
@@ -78,7 +78,7 @@ export const getRack = (w, h) => [
       }
     },
     drawingValues: {
-      position: [20, 350],
+      position: [508, 75],
       textPosition: [0,0],
       dimensions: [0,0],
       inputPositions: {},
@@ -96,7 +96,7 @@ export const getRack = (w, h) => [
       }
     },
     drawingValues: {
-      position: [80, 550],
+      position: [829, 83],
       textPosition: [0,0],
       dimensions: [0,0],
       inputPositions: {},
@@ -130,6 +130,7 @@ export const getRack = (w, h) => [
       }
     },
     drawingValues: {
+      position: [535, 323],
       textPosition: [0,0],
       dimensions: [0,0],
       inputPositions: {},
@@ -152,6 +153,7 @@ export const getRack = (w, h) => [
       }
     },
     drawingValues: {
+      position: [840, 327],
       textPosition: [0,0],
       dimensions: [0,0],
       inputPositions: {},
@@ -177,6 +179,7 @@ export const getRack = (w, h) => [
       }
     },
     drawingValues: {
+      position: [1064, 188],
       textPosition: [0,0],
       dimensions: [0,0],
       inputPositions: {},
@@ -194,6 +197,7 @@ export const getRack = (w, h) => [
       }
     },
     drawingValues: {
+      position: [1279, 188],
       textPosition: [0,0],
       dimensions: [0,0],
       inputPositions: {},

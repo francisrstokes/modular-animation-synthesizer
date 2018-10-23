@@ -5,6 +5,7 @@ import {checkForCycles} from './check-for-cycles';
 import {incTime} from './global';
 import {generateAnimationFn} from './generate-animation-function';
 import {getRack} from './rack';
+import {pointInRect} from './math-util';
 
 const textSize = 15;
 const socketRadius = 5;
@@ -115,10 +116,18 @@ const drawRack = rack => {
     mc.stroke([255, 255, 255, 1]);
     mc.fill([0,0,0,1]);
     mc.drawPolygon({points: modulePoints});
-    mc.fill([255, 255, 255, 0.5])
+    mc.fill([255, 255, 255, 0.5]);
 
     // Module Title
     ctx.fillText(moduleDef.moduleName, ...translateToPosition(textPosition));
+
+    // Title box line
+    mc.fill([255, 255, 255, 0.25]);
+    mc.drawLine(mc.line(
+      translateToPosition([0, 30]),
+      translateToPosition([dx, 30]),
+    ));
+    mc.fill([255, 255, 255, 0.5]);
 
     // In
     ctx.fillText('In', ...translateToPosition(inPosition));
@@ -131,11 +140,29 @@ const drawRack = rack => {
       mc.drawEllipse(mc.circle(socketRadius, translateToPosition(socket)));
     };
 
+    const drawConnections = ([inputKey, inputObj]) => {
+      if (inputObj.type === 'connection') {
+        const inputModule = rack.find(md => inputObj.module === md.name);
+        if (inputModule) {
+          const inputProp = inputObj.property;
+          const inputPos = translateToPosition(inputPositions[inputKey].socket);
+          const outputPos = vAdd(inputModule.drawingValues.outputPositions[inputProp].socket, inputModule.drawingValues.position);
+          mc.drawLine(mc.line(inputPos, outputPos));
+        }
+      } else if (inputObj.type === 'value') {
+        const inputPos = translateToPosition(inputPositions[inputKey].socket);
+        mc.fill([0, 50, 200, 0.5]);
+        mc.drawEllipse(mc.circle(socketRadius, inputPos));
+        mc.fill([255, 255, 255, 0.5])
+      }
+    }
+
     Object.entries(inputPositions).forEach(drawSockets);
     Object.entries(outputPositions).forEach(drawSockets);
+
+    Object.entries(moduleDef.inputs).forEach(drawConnections);
   })
 }
-
 
 const aniFn = generateAnimationFn(rack, modules);
 const draw = () => {
@@ -170,9 +197,7 @@ toggleModeButton.addEventListener('click', () => {
   setModeButtonText(toggleModeButton, mode);
 });
 
-const pointInRect = ([x, y], [w, h], [px, py]) => {
-  return px > x && px < x + w && py > y && py < y + h;
-}
+
 
 const mouseState = {
   isDragging: false,

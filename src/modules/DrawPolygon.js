@@ -3,9 +3,13 @@ export const DrawPolygon = (mc) => ({
   inputs: {
 		points: '[Vector]'
 	},
-	outputs: {},
+	outputs: {
+    done: 'Number'
+  },
   fn: ({ points }) => {
     mc.drawPolygon(mc.polygon(points));
-    return {};
+    return {
+      done: true
+    };
   }
 });
