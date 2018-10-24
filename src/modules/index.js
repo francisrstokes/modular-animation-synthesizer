@@ -6,6 +6,7 @@ import {VectorScale} from './VectorScale';
 import {VectorTranslate} from './VectorTranslate';
 import {DrawPolygon} from './DrawPolygon';
 import {MapRange} from './MapRange';
+import {Global} from './Global';
 
 export const getModules = mc => {
   return [
@@ -16,6 +17,7 @@ export const getModules = mc => {
     VectorScale,
     VectorTranslate,
     MapRange,
+    Global,
     DrawPolygon(mc)
   ]
 };

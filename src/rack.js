@@ -1,5 +1,13 @@
 export const getRack = (w, h) => [
   {
+    name: 'globals',
+    module: 'Global',
+    inputs: {},
+    drawingValues: {
+      position: [769, 180]
+    }
+  },
+  {
     name: 't1',
     module: 'Time',
     inputs: {},
@@ -170,13 +178,10 @@ export const getRack = (w, h) => [
     name: 'raddedPoly2',
     module: 'VectorTranslate',
     inputs: {
-      x: {
-        type: 'value',
-        value: w/2
-      },
-      y: {
-        type: 'value',
-        value: h/2
+      vxy: {
+        type: 'connection',
+        module: 'globals',
+        property: 'C'
       },
       v: {
         type: 'connection',
