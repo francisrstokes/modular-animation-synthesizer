@@ -10,8 +10,14 @@ export const getRack = (w, h) => [
       inPosition: [0,0],
       outPosition: [0,0],
       dimensions: [0,0],
-      inputPositions: {},
-      outputPositions: {}
+      inputPositions: {
+        text: [0,0],
+        socket: [0,0]
+      },
+      outputPositions: {
+        text: [0,0],
+        socket: [0,0]
+      }
     }
   },
   {

@@ -1,14 +1,13 @@
 import microcan from 'microcan-fp';
-import {vSub, vAdd} from 'vec-la-fp';
 import {getModules, findModule} from './modules';
 import {checkForCycles} from './check-for-cycles';
 import {incTime} from './global';
 import {generateAnimationFn} from './generate-animation-function';
 import {getRack} from './rack';
-import {pointInRect} from './math-util';
-
+import {state} from './state';
 import {textSize, socketRadius, w, h, wh} from './constants';
 import {drawRack} from './draw-rack';
+import {setupEvents} from './events';
 
 const canvas = document.getElementById('main');
 const ctx = canvas.getContext('2d');
@@ -21,12 +20,6 @@ const rack = getRack(w, h).map(moduleDef => {
 });
 
 ctx.font = `${textSize}px Arial`;
-
-const state = {
-  mode: 'animate',
-  substate: '',
-  data: {}
-};
 
 if (checkForCycles(rack, modules)) {
   throw new Error('Cycle found');
@@ -111,44 +104,4 @@ const draw = () => {
 };
 draw();
 
-
-const setModeButtonText = (el, mode) => {
-  el.innerText = mode === 'animate' ? 'Edit Mode' : 'Animation Mode';
-};
-
-const getToggledMode = mode => (mode === 'edit') ? 'animate' : 'edit';
-
-const toggleModeButton = document.getElementById('toggleMode');
-setModeButtonText(toggleModeButton, state.mode);
-toggleModeButton.addEventListener('click', () => {
-  state.mode = getToggledMode(state.mode);
-  setModeButtonText(toggleModeButton, state.mode);
-});
-
-canvas.addEventListener('mousedown', ({ x, y }) => {
-  if (state.mode === 'edit' && state.substate === '') {
-    rack.some(md => {
-      const pos = md.drawingValues.position;
-      const dim = [md.drawingValues.dimensions[0], 30];
-      if (pointInRect(pos, dim, [x, y])) {
-        state.substate = 'dragging';
-        state.data.draggedModule = md;
-        state.data.dragOffset = vSub([x, y], pos);
-        return true;
-      }
-    })
-  }
-})
-
-canvas.addEventListener('mousemove', ({ x, y }) => {
-  if (state.mode === 'edit' && state.substate === 'dragging') {
-    state.data.draggedModule.drawingValues.position = vSub([x, y], state.data.dragOffset);
-  }
-})
-
-canvas.addEventListener('mouseup', () => {
-  if (state.mode === 'edit' && state.substate === 'dragging') {
-    state.substate = '';
-    state.data.draggedModule = null;
-  }
-})
+setupEvents(canvas, rack);
