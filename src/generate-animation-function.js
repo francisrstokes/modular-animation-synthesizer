@@ -1,5 +1,6 @@
-import {findModule} from './modules';
+import {findModule, modules} from './modules';
 import {runWithContext} from './run-with-context';
+import {rack} from './rack';
 
 const inputsToString = inputs => {
   return Object.entries(inputs)
@@ -29,7 +30,7 @@ const getEvaluatableModule = (rack, knownVariables) => {
   })
 }
 
-export const generateAnimationFn = (rack, modules) => {
+export const generateAnimationFn = mc => {
   const copy = JSON.parse(JSON.stringify(rack)).map(moduleDef => {
     moduleDef.isEvaluated = false;
     return moduleDef;
@@ -52,11 +53,11 @@ export const generateAnimationFn = (rack, modules) => {
     const md = getEvaluatableModule(unevaluated, knownVariables);
     knownVariables.push(md.name);
     md.isEvaluated = true;
-    fnStr += `\nconst ${md.name} = findModule('${md.moduleName}', modules).fn({${inputsToString(md.inputs)}})`;
+    fnStr += `\nconst ${md.name} = findModule('${md.moduleName}', modules).fn({${inputsToString(md.inputs)}}, mc)`;
     unevaluated = getUnevaluatedModules(copy)
   }
 
-  return runWithContext({findModule, modules}, `return () => {\n${fnStr}\n}`);
+  return runWithContext({findModule, modules, mc}, `return () => {\n${fnStr}\n}`);
 }
 
 

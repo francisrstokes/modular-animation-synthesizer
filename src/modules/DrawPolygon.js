@@ -1,4 +1,4 @@
-export const DrawPolygon = (mc) => ({
+export const DrawPolygon = {
   name: 'DrawPolygon',
   inputs: {
 		points: '[Vector]'
@@ -6,10 +6,10 @@ export const DrawPolygon = (mc) => ({
 	outputs: {
     done: 'Number'
   },
-  fn: ({ points }) => {
+  fn: ({ points }, mc) => {
     mc.drawPolygon(mc.polygon(points));
     return {
       done: true
     };
   }
-});
+};

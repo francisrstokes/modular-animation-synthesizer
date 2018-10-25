@@ -1,4 +1,4 @@
-import {vAddAll, vAdd} from 'vec-la-fp';
+import {vAddAll} from 'vec-la-fp';
 
 export const state = {
   mode: 'animate',

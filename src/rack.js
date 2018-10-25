@@ -1,4 +1,4 @@
-export const getRack = (w, h) => [
+export const rack = [
   {
     name: 'globals',
     module: 'Global',

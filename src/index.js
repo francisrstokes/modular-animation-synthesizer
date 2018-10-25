@@ -1,9 +1,9 @@
 import microcan from 'microcan-fp';
-import {getModules, findModule} from './modules';
+import {modules, findModule} from './modules';
 import {checkForCycles} from './check-for-cycles';
 import {incTime} from './global';
 import {generateAnimationFn} from './generate-animation-function';
-import {getRack} from './rack';
+import {rack} from './rack';
 import {state} from './state';
 import {textSize, socketRadius, w, h, wh} from './constants';
 import {drawRack} from './draw-rack';
@@ -15,11 +15,10 @@ init();
 const canvas = document.getElementById('main');
 const ctx = canvas.getContext('2d');
 const mc = microcan(ctx, wh);
-const modules = getModules(mc);
-const rack = getRack(w, h).map(moduleDef => {
+
+rack.forEach(moduleDef => {
   moduleDef.moduleName = moduleDef.module;
   moduleDef.module = findModule(moduleDef.module, modules);
-  return moduleDef;
 });
 
 ctx.font = `${textSize}px Arial`;
@@ -90,7 +89,7 @@ rack.forEach(moduleDef => {
   }
 });
 
-const aniFn = generateAnimationFn(rack, modules);
+const aniFn = generateAnimationFn(mc);
 const draw = () => {
   mc.background([0,0,0,1]);
   mc.fill([255, 255, 255, 1]);

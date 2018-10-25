@@ -8,19 +8,17 @@ import {DrawPolygon} from './DrawPolygon';
 import {MapRange} from './MapRange';
 import {Global} from './Global';
 
-export const getModules = mc => {
-  return [
-    Time,
-    Multiply,
-    Polygon,
-    Wave,
-    VectorScale,
-    VectorTranslate,
-    MapRange,
-    Global,
-    DrawPolygon(mc)
-  ]
-};
+export const modules = [
+  Time,
+  Multiply,
+  Polygon,
+  Wave,
+  VectorScale,
+  VectorTranslate,
+  MapRange,
+  Global,
+  DrawPolygon
+];
 
 export const findModule = (moduleName, modules) => {
   return modules.find(m => m.name === moduleName);
