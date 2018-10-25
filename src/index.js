@@ -9,6 +9,9 @@ import {textSize, socketRadius, w, h, wh} from './constants';
 import {drawRack} from './draw-rack';
 import {setupEvents} from './events';
 
+import {init} from './react';
+init();
+
 const canvas = document.getElementById('main');
 const ctx = canvas.getContext('2d');
 const mc = microcan(ctx, wh);

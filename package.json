@@ -6,6 +6,10 @@
   "dependencies": {
     "microcan-fp": "^0.0.1",
     "parcel-bundler": "^1.10.3",
+    "ramda": "^0.25.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "styled-components": "^4.0.2",
     "vec-la-fp": "^1.7.0"
   },
   "scripts": {

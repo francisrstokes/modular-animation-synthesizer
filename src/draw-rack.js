@@ -1,5 +1,7 @@
-import {vAdd} from 'vec-la-fp';
+import {compose} from 'ramda';
+import {vAdd, vAddAll, vSub} from 'vec-la-fp';
 import {socketRadius} from './constants';
+import {state, globalTranslate} from './state';
 
 const drawSockets = (mc, ctx, translateToPosition) => ([key, { text, socket }]) => {
   ctx.fillText(key, ...translateToPosition(text));
@@ -11,9 +13,12 @@ const drawConnections = (mc, translateToPosition, inputPositions, rack) => ([inp
     const inputModule = rack.find(md => inputObj.module === md.name);
     if (inputModule) {
       const inputProp = inputObj.property;
-      const inputPos = translateToPosition(inputPositions[inputKey].socket);
-      const outputPos = vAdd(inputModule.drawingValues.outputPositions[inputProp].socket, inputModule.drawingValues.position);
-      mc.drawLine(mc.line(inputPos, outputPos));
+      const inputPos = inputPositions[inputKey].socket;
+      const outputPos = vAdd(inputModule.drawingValues.position, inputModule.drawingValues.outputPositions[inputProp].socket);
+      mc.drawLine(mc.line(
+        translateToPosition(inputPos),
+        globalTranslate(outputPos)
+      ));
     }
   } else if (inputObj.type === 'value') {
     const inputPos = translateToPosition(inputPositions[inputKey].socket);
@@ -35,7 +40,7 @@ export const drawRack = (rack, mc, ctx) => {
       outputPositions,
     } = moduleDef.drawingValues;
 
-    const translateToPosition = vAdd(position);
+    const translateToPosition = compose(globalTranslate, vAdd(position));
 
     const modulePoints = [
       [0, 0],

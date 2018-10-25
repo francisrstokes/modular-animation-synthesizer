@@ -1,6 +1,6 @@
-import {state} from './state';
+import {state, globalTranslate} from './state';
 import {pointInCircle, pointInRect} from './math-util';
-import {vSub, vAdd} from 'vec-la-fp';
+import {vSub, vSubAll, vAdd} from 'vec-la-fp';
 
 const setModeButtonText = (el, mode) => {
   el.innerText = mode === 'animate' ? 'Edit Mode' : 'Animation Mode';
@@ -20,7 +20,7 @@ export const setupEvents = (canvas, rack) => {
   canvas.addEventListener('mousedown', ({ x, y }) => {
     if (state.mode === 'edit' && state.substate === '') {
       const enteredDragState = rack.some(md => {
-        const pos = md.drawingValues.position;
+        const pos = globalTranslate(md.drawingValues.position);
         const dim = [md.drawingValues.dimensions[0], 30];
         if (pointInRect(pos, dim, [x, y])) {
           state.substate = 'dragging';
@@ -33,7 +33,7 @@ export const setupEvents = (canvas, rack) => {
       if (enteredDragState) return;
 
       const enteredValueChangeState = rack.some(md => {
-        const pos = md.drawingValues.position;
+        const pos = globalTranslate(md.drawingValues.position);
         const dim = md.drawingValues.dimensions;
 
         if (pointInRect(pos, dim, [x, y])) {
@@ -45,19 +45,33 @@ export const setupEvents = (canvas, rack) => {
           });
         }
       });
+
+      if (enteredValueChangeState) return;
+
+      // Panning
+      state.substate = 'panning';
+      state.data.lastPos = [x, y];
     }
   });
 
   canvas.addEventListener('mousemove', ({ x, y }) => {
     if (state.mode === 'edit' && state.substate === 'dragging') {
-      state.data.draggedModule.drawingValues.position = vSub([x, y], state.data.dragOffset);
+      const [gx, gy] = state.translate;
+      state.data.draggedModule.drawingValues.position = vSub([x - gx, y - gy], state.data.dragOffset);
+    }
+
+    if (state.mode === 'edit' && state.substate === 'panning') {
+      const diff = vSub([x, y], state.data.lastPos);
+      state.translate = vAdd(state.translate, diff);
+      state.data.lastPos = [x, y];
     }
   })
 
   canvas.addEventListener('mouseup', () => {
-    if (state.mode === 'edit' && state.substate === 'dragging') {
-      state.substate = '';
-      state.data.draggedModule = null;
+    if (state.mode === 'edit') {
+      if (['dragging', 'panning'].includes(state.substate)) {
+        state.substate = '';
+      }
     }
   })
 }
