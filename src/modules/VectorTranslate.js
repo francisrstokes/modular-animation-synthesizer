@@ -13,7 +13,12 @@ export const VectorTranslate = {
     let out;
     if (v.length && Array.isArray(v[0])) {
       if (tv.length && Array.isArray(tv[0])) {
-        out = v.map((vec, i) => vAdd(tv[i], vec));
+        // Array of polygons
+        if (Array.isArray(v[0][0])) {
+          out = v.map((poly, i) => poly.map(vec => vAdd(tv[i], vec)));
+        } else {
+          out = v.map((vec, i) => vAdd(tv[i], vec));
+        }
       } else {
         out = v.map(vec => vAdd(tv, vec));
       }

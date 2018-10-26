@@ -10,13 +10,13 @@ export const Wave = {
 		ncosx: 'Number',
 	},
   fn: ({ x }) => {
-    const sx = Math.sin(x);
-    const cx = Math.cos(x);
+    const sx = Array.isArray(x) ? x.map(Math.sin) : Math.sin(x);
+    const cx = Array.isArray(x) ? x.map(Math.cos) : Math.cos(x);
     return {
       sinx: sx,
-			nsinx: (1 + sx) / 2,
+			nsinx: Array.isArray(sx) ? sx.map(v => (1 + v) / 2) : (1 + sx) / 2,
 			cosx: cx,
-      ncosx: (1 + cx) / 2,
+      ncosx: Array.isArray(cx) ? cx.map(v => (1 + v) / 2) : (1 + cx) / 2,
     }
   }
 };

@@ -55,6 +55,10 @@ export class App extends React.Component {
     }
   }
 
+  clearRack() {
+    rack.splice(0, rack.legnth);
+  }
+
   toggleOpen() {
     this.setState(({ className: prevClass }) => ({
       className: prevClass === 'open' ? 'closed' : 'open'
@@ -137,6 +141,12 @@ export class App extends React.Component {
 
             <Row>
               <button onClick={() => this.enterRawMode()}>Set raw values</button>
+            </Row>
+
+            <hr/>
+            <br/>
+            <Row>
+              <button onClick={() => this.clearRack()}>CLEAR RACK</button>
             </Row>
           </React.Fragment>
 

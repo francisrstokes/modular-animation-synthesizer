@@ -14,6 +14,7 @@ import {Power} from './Power';
 import {Gate} from './Gate';
 import {DrawBackground} from './DrawBackground';
 import {Multi} from './Multi';
+import {Arrayify} from './Arrayify';
 
 export const modules = [
   Time,
@@ -31,7 +32,8 @@ export const modules = [
   DrawBackground,
   Power,
   Gate,
-  Multi
+  Multi,
+  Arrayify
 ];
 
 export const findModule = (moduleName, modules) => {
