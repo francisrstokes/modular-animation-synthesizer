@@ -28,7 +28,13 @@ export const DrawPolygon = {
     } = props;
     mc.fill([fillR,fillG,fillB,fillA]);
     mc.stroke([strokeR,strokeG,strokeB,strokeA]);
-    mc.drawPolygon(mc.polygon(points));
+
+    if (points.length && Array.isArray(points[0][0])) {
+      points.forEach(ps => mc.drawPolygon(mc.polygon(ps)));
+    } else {
+      mc.drawPolygon(mc.polygon(points));
+    }
+
     return {
       done: 1
     };

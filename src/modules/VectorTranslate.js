@@ -4,22 +4,25 @@ export const VectorTranslate = {
   name: 'VectorTranslate',
   inputs: {
     v: 'Vector',
-    vxy: 'Vector',
-    x: 'Number',
-    y: 'Number',
+    tv: 'Vector'
 	},
 	outputs: {
 		output: 'Vector'
   },
-  fn: ({ v, vxy, x, y }) => {
-    const txy = vxy || [x, y];
+  fn: ({ v, tv }) => {
+    let out;
     if (v.length && Array.isArray(v[0])) {
-      return {
-        output: v.map(vec => vAdd(txy, vec))
-      };
+      if (tv.length && Array.isArray(tv[0])) {
+        out = v.map((vec, i) => vAdd(tv[i], vec));
+      } else {
+        out = v.map(vec => vAdd(tv, vec));
+      }
+    } else {
+      out = vAdd(tv, v);
     }
+
     return {
-      output: vAdd(txy, v)
+      output: out
     };
   }
 };

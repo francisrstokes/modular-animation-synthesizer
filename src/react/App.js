@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {C} from '../constants';
+import {C, w, h} from '../constants';
 import {vAdd} from 'vec-la-fp';
 import {state, setAnimationFn} from '../state';
 import {modules, findModule} from '../modules';
@@ -10,7 +10,6 @@ import {computeModuleDefDrawingValues} from '../compute-moduledef-drawing-values
 import { generateAnimationFn } from '../generate-animation-function';
 
 const animationState = state;
-
 
 const SidePanel = styled.div`
   display:flex;
@@ -63,7 +62,7 @@ export class App extends React.Component {
       animationState.mode = (this.state.className === 'open') ? 'edit' : 'animate';
       if (animationState.mode === 'animate') {
         setAnimationFn(generateAnimationFn(this.props.mc));
-        this.props.ctx.clear();
+        this.props.ctx.clearRect(0,0,w,h);
       }
     });
   }

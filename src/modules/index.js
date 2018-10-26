@@ -13,6 +13,7 @@ import {Global} from './Global';
 import {Power} from './Power';
 import {Gate} from './Gate';
 import {DrawBackground} from './DrawBackground';
+import {Multi} from './Multi';
 
 export const modules = [
   Time,
@@ -29,7 +30,8 @@ export const modules = [
   DrawPolygon,
   DrawBackground,
   Power,
-  Gate
+  Gate,
+  Multi
 ];
 
 export const findModule = (moduleName, modules) => {

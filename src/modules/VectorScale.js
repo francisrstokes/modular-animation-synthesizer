@@ -10,13 +10,18 @@ export const VectorScale = {
 		output: 'Vector'
   },
   fn: ({ v, scale }) => {
+    let out;
     if (v.length && Array.isArray(v[0])) {
-      return {
-        output: v.map(vec => vScale(scale, vec))
-      };
+      if (Array.isArray(scale)) {
+        out = v.map((vec, i) => vScale(scale[i], vec))
+      } else {
+        out = v.map(vec => vScale(scale, vec))
+      }
+    } else {
+      out = vScale(scale, v);
     }
     return {
-      output: vScale(scale, v)
+      output: out
     };
   }
 };
