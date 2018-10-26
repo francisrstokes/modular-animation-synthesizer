@@ -7,8 +7,8 @@ export const Polygon = {
 		points: '[Vector]'
   },
 	fn: ({ sides }) => ({
-    points: Array.from({length: sides || 1}, (_, i) => {
-      const a = Math.PI * 2 * (i / (sides-1));
+    points: Array.from({length: Math.ceil(sides)}, (_, i) => {
+      const a = Math.PI * 2 * (i / (sides));
       return [Math.cos(a), Math.sin(a)];
     })
   })

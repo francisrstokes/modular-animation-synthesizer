@@ -73,6 +73,10 @@ export const drawRack = (rack, mc, ctx) => {
 
     Object.entries(inputPositions).forEach(drawSockets(mc, ctx, translateToPosition));
     Object.entries(outputPositions).forEach(drawSockets(mc, ctx, translateToPosition));
-    Object.entries(moduleDef.inputs).forEach(drawConnections(mc, translateToPosition, inputPositions, rack));
+  });
+
+  rack.forEach(md => {
+    const translateToPosition = compose(globalTranslate, vAdd(md.drawingValues.position));
+    Object.entries(md.inputs).forEach(drawConnections(mc, translateToPosition, md.drawingValues.inputPositions, rack));
   })
 }

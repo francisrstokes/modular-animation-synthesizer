@@ -20,12 +20,12 @@ const getEvaluatableModule = (rack, knownVariables) => {
       // If it's ever false it's always false
       if (!acc) return acc;
 
-      if (Array.isArray(cur)) {
-        return knownVariables.includes(cur[0]);
+      if (cur.type === 'connection') {
+        return acc && knownVariables.includes(cur.module);
       }
 
       // Regular values can always be evaluated
-      return true;
+      return acc && true;
     }, true);
   })
 }

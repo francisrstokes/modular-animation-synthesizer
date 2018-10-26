@@ -1,6 +1,7 @@
 import {state, globalTranslate} from './state';
 import {pointInCircle, pointInRect} from './math-util';
-import {vSub, vSubAll, vAdd} from 'vec-la-fp';
+import {vSub, vAdd} from 'vec-la-fp';
+import {socketRadius} from './constants';
 
 const setModeButtonText = (el, mode) => {
   el.innerText = mode === 'animate' ? 'Edit Mode' : 'Animation Mode';
@@ -18,8 +19,35 @@ export const setupEvents = (canvas, rack) => {
   });
 
   canvas.addEventListener('mousedown', ({ x, y }) => {
+    if (state.mode === 'edit' && state.substate === 'delete') {
+      rack.some(md => {
+        const pos = globalTranslate(md.drawingValues.position);
+        const dim = md.drawingValues.dimensions;
+        if (pointInRect(pos, dim, [x, y])) {
+          const ind = rack.indexOf(md);
+          rack.splice(ind, 1);
+          return true;
+        }
+      });
+    }
+
+    if (state.mode === 'edit' && state.substate === 'raw') {
+      rack.some(md => {
+        Object.entries(md.drawingValues.inputPositions).forEach(([inputKey, {socket}]) => {
+          if (pointInCircle(globalTranslate(socket, md.drawingValues.position), socketRadius, [x, y])) {
+            const value = JSON.parse(state.data.rawValue);
+            md.inputs[inputKey] = {
+              type: 'value',
+              value
+            };
+          }
+        });
+      });
+    }
+
+    let enteredDragState = null
     if (state.mode === 'edit' && state.substate === '') {
-      const enteredDragState = rack.some(md => {
+      enteredDragState = rack.some(md => {
         const pos = globalTranslate(md.drawingValues.position);
         const dim = [md.drawingValues.dimensions[0], 30];
         if (pointInRect(pos, dim, [x, y])) {
@@ -32,26 +60,58 @@ export const setupEvents = (canvas, rack) => {
 
       if (enteredDragState) return;
 
-      const enteredValueChangeState = rack.some(md => {
+      let connectingFromInput = null;
+      rack.some(md => {
         const pos = globalTranslate(md.drawingValues.position);
         const dim = md.drawingValues.dimensions;
 
         if (pointInRect(pos, dim, [x, y])) {
           Object.entries(md.drawingValues.inputPositions).forEach(([inputKey, {socket}]) => {
-            if (pointInCircle(vAdd(socket, md.drawingValues.position), socketRadius, [x, y])) {
-              console.log(`click in ${md.name} input socket ${inputKey}`);
-              state.substate = 'connecting';
+            if (pointInCircle(globalTranslate(socket, md.drawingValues.position), socketRadius, [x, y])) {
+              connectingFromInput = true;
+
+              if (md.inputs[inputKey]) {
+                delete md.inputs[inputKey];
+                return;
+              }
+              state.substate = 'connecting_from_input';
+              state.data.connectingInput = {
+                module: md,
+                key: inputKey
+              }
             }
           });
         }
       });
 
-      if (enteredValueChangeState) return;
+      if (connectingFromInput) return;
 
       // Panning
       state.substate = 'panning';
       state.data.lastPos = [x, y];
     }
+
+    let finishedConnecting = null;
+      if (state.mode === 'edit' && state.substate === 'connecting_from_input') {
+        finishedConnecting = rack.some(md => {
+          const pos = globalTranslate(md.drawingValues.position);
+          const dim = md.drawingValues.dimensions;
+
+          if (pointInRect(pos, dim, [x, y])) {
+            Object.entries(md.drawingValues.outputPositions).forEach(([outputKey, {socket}]) => {
+              if (pointInCircle(globalTranslate(socket, md.drawingValues.position), socketRadius, [x, y])) {
+                const {module: inputModule, key} = state.data.connectingInput;
+                inputModule.inputs[key] = {
+                  type: 'connection',
+                  module: md.name,
+                  property: outputKey
+                }
+                state.substate = '';
+              }
+            });
+          }
+        });
+      }
   });
 
   canvas.addEventListener('mousemove', ({ x, y }) => {

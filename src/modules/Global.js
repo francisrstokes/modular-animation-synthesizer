@@ -13,7 +13,7 @@ export const Global = {
     w: 'Number',
     h: 'Number',
     wh: 'Vector',
-    C: 'Vector',
+    C: 'Vector'
   },
   fn: () => ({
     w,
