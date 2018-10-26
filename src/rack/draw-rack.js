@@ -1,7 +1,7 @@
 import {compose} from 'ramda';
-import {vAdd, vAddAll, vSub} from 'vec-la-fp';
-import {socketRadius} from './constants';
-import {state, globalTranslate} from './state';
+import {vAdd} from 'vec-la-fp';
+import {socketRadius} from '../shared/constants';
+import {globalTranslate} from '../shared/state';
 
 const drawSockets = (mc, ctx, translateToPosition) => ([key, { text, socket }]) => {
   ctx.fillText(key, ...translateToPosition(text));

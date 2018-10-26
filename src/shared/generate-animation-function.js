@@ -1,6 +1,6 @@
-import {findModule, modules} from './modules';
-import {runWithContext} from './run-with-context';
-import {rack} from './rack';
+import {findModule, modules} from '../modules';
+import {runWithContext} from '../util/run-with-context';
+import {rack} from '../rack/rack';
 
 const inputsToString = inputs => {
   return Object.entries(inputs)

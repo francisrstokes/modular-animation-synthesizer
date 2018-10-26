@@ -1,14 +1,14 @@
 import microcan from 'microcan-fp';
 import {modules, findModule} from './modules';
-import {checkForCycles} from './check-for-cycles';
-import {incTime} from './global';
-import {generateAnimationFn} from './generate-animation-function';
-import {rack} from './rack';
-import {state, getAnimationFn, setAnimationFn} from './state';
-import {textSize, w, h, wh} from './constants';
-import {drawRack} from './draw-rack';
+import {checkForCycles} from './util/check-for-cycles';
+import {incTime} from './shared/global';
+import {generateAnimationFn} from './shared/generate-animation-function';
+import {rack} from './rack/rack';
+import {state, getAnimationFn, setAnimationFn} from './shared/state';
+import {textSize, w, h, wh} from './shared/constants';
+import {drawRack} from './rack/draw-rack';
 import {setupEvents} from './events';
-import {computeModuleDefDrawingValues} from './compute-moduledef-drawing-values'
+import {computeModuleDefDrawingValues} from './rack/compute-moduledef-drawing-values'
 
 import {init} from './react';
 

@@ -1,7 +1,7 @@
-import {state, globalTranslate} from './state';
-import {pointInCircle, pointInRect} from './math-util';
+import {state, globalTranslate} from './shared/state';
+import {pointInCircle, pointInRect} from './util/math-util';
 import {vSub, vAdd} from 'vec-la-fp';
-import {socketRadius} from './constants';
+import {socketRadius} from './shared/constants';
 
 const setModeButtonText = (el, mode) => {
   el.innerText = mode === 'animate' ? 'Edit Mode' : 'Animation Mode';

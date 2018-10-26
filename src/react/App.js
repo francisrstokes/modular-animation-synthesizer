@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {C, w, h} from '../constants';
+import {C, w, h} from '../shared/constants';
 import {vAdd} from 'vec-la-fp';
-import {state, setAnimationFn} from '../state';
+import {state, setAnimationFn} from '../shared/state';
 import {modules, findModule} from '../modules';
-import {rack} from '../rack';
-import {computeModuleDefDrawingValues} from '../compute-moduledef-drawing-values';
-import { generateAnimationFn } from '../generate-animation-function';
+import {rack} from '../rack/rack';
+import {computeModuleDefDrawingValues} from '../rack/compute-moduledef-drawing-values';
+import { generateAnimationFn } from '../shared/generate-animation-function';
 
 const animationState = state;
 

@@ -1,4 +1,4 @@
-import {findModule} from './modules';
+import {findModule} from '../modules';
 
 const checkInputs = (moduleDef, rack, seen) => {
   for (const input of Object.values(moduleDef.inputs)) {

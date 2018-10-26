@@ -1,4 +1,4 @@
-import {textSize, socketRadius} from './constants';
+import {textSize, socketRadius} from '../shared/constants';
 
 export const computeModuleDefDrawingValues = (moduleDef, ctx) => {
   const margin = 15;

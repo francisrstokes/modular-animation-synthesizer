@@ -2,7 +2,7 @@ import {
   w,
   h,
   wh
-} from '../constants';
+} from '../../shared/constants';
 
 const C = [w/2, h/2];
 
