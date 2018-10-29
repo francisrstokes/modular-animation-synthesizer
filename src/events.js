@@ -47,7 +47,7 @@ export const setupEvents = (canvas, rack) => {
 
     let enteredDragState = null
     if (state.mode === 'edit' && state.substate === '') {
-      enteredDragState = rack.some(md => {
+      enteredDragState = [...rack].reverse().some(md => {
         const pos = globalTranslate(md.drawingValues.position);
         const dim = [md.drawingValues.dimensions[0], 30];
         if (pointInRect(pos, dim, [x, y])) {
