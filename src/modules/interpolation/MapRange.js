@@ -1,3 +1,5 @@
+import {isNumberArray, isNumber} from '../../util/types';
+
 const mapRange = (fromA,fromB,toA,toB,value) => (value-fromA)/(fromB-fromA) * (toB-toA) + toA;
 
 export const MapRange = {
@@ -12,9 +14,17 @@ export const MapRange = {
 	outputs: {
 		output: 'Number'
   },
-	fn: ({ fromA,fromB,toA,toB,value }) => ({
-    output: Array.isArray(value)
-      ? value.mapRange(v => mapRange(fromA,fromB,toA,toB,v))
-      : mapRange(fromA,fromB,toA,toB,value)
-  })
+	fn: ({ fromA,fromB,toA,toB,value }) => {
+		let out;
+
+		if (isNumberArray(value)) {
+			out = value.map(v => mapRange(fromA, fromB, toA, toB, v));
+		} else if (isNumber(value)) {
+			out = mapRange(fromA, fromB, toA, toB, value);
+		}
+
+		return {
+			output: out
+		};
+  }
 };

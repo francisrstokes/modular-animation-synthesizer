@@ -1,29 +1,30 @@
+import {zip} from 'ramda';
+import { isNumber, isNumberArray } from '../../util/types';
+
 export const Power = {
   name: 'Power',
   inputs: {
-		x: 'Number',
-		n: 'Number',
+		a: 'Number',
+    b: 'Number'
 	},
 	outputs: {
 		m: 'Number'
   },
-  fn: ({ x, n }) => {
+  fn: ({ a, b }) => {
     let out;
-    // X is an array
-    if (Array.isArray(x)) {
-      // N is an array
-      if (Array.isArray(n)) {
-        out = x.map((a, i) => a**n[i]);
-      } else {
-        // A is an array but B is not
-        out = x.map(a => a**n);
+
+    if (isNumber(a)) {
+      if (isNumber(b)) {
+        out = a**b;
+      } else if (isNumberArray(b)) {
+        out = b.map(bv => a**bv);
       }
-    } else if (Array.isArray(n)) {
-      //B is an array but a is not
-      out = n.map(p => x**p);
-    } else {
-      // Neither A nor B is an array
-      out = x**n;
+    } else if (isNumberArray(a)) {
+      if (isNumber(b)) {
+        out = a.map(av => av**b);
+      } else if (isNumberArray(b)) {
+        out = zip(a, b).map(([av, bv]) => av**bv);
+      }
     }
 
     return {m: out};

@@ -1,3 +1,6 @@
+import {zip} from 'ramda';
+import { isNumber, isNumberArray } from '../../util/types';
+
 export const Add = {
   name: 'Add',
   inputs: {
@@ -9,21 +12,19 @@ export const Add = {
   },
   fn: ({ a, b }) => {
     let out;
-    // A is an array
-    if (Array.isArray(a)) {
-      // B is an array
-      if (Array.isArray(b)) {
-        out = a.map((x, i) => x + b[i]);
-      } else {
-        // A is an array but B is not
-        out = a.map(x => x + b);
+
+    if (isNumber(a)) {
+      if (isNumber(b)) {
+        out = a + b;
+      } else if (isNumberArray(b)) {
+        out = b.map(bv => a + bv);
       }
-    } else if (Array.isArray(b)) {
-      //B is an array but a is not
-      out = b.map(x => x + a);
-    } else {
-      // Neither A nor B is an array
-      out = a + b;
+    } else if (isNumberArray(a)) {
+      if (isNumber(b)) {
+        out = a.map(av => av + b);
+      } else if (isNumberArray(b)) {
+        out = zip(a, b).map(([av, bv]) => av + bv);
+      }
     }
 
     return {m: out};
