@@ -11,5 +11,5 @@ export const globalTranslate = (...vs) => vAddAll([...vs, state.translate]);
 
 let aniFn = () => {};
 
-export const getAnimationFn = () => aniFn;
+export const callAnimationFn = () => aniFn();
 export const setAnimationFn = fn => aniFn = fn;

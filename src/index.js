@@ -4,7 +4,7 @@ import {checkForCycles} from './util/check-for-cycles';
 import {incTime} from './shared/global';
 import {generateAnimationFn} from './shared/generate-animation-function';
 import {rack} from './rack/rack';
-import {state, getAnimationFn, setAnimationFn} from './shared/state';
+import {state, callAnimationFn, setAnimationFn} from './shared/state';
 import {textSize, w, h, wh} from './shared/constants';
 import {drawRack} from './rack/draw-rack';
 import {setupEvents} from './events';
@@ -44,8 +44,12 @@ const draw = () => {
   mc.stroke([255, 255, 255, 1]);
 
   if (state.mode === 'animate') {
-    getAnimationFn()();
-    incTime();
+    try {
+      callAnimationFn();
+      incTime();
+    } catch (ex) {
+      // Warn
+    }
   } else if (state.mode === 'edit') {
     mc.background([0,0,0,1]);
     drawRack(rack, mc, ctx);
