@@ -3,8 +3,4 @@
   - Vector Scale
   - Draw Polygon
 
-- Separate style logic from draw Polygon
-  - module directly for stroke/fill etc with built in gate
-
-- Perform cycle check on every module connection
 - Use exception to display error help

@@ -10,33 +10,33 @@ import {drawRack} from './rack/draw-rack';
 import {setupEvents} from './events';
 import {computeModuleDefDrawingValues} from './rack/compute-moduledef-drawing-values'
 
-import {init} from './react';
+import {init as reactAppInit} from './react';
 
 const canvas = document.getElementById('main');
 const ctx = canvas.getContext('2d');
 const mc = microcan(ctx, wh);
-init(ctx, mc);
-
-rack.forEach(moduleDef => {
-  moduleDef.moduleName = moduleDef.module;
-  moduleDef.module = findModule(moduleDef.module, modules);
-});
+reactAppInit(ctx, mc);
 
 ctx.font = `${textSize}px Arial`;
+
+// Setup the drawing values for each module
+rack.forEach(moduleDef => {
+  // Assign a module reference
+  moduleDef.moduleName = moduleDef.module;
+  moduleDef.module = findModule(moduleDef.module, modules);
+
+  const drawingValues = computeModuleDefDrawingValues(moduleDef, ctx);
+  const currentPosition = moduleDef.drawingValues.position;
+  moduleDef.drawingValues = {
+    position: currentPosition,
+    ...drawingValues
+  }
+});
 
 if (checkForCycles(rack, modules)) {
   throw new Error('Cycle found');
 }
 
-// Setup the drawing values for each module
-rack.forEach(moduleDef => {
-  const drawingValues = computeModuleDefDrawingValues(moduleDef, ctx);
-  const currentPosition = moduleDef.drawingValues.position;
-  moduleDef.drawingValues = {
-    position: (currentPosition) ? currentPosition : [Math.random() * w, Math.random() * h],
-    ...drawingValues
-  }
-});
 
 setAnimationFn(generateAnimationFn(mc));
 const draw = () => {
@@ -52,6 +52,7 @@ const draw = () => {
     }
   } else if (state.mode === 'edit') {
     mc.background([0,0,0,1]);
+    mc.strokeWeight(1);
     drawRack(rack, mc, ctx);
   }
 

@@ -15,6 +15,7 @@ import {Gate} from './util/Gate';
 import {DrawBackground} from './drawing/DrawBackground';
 import {Multi} from './interpolation/Multi';
 import {Arrayify} from './util/Arrayify';
+import {Style} from './drawing/Style';
 
 export const modules = [
   Time,
@@ -28,6 +29,7 @@ export const modules = [
   Vectorize,
   MapRange,
   Global,
+  Style,
   DrawPolygon,
   DrawBackground,
   Power,
