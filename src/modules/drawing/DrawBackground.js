@@ -1,17 +1,18 @@
 export const DrawBackground = {
   name: 'DrawBackground',
   inputs: {
+    gateIn: 'any',
     fillR: 'Number',
     fillG: 'Number',
     fillB: 'Number',
     fillA: 'Number'
 	},
 	outputs: {
-    done: 'Number'
+    gateOut: 'any'
   },
   fn: (props, mc) => {
     const {
-      points,
+      gateIn,
       fillR = 255,
       fillG = 255,
       fillB = 255,
@@ -19,7 +20,7 @@ export const DrawBackground = {
     } = props;
     mc.background([fillR,fillG,fillB,fillA]);
     return {
-      done: 1
+      gateOut: gateIn
     };
   }
 };

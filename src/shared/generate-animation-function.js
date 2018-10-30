@@ -7,7 +7,13 @@ const inputsToString = inputs => {
     .reduce((acc, [k, v]) => {
       return [
         ...acc,
-        `${k}: ${v.type === 'connection' ? `${v.module}.${v.property}` : v.value}`
+        `${k}: ${
+          v.type === 'connection'
+            ? `${v.module}.${v.property}`
+            : Array.isArray(v.value)
+              ? `[${v.value}]`
+              : v.value
+          }`
       ]
     }, [])
     .join(', ');

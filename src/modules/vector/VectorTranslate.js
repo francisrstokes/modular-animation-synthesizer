@@ -31,7 +31,7 @@ export const VectorTranslate = {
         out = tv.map(vAdd(v));
       } else if (isPolygon(v)) {
         // 5. Translate each point by each translation vector
-        out = zip(tv, v).map(([v1, v2]) => vAdd(v1, v2));
+        out = tv.map(tv1 => v.map(vAdd(tv1)));
       } else if (isPolygonArray(v)) {
         // 6. Translate each polygon by each translation vector
         out = zip(tv, v).map(([v1, poly]) => poly.map(vAdd(v1)));
