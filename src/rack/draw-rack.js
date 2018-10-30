@@ -3,8 +3,18 @@ import {vAdd} from 'vec-la-fp';
 import {socketRadius} from '../shared/constants';
 import {globalTranslate} from '../shared/state';
 
-const drawSockets = (mc, ctx, translateToPosition) => ([key, { text, socket }]) => {
+const drawOutputSockets = (mc, ctx, translateToPosition) => ([key, { text, socket }]) => {
   ctx.fillText(key, ...translateToPosition(text));
+  mc.drawEllipse(mc.circle(socketRadius, translateToPosition(socket)));
+};
+
+const drawInputSockets = (mc, ctx, translateToPosition, inputs) => ([key, { text, socket }]) => {
+  const input = inputs[key];
+  const socketText = (input && input.type === 'value')
+    ? `${key}(${input.value})`
+    : key;
+
+  ctx.fillText(socketText, ...translateToPosition(text));
   mc.drawEllipse(mc.circle(socketRadius, translateToPosition(socket)));
 };
 
@@ -71,8 +81,8 @@ export const drawRack = (rack, mc, ctx) => {
     // Out
     ctx.fillText('Out', ...translateToPosition(outPosition));
 
-    Object.entries(inputPositions).forEach(drawSockets(mc, ctx, translateToPosition));
-    Object.entries(outputPositions).forEach(drawSockets(mc, ctx, translateToPosition));
+    Object.entries(inputPositions).forEach(drawInputSockets(mc, ctx, translateToPosition, moduleDef.inputs));
+    Object.entries(outputPositions).forEach(drawOutputSockets(mc, ctx, translateToPosition));
   });
 
   rack.forEach(md => {

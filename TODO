@@ -4,3 +4,15 @@
   - Draw Polygon
 
 - Use exception to display error help
+
+- Incorperate type chechking at module connection time
+
+Rotate:
+  - input vector  : V | P   | [P]
+  - control point : V | P   | [P]
+  - angle         : N | [N] | [[N]]
+
+Scale:
+  - input vector  : V | P   | [P]
+  - scaler        : N | V   | P   | [P]
+
