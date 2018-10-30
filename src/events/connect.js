@@ -1,6 +1,8 @@
 import { globalTranslate, state } from '../shared/state';
 import { pointInRect, pointInCircle } from '../util/math-util';
 import { socketRadius } from '../shared/constants';
+import { checkForCycles } from '../util/check-for-cycles';
+import { modules } from '../modules';
 
 export const start = (rack, clickPosition) => {
   let connectingFromInput = null;
@@ -45,7 +47,14 @@ export const end = (rack, clickPosition) => {
               module: md.name,
               property: outputKey
             }
+
+            if (checkForCycles(rack, modules)) {
+              alert('This action results in a cycle');
+              delete inputModule.inputs[key];
+            }
+
             state.substate = '';
+            return true;
           }
         });
       }

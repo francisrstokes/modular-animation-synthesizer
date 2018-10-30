@@ -21,7 +21,8 @@ const checkInputs = (moduleDef, rack, seen) => {
 
 export const checkForCycles = (rack, modules) => {
   for (const moduleDef of rack) {
-    const seen = [moduleDef.name];
+    const seen = [];
+    seen.push(moduleDef.name);
     if (checkInputs(moduleDef, rack, seen)) {
       // found a cycle
       return true;
