@@ -6,6 +6,7 @@ import {vAdd} from 'vec-la-fp';
 import {state, setAnimationFn} from '../shared/state';
 import {modules, findModule} from '../modules';
 import {rack} from '../rack/rack';
+import {clearRack} from '../rack/clear-rack';
 import {computeModuleDefDrawingValues} from '../rack/compute-moduledef-drawing-values';
 import { generateAnimationFn } from '../shared/generate-animation-function';
 
@@ -53,10 +54,6 @@ export class App extends React.Component {
       className: 'closed',
       selectedModule: 'Time'
     }
-  }
-
-  clearRack() {
-    rack.splice(0, rack.legnth);
   }
 
   toggleOpen() {
@@ -119,6 +116,7 @@ export class App extends React.Component {
         ? <React.Fragment>
             <Row>
               <select
+              value={this.selectedModule}
               onChange={({target: {value}}) => {
                 this.setState(() => ({
                   selectedModule: value
@@ -146,7 +144,7 @@ export class App extends React.Component {
             <hr/>
             <br/>
             <Row>
-              <button onClick={() => this.clearRack()}>CLEAR RACK</button>
+              <button onClick={clearRack}>CLEAR RACK</button>
             </Row>
           </React.Fragment>
 

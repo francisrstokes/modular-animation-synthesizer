@@ -21,19 +21,19 @@ export const Style = {
   fn: (props, mc) => {
     const {
       gateIn,
-      fillR = 255,
-      fillG = 255,
-      fillB = 255,
+      fillR = 1,
+      fillG = 1,
+      fillB = 1,
       fillA = 1,
-      strokeR = 255,
-      strokeG = 255,
-      strokeB = 255,
+      strokeR = 1,
+      strokeG = 1,
+      strokeB = 1,
       strokeA = 1,
       strokeWeight = 1
     } = props;
 
-    mc.fill([fillR,fillG,fillB,fillA]);
-    mc.stroke([strokeR,strokeG,strokeB,strokeA]);
+    mc.fill([fillR * 255, fillG * 255, fillB * 255, fillA]);
+    mc.stroke([strokeR * 255, strokeG * 255, strokeB * 255, strokeA]);
     mc.strokeWeight(strokeWeight);
 
     return { gateOut: gateIn };

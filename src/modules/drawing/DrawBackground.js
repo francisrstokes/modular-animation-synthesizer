@@ -13,12 +13,12 @@ export const DrawBackground = {
   fn: (props, mc) => {
     const {
       gateIn,
-      fillR = 255,
-      fillG = 255,
-      fillB = 255,
+      fillR = 1,
+      fillG = 1,
+      fillB = 1,
       fillA = 1
     } = props;
-    mc.background([fillR,fillG,fillB,fillA]);
+    mc.background([fillR * 255, fillG * 255, fillB * 255, fillA]);
     return {
       gateOut: gateIn
     };
