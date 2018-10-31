@@ -1,4 +1,4 @@
-import { isPolygon, isPolygonArray } from "../../util/types";
+import { isPolygon, isPolygonArray } from '../../util/types';
 
 export const DrawPolygon = {
   name: 'DrawPolygon',
