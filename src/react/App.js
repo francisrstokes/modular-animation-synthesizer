@@ -45,7 +45,7 @@ const Row = styled.div`
   flex-direction: row;
 `;
 
-const generateId = () => Math.random().toString(36).slice(2);
+const generateId = () => String.fromCharCode(65 + ((Math.random() * 26)|0)) + Math.random().toString(36).slice(2).slice(0, 6);
 
 export class App extends React.Component {
   constructor(props) {
@@ -71,7 +71,7 @@ export class App extends React.Component {
 
   addModule(moduleName) {
     const md = {
-      name: `${moduleName}_${generateId()}`,
+      name: generateId(),
       module: findModule(moduleName, modules),
       moduleName,
       inputs:{},
