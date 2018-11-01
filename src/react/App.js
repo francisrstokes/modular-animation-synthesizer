@@ -7,6 +7,7 @@ import {state, setAnimationFn} from '../shared/state';
 import {modules, findModule} from '../modules';
 import {rack} from '../rack/rack';
 import {clearRack} from '../rack/clear-rack';
+import {exportRack} from '../rack/export';
 import {computeModuleDefDrawingValues} from '../rack/compute-moduledef-drawing-values';
 import { generateAnimationFn } from '../shared/generate-animation-function';
 
@@ -140,7 +141,10 @@ export class App extends React.Component {
             <Row>
               <button onClick={() => this.enterRawMode()}>Set raw values</button>
             </Row>
-
+            <br/>
+            <Row>
+              <button onClick={exportRack}>Export</button>
+            </Row>
             <hr/>
             <br/>
             <Row>
