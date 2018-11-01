@@ -9,6 +9,9 @@ export const Time = {
 		t10: 'Number',
 		t30: 'Number',
 		t60: 'Number',
+		t100: 'Number',
+		t200: 'Number',
+		t300: 'Number',
 	},
 	fn: () => {
 		const t = getTime();
@@ -18,6 +21,9 @@ export const Time = {
 			t10: t/10,
 			t30: t/30,
 			t60: t/60,
+			t100: t/100,
+			t200: t/200,
+			t300: t/300,
 		}
 	}
 };

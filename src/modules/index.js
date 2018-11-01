@@ -1,5 +1,6 @@
 import {Time} from './util/Time';
 import {Multiply} from './math/Multiply';
+import {Divide} from './math/Divide';
 import {Add} from './math/Add';
 import {Polygon} from './geometry/Polygon';
 import {Wave} from './math/Wave';
@@ -22,6 +23,7 @@ import {LengthOf} from './util/LengthOf';
 export const modules = [
   Time,
   Multiply,
+  Divide,
   Add,
   Polygon,
   Wave,
