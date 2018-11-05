@@ -19,9 +19,11 @@ import {Multi} from './interpolation/Multi';
 import {Arrayify} from './util/Arrayify';
 import {Style} from './drawing/Style';
 import {LengthOf} from './util/LengthOf';
+import {Spectrum} from './audio/Spectrum';
 
 export const modules = [
   Time,
+  Spectrum,
   Multiply,
   Divide,
   Add,
