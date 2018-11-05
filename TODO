@@ -1,8 +1,11 @@
 - Use exception to display error help
+- Fix cycle check
 - Incorperate type chechking at module connection time
 - Multi select menu
   - Copy
   - Paste
   - Delete
-- Exporting
-- Audio signal module
+- Way to style streams of data to draw functions
+- Better interface into Spectrum module
+  - Rolling/Smoothed values that account for some historical
+- Cartesian product module
