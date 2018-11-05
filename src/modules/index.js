@@ -20,6 +20,8 @@ import {Arrayify} from './util/Arrayify';
 import {Style} from './drawing/Style';
 import {LengthOf} from './util/LengthOf';
 import {Spectrum} from './audio/Spectrum';
+import { Cartesian } from './math/Cartesian';
+import { Unvectorize } from './vector/Unvectorize';
 
 export const modules = [
   Time,
@@ -33,6 +35,7 @@ export const modules = [
   VectorTranslate,
   VectorRotate,
   Vectorize,
+  Unvectorize,
   MapRange,
   Global,
   Style,
@@ -43,7 +46,8 @@ export const modules = [
   Gate,
   Multi,
   Arrayify,
-  LengthOf
+  LengthOf,
+  Cartesian
 ];
 
 export const findModule = (moduleName, modules) => {
