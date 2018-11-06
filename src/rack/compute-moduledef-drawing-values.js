@@ -19,8 +19,8 @@ export const computeModuleDefDrawingValues = (moduleDef, ctx) => {
       longestWidth = (longestWidth < tw) ? tw : longestWidth;
 
       inputPositions[input] = {
-        text: [margin * 2 + socketRadius * 2, sy + textSize * i],
-        socket: [margin + socketRadius, sy + (textSize * i) - socketRadius]
+        text: [margin * 2 + socketRadius * 2, sy + 2 * socketRadius * i + socketRadius / 2],
+        socket: [margin + socketRadius, sy + (2 * socketRadius * i)]
       }
     });
   }
@@ -36,12 +36,12 @@ export const computeModuleDefDrawingValues = (moduleDef, ctx) => {
     longestWidth = (longestWidth < tw) ? tw : longestWidth;
 
     outputPositions[output] = {
-      text: [insx + margin * 4 + socketRadius * 4, sy + textSize * i],
-      socket: [insx + margin * 4 + socketRadius, sy + (textSize * i) - socketRadius]
+      text: [insx + margin * 4 + socketRadius * 4, sy + 2 * socketRadius * i + socketRadius / 2],
+      socket: [insx + margin * 4 + socketRadius, sy + (2 * socketRadius * i)]
     };
   });
 
-  const dimensions = [insx + longestWidth + margin * 4, sy + Math.max(inputKeys.length, outputKeys.length) * textSize]
+  const dimensions = [insx + longestWidth + margin * 4, sy + Math.max(inputKeys.length, outputKeys.length) * 2 * socketRadius]
   return {
     textPosition,
     inPosition,
