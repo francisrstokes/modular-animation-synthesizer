@@ -2,6 +2,7 @@ import { isArray, isArrayArray } from "../../util/types";
 
 export const LengthOf = {
   name: 'LengthOf',
+  tag: 'Misc',
   inputs: {
     x: 'Array'
   },

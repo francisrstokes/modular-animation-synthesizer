@@ -2,6 +2,7 @@ import {getTime} from '../../shared/global';
 
 export const Time = {
 	name: 'Time',
+	tag: 'Time',
 	inputs: {},
 	outputs: {
 		t: 'Number',

@@ -4,6 +4,7 @@ import {zip, transpose} from 'ramda';
 
 export const DrawEllipse = {
   name: 'DrawEllipse',
+  tag: 'Drawing',
   inputs: {
     multiply: 'any',
     v: 'Vector',

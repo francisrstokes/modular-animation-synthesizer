@@ -2,6 +2,7 @@ import { isPolygon, isPolygonArray } from '../../util/types';
 
 export const DrawPolygon = {
   name: 'DrawPolygon',
+  tag: 'Drawing',
   inputs: {
     points: '[Vector]'
 	},

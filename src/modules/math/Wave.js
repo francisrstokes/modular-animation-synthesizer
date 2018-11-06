@@ -1,5 +1,6 @@
 export const Wave = {
 	name: 'Wave',
+	tag: 'Math',
 	inputs: {
 		x: 'Number'
 	},

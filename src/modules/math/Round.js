@@ -4,6 +4,7 @@ const fns = ['round', 'floor', 'ceil'];
 
 export const Round = {
   name: 'Round',
+  tag: 'Math',
   inputs: {
 		a: 'Number'
 	},

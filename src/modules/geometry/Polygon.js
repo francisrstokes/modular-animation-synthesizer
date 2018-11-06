@@ -1,5 +1,6 @@
 export const Polygon = {
 	name: 'Polygon',
+	tag: 'Geometry',
 	inputs: {
 		sides: 'Number'
 	},

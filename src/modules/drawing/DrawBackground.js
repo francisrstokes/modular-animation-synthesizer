@@ -1,5 +1,6 @@
 export const DrawBackground = {
   name: 'DrawBackground',
+  tag: 'Drawing',
   inputs: {
     gateIn: 'any',
     fillR: 'Number',

@@ -14,6 +14,7 @@ const one = 1;
 
 export const Global = {
   name: 'Global',
+  tag: 'Misc',
   inputs: {},
 	outputs: {
     w: 'Number',

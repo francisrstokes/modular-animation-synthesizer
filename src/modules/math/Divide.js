@@ -3,6 +3,7 @@ import { isNumber, isNumberArray } from '../../util/types';
 
 export const Divide = {
   name: 'Divide',
+  tag: 'Math',
   inputs: {
 		a: 'Number',
     b: 'Number'

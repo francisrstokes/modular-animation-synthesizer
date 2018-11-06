@@ -15,18 +15,13 @@ navigator
     source.connect(analyser);
     analyser.fftSize = fftSize;
     bufferLength = analyser.frequencyBinCount;
-
-    // setInterval(() => {
-    //   const dataArray = new Uint8Array(bufferLength)
-    //   analyser.getByteTimeDomainData(dataArray);
-    //   spectrumData = Array.from(dataArray).map(x => x / fftSize);
-    // }, 2000);
   });
 
 const max = a => a.reduce((a, b) => Math.max(a, b), 0);
 
 export const Spectrum = {
-	name: 'Spectrum',
+  name: 'Spectrum',
+  tag: 'Audio',
 	inputs: {},
 	outputs: {
     output: '[Number]',

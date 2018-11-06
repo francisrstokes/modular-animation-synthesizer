@@ -2,6 +2,7 @@ import {vRotatePointAround} from 'vec-la-fp';
 
 export const VectorRotate = {
   name: 'VectorRotate',
+  tag: 'Vector',
   inputs: {
     v: 'Vector',
     cp: 'Vector',

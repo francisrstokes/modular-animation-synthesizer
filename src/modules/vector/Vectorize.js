@@ -3,6 +3,7 @@ import { isNumber, isNumberArray } from '../../util/types';
 
 export const Vectorize = {
   name: 'Vectorize',
+  tag: 'Vector',
   inputs: {
 		x: 'Number',
     y: 'Number'

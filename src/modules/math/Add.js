@@ -3,6 +3,7 @@ import { isNumber, isNumberArray } from '../../util/types';
 
 export const Add = {
   name: 'Add',
+  tag: 'Math',
   inputs: {
 		a: 'Number',
     b: 'Number'

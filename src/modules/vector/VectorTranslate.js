@@ -4,6 +4,7 @@ import {zip} from 'ramda';
 
 export const VectorTranslate = {
   name: 'VectorTranslate',
+  tag: 'Vector',
   inputs: {
     v: 'Vector',
     tv: 'Vector'

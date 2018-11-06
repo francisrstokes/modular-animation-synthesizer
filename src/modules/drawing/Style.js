@@ -1,5 +1,6 @@
 export const Style = {
   name: 'Style',
+  tag: 'Drawing',
   inputs: {
     gateIn: 'any',
 

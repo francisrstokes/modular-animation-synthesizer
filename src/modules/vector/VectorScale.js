@@ -1,11 +1,11 @@
 import {curry, zip} from 'ramda';
-import { isVector, isPolygon, isPolygonArray } from '../../util/types';
 import {tagType} from '../../util/types';
 
 const vMultiply = curry(([x, y], [x2, y2]) => [x*x2, y*y2]);
 
 export const VectorScale = {
   name: 'VectorScale',
+  tag: 'Vector',
   inputs: {
 		v: 'Vector',
     scale: 'Number'

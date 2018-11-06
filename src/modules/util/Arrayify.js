@@ -1,5 +1,6 @@
 export const Arrayify = {
   name: 'Arrayify',
+  tag: 'Misc',
   inputs: {
     x: 'any',
     n: 'Number'

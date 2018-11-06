@@ -3,6 +3,7 @@ import { isNumber, isNumberArray } from '../../util/types';
 
 export const Multiply = {
   name: 'Multiply',
+  tag: 'Math',
   inputs: {
 		a: 'Number',
     b: 'Number'

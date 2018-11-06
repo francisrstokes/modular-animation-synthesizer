@@ -6,6 +6,7 @@ const cartesianProduct = (a, b) => a.reduce((acc, ca) => {
 
 export const Cartesian = {
   name: 'Cartesian',
+  tag: 'Math',
   inputs: {
 		a: 'Number',
     b: 'Number'

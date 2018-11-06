@@ -2,6 +2,7 @@ import { isNumber, isNumberArray, isNumberArrayArray } from '../../util/types';
 
 export const Sqrt = {
   name: 'Sqrt',
+  tag: 'Math',
   inputs: {
 		a: 'Number'
 	},

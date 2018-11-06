@@ -1,7 +1,8 @@
 import {vAdd} from 'vec-la-fp';
 
 export const Rect = {
-	name: 'Rect',
+  name: 'Rect',
+  tag: 'Geometry',
 	inputs: {
     centered: 'Boolean',
 		dimensions: 'Vector'

@@ -3,6 +3,7 @@ import { isVector, isPolygon, isPolygonArray } from '../../util/types';
 
 export const Unvectorize = {
   name: 'Unvectorize',
+  tag: 'Vector',
   inputs: {
 		v: 'Vector'
 	},

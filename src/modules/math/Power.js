@@ -3,6 +3,7 @@ import { isNumber, isNumberArray } from '../../util/types';
 
 export const Power = {
   name: 'Power',
+  tag: 'Math',
   inputs: {
 		a: 'Number',
     b: 'Number'

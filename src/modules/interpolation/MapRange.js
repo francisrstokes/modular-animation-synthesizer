@@ -4,6 +4,7 @@ const mapRange = (fromA,fromB,toA,toB,value) => (value-fromA)/(fromB-fromA) * (t
 
 export const MapRange = {
 	name: 'MapRange',
+	tag: 'Interpolation',
 	inputs: {
 		fromA: 'Number',
 		fromB: 'Number',

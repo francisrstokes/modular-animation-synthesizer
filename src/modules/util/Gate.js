@@ -1,5 +1,6 @@
 export const Gate = {
 	name: 'Gate',
+	tag: 'Misc',
 	inputs: {
 		trigger: 'any',
 		x: 'any',
