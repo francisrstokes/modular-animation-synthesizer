@@ -9,8 +9,4 @@
 - Better interface into Spectrum module
   - Rolling/Smoothed values that account for some historical?
 
-- Math functions
-  - Round/Floor/Ceil
-  - Modulus
-
 - Constant module (identity)
