@@ -3,6 +3,7 @@ import {Multiply} from './math/Multiply';
 import {Divide} from './math/Divide';
 import {Add} from './math/Add';
 import {Polygon} from './geometry/Polygon';
+import {Rect} from './geometry/Rect';
 import {Wave} from './math/Wave';
 import {VectorScale} from './vector/VectorScale';
 import {VectorTranslate} from './vector/VectorTranslate';
@@ -22,6 +23,7 @@ import {LengthOf} from './util/LengthOf';
 import {Spectrum} from './audio/Spectrum';
 import { Cartesian } from './math/Cartesian';
 import { Unvectorize } from './vector/Unvectorize';
+import { Sqrt } from './math/Sqrt';
 
 export const modules = [
   Time,
@@ -29,7 +31,9 @@ export const modules = [
   Multiply,
   Divide,
   Add,
+  Sqrt,
   Polygon,
+  Rect,
   Wave,
   VectorScale,
   VectorTranslate,

@@ -5,7 +5,12 @@
   - Copy
   - Paste
   - Delete
-- Way to style streams of data to draw functions
+- Way to style draw functions (ith element gets ith style)
 - Better interface into Spectrum module
-  - Rolling/Smoothed values that account for some historical
-- Cartesian product module
+  - Rolling/Smoothed values that account for some historical?
+
+- Math functions
+  - Round/Floor/Ceil
+  - Modulus
+
+- Constant module (identity)
