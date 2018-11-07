@@ -11,22 +11,38 @@ import { RawMode } from './RawMode';
 
 const animationState = state;
 
+const MainPanel = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  padding: 20px;
+
+`;
+
+const PanelToggle = styled.div`
+  display: flex;
+  min-width: 20px;
+  background-color: #ccc;
+  cursor: pointer;
+`;
+
 const SidePanel = styled.div`
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
   position: absolute;
   height: 100%;
-  min-width: 250px;
   background-color: #efefef;
-  padding: 0 20px;
 
   transition: 1s ease;
   overflow: hidden;
 
   &.closed {
-    height: 30px;
+    ${MainPanel} {
+      display:none;
+    }
   }
 `;
+
 
 
 const toggleOpen = (appState, setAppState, ctx, mc) => {
@@ -47,15 +63,12 @@ const applyMode = (nextMode, setterFn, subState) => {
 export const App = ({ctx, mc}) => {
   const [mode, setMode] = useState('edit');
   const [appState, setAppState] = useState('closed');
-  const [selectedModule, setSelectedModule] = useState('Time');
 
   return <SidePanel className={appState}>
-      <Title onClick={() => toggleOpen(appState, setAppState, ctx, mc)}>Settings</Title>
-
+    <MainPanel>
+      <Title>Edit Animation Graph</Title>
       {mode === 'edit'
         ? <EditMode
-          selectedModule={selectedModule}
-          setSelectedModule={setSelectedModule}
           enterDeleteMode={() => applyMode('delete', setMode, 'delete')}
           enterRawMode={() => applyMode('raw', setMode, 'raw')}
           ctx={ctx}
@@ -65,5 +78,9 @@ export const App = ({ctx, mc}) => {
             ? <DeleteMode exitDeleteMode={() => applyMode('edit', setMode, '')} />
             : <RawMode exitRawMode={() => applyMode('edit', setMode, '')} />
       }
-    </SidePanel>;
+    </MainPanel>
+    <PanelToggle
+      onClick={() => toggleOpen(appState, setAppState, ctx, mc)}
+    />
+  </SidePanel>;
 }

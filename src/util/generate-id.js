@@ -1,0 +1,1 @@
+export const generateId = () => String.fromCharCode(65 + ((Math.random() * 26)|0)) + Math.random().toString(36).slice(2).slice(0, 6);
