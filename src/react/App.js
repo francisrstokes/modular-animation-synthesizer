@@ -24,6 +24,12 @@ const PanelToggle = styled.div`
   min-width: 20px;
   background-color: #ccc;
   cursor: pointer;
+
+  font-size: 28px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 `;
 
 const SidePanel = styled.div`
@@ -81,6 +87,6 @@ export const App = ({ctx, mc}) => {
     </MainPanel>
     <PanelToggle
       onClick={() => toggleOpen(appState, setAppState, ctx, mc)}
-    />
+    >{appState === 'closed' ? '>' : '<'}</PanelToggle>
   </SidePanel>;
 }
