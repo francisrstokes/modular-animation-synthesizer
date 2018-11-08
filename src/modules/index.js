@@ -58,6 +58,4 @@ export const modules = [
   Cartesian
 ];
 
-export const findModule = (moduleName, modules) => {
-  return modules.find(m => m.name === moduleName);
-};
+export const findModule = moduleName => modules.find(m => m.name === moduleName);

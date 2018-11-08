@@ -41,15 +41,10 @@ export const generateAnimationFn = (rack, mc) => {
     return moduleDef;
   });
 
-  copy.forEach(md => {
-    if (!md.module || typeof md.module !== 'object') {
-      md.module = findModule(md.moduleName, modules);
-    }
-  })
-
-  const entryPoints = copy.filter(({module}) => {
-    return Object.keys(module.inputs).length === 0
-  });
+  const entryPoints = copy
+    .map(md => [findModule(md.moduleName), md])
+    .filter(([module]) => Object.keys(module.inputs).length === 0)
+    .map(([_, md]) => md);
 
   const knownVariables = [];
   let fnStr = '';
@@ -58,7 +53,7 @@ export const generateAnimationFn = (rack, mc) => {
     const {name, moduleName} = md;
     knownVariables.push(name);
     md.isEvaluated = true;
-    return `const ${name} = findModule('${moduleName}', modules).fn();`
+    return `const ${name} = findModule('${moduleName}').fn();`
   }).join('\n');
 
   let unevaluated = getUnevaluatedModules(copy);
@@ -66,11 +61,11 @@ export const generateAnimationFn = (rack, mc) => {
     const md = getEvaluatableModule(unevaluated, knownVariables);
     knownVariables.push(md.name);
     md.isEvaluated = true;
-    fnStr += `\nconst ${md.name} = findModule('${md.moduleName}', modules).fn({${inputsToString(md.inputs)}}, mc)`;
+    fnStr += `\nconst ${md.name} = findModule('${md.moduleName}').fn({${inputsToString(md.inputs)}}, mc)`;
     unevaluated = getUnevaluatedModules(copy)
   }
 
-  return runWithContext({findModule, modules, mc}, `return () => {\n${fnStr}\n}`);
+  return runWithContext({findModule, mc}, `return () => {\n${fnStr}\n}`);
 }
 
 

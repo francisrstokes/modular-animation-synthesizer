@@ -20,7 +20,7 @@ const groupedByTag = groupBy(({tag}) => tag, modules);
 const createModule = (moduleName, ctx, globalOffset) => {
   const md = {
     name: generateId(),
-    module: findModule(moduleName, modules),
+    module: findModule(moduleName),
     moduleName,
     inputs:{},
     drawingValues: null
