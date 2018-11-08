@@ -76,7 +76,7 @@ export const EditMode = connecter(({
   enterDeleteMode,
   enterRawMode,
   globalOffset,
-  clearRack,
+  clearModules,
   addModule,
   ctx,
   rack
@@ -92,7 +92,7 @@ export const EditMode = connecter(({
     <br/>
     <button onClick={() => {
       if (confirm('Are you sure you want to remove all modules?')) {
-        clearRack();
+        clearModules();
       }
     }}>Clear all modules</button>
   </React.Fragment>

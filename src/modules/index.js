@@ -26,6 +26,7 @@ import { Unvectorize } from './vector/Unvectorize';
 import { Sqrt } from './math/Sqrt';
 import { Mod } from './math/Mod';
 import { Round } from './math/Round';
+import { Random } from './random-and-noise/Random';
 
 export const modules = [
   Time,
@@ -43,6 +44,7 @@ export const modules = [
   VectorTranslate,
   VectorRotate,
   Vectorize,
+  Random,
   Unvectorize,
   MapRange,
   Global,
