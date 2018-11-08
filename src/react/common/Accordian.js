@@ -12,6 +12,7 @@ export const AccordianTitle = styled.h2`
   justify-content: center;
   cursor: pointer;
   border-radius: 5px;
+  min-height: 30px;
 
   &.active {
     background-color: #f7f7f7;

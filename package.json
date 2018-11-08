@@ -9,6 +9,8 @@
     "ramda": "^0.25.0",
     "react": "^16.7.0-alpha.0",
     "react-dom": "^16.7.0-alpha",
+    "react-redux": "^5.1.0",
+    "redux": "^4.0.1",
     "styled-components": "^4.0.2",
     "vec-la-fp": "^1.7.0"
   },

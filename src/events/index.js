@@ -1,4 +1,3 @@
-import {state} from '../shared/state';
 
 import {mousedown as deleteMousedown} from './delete';
 import {mousedown as rawValueMousedown} from './raw-value';
@@ -6,35 +5,33 @@ import {mousedown as dragMousedown, mousemove as dragMousemove} from './drag';
 import {start as connectStart, end as connectEnd} from './connect';
 import {start as panStart, move as panMove} from './pan';
 
-export const setupEvents = (canvas, rack) => {
-  canvas.addEventListener('mousedown', ({ x, y }) => {
-    const clickPosition = [x, y];
+export const onMouseDown = (props) => (e) => {
+  const clickPosition = [e.clientX, e.clientY];
 
-    if (deleteMousedown(rack, clickPosition)) return;
-    if (rawValueMousedown(rack, clickPosition)) return;
+  if (deleteMousedown(props, clickPosition)) return;
+  if (rawValueMousedown(props, clickPosition)) return;
 
-    if (state.mode === 'edit' && state.substate === '') {
-      if (dragMousedown(rack, clickPosition)) return;
-      if (connectStart(rack, clickPosition)) return;
+  if (props.isInPureEditMode) {
+    if (dragMousedown(props, clickPosition)) return;
+    if (connectStart(props, clickPosition)) return;
 
-      panStart(clickPosition);
-      return;
+    panStart(props, clickPosition);
+    return;
+  }
+
+  if (connectEnd(props, clickPosition)) return;
+};
+
+export const onMouseMove = (props) => (e) => {
+  const clickPosition = [e.clientX, e.clientY];
+  dragMousemove(props, clickPosition);
+  panMove(props, clickPosition);
+};
+
+export const onMouseUp = ({isInEditMode, currentSubstate, gotoEditMode}) => () => {
+  if (isInEditMode) {
+    if (['dragging', 'pan'].includes(currentSubstate)) {
+      gotoEditMode();
     }
-
-   if (connectEnd(rack, clickPosition)) return;
-  });
-
-  canvas.addEventListener('mousemove', ({ x, y }) => {
-    const clickPosition = [x, y];
-    dragMousemove(clickPosition);
-    panMove(clickPosition);
-  })
-
-  canvas.addEventListener('mouseup', () => {
-    if (state.mode === 'edit') {
-      if (['dragging', 'panning'].includes(state.substate)) {
-        state.substate = '';
-      }
-    }
-  })
-}
+  }
+};

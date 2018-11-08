@@ -1,92 +1,83 @@
 import React, {useState} from 'react';
-import styled from 'styled-components';
+import {useStateFunction} from './hooks/useStateFunction';
+import {generateAnimationFn} from '../shared/generate-animation-function';
+import {connectSelectorsAndActions} from './util';
+import {MainPanel, SidePanel, PanelToggle} from './SidePanel';
+
+import * as editorModeActions from './actions/editor-mode';
+import * as rackActions from './actions/rack';
+import {selectors as editorModeSelectors} from './reducers/editor-mode';
+import {selectors as rackSelectors} from './reducers/rack';
 
 import {w, h} from '../shared/constants';
-import {state, setAnimationFn} from '../shared/state';
 
 import {Title} from './common';
 import { EditMode } from './EditMode';
 import { DeleteMode } from './DeleteMode';
 import { RawMode } from './RawMode';
-
-const animationState = state;
-
-const MainPanel = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-width: 240px;
-  padding: 20px;
-
-`;
-
-const PanelToggle = styled.div`
-  display: flex;
-  min-width: 20px;
-  background-color: #ccc;
-  cursor: pointer;
-
-  font-size: 28px;
-  font-weight: bold;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-`;
-
-const SidePanel = styled.div`
-  display:flex;
-  flex-direction: row;
-  position: absolute;
-  height: 100%;
-  background-color: #efefef;
-
-  transition: 1s ease;
-  overflow: hidden;
-
-  &.closed {
-    ${MainPanel} {
-      display:none;
-    }
-  }
-`;
+import { Canvas } from './Canvas';
 
 
-
-const toggleOpen = (appState, setAppState, ctx, mc) => {
-  const nextState = (appState === 'open') ? 'closed' : 'open';
-  setAppState(nextState);
-  animationState.mode = (nextState === 'open') ? 'edit' : 'animate';
-  if (animationState.mode === 'animate') {
-    setAnimationFn(generateAnimationFn(mc));
+const toggleOpen = (currentMode, setEditorMode, setAnimationFn, rack, ctx, mc) => {
+  const nextMode = currentMode === 'animate' ? 'edit' : 'animate';
+  setEditorMode(nextMode);
+  if (nextMode === 'animate') {
+    setAnimationFn(generateAnimationFn(rack, mc));
     ctx.clearRect(0,0,w,h);
   }
 };
 
-const applyMode = (nextMode, setterFn, subState) => {
-  setterFn(nextMode);
-  animationState.substate = subState;
-}
+const connecter = connectSelectorsAndActions(
+  {...editorModeSelectors, ...rackSelectors},
+  {...editorModeActions, ...rackActions}
+);
 
-export const App = ({ctx, mc}) => {
-  const [mode, setMode] = useState('edit');
-  const [appState, setAppState] = useState('closed');
+export const App = connecter(props => {
+  const [animationFn, setAnimationFn] = useStateFunction(() => {});
+  const [ctx, setCtx] = useState(null);
+  const [mc, setMc] = useState(null);
 
-  return <SidePanel className={appState}>
-    <MainPanel>
-      <Title>Edit Animation Graph</Title>
-      {mode === 'edit'
-        ? <EditMode
-          enterDeleteMode={() => applyMode('delete', setMode, 'delete')}
-          enterRawMode={() => applyMode('raw', setMode, 'raw')}
-          ctx={ctx}
-        />
+  const {
+    isInEditMode,
+    isInDeleteMode,
+    isInRawMode,
+    isInAnimateMode,
+    currentMode,
+    gotoDeleteMode,
+    gotoRawMode,
+    gotoEditMode,
+    addModule,
+    setEditorMode,
+    rack
+  } = props;
 
-        : mode === 'delete'
-            ? <DeleteMode exitDeleteMode={() => applyMode('edit', setMode, '')} />
-            : <RawMode exitRawMode={() => applyMode('edit', setMode, '')} />
-      }
-    </MainPanel>
-    <PanelToggle
-      onClick={() => toggleOpen(appState, setAppState, ctx, mc)}
-    >{appState === 'closed' ? '>' : '<'}</PanelToggle>
-  </SidePanel>;
-}
+  return <React.Fragment>
+    <Canvas
+      animationFn={animationFn}
+      setCtx={setCtx}
+      setMc={setMc}
+    />
+
+    <SidePanel className={isInAnimateMode ? 'closed' : ''}>
+      <MainPanel>
+        <Title>Edit Animation Graph</Title>
+        {isInDeleteMode
+          ? <DeleteMode exitDeleteMode={gotoEditMode} />
+          : isInRawMode
+            ? <RawMode exitRawMode={gotoEditMode} />
+            : isInEditMode
+              ? <EditMode
+                  ctx={ctx}
+                  enterDeleteMode={gotoDeleteMode}
+                  enterRawMode={gotoRawMode}
+                  addModule={addModule}
+                />
+              : null
+        }
+      </MainPanel>
+      <PanelToggle
+        onClick={() => toggleOpen(currentMode, setEditorMode, setAnimationFn, rack, ctx, mc)}
+      >{isInAnimateMode ? '>' : '<'}</PanelToggle>
+    </SidePanel>
+  </React.Fragment>
+});

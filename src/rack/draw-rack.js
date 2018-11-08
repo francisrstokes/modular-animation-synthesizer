@@ -1,7 +1,6 @@
 import {compose} from 'ramda';
 import {vAdd} from 'vec-la-fp';
 import {socketRadius} from '../shared/constants';
-import {globalTranslate} from '../shared/state';
 
 const drawOutputSockets = (mc, ctx, translateToPosition) => ([key, { text, socket }]) => {
   ctx.fillText(key, ...translateToPosition(text));
@@ -18,7 +17,7 @@ const drawInputSockets = (mc, ctx, translateToPosition, inputs) => ([key, { text
   mc.drawEllipse(mc.circle(socketRadius, translateToPosition(socket)));
 };
 
-const drawConnections = (mc, translateToPosition, inputPositions, rack) => ([inputKey, inputObj]) => {
+const drawConnections = (mc, translateToPosition, globalTranslate, inputPositions, rack) => ([inputKey, inputObj]) => {
   if (inputObj.type === 'connection') {
     const inputModule = rack.find(md => inputObj.module === md.name);
     if (inputModule) {
@@ -38,7 +37,7 @@ const drawConnections = (mc, translateToPosition, inputPositions, rack) => ([inp
   }
 }
 
-export const drawRack = (rack, mc, ctx) => {
+export const drawRack = (rack, mc, ctx, globalTranslate) => {
   rack.forEach(moduleDef => {
     const {
       position,
@@ -87,6 +86,6 @@ export const drawRack = (rack, mc, ctx) => {
 
   rack.forEach(md => {
     const translateToPosition = compose(globalTranslate, vAdd(md.drawingValues.position));
-    Object.entries(md.inputs).forEach(drawConnections(mc, translateToPosition, md.drawingValues.inputPositions, rack));
+    Object.entries(md.inputs).forEach(drawConnections(mc, translateToPosition, globalTranslate, md.drawingValues.inputPositions, rack));
   })
 }

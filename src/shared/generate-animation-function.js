@@ -1,6 +1,5 @@
 import {findModule, modules} from '../modules';
 import {runWithContext} from '../util/run-with-context';
-import {rack} from '../rack/rack';
 
 const inputsToString = inputs => {
   return Object.entries(inputs)
@@ -36,7 +35,7 @@ const getEvaluatableModule = (rack, knownVariables) => {
   })
 }
 
-export const generateAnimationFn = mc => {
+export const generateAnimationFn = (rack, mc) => {
   const copy = JSON.parse(JSON.stringify(rack)).map(moduleDef => {
     moduleDef.isEvaluated = false;
     return moduleDef;

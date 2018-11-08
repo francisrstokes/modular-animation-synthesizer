@@ -1,10 +1,14 @@
-import { globalTranslate, state } from '../shared/state';
 import { pointInRect, pointInCircle } from '../util/math-util';
 import { socketRadius } from '../shared/constants';
-import { checkForCycles } from '../util/check-for-cycles';
-import { modules } from '../modules';
 
-export const start = (rack, clickPosition) => {
+export const start = (props, clickPosition) => {
+  const {
+    rack,
+    globalTranslate,
+    gotoConnectingInputMode,
+    disconnectModuleInput,
+    setConnectingData
+  } = props;
   let connectingFromInput = null;
   rack.some(md => {
     const pos = globalTranslate(md.drawingValues.position);
@@ -16,14 +20,11 @@ export const start = (rack, clickPosition) => {
           connectingFromInput = true;
 
           if (md.inputs[inputKey]) {
-            delete md.inputs[inputKey];
+            disconnectModuleInput(md.name, inputKey);
             return;
           }
-          state.substate = 'connecting_from_input';
-          state.data.connectingInput = {
-            module: md,
-            key: inputKey
-          }
+          gotoConnectingInputMode();
+          setConnectingData(md.name, inputKey);
         }
       });
     }
@@ -32,8 +33,18 @@ export const start = (rack, clickPosition) => {
 };
 
 
-export const end = (rack, clickPosition) => {
-  if (state.mode === 'edit' && state.substate === 'connecting_from_input') {
+export const end = (props, clickPosition) => {
+  const {
+    rack,
+    globalTranslate,
+    isInConnectingInputMode,
+    connectingModuleId,
+    connectingKey,
+    connectModules,
+    gotoEditMode
+  } = props;
+
+  if (isInConnectingInputMode) {
     return rack.some(md => {
       const pos = globalTranslate(md.drawingValues.position);
       const dim = md.drawingValues.dimensions;
@@ -41,19 +52,20 @@ export const end = (rack, clickPosition) => {
       if (pointInRect(pos, dim, clickPosition)) {
         Object.entries(md.drawingValues.outputPositions).forEach(([outputKey, {socket}]) => {
           if (pointInCircle(globalTranslate(socket, md.drawingValues.position), socketRadius, clickPosition)) {
-            const {module: inputModule, key} = state.data.connectingInput;
-            inputModule.inputs[key] = {
-              type: 'connection',
-              module: md.name,
-              property: outputKey
-            }
+            connectModules(connectingModuleId, md.name, connectingKey, outputKey);
 
-            if (checkForCycles(rack, modules)) {
-              alert('This action results in a cycle');
-              delete inputModule.inputs[key];
-            }
+            // if (checkForCycles(rack, modules)) {
+            //   alert('This action results in a cycle');
+            //   delete inputModule.inputs[key];
+            // }
 
-            state.substate = '';
+            // inputModule.inputs[key] = {
+            //   type: 'connection',
+            //   module: md.name,
+            //   property: outputKey
+            // }
+
+            gotoEditMode();
             return true;
           }
         });

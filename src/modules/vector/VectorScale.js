@@ -27,7 +27,7 @@ export const VectorScale = {
         break;
       }
       case 'scale:pa,v:v': {
-        out = scale.map(scalePoly => scalePoly.map(sv => vMultiply(v, scrollBv)));
+        out = scale.map(scalePoly => scalePoly.map(sv => vMultiply(sv, scrollBv)));
         break;
       }
       case 'scale:v,v:p': {
