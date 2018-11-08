@@ -1,5 +1,5 @@
 //https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript#30810322
-export function copyTextToClipboard(text) {
+function copyTextToClipboard(text) {
   var textArea = document.createElement("textarea");
   // *** This styling is an extra step which is likely not required. ***
   //
@@ -51,3 +51,10 @@ export function copyTextToClipboard(text) {
 
   document.body.removeChild(textArea);
 }
+
+export const copyToClipboard = (str, doAlert = true) => {
+  copyTextToClipboard(str);
+  if (doAlert) {
+    alert('Copied to clipboard');
+  }
+};

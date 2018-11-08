@@ -1,8 +1,8 @@
 import React from 'react';
 import {Row, SubTitle} from './common';
-import {selectors as rawValueSelectors} from './reducers/raw-value';
-import * as rawValueActions from './actions/raw-value';
-import { connectSelectorsAndActions } from './util';
+import {selectors as rawValueSelectors} from '../reducers/raw-value';
+import * as rawValueActions from '../actions/raw-value';
+import { connectSelectorsAndActions } from '../util';
 
 const connecter = connectSelectorsAndActions(
   rawValueSelectors,

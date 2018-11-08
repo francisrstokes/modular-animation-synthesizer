@@ -1,5 +1,5 @@
 import { pointInRect, pointInCircle } from '../util/math-util';
-import { socketRadius } from '../shared/constants';
+import { socketRadius } from '../constants';
 
 export const start = (props, clickPosition) => {
   const {

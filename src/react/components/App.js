@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
-import {useStateFunction} from './hooks/useStateFunction';
-import {generateAnimationFn} from '../shared/generate-animation-function';
-import {connectSelectorsAndActions} from './util';
+import {useStateFunction} from '../hooks/useStateFunction';
+import {generateAnimationFn} from '../../generate-animation-function';
+import {connectSelectorsAndActions} from '../util';
 import {MainPanel, SidePanel, PanelToggle} from './SidePanel';
 
-import * as editorModeActions from './actions/editor-mode';
-import * as rackActions from './actions/rack';
-import {selectors as editorModeSelectors} from './reducers/editor-mode';
-import {selectors as rackSelectors} from './reducers/rack';
+import * as editorModeActions from '../actions/editor-mode';
+import * as rackActions from '../actions/rack';
+import {selectors as editorModeSelectors} from '../reducers/editor-mode';
+import {selectors as rackSelectors} from '../reducers/rack';
 
-import {w, h} from '../shared/constants';
+import {w, h} from '../../constants';
 
 import {Title} from './common';
 import { EditMode } from './EditMode';

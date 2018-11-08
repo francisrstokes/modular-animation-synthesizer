@@ -1,16 +1,19 @@
 import React from 'react';
+import {C} from '../../constants';
 import {groupBy} from 'ramda';
-import {clearRack} from '../rack/clear-rack';
-import {exportRack} from '../rack/export';
-import { findModule, modules } from '../modules';
+import { findModule, modules } from '../../modules';
 import { AccordianTitle, AccordionList, AccordionItem } from './common/Accordian';
-import { useActiveClasses } from './hooks/useActiveClasses';
-import { generateId } from '../util/generate-id';
-import { computeModuleDefDrawingValues } from '../rack/compute-moduledef-drawing-values';
+import { useActiveClasses } from '../hooks/useActiveClasses';
+import { generateId } from '../../util/generate-id';
+import { computeModuleDefDrawingValues } from '../../rack/compute-moduledef-drawing-values';
 import { vAdd } from 'vec-la-fp';
-import { connectSelectorsAndActions } from './util';
-import {selectors as globalOffsetSelectors} from './reducers/global-offset';
-import {C} from '../shared/constants';
+import { copyToClipboard } from '../../util/copy-to-clipboard';
+
+import { connectSelectorsAndActions } from '../util';
+import {selectors as rackSelectors} from '../reducers/rack';
+import {selectors as globalOffsetSelectors} from '../reducers/global-offset';
+import * as editorModeActions from '../reducers/editor-mode';
+import * as rackActions from '../actions/rack';
 
 const groupedByTag = groupBy(({tag}) => tag, modules);
 
@@ -33,12 +36,15 @@ const createModule = (moduleName, ctx, globalOffset) => {
 };
 
 const connecter = connectSelectorsAndActions(
-  globalOffsetSelectors,
-  {}
+  {...globalOffsetSelectors, ...rackSelectors},
+  {
+    ...rackActions,
+    ...editorModeActions
+  }
 );
 
 
-const AddModules = connecter(({ addModule, ctx, globalOffset }) => {
+const AddModules = ({ addModule, ctx, globalOffset }) => {
   const [activeClasses, toggleGroup] = useActiveClasses(groupedByTag);
 
   return <React.Fragment>
@@ -64,23 +70,30 @@ const AddModules = connecter(({ addModule, ctx, globalOffset }) => {
       </React.Fragment>
     ))}
   </React.Fragment>
-});
+};
 
-export const EditMode = ({
+export const EditMode = connecter(({
   enterDeleteMode,
   enterRawMode,
+  globalOffset,
+  clearRack,
   addModule,
-  ctx
+  ctx,
+  rack
 }) => {
   return <React.Fragment>
-    <AddModules ctx={ctx} addModule={addModule}/>
+    <AddModules ctx={ctx} addModule={addModule} globalOffset={globalOffset} />
     <br/>
     <button onClick={enterDeleteMode}>Delete Modules</button>
     <button onClick={enterRawMode}>Set raw values</button>
     <br/>
-    <button onClick={exportRack}>Export</button>
+    <button onClick={() => copyToClipboard(JSON.stringify(rack))}>Export</button>
     <hr/>
     <br/>
-    <button onClick={clearRack}>CLEAR RACK</button>
+    <button onClick={() => {
+      if (confirm('Are you sure you want to remove all modules?')) {
+        clearRack();
+      }
+    }}>Clear all modules</button>
   </React.Fragment>
-}
+});

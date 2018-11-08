@@ -1,5 +1,5 @@
-import {findModule, modules} from '../modules';
-import {runWithContext} from '../util/run-with-context';
+import {findModule, modules} from './modules';
+import {runWithContext} from './util/run-with-context';
 
 const inputsToString = inputs => {
   return Object.entries(inputs)
@@ -41,7 +41,15 @@ export const generateAnimationFn = (rack, mc) => {
     return moduleDef;
   });
 
-  const entryPoints = copy.filter(({module}) => Object.keys(module.inputs).length === 0);
+  copy.forEach(md => {
+    if (!md.module || typeof md.module !== 'object') {
+      md.module = findModule(md.moduleName, modules);
+    }
+  })
+
+  const entryPoints = copy.filter(({module}) => {
+    return Object.keys(module.inputs).length === 0
+  });
 
   const knownVariables = [];
   let fnStr = '';

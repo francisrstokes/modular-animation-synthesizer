@@ -1,5 +1,5 @@
 import { pointInCircle } from '../util/math-util';
-import { socketRadius } from '../shared/constants';
+import { socketRadius } from '../constants';
 
 export const mousedown = (props, clickPosition) => {
   const {

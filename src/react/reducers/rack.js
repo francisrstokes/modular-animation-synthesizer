@@ -1,5 +1,6 @@
 import {omit} from 'ramda';
-const initialState = [];
+import {rack as initialState} from '../../rack/rack';
+// const initialState = [];
 
 const filterDisconnect = moduleId => md => {
   return {

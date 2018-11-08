@@ -43,3 +43,7 @@ export const connectModules = (inputModuleId, outputModuleId, inputKey, outputKe
     outputKey
   }
 });
+
+export const clearModules = () => ({
+  type: 'CLEAR_MODULES'
+});

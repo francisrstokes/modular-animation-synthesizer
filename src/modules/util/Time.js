@@ -1,4 +1,4 @@
-import {getTime} from '../../shared/global';
+import {getTime} from '../../time';
 
 export const Time = {
 	name: 'Time',
