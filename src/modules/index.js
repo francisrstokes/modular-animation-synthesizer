@@ -27,6 +27,7 @@ import { Sqrt } from './math/Sqrt';
 import { Mod } from './math/Mod';
 import { Round } from './math/Round';
 import { Random } from './random-and-noise/Random';
+import { Perlin } from './random-and-noise/Perlin';
 
 export const modules = [
   Time,
@@ -37,6 +38,7 @@ export const modules = [
   Sqrt,
   Mod,
   Round,
+  Perlin,
   Polygon,
   Rect,
   Wave,

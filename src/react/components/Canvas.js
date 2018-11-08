@@ -66,6 +66,7 @@ class UnconnectedCanvas extends React.Component {
         try {
           this.props.animationFn();
         } catch (ex) {
+          debugger;
           // Do something
         }
         incTime();

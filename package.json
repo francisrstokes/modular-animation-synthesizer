@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "microcan-fp": "^0.0.1",
+    "noisejs": "^2.1.0",
     "parcel-bundler": "^1.10.3",
     "ramda": "^0.25.0",
     "react": "^16.7.0-alpha.0",
