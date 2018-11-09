@@ -54,9 +54,9 @@ export default (state = initialState, action) => {
         if (md.name !== moduleId) return md;
         return {
           ...md,
-          drawingValues: {
-            ...md.drawingValues,
-            position
+          dv: {
+            ...md.dv,
+            p: position
           }
         }
       });

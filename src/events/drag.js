@@ -3,8 +3,8 @@ import { vSub } from 'vec-la-fp';
 
 export const mousedown = ({rack, globalTranslate, gotoDragMode, setDragData}, clickPosition) => {
   return [...rack].reverse().some(md => {
-    const pos = globalTranslate(md.drawingValues.position);
-    const dim = [md.drawingValues.dimensions[0], 30];
+    const pos = globalTranslate(md.dv.p);
+    const dim = [md.dv.d[0], 30];
     if (pointInRect(pos, dim, clickPosition)) {
       gotoDragMode();
       setDragData(md.name, vSub(clickPosition, pos));

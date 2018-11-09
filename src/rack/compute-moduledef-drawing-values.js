@@ -1,4 +1,5 @@
 import {textSize, socketRadius} from '../constants';
+import {findModule} from '../modules';
 
 export const computeModuleDefDrawingValues = (moduleDef, ctx) => {
   const margin = 15;
@@ -10,7 +11,7 @@ export const computeModuleDefDrawingValues = (moduleDef, ctx) => {
 
   const sy = textSize * 4;
   let longestWidth = 0;
-  const inputKeys = Object.keys(moduleDef.module.inputs);
+  const inputKeys = Object.keys(findModule(moduleDef.moduleName).inputs);
   if (inputKeys.length) {
     longestWidth = ctx.measureText('In').width + margin;
 
@@ -27,7 +28,7 @@ export const computeModuleDefDrawingValues = (moduleDef, ctx) => {
 
 
   // Output keys
-  const outputKeys = Object.keys(moduleDef.module.outputs);
+  const outputKeys = Object.keys(findModule(moduleDef.moduleName).outputs);
   const outPosition = [margin * 4 + longestWidth, textSize * 3]
   const insx = longestWidth;
   longestWidth = 0;
@@ -43,11 +44,11 @@ export const computeModuleDefDrawingValues = (moduleDef, ctx) => {
 
   const dimensions = [insx + longestWidth + margin * 4, sy + Math.max(inputKeys.length, outputKeys.length) * 2 * socketRadius]
   return {
-    textPosition,
-    inPosition,
-    outPosition,
-    dimensions,
-    inputPositions,
-    outputPositions,
+    tp: textPosition,
+    ip: inPosition,
+    op: outPosition,
+    d: dimensions,
+    inp: inputPositions,
+    oup: outputPositions,
   }
 }

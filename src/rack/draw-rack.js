@@ -23,7 +23,7 @@ const drawConnections = (mc, translateToPosition, globalTranslate, inputPosition
     if (inputModule) {
       const inputProp = inputObj.property;
       const inputPos = inputPositions[inputKey].socket;
-      const outputPos = vAdd(inputModule.drawingValues.position, inputModule.drawingValues.outputPositions[inputProp].socket);
+      const outputPos = vAdd(inputModule.dv.p, inputModule.dv.oup[inputProp].socket);
       mc.drawLine(mc.line(
         translateToPosition(inputPos),
         globalTranslate(outputPos)
@@ -40,16 +40,16 @@ const drawConnections = (mc, translateToPosition, globalTranslate, inputPosition
 export const drawRack = (rack, mc, ctx, globalTranslate) => {
   rack.forEach(moduleDef => {
     const {
-      position,
-      textPosition,
-      inPosition,
-      outPosition,
-      dimensions: [dx, dy],
-      inputPositions,
-      outputPositions,
-    } = moduleDef.drawingValues;
+      p,
+      tp: textPosition,
+      ip: inPosition,
+      op: outPosition,
+      d: [dx, dy],
+      inp: inputPositions,
+      oup: outputPositions,
+    } = moduleDef.dv;
 
-    const translateToPosition = compose(globalTranslate, vAdd(position));
+    const translateToPosition = compose(globalTranslate, vAdd(p));
 
     const modulePoints = [
       [0, 0],
@@ -85,7 +85,7 @@ export const drawRack = (rack, mc, ctx, globalTranslate) => {
   });
 
   rack.forEach(md => {
-    const translateToPosition = compose(globalTranslate, vAdd(md.drawingValues.position));
-    Object.entries(md.inputs).forEach(drawConnections(mc, translateToPosition, globalTranslate, md.drawingValues.inputPositions, rack));
+    const translateToPosition = compose(globalTranslate, vAdd(md.dv.p));
+    Object.entries(md.inputs).forEach(drawConnections(mc, translateToPosition, globalTranslate, md.dv.inp, rack));
   })
 }

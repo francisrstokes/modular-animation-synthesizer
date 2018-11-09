@@ -20,16 +20,15 @@ const groupedByTag = groupBy(({tag}) => tag, modules);
 const createModule = (moduleName, ctx, globalOffset) => {
   const md = {
     name: generateId(),
-    module: findModule(moduleName),
     moduleName,
     inputs:{},
-    drawingValues: null
+    dv: null
   };
 
-  const drawingValues = computeModuleDefDrawingValues(md, ctx);
-  md.drawingValues = {
-    position: vAdd(C, globalOffset.map(c => c * -1)),
-    ...drawingValues
+  const dv = computeModuleDefDrawingValues(md, ctx);
+  md.dv = {
+    p: vAdd(C, globalOffset.map(c => c * -1)),
+    ...dv
   };
 
   return md;

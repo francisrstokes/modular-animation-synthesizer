@@ -11,12 +11,12 @@ export const start = (props, clickPosition) => {
   } = props;
   let connectingFromInput = null;
   rack.some(md => {
-    const pos = globalTranslate(md.drawingValues.position);
-    const dim = md.drawingValues.dimensions;
+    const pos = globalTranslate(md.dv.p);
+    const dim = md.dv.d;
 
     if (pointInRect(pos, dim, clickPosition)) {
-      Object.entries(md.drawingValues.inputPositions).forEach(([inputKey, {socket}]) => {
-        if (pointInCircle(globalTranslate(socket, md.drawingValues.position), socketRadius, clickPosition)) {
+      Object.entries(md.dv.inp).forEach(([inputKey, {socket}]) => {
+        if (pointInCircle(globalTranslate(socket, md.dv.p), socketRadius, clickPosition)) {
           connectingFromInput = true;
 
           if (md.inputs[inputKey]) {
@@ -46,12 +46,12 @@ export const end = (props, clickPosition) => {
 
   if (isInConnectingInputMode) {
     return rack.some(md => {
-      const pos = globalTranslate(md.drawingValues.position);
-      const dim = md.drawingValues.dimensions;
+      const pos = globalTranslate(md.dv.p);
+      const dim = md.dv.d;
 
       if (pointInRect(pos, dim, clickPosition)) {
-        Object.entries(md.drawingValues.outputPositions).forEach(([outputKey, {socket}]) => {
-          if (pointInCircle(globalTranslate(socket, md.drawingValues.position), socketRadius, clickPosition)) {
+        Object.entries(md.dv.oup).forEach(([outputKey, {socket}]) => {
+          if (pointInCircle(globalTranslate(socket, md.dv.p), socketRadius, clickPosition)) {
             connectModules(connectingModuleId, md.name, connectingKey, outputKey);
 
             // if (checkForCycles(rack, modules)) {

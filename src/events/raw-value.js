@@ -11,8 +11,8 @@ export const mousedown = (props, clickPosition) => {
   } = props;
   if (isInRawMode) {
     return rack.some(md => {
-      Object.entries(md.drawingValues.inputPositions).forEach(([inputKey, {socket}]) => {
-        if (pointInCircle(globalTranslate(socket, md.drawingValues.position), socketRadius, clickPosition)) {
+      Object.entries(md.dv.inp).forEach(([inputKey, {socket}]) => {
+        if (pointInCircle(globalTranslate(socket, md.dv.p), socketRadius, clickPosition)) {
           const value = JSON.parse(rawValue);
           setRawValue(md.name, inputKey, value);
           return true;
