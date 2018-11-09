@@ -12,12 +12,15 @@ import {Vectorize} from './vector/Vectorize';
 import {DrawPolygon} from './drawing/DrawPolygon';
 import {DrawEllipse} from './drawing/DrawEllipse';
 import {MapRange} from './interpolation/MapRange';
+import {Step} from './interpolation/Step';
 import {Global} from './util/Global';
 import {Power} from './math/Power';
 import {Gate} from './util/Gate';
 import {DrawBackground} from './drawing/DrawBackground';
 import {Multi} from './interpolation/Multi';
 import {Arrayify} from './util/Arrayify';
+import {Constant} from './util/Constant';
+import {Flatten} from './util/Flatten';
 import {Style} from './drawing/Style';
 import {LengthOf} from './util/LengthOf';
 import {Spectrum} from './audio/Spectrum';
@@ -34,6 +37,9 @@ export const modules = [
   Spectrum,
   Multiply,
   Divide,
+  Flatten,
+  Constant,
+  Step,
   Add,
   Sqrt,
   Mod,
