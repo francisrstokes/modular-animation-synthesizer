@@ -1,6 +1,8 @@
 import {compose} from 'ramda';
 import {vAdd} from 'vec-la-fp';
 import {socketRadius} from '../constants';
+import { getTagColor } from './module-tag-colors';
+import { findModule } from '../modules';
 
 const drawOutputSockets = (mc, ctx, translateToPosition) => ([key, { text, socket }]) => {
   ctx.fillText(key, ...translateToPosition(text));
@@ -49,6 +51,7 @@ export const drawRack = (rack, mc, ctx, globalTranslate) => {
       oup: outputPositions,
     } = moduleDef.dv;
 
+    const tagColor = getTagColor(findModule(moduleDef.moduleName).tag);
     const translateToPosition = compose(globalTranslate, vAdd(p));
 
     const modulePoints = [
@@ -58,9 +61,21 @@ export const drawRack = (rack, mc, ctx, globalTranslate) => {
       [0, dy]
     ].map(v => translateToPosition(v));
 
+    const headerPoints = [
+      [0, 0],
+      [dx, 0],
+      [dx, 30],
+      [0, 30]
+    ].map(v => translateToPosition(v));
+
     mc.stroke([255, 255, 255, 1]);
+
     mc.fill([0,0,0,1]);
     mc.drawPolygon({points: modulePoints});
+
+    mc.fill(tagColor);
+    mc.drawPolygon({points: headerPoints});
+
     mc.fill([255, 255, 255, 0.5]);
 
     // Module Title
