@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {C} from '../../constants';
 import {groupBy} from 'ramda';
-import { findModule, modules } from '../../modules';
+import { modules } from '../../modules';
 import { AccordianTitle, AccordionList, AccordionItem } from './common/Accordian';
 import { useActiveClasses } from '../hooks/useActiveClasses';
 import { generateId } from '../../util/generate-id';
@@ -80,6 +80,19 @@ export const EditMode = connecter(({
   ctx,
   rack
 }) => {
+
+  useEffect(() => {
+    const handler = e => {
+      switch (e.key) {
+        case 'r': return enterRawMode();
+        case 'd': return enterDeleteMode();
+        default: return;
+      }
+    }
+    document.body.addEventListener('keydown', handler);
+    return () => document.body.removeEventListener('keydown', handler);
+  }, [enterDeleteMode]);
+
   return <React.Fragment>
     <AddModules ctx={ctx} addModule={addModule} globalOffset={globalOffset} />
     <br/>
