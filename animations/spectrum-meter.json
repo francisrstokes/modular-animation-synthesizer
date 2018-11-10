@@ -1,0 +1,908 @@
+[
+  {
+    "name": "Revz1ud",
+    "module": "Spectrum",
+    "moduleName": "Spectrum",
+    "inputs": {},
+    "dv": {
+      "p": [
+        169,
+        238.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        60,
+        45
+      ],
+      "d": [
+        179.21875,
+        120
+      ],
+      "inp": {},
+      "oup": {
+        "output": {
+          "text": [
+            80,
+            60
+          ],
+          "socket": [
+            65,
+            55
+          ]
+        },
+        "highestLow": {
+          "text": [
+            80,
+            75
+          ],
+          "socket": [
+            65,
+            70
+          ]
+        },
+        "highestMid": {
+          "text": [
+            80,
+            90
+          ],
+          "socket": [
+            65,
+            85
+          ]
+        },
+        "highestHigh": {
+          "text": [
+            80,
+            105
+          ],
+          "socket": [
+            65,
+            100
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Kj9m9c3",
+    "module": "Multi",
+    "moduleName": "Multi",
+    "inputs": {
+      "n": {
+        "type": "connection",
+        "module": "X63zayt",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        615,
+        355.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        108.34228515625,
+        45
+      ],
+      "d": [
+        190.04638671875,
+        75
+      ],
+      "inp": {
+        "n": {
+          "text": [
+            40,
+            60
+          ],
+          "socket": [
+            20,
+            55
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            128.34228515625,
+            60
+          ],
+          "socket": [
+            113.34228515625,
+            55
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "X63zayt",
+    "module": "LengthOf",
+    "moduleName": "LengthOf",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Revz1ud",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        417,
+        361.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        107.5,
+        45
+      ],
+      "d": [
+        189.2041015625,
+        75
+      ],
+      "inp": {
+        "x": {
+          "text": [
+            40,
+            60
+          ],
+          "socket": [
+            20,
+            55
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            127.5,
+            60
+          ],
+          "socket": [
+            112.5,
+            55
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Mqs1vhx",
+    "module": "Global",
+    "moduleName": "Global",
+    "inputs": {},
+    "dv": {
+      "p": [
+        489,
+        461.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        60,
+        45
+      ],
+      "d": [
+        129.1796875,
+        210
+      ],
+      "inp": {},
+      "oup": {
+        "w": {
+          "text": [
+            80,
+            60
+          ],
+          "socket": [
+            65,
+            55
+          ]
+        },
+        "h": {
+          "text": [
+            80,
+            75
+          ],
+          "socket": [
+            65,
+            70
+          ]
+        },
+        "wh": {
+          "text": [
+            80,
+            90
+          ],
+          "socket": [
+            65,
+            85
+          ]
+        },
+        "CV": {
+          "text": [
+            80,
+            105
+          ],
+          "socket": [
+            65,
+            100
+          ]
+        },
+        "BV": {
+          "text": [
+            80,
+            120
+          ],
+          "socket": [
+            65,
+            115
+          ]
+        },
+        "ZV": {
+          "text": [
+            80,
+            135
+          ],
+          "socket": [
+            65,
+            130
+          ]
+        },
+        "PI": {
+          "text": [
+            80,
+            150
+          ],
+          "socket": [
+            65,
+            145
+          ]
+        },
+        "TAU": {
+          "text": [
+            80,
+            165
+          ],
+          "socket": [
+            65,
+            160
+          ]
+        },
+        "one": {
+          "text": [
+            80,
+            180
+          ],
+          "socket": [
+            65,
+            175
+          ]
+        },
+        "zero": {
+          "text": [
+            80,
+            195
+          ],
+          "socket": [
+            65,
+            190
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Fs5wk41",
+    "module": "Vectorize",
+    "moduleName": "Vectorize",
+    "inputs": {
+      "y": {
+        "type": "connection",
+        "module": "P4y3d8q",
+        "property": "m"
+      },
+      "x": {
+        "type": "connection",
+        "module": "Sajonjr",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        1009,
+        340.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        107.5,
+        45
+      ],
+      "d": [
+        189.2041015625,
+        90
+      ],
+      "inp": {
+        "x": {
+          "text": [
+            40,
+            60
+          ],
+          "socket": [
+            20,
+            55
+          ]
+        },
+        "y": {
+          "text": [
+            40,
+            75
+          ],
+          "socket": [
+            20,
+            70
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            127.5,
+            60
+          ],
+          "socket": [
+            112.5,
+            55
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "P4y3d8q",
+    "module": "Multiply",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Mqs1vhx",
+        "property": "h"
+      },
+      "b": {
+        "type": "connection",
+        "module": "Revz1ud",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        814,
+        240.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        108.34228515625,
+        45
+      ],
+      "d": [
+        160.83740234375,
+        90
+      ],
+      "inp": {
+        "a": {
+          "text": [
+            40,
+            60
+          ],
+          "socket": [
+            20,
+            55
+          ]
+        },
+        "b": {
+          "text": [
+            40,
+            75
+          ],
+          "socket": [
+            20,
+            70
+          ]
+        }
+      },
+      "oup": {
+        "m": {
+          "text": [
+            128.34228515625,
+            60
+          ],
+          "socket": [
+            113.34228515625,
+            55
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Sajonjr",
+    "module": "Multiply",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Kj9m9c3",
+        "property": "output"
+      },
+      "b": {
+        "type": "connection",
+        "module": "Mqs1vhx",
+        "property": "w"
+      }
+    },
+    "dv": {
+      "p": [
+        833,
+        383.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        108.34228515625,
+        45
+      ],
+      "d": [
+        160.83740234375,
+        90
+      ],
+      "inp": {
+        "a": {
+          "text": [
+            40,
+            60
+          ],
+          "socket": [
+            20,
+            55
+          ]
+        },
+        "b": {
+          "text": [
+            40,
+            75
+          ],
+          "socket": [
+            20,
+            70
+          ]
+        }
+      },
+      "oup": {
+        "m": {
+          "text": [
+            128.34228515625,
+            60
+          ],
+          "socket": [
+            113.34228515625,
+            55
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Ynsfpoh",
+    "module": "DrawBackground",
+    "moduleName": "DrawBackground",
+    "inputs": {
+      "gateIn": {
+        "type": "connection",
+        "module": "Fs5wk41",
+        "property": "output"
+      },
+      "fillR": {
+        "type": "value",
+        "value": 0
+      },
+      "fillG": {
+        "type": "value",
+        "value": 0
+      },
+      "fillB": {
+        "type": "value",
+        "value": 0
+      }
+    },
+    "dv": {
+      "p": [
+        1242,
+        395.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        141.7041015625,
+        45
+      ],
+      "d": [
+        235.07568359375,
+        135
+      ],
+      "inp": {
+        "gateIn": {
+          "text": [
+            40,
+            60
+          ],
+          "socket": [
+            20,
+            55
+          ]
+        },
+        "fillR": {
+          "text": [
+            40,
+            75
+          ],
+          "socket": [
+            20,
+            70
+          ]
+        },
+        "fillG": {
+          "text": [
+            40,
+            90
+          ],
+          "socket": [
+            20,
+            85
+          ]
+        },
+        "fillB": {
+          "text": [
+            40,
+            105
+          ],
+          "socket": [
+            20,
+            100
+          ]
+        },
+        "fillA": {
+          "text": [
+            40,
+            120
+          ],
+          "socket": [
+            20,
+            115
+          ]
+        }
+      },
+      "oup": {
+        "gateOut": {
+          "text": [
+            161.7041015625,
+            60
+          ],
+          "socket": [
+            146.7041015625,
+            55
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Pwne9pg",
+    "module": "Style",
+    "moduleName": "Style",
+    "inputs": {
+      "gateIn": {
+        "type": "connection",
+        "module": "Ynsfpoh",
+        "property": "gateOut"
+      },
+      "fillR": {
+        "type": "value",
+        "value": 1
+      },
+      "fillG": {
+        "type": "value",
+        "value": 1
+      },
+      "fillB": {
+        "type": "value",
+        "value": 1
+      },
+      "strokeA": {
+        "type": "value",
+        "value": 0
+      }
+    },
+    "dv": {
+      "p": [
+        1494,
+        393.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        187.2607421875,
+        45
+      ],
+      "d": [
+        280.63232421875,
+        210
+      ],
+      "inp": {
+        "gateIn": {
+          "text": [
+            40,
+            60
+          ],
+          "socket": [
+            20,
+            55
+          ]
+        },
+        "fillR": {
+          "text": [
+            40,
+            75
+          ],
+          "socket": [
+            20,
+            70
+          ]
+        },
+        "fillG": {
+          "text": [
+            40,
+            90
+          ],
+          "socket": [
+            20,
+            85
+          ]
+        },
+        "fillB": {
+          "text": [
+            40,
+            105
+          ],
+          "socket": [
+            20,
+            100
+          ]
+        },
+        "fillA": {
+          "text": [
+            40,
+            120
+          ],
+          "socket": [
+            20,
+            115
+          ]
+        },
+        "strokeR": {
+          "text": [
+            40,
+            135
+          ],
+          "socket": [
+            20,
+            130
+          ]
+        },
+        "strokeG": {
+          "text": [
+            40,
+            150
+          ],
+          "socket": [
+            20,
+            145
+          ]
+        },
+        "strokeB": {
+          "text": [
+            40,
+            165
+          ],
+          "socket": [
+            20,
+            160
+          ]
+        },
+        "strokeA": {
+          "text": [
+            40,
+            180
+          ],
+          "socket": [
+            20,
+            175
+          ]
+        },
+        "strokeWeight": {
+          "text": [
+            40,
+            195
+          ],
+          "socket": [
+            20,
+            190
+          ]
+        }
+      },
+      "oup": {
+        "gateOut": {
+          "text": [
+            207.2607421875,
+            60
+          ],
+          "socket": [
+            192.2607421875,
+            55
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Z2efor5",
+    "module": "DrawEllipse",
+    "moduleName": "DrawEllipse",
+    "inputs": {
+      "v": {
+        "type": "connection",
+        "module": "Pwne9pg",
+        "property": "gateOut"
+      },
+      "r": {
+        "type": "value",
+        "value": [
+          10,
+          10
+        ]
+      }
+    },
+    "dv": {
+      "p": [
+        1832,
+        278.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        150.8447265625,
+        45
+      ],
+      "d": [
+        224.2138671875,
+        120
+      ],
+      "inp": {
+        "multiply": {
+          "text": [
+            40,
+            60
+          ],
+          "socket": [
+            20,
+            55
+          ]
+        },
+        "v": {
+          "text": [
+            40,
+            75
+          ],
+          "socket": [
+            20,
+            70
+          ]
+        },
+        "r": {
+          "text": [
+            40,
+            90
+          ],
+          "socket": [
+            20,
+            85
+          ]
+        },
+        "a": {
+          "text": [
+            40,
+            105
+          ],
+          "socket": [
+            20,
+            100
+          ]
+        }
+      },
+      "oup": {
+        "done": {
+          "text": [
+            170.8447265625,
+            60
+          ],
+          "socket": [
+            155.8447265625,
+            55
+          ]
+        }
+      }
+    }
+  }
+]

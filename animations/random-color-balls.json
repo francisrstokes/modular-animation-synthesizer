@@ -1,0 +1,1493 @@
+[
+  {
+    "name": "R19fmnk",
+    "module": {
+      "name": "Style",
+      "tag": "Drawing",
+      "inputs": {
+        "gateIn": "any",
+        "fillR": "Number",
+        "fillG": "Number",
+        "fillB": "Number",
+        "fillA": "Number",
+        "strokeR": "Number",
+        "strokeG": "Number",
+        "strokeB": "Number",
+        "strokeA": "Number",
+        "strokeWeight": "Number"
+      },
+      "outputs": {
+        "gateOut": "any"
+      }
+    },
+    "moduleName": "Style",
+    "inputs": {
+      "strokeA": {
+        "type": "value",
+        "value": 0
+      },
+      "fillR": {
+        "type": "connection",
+        "module": "U80x5ym",
+        "property": "output"
+      },
+      "fillG": {
+        "type": "connection",
+        "module": "Ultfqfz",
+        "property": "output"
+      },
+      "fillB": {
+        "type": "connection",
+        "module": "Rup48xh",
+        "property": "output"
+      },
+      "fillA": {
+        "type": "connection",
+        "module": "Boidkv8",
+        "property": "output"
+      },
+      "gateIn": {
+        "type": "connection",
+        "module": "Okjn4qn",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1324,
+        555.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        191.2607421875,
+        45
+      ],
+      "d": [
+        288.63232421875,
+        200
+      ],
+      "inp": {
+        "gateIn": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "fillR": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "fillG": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        },
+        "fillB": {
+          "text": [
+            44,
+            105.5
+          ],
+          "socket": [
+            22,
+            102
+          ]
+        },
+        "fillA": {
+          "text": [
+            44,
+            119.5
+          ],
+          "socket": [
+            22,
+            116
+          ]
+        },
+        "strokeR": {
+          "text": [
+            44,
+            133.5
+          ],
+          "socket": [
+            22,
+            130
+          ]
+        },
+        "strokeG": {
+          "text": [
+            44,
+            147.5
+          ],
+          "socket": [
+            22,
+            144
+          ]
+        },
+        "strokeB": {
+          "text": [
+            44,
+            161.5
+          ],
+          "socket": [
+            22,
+            158
+          ]
+        },
+        "strokeA": {
+          "text": [
+            44,
+            175.5
+          ],
+          "socket": [
+            22,
+            172
+          ]
+        },
+        "strokeWeight": {
+          "text": [
+            44,
+            189.5
+          ],
+          "socket": [
+            22,
+            186
+          ]
+        }
+      },
+      "oup": {
+        "gateOut": {
+          "text": [
+            219.2607421875,
+            63.5
+          ],
+          "socket": [
+            198.2607421875,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Eifohxy",
+    "module": {
+      "name": "DrawEllipse",
+      "tag": "Drawing",
+      "inputs": {
+        "multiply": "any",
+        "v": "Vector",
+        "r": "Number",
+        "a": "Number"
+      },
+      "outputs": {
+        "done": "Number"
+      }
+    },
+    "moduleName": "DrawEllipse",
+    "inputs": {
+      "r": {
+        "type": "connection",
+        "module": "Pw79sav",
+        "property": "output"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Ztgrnoz",
+        "property": "gateOut"
+      }
+    },
+    "dv": {
+      "p": [
+        2053,
+        781.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        154.8447265625,
+        45
+      ],
+      "d": [
+        232.2138671875,
+        116
+      ],
+      "inp": {
+        "multiply": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "v": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "r": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        },
+        "a": {
+          "text": [
+            44,
+            105.5
+          ],
+          "socket": [
+            22,
+            102
+          ]
+        }
+      },
+      "oup": {
+        "done": {
+          "text": [
+            182.8447265625,
+            63.5
+          ],
+          "socket": [
+            161.8447265625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Ztgrnoz",
+    "module": {
+      "name": "DrawBackground",
+      "tag": "Drawing",
+      "inputs": {
+        "gateIn": "any",
+        "fillR": "Number",
+        "fillG": "Number",
+        "fillB": "Number",
+        "fillA": "Number"
+      },
+      "outputs": {
+        "gateOut": "any"
+      }
+    },
+    "moduleName": "DrawBackground",
+    "inputs": {
+      "fillR": {
+        "type": "value",
+        "value": 0
+      },
+      "fillG": {
+        "type": "value",
+        "value": 0
+      },
+      "fillB": {
+        "type": "value",
+        "value": 0
+      },
+      "fillA": {
+        "type": "value",
+        "value": 0.06
+      },
+      "gateIn": {
+        "type": "connection",
+        "module": "R19fmnk",
+        "property": "gateOut"
+      }
+    },
+    "dv": {
+      "p": [
+        1760,
+        680.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        145.7041015625,
+        45
+      ],
+      "d": [
+        243.07568359375,
+        130
+      ],
+      "inp": {
+        "gateIn": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "fillR": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "fillG": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        },
+        "fillB": {
+          "text": [
+            44,
+            105.5
+          ],
+          "socket": [
+            22,
+            102
+          ]
+        },
+        "fillA": {
+          "text": [
+            44,
+            119.5
+          ],
+          "socket": [
+            22,
+            116
+          ]
+        }
+      },
+      "oup": {
+        "gateOut": {
+          "text": [
+            173.7041015625,
+            63.5
+          ],
+          "socket": [
+            152.7041015625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "T2oex07",
+    "module": {
+      "name": "Global",
+      "tag": "Misc",
+      "inputs": {},
+      "outputs": {
+        "w": "Number",
+        "h": "Number",
+        "wh": "Vector",
+        "CV": "Vector",
+        "BV": "Vector",
+        "ZV": "Vector",
+        "PI": "Number",
+        "TAU": "Number",
+        "one": "Number",
+        "zero": "Number"
+      }
+    },
+    "moduleName": "Global",
+    "inputs": {},
+    "dv": {
+      "p": [
+        417,
+        494.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        60,
+        45
+      ],
+      "d": [
+        133.1796875,
+        200
+      ],
+      "inp": {},
+      "oup": {
+        "w": {
+          "text": [
+            88,
+            63.5
+          ],
+          "socket": [
+            67,
+            60
+          ]
+        },
+        "h": {
+          "text": [
+            88,
+            77.5
+          ],
+          "socket": [
+            67,
+            74
+          ]
+        },
+        "wh": {
+          "text": [
+            88,
+            91.5
+          ],
+          "socket": [
+            67,
+            88
+          ]
+        },
+        "CV": {
+          "text": [
+            88,
+            105.5
+          ],
+          "socket": [
+            67,
+            102
+          ]
+        },
+        "BV": {
+          "text": [
+            88,
+            119.5
+          ],
+          "socket": [
+            67,
+            116
+          ]
+        },
+        "ZV": {
+          "text": [
+            88,
+            133.5
+          ],
+          "socket": [
+            67,
+            130
+          ]
+        },
+        "PI": {
+          "text": [
+            88,
+            147.5
+          ],
+          "socket": [
+            67,
+            144
+          ]
+        },
+        "TAU": {
+          "text": [
+            88,
+            161.5
+          ],
+          "socket": [
+            67,
+            158
+          ]
+        },
+        "one": {
+          "text": [
+            88,
+            175.5
+          ],
+          "socket": [
+            67,
+            172
+          ]
+        },
+        "zero": {
+          "text": [
+            88,
+            189.5
+          ],
+          "socket": [
+            67,
+            186
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Vxm9gwa",
+    "module": {
+      "name": "Random",
+      "tag": "Random and Noise",
+      "inputs": {},
+      "outputs": {
+        "output": "Number"
+      }
+    },
+    "moduleName": "Random",
+    "inputs": {},
+    "dv": {
+      "p": [
+        411,
+        388.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        60,
+        45
+      ],
+      "d": [
+        145.7041015625,
+        74
+      ],
+      "inp": {},
+      "oup": {
+        "output": {
+          "text": [
+            88,
+            63.5
+          ],
+          "socket": [
+            67,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Okjn4qn",
+    "module": {
+      "name": "Vectorize",
+      "tag": "Vector",
+      "inputs": {
+        "x": "Number",
+        "y": "Number"
+      },
+      "outputs": {
+        "output": "Vector"
+      }
+    },
+    "moduleName": "Vectorize",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Be9wedh",
+        "property": "output"
+      },
+      "y": {
+        "type": "connection",
+        "module": "Bulhva4",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1011,
+        451.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        111.5,
+        45
+      ],
+      "d": [
+        197.2041015625,
+        88
+      ],
+      "inp": {
+        "x": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "y": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            139.5,
+            63.5
+          ],
+          "socket": [
+            118.5,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Be9wedh",
+    "module": {
+      "name": "MapRange",
+      "tag": "Interpolation",
+      "inputs": {
+        "fromA": "Number",
+        "fromB": "Number",
+        "toA": "Number",
+        "toB": "Number",
+        "value": "Number"
+      },
+      "outputs": {
+        "output": "Number"
+      }
+    },
+    "moduleName": "MapRange",
+    "inputs": {
+      "value": {
+        "type": "connection",
+        "module": "Vxm9gwa",
+        "property": "output"
+      },
+      "fromA": {
+        "type": "value",
+        "value": 0
+      },
+      "fromB": {
+        "type": "value",
+        "value": 1
+      },
+      "toA": {
+        "type": "value",
+        "value": 0
+      },
+      "toB": {
+        "type": "connection",
+        "module": "T2oex07",
+        "property": "w"
+      }
+    },
+    "dv": {
+      "p": [
+        628,
+        430.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        144.0048828125,
+        45
+      ],
+      "d": [
+        229.708984375,
+        130
+      ],
+      "inp": {
+        "fromA": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "fromB": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "toA": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        },
+        "toB": {
+          "text": [
+            44,
+            105.5
+          ],
+          "socket": [
+            22,
+            102
+          ]
+        },
+        "value": {
+          "text": [
+            44,
+            119.5
+          ],
+          "socket": [
+            22,
+            116
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            172.0048828125,
+            63.5
+          ],
+          "socket": [
+            151.0048828125,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Bulhva4",
+    "module": {
+      "name": "MapRange",
+      "tag": "Interpolation",
+      "inputs": {
+        "fromA": "Number",
+        "fromB": "Number",
+        "toA": "Number",
+        "toB": "Number",
+        "value": "Number"
+      },
+      "outputs": {
+        "output": "Number"
+      }
+    },
+    "moduleName": "MapRange",
+    "inputs": {
+      "toA": {
+        "type": "value",
+        "value": 0
+      },
+      "fromA": {
+        "type": "value",
+        "value": 0
+      },
+      "fromB": {
+        "type": "value",
+        "value": 1
+      },
+      "value": {
+        "type": "connection",
+        "module": "Ildna4p",
+        "property": "output"
+      },
+      "toB": {
+        "type": "connection",
+        "module": "T2oex07",
+        "property": "h"
+      }
+    },
+    "dv": {
+      "p": [
+        626,
+        578.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        144.0048828125,
+        45
+      ],
+      "d": [
+        229.708984375,
+        130
+      ],
+      "inp": {
+        "fromA": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "fromB": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "toA": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        },
+        "toB": {
+          "text": [
+            44,
+            105.5
+          ],
+          "socket": [
+            22,
+            102
+          ]
+        },
+        "value": {
+          "text": [
+            44,
+            119.5
+          ],
+          "socket": [
+            22,
+            116
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            172.0048828125,
+            63.5
+          ],
+          "socket": [
+            151.0048828125,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Ildna4p",
+    "module": {
+      "name": "Random",
+      "tag": "Random and Noise",
+      "inputs": {},
+      "outputs": {
+        "output": "Number"
+      }
+    },
+    "moduleName": "Random",
+    "inputs": {},
+    "dv": {
+      "p": [
+        412,
+        727.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        60,
+        45
+      ],
+      "d": [
+        145.7041015625,
+        74
+      ],
+      "inp": {},
+      "oup": {
+        "output": {
+          "text": [
+            88,
+            63.5
+          ],
+          "socket": [
+            67,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Ultfqfz",
+    "module": {
+      "name": "Random",
+      "tag": "Random and Noise",
+      "inputs": {},
+      "outputs": {
+        "output": "Number"
+      }
+    },
+    "moduleName": "Random",
+    "inputs": {},
+    "dv": {
+      "p": [
+        1037,
+        668.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        60,
+        45
+      ],
+      "d": [
+        145.7041015625,
+        74
+      ],
+      "inp": {},
+      "oup": {
+        "output": {
+          "text": [
+            88,
+            63.5
+          ],
+          "socket": [
+            67,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Rup48xh",
+    "module": {
+      "name": "Random",
+      "tag": "Random and Noise",
+      "inputs": {},
+      "outputs": {
+        "output": "Number"
+      }
+    },
+    "moduleName": "Random",
+    "inputs": {},
+    "dv": {
+      "p": [
+        1037,
+        755.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        60,
+        45
+      ],
+      "d": [
+        145.7041015625,
+        74
+      ],
+      "inp": {},
+      "oup": {
+        "output": {
+          "text": [
+            88,
+            63.5
+          ],
+          "socket": [
+            67,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "U80x5ym",
+    "module": {
+      "name": "Random",
+      "tag": "Random and Noise",
+      "inputs": {},
+      "outputs": {
+        "output": "Number"
+      }
+    },
+    "moduleName": "Random",
+    "inputs": {},
+    "dv": {
+      "p": [
+        1038,
+        574.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        60,
+        45
+      ],
+      "d": [
+        145.7041015625,
+        74
+      ],
+      "inp": {},
+      "oup": {
+        "output": {
+          "text": [
+            88,
+            63.5
+          ],
+          "socket": [
+            67,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Boidkv8",
+    "module": {
+      "name": "Random",
+      "tag": "Random and Noise",
+      "inputs": {},
+      "outputs": {
+        "output": "Number"
+      }
+    },
+    "moduleName": "Random",
+    "inputs": {},
+    "dv": {
+      "p": [
+        1039,
+        844.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        60,
+        45
+      ],
+      "d": [
+        145.7041015625,
+        74
+      ],
+      "inp": {},
+      "oup": {
+        "output": {
+          "text": [
+            88,
+            63.5
+          ],
+          "socket": [
+            67,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Xeeif3r",
+    "module": {
+      "name": "Random",
+      "tag": "Random and Noise",
+      "inputs": {},
+      "outputs": {
+        "output": "Number"
+      }
+    },
+    "moduleName": "Random",
+    "inputs": {},
+    "dv": {
+      "p": [
+        1036,
+        934.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        60,
+        45
+      ],
+      "d": [
+        145.7041015625,
+        74
+      ],
+      "inp": {},
+      "oup": {
+        "output": {
+          "text": [
+            88,
+            63.5
+          ],
+          "socket": [
+            67,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Pw79sav",
+    "module": {
+      "name": "Vectorize",
+      "tag": "Vector",
+      "inputs": {
+        "x": "Number",
+        "y": "Number"
+      },
+      "outputs": {
+        "output": "Vector"
+      }
+    },
+    "moduleName": "Vectorize",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Lztzyw8",
+        "property": "m"
+      },
+      "y": {
+        "type": "connection",
+        "module": "Lztzyw8",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        1575,
+        933.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        111.5,
+        45
+      ],
+      "d": [
+        197.2041015625,
+        88
+      ],
+      "inp": {
+        "x": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "y": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            139.5,
+            63.5
+          ],
+          "socket": [
+            118.5,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Lztzyw8",
+    "module": {
+      "name": "Multiply",
+      "tag": "Math",
+      "inputs": {
+        "a": "Number",
+        "b": "Number"
+      },
+      "outputs": {
+        "m": "Number"
+      }
+    },
+    "moduleName": "Multiply",
+    "inputs": {
+      "b": {
+        "type": "value",
+        "value": 200
+      },
+      "a": {
+        "type": "connection",
+        "module": "Xzprc0w",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        1389,
+        934.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        112.34228515625,
+        45
+      ],
+      "d": [
+        168.83740234375,
+        88
+      ],
+      "inp": {
+        "a": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "b": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "m": {
+          "text": [
+            140.34228515625,
+            63.5
+          ],
+          "socket": [
+            119.34228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Xzprc0w",
+    "module": {
+      "name": "Power",
+      "tag": "Math",
+      "inputs": {
+        "a": "Number",
+        "b": "Number"
+      },
+      "outputs": {
+        "m": "Number"
+      }
+    },
+    "moduleName": "Power",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Xeeif3r",
+        "property": "output"
+      },
+      "b": {
+        "type": "value",
+        "value": 2
+      }
+    },
+    "dv": {
+      "p": [
+        1200,
+        934.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        112.34228515625,
+        45
+      ],
+      "d": [
+        168.83740234375,
+        88
+      ],
+      "inp": {
+        "a": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "b": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "m": {
+          "text": [
+            140.34228515625,
+            63.5
+          ],
+          "socket": [
+            119.34228515625,
+            60
+          ]
+        }
+      }
+    }
+  }
+]
