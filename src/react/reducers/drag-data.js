@@ -1,3 +1,7 @@
+import {view, lensProp, compose} from 'ramda';
+
+const root = lensProp('dragData');
+
 const initialValue = {
   moduleId: null,
   offset: [0,0]
@@ -14,6 +18,6 @@ export default (state = initialValue, action) => {
 };
 
 export const selectors = {
-  draggedModuleId: state => state.dragData.moduleId,
-  dragOffset: state => state.dragData.offset,
+  draggedModuleId: view(compose(root, lensProp('moduleId'))),
+  dragOffset: view(compose(root, lensProp('offset'))),
 };

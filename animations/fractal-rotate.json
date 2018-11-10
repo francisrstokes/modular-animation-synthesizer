@@ -1,0 +1,3088 @@
+[
+  {
+    "name": "H3etu9v",
+    "moduleName": "Polygon",
+    "inputs": {
+      "sides": {
+        "type": "connection",
+        "module": "Pyyhmgq",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        -66,
+        -459.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        139.01708984375,
+        45
+      ],
+      "d": [
+        223.0439453125,
+        74
+      ],
+      "inp": {
+        "sides": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        }
+      },
+      "oup": {
+        "points": {
+          "text": [
+            167.01708984375,
+            63.5
+          ],
+          "socket": [
+            146.01708984375,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Pyyhmgq",
+    "moduleName": "Constant",
+    "inputs": {
+      "x": {
+        "type": "value",
+        "value": 5
+      }
+    },
+    "dv": {
+      "p": [
+        -298,
+        -513.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        111.5,
+        45
+      ],
+      "d": [
+        197.2041015625,
+        74
+      ],
+      "inp": {
+        "x": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            139.5,
+            63.5
+          ],
+          "socket": [
+            118.5,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Y5tt81v",
+    "moduleName": "VectorScale",
+    "inputs": {
+      "scale": {
+        "type": "connection",
+        "module": "Ghnmrjv",
+        "property": "output"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Aos3nft",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1023,
+        101.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        139.01708984375,
+        45
+      ],
+      "d": [
+        224.72119140625,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "scale": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            167.01708984375,
+            63.5
+          ],
+          "socket": [
+            146.01708984375,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Y36m0ly",
+    "moduleName": "VectorTranslate",
+    "inputs": {
+      "v": {
+        "type": "connection",
+        "module": "Y5tt81v",
+        "property": "output"
+      },
+      "tv": {
+        "type": "connection",
+        "module": "Lv5ldpg",
+        "property": "CV"
+      }
+    },
+    "dv": {
+      "p": [
+        1273,
+        102.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        115.66748046875,
+        45
+      ],
+      "d": [
+        201.37158203125,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "tv": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            143.66748046875,
+            63.5
+          ],
+          "socket": [
+            122.66748046875,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Ghnmrjv",
+    "moduleName": "Constant",
+    "inputs": {
+      "x": {
+        "type": "value",
+        "value": [
+          200,
+          200
+        ]
+      }
+    },
+    "dv": {
+      "p": [
+        302,
+        233.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        111.5,
+        45
+      ],
+      "d": [
+        197.2041015625,
+        74
+      ],
+      "inp": {
+        "x": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            139.5,
+            63.5
+          ],
+          "socket": [
+            118.5,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Lv5ldpg",
+    "moduleName": "Global",
+    "inputs": {},
+    "dv": {
+      "p": [
+        967,
+        280.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        60,
+        45
+      ],
+      "d": [
+        133.1796875,
+        200
+      ],
+      "inp": {},
+      "oup": {
+        "w": {
+          "text": [
+            88,
+            63.5
+          ],
+          "socket": [
+            67,
+            60
+          ]
+        },
+        "h": {
+          "text": [
+            88,
+            77.5
+          ],
+          "socket": [
+            67,
+            74
+          ]
+        },
+        "wh": {
+          "text": [
+            88,
+            91.5
+          ],
+          "socket": [
+            67,
+            88
+          ]
+        },
+        "CV": {
+          "text": [
+            88,
+            105.5
+          ],
+          "socket": [
+            67,
+            102
+          ]
+        },
+        "BV": {
+          "text": [
+            88,
+            119.5
+          ],
+          "socket": [
+            67,
+            116
+          ]
+        },
+        "ZV": {
+          "text": [
+            88,
+            133.5
+          ],
+          "socket": [
+            67,
+            130
+          ]
+        },
+        "PI": {
+          "text": [
+            88,
+            147.5
+          ],
+          "socket": [
+            67,
+            144
+          ]
+        },
+        "TAU": {
+          "text": [
+            88,
+            161.5
+          ],
+          "socket": [
+            67,
+            158
+          ]
+        },
+        "one": {
+          "text": [
+            88,
+            175.5
+          ],
+          "socket": [
+            67,
+            172
+          ]
+        },
+        "zero": {
+          "text": [
+            88,
+            189.5
+          ],
+          "socket": [
+            67,
+            186
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "A6prcse",
+    "moduleName": "VectorTranslate",
+    "inputs": {
+      "tv": {
+        "type": "connection",
+        "module": "Y36m0ly",
+        "property": "output"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Y185st0",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1439,
+        -31.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        115.66748046875,
+        45
+      ],
+      "d": [
+        201.37158203125,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "tv": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            143.66748046875,
+            63.5
+          ],
+          "socket": [
+            122.66748046875,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Y185st0",
+    "moduleName": "VectorScale",
+    "inputs": {
+      "scale": {
+        "type": "connection",
+        "module": "Qwhff0y",
+        "property": "output"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Gad4by0",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1128,
+        -29.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        139.01708984375,
+        45
+      ],
+      "d": [
+        224.72119140625,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "scale": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            167.01708984375,
+            63.5
+          ],
+          "socket": [
+            146.01708984375,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Qwhff0y",
+    "moduleName": "VectorScale",
+    "inputs": {
+      "scale": {
+        "type": "connection",
+        "module": "Ghnmrjv",
+        "property": "output"
+      },
+      "v": {
+        "type": "value",
+        "value": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    "dv": {
+      "p": [
+        484,
+        128.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        139.01708984375,
+        45
+      ],
+      "d": [
+        224.72119140625,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "scale": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            167.01708984375,
+            63.5
+          ],
+          "socket": [
+            146.01708984375,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Nexd9qr",
+    "moduleName": "VectorScale",
+    "inputs": {
+      "scale": {
+        "type": "connection",
+        "module": "Qwhff0y",
+        "property": "output"
+      },
+      "v": {
+        "type": "value",
+        "value": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    "dv": {
+      "p": [
+        665,
+        12.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        139.01708984375,
+        45
+      ],
+      "d": [
+        224.72119140625,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "scale": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            167.01708984375,
+            63.5
+          ],
+          "socket": [
+            146.01708984375,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Q2jfcbo",
+    "moduleName": "VectorScale",
+    "inputs": {
+      "scale": {
+        "type": "connection",
+        "module": "Nexd9qr",
+        "property": "output"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Hhrxbh8",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1308,
+        -207.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        139.01708984375,
+        45
+      ],
+      "d": [
+        224.72119140625,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "scale": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            167.01708984375,
+            63.5
+          ],
+          "socket": [
+            146.01708984375,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Nkhdth4",
+    "moduleName": "VectorTranslate",
+    "inputs": {
+      "v": {
+        "type": "connection",
+        "module": "Q2jfcbo",
+        "property": "output"
+      },
+      "tv": {
+        "type": "connection",
+        "module": "N530cuk",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1774,
+        -229.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        115.66748046875,
+        45
+      ],
+      "d": [
+        201.37158203125,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "tv": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            143.66748046875,
+            63.5
+          ],
+          "socket": [
+            122.66748046875,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "N530cuk",
+    "moduleName": "Flatten",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "A6prcse",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1587,
+        -122.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        111.5,
+        45
+      ],
+      "d": [
+        197.2041015625,
+        74
+      ],
+      "inp": {
+        "x": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            139.5,
+            63.5
+          ],
+          "socket": [
+            118.5,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "W758n49",
+    "moduleName": "Style",
+    "inputs": {
+      "gateIn": {
+        "type": "connection",
+        "module": "Bv0b8y0",
+        "property": "gateOut"
+      },
+      "fillA": {
+        "type": "value",
+        "value": 0.3
+      },
+      "fillR": {
+        "type": "value",
+        "value": 1
+      },
+      "fillG": {
+        "type": "value",
+        "value": 1
+      },
+      "fillB": {
+        "type": "value",
+        "value": 1
+      },
+      "strokeA": {
+        "type": "value",
+        "value": 0
+      }
+    },
+    "dv": {
+      "p": [
+        3362,
+        -376.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        191.2607421875,
+        45
+      ],
+      "d": [
+        288.63232421875,
+        200
+      ],
+      "inp": {
+        "gateIn": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "fillR": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "fillG": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        },
+        "fillB": {
+          "text": [
+            44,
+            105.5
+          ],
+          "socket": [
+            22,
+            102
+          ]
+        },
+        "fillA": {
+          "text": [
+            44,
+            119.5
+          ],
+          "socket": [
+            22,
+            116
+          ]
+        },
+        "strokeR": {
+          "text": [
+            44,
+            133.5
+          ],
+          "socket": [
+            22,
+            130
+          ]
+        },
+        "strokeG": {
+          "text": [
+            44,
+            147.5
+          ],
+          "socket": [
+            22,
+            144
+          ]
+        },
+        "strokeB": {
+          "text": [
+            44,
+            161.5
+          ],
+          "socket": [
+            22,
+            158
+          ]
+        },
+        "strokeA": {
+          "text": [
+            44,
+            175.5
+          ],
+          "socket": [
+            22,
+            172
+          ]
+        },
+        "strokeWeight": {
+          "text": [
+            44,
+            189.5
+          ],
+          "socket": [
+            22,
+            186
+          ]
+        }
+      },
+      "oup": {
+        "gateOut": {
+          "text": [
+            219.2607421875,
+            63.5
+          ],
+          "socket": [
+            198.2607421875,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Bv0b8y0",
+    "moduleName": "DrawBackground",
+    "inputs": {
+      "fillR": {
+        "type": "value",
+        "value": 0
+      },
+      "fillG": {
+        "type": "value",
+        "value": 0
+      },
+      "fillB": {
+        "type": "value",
+        "value": 0
+      },
+      "gateIn": {
+        "type": "connection",
+        "module": "K2na8qo",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        3100,
+        -371.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        145.7041015625,
+        45
+      ],
+      "d": [
+        243.07568359375,
+        130
+      ],
+      "inp": {
+        "gateIn": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "fillR": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "fillG": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        },
+        "fillB": {
+          "text": [
+            44,
+            105.5
+          ],
+          "socket": [
+            22,
+            102
+          ]
+        },
+        "fillA": {
+          "text": [
+            44,
+            119.5
+          ],
+          "socket": [
+            22,
+            116
+          ]
+        }
+      },
+      "oup": {
+        "gateOut": {
+          "text": [
+            173.7041015625,
+            63.5
+          ],
+          "socket": [
+            152.7041015625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Jmb9lza",
+    "moduleName": "DrawEllipse",
+    "inputs": {
+      "v": {
+        "type": "connection",
+        "module": "W758n49",
+        "property": "gateOut"
+      },
+      "r": {
+        "type": "value",
+        "value": [
+          5,
+          5
+        ]
+      }
+    },
+    "dv": {
+      "p": [
+        3679,
+        -475.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        154.8447265625,
+        45
+      ],
+      "d": [
+        232.2138671875,
+        116
+      ],
+      "inp": {
+        "multiply": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "v": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "r": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        },
+        "a": {
+          "text": [
+            44,
+            105.5
+          ],
+          "socket": [
+            22,
+            102
+          ]
+        }
+      },
+      "oup": {
+        "done": {
+          "text": [
+            182.8447265625,
+            63.5
+          ],
+          "socket": [
+            161.8447265625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Ad6ac2w",
+    "moduleName": "Flatten",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Nkhdth4",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1985,
+        -222.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        111.5,
+        45
+      ],
+      "d": [
+        197.2041015625,
+        74
+      ],
+      "inp": {
+        "x": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            139.5,
+            63.5
+          ],
+          "socket": [
+            118.5,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Dhw8e1n",
+    "moduleName": "VectorScale",
+    "inputs": {
+      "scale": {
+        "type": "connection",
+        "module": "Nexd9qr",
+        "property": "output"
+      },
+      "v": {
+        "type": "value",
+        "value": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    "dv": {
+      "p": [
+        875,
+        -117.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        139.01708984375,
+        45
+      ],
+      "d": [
+        224.72119140625,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "scale": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            167.01708984375,
+            63.5
+          ],
+          "socket": [
+            146.01708984375,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Vsbsjcj",
+    "moduleName": "VectorScale",
+    "inputs": {
+      "scale": {
+        "type": "connection",
+        "module": "Dhw8e1n",
+        "property": "output"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Yp0aq1d",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1472,
+        -346.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        139.01708984375,
+        45
+      ],
+      "d": [
+        224.72119140625,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "scale": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            167.01708984375,
+            63.5
+          ],
+          "socket": [
+            146.01708984375,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Ev5mdme",
+    "moduleName": "VectorTranslate",
+    "inputs": {
+      "v": {
+        "type": "connection",
+        "module": "Vsbsjcj",
+        "property": "output"
+      },
+      "tv": {
+        "type": "connection",
+        "module": "Ad6ac2w",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        2160,
+        -344.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        115.66748046875,
+        45
+      ],
+      "d": [
+        201.37158203125,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "tv": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            143.66748046875,
+            63.5
+          ],
+          "socket": [
+            122.66748046875,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Aylf3x0",
+    "moduleName": "Flatten",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Ev5mdme",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        2370,
+        -343.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        111.5,
+        45
+      ],
+      "d": [
+        197.2041015625,
+        74
+      ],
+      "inp": {
+        "x": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            139.5,
+            63.5
+          ],
+          "socket": [
+            118.5,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Sede3ln",
+    "moduleName": "VectorScale",
+    "inputs": {
+      "scale": {
+        "type": "connection",
+        "module": "Dhw8e1n",
+        "property": "output"
+      },
+      "v": {
+        "type": "value",
+        "value": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    "dv": {
+      "p": [
+        1066,
+        -253.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        139.01708984375,
+        45
+      ],
+      "d": [
+        224.72119140625,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "scale": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            167.01708984375,
+            63.5
+          ],
+          "socket": [
+            146.01708984375,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "F68do7m",
+    "moduleName": "VectorScale",
+    "inputs": {
+      "v": {
+        "type": "connection",
+        "module": "Sede3ln",
+        "property": "output"
+      },
+      "scale": {
+        "type": "connection",
+        "module": "Bjpiv1v",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1564,
+        -463.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        139.01708984375,
+        45
+      ],
+      "d": [
+        224.72119140625,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "scale": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            167.01708984375,
+            63.5
+          ],
+          "socket": [
+            146.01708984375,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "H7edy72",
+    "moduleName": "VectorTranslate",
+    "inputs": {
+      "tv": {
+        "type": "connection",
+        "module": "Aylf3x0",
+        "property": "output"
+      },
+      "v": {
+        "type": "connection",
+        "module": "F68do7m",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        2585,
+        -467.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        115.66748046875,
+        45
+      ],
+      "d": [
+        201.37158203125,
+        88
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "tv": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            143.66748046875,
+            63.5
+          ],
+          "socket": [
+            122.66748046875,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "K2na8qo",
+    "moduleName": "Flatten",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "H7edy72",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        2794,
+        -468.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        111.5,
+        45
+      ],
+      "d": [
+        197.2041015625,
+        74
+      ],
+      "inp": {
+        "x": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            139.5,
+            63.5
+          ],
+          "socket": [
+            118.5,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Aos3nft",
+    "moduleName": "VectorRotate",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Vq7d5ft",
+        "property": "m"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Vk9kzzw",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        388,
+        -36.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        119.84228515625,
+        45
+      ],
+      "d": [
+        205.54638671875,
+        102
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "cp": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "a": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            147.84228515625,
+            63.5
+          ],
+          "socket": [
+            126.84228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Jp13ajy",
+    "moduleName": "Time",
+    "inputs": {},
+    "dv": {
+      "p": [
+        -543,
+        -133.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        60,
+        45
+      ],
+      "d": [
+        133.1943359375,
+        172
+      ],
+      "inp": {},
+      "oup": {
+        "t": {
+          "text": [
+            88,
+            63.5
+          ],
+          "socket": [
+            67,
+            60
+          ]
+        },
+        "t2": {
+          "text": [
+            88,
+            77.5
+          ],
+          "socket": [
+            67,
+            74
+          ]
+        },
+        "t10": {
+          "text": [
+            88,
+            91.5
+          ],
+          "socket": [
+            67,
+            88
+          ]
+        },
+        "t30": {
+          "text": [
+            88,
+            105.5
+          ],
+          "socket": [
+            67,
+            102
+          ]
+        },
+        "t60": {
+          "text": [
+            88,
+            119.5
+          ],
+          "socket": [
+            67,
+            116
+          ]
+        },
+        "t100": {
+          "text": [
+            88,
+            133.5
+          ],
+          "socket": [
+            67,
+            130
+          ]
+        },
+        "t200": {
+          "text": [
+            88,
+            147.5
+          ],
+          "socket": [
+            67,
+            144
+          ]
+        },
+        "t300": {
+          "text": [
+            88,
+            161.5
+          ],
+          "socket": [
+            67,
+            158
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Cro3s3o",
+    "moduleName": "Divide",
+    "inputs": {
+      "b": {
+        "type": "value",
+        "value": 91
+      },
+      "a": {
+        "type": "connection",
+        "module": "Jp13ajy",
+        "property": "t"
+      }
+    },
+    "dv": {
+      "p": [
+        31,
+        -64.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        112.34228515625,
+        45
+      ],
+      "d": [
+        168.83740234375,
+        88
+      ],
+      "inp": {
+        "a": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "b": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "m": {
+          "text": [
+            140.34228515625,
+            63.5
+          ],
+          "socket": [
+            119.34228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Sukidm5",
+    "moduleName": "Divide",
+    "inputs": {
+      "b": {
+        "type": "value",
+        "value": 71
+      },
+      "a": {
+        "type": "connection",
+        "module": "J4dfc34",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        32,
+        -152.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        112.34228515625,
+        45
+      ],
+      "d": [
+        168.83740234375,
+        88
+      ],
+      "inp": {
+        "a": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "b": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "m": {
+          "text": [
+            140.34228515625,
+            63.5
+          ],
+          "socket": [
+            119.34228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Vq7d5ft",
+    "moduleName": "Divide",
+    "inputs": {
+      "b": {
+        "type": "value",
+        "value": 171
+      },
+      "a": {
+        "type": "connection",
+        "module": "Jp13ajy",
+        "property": "t"
+      }
+    },
+    "dv": {
+      "p": [
+        33,
+        111.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        112.34228515625,
+        45
+      ],
+      "d": [
+        168.83740234375,
+        88
+      ],
+      "inp": {
+        "a": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "b": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "m": {
+          "text": [
+            140.34228515625,
+            63.5
+          ],
+          "socket": [
+            119.34228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Ip5hfkq",
+    "moduleName": "Divide",
+    "inputs": {
+      "b": {
+        "type": "value",
+        "value": 131
+      },
+      "a": {
+        "type": "connection",
+        "module": "Cv5bmr1",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        32,
+        23.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        112.34228515625,
+        45
+      ],
+      "d": [
+        168.83740234375,
+        88
+      ],
+      "inp": {
+        "a": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "b": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "m": {
+          "text": [
+            140.34228515625,
+            63.5
+          ],
+          "socket": [
+            119.34228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Gad4by0",
+    "moduleName": "VectorRotate",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Ip5hfkq",
+        "property": "m"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Vk9kzzw",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        496,
+        -150.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        119.84228515625,
+        45
+      ],
+      "d": [
+        205.54638671875,
+        102
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "cp": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "a": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            147.84228515625,
+            63.5
+          ],
+          "socket": [
+            126.84228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Hhrxbh8",
+    "moduleName": "VectorRotate",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Cro3s3o",
+        "property": "m"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Vk9kzzw",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        594,
+        -270.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        119.84228515625,
+        45
+      ],
+      "d": [
+        205.54638671875,
+        102
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "cp": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "a": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            147.84228515625,
+            63.5
+          ],
+          "socket": [
+            126.84228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Fy72a4s",
+    "moduleName": "Divide",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Jp13ajy",
+        "property": "t"
+      },
+      "b": {
+        "type": "value",
+        "value": 51
+      }
+    },
+    "dv": {
+      "p": [
+        34,
+        -241.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        112.34228515625,
+        45
+      ],
+      "d": [
+        168.83740234375,
+        88
+      ],
+      "inp": {
+        "a": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "b": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "m": {
+          "text": [
+            140.34228515625,
+            63.5
+          ],
+          "socket": [
+            119.34228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Yp0aq1d",
+    "moduleName": "VectorRotate",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Sukidm5",
+        "property": "m"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Vk9kzzw",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        780,
+        -374.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        119.84228515625,
+        45
+      ],
+      "d": [
+        205.54638671875,
+        102
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "cp": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "a": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            147.84228515625,
+            63.5
+          ],
+          "socket": [
+            126.84228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Bjpiv1v",
+    "moduleName": "VectorRotate",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Fy72a4s",
+        "property": "m"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Vk9kzzw",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        919,
+        -480.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        119.84228515625,
+        45
+      ],
+      "d": [
+        205.54638671875,
+        102
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "cp": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "a": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            147.84228515625,
+            63.5
+          ],
+          "socket": [
+            126.84228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "J4dfc34",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Jp13ajy",
+        "property": "t"
+      },
+      "b": {
+        "type": "value",
+        "value": -1
+      }
+    },
+    "dv": {
+      "p": [
+        -157,
+        -125.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        112.34228515625,
+        45
+      ],
+      "d": [
+        168.83740234375,
+        88
+      ],
+      "inp": {
+        "a": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "b": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "m": {
+          "text": [
+            140.34228515625,
+            63.5
+          ],
+          "socket": [
+            119.34228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Cv5bmr1",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Jp13ajy",
+        "property": "t"
+      },
+      "b": {
+        "type": "value",
+        "value": -1
+      }
+    },
+    "dv": {
+      "p": [
+        -161,
+        18.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        112.34228515625,
+        45
+      ],
+      "d": [
+        168.83740234375,
+        88
+      ],
+      "inp": {
+        "a": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "b": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "m": {
+          "text": [
+            140.34228515625,
+            63.5
+          ],
+          "socket": [
+            119.34228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Vk9kzzw",
+    "moduleName": "VectorRotate",
+    "inputs": {
+      "v": {
+        "type": "connection",
+        "module": "H3etu9v",
+        "property": "points"
+      },
+      "a": {
+        "type": "connection",
+        "module": "Li8qvtp",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        179,
+        -378.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        119.84228515625,
+        45
+      ],
+      "d": [
+        205.54638671875,
+        102
+      ],
+      "inp": {
+        "v": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "cp": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        },
+        "a": {
+          "text": [
+            44,
+            91.5
+          ],
+          "socket": [
+            22,
+            88
+          ]
+        }
+      },
+      "oup": {
+        "output": {
+          "text": [
+            147.84228515625,
+            63.5
+          ],
+          "socket": [
+            126.84228515625,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Li8qvtp",
+    "moduleName": "Multiply",
+    "inputs": {
+      "b": {
+        "type": "connection",
+        "module": "Jp13ajy",
+        "property": "t100"
+      },
+      "a": {
+        "type": "value",
+        "value": -1
+      }
+    },
+    "dv": {
+      "p": [
+        -124,
+        -334.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        112.34228515625,
+        45
+      ],
+      "d": [
+        168.83740234375,
+        88
+      ],
+      "inp": {
+        "a": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "b": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "m": {
+          "text": [
+            140.34228515625,
+            63.5
+          ],
+          "socket": [
+            119.34228515625,
+            60
+          ]
+        }
+      }
+    }
+  }
+]

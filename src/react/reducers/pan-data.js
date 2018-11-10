@@ -1,3 +1,7 @@
+import {view, lensProp} from 'ramda';
+
+const root = lensProp('panData');
+
 const initialValue = [0,0];
 
 export default (state = initialValue, action) => {
@@ -8,5 +12,5 @@ export default (state = initialValue, action) => {
 };
 
 export const selectors = {
-  panPosition: state => state.panData
+  panPosition: view(root)
 };

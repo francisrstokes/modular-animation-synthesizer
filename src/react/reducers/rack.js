@@ -1,6 +1,7 @@
-import {omit} from 'ramda';
+import {view, lensProp, omit, append} from 'ramda';
 import {rack as initialState} from '../../rack/rack';
-// const initialState = [];
+
+const root = lensProp('rack');
 
 const filterDisconnect = moduleId => md => {
   return {
@@ -16,12 +17,12 @@ const filterDisconnect = moduleId => md => {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_MODULE': return [...state, action.payload];
+    case 'ADD_MODULE': return append(action.payload, state);
 
     case 'REMOVE_MODULE': {
       const moduleId = action.payload;
       return state
-        .filter(md => md.name !== action.payload)
+        .filter(md => md.name !== moduleId)
         .filter(filterDisconnect(moduleId));
     }
 
@@ -103,7 +104,5 @@ export default (state = initialState, action) => {
 };
 
 export const selectors = {
-  rack: state => {
-    return state.rack
-  }
+  rack: view(root)
 };

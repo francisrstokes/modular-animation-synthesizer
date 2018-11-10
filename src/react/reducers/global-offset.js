@@ -1,4 +1,7 @@
+import {view, lensProp, compose} from 'ramda';
 import {vAdd, vAddAll} from 'vec-la-fp';
+
+const root = lensProp('globalOffset');
 
 export default (state = [0, 0], action) => {
   switch (action.type) {
@@ -9,6 +12,6 @@ export default (state = [0, 0], action) => {
 };
 
 export const selectors = {
-  globalOffset: state => state.globalOffset,
-  globalTranslate: state => (...vs) => vAddAll([...vs, state.globalOffset])
+  globalOffset: view(root),
+  globalTranslate: state => (...vs) => vAddAll([...vs, view(root, state)])
 };

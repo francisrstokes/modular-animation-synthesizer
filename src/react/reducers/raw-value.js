@@ -1,3 +1,7 @@
+import {view, lensProp} from 'ramda';
+
+const root = lensProp('rawValue');
+
 export default (state = '', action) => {
   switch (action.type) {
     case 'SET_CURRENT_RAW_VALUE': return action.payload;
@@ -6,5 +10,5 @@ export default (state = '', action) => {
 };
 
 export const selectors = {
-  rawValue: state => state.rawValue
+  rawValue: view(root)
 };
