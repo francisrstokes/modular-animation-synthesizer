@@ -17,7 +17,15 @@ export const RawMode = connecter(({exitRawMode, setCurrentRawValue, rawValue}) =
   });
 
   useEffect(() => {
-    const handler = e => (e.key === 'Escape') ? exitRawMode() : null;
+    const handler = e => {
+      if (e.key === 'Escape') {
+        exitRawMode();
+      }
+      if (document.activeElement !== ref.current) {
+        setCurrentRawValue('')
+        ref.current.focus();
+      }
+    }
     document.body.addEventListener('keydown', handler);
     return () => document.body.removeEventListener('keydown', handler);
   }, [exitRawMode]);

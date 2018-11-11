@@ -9,4 +9,5 @@
 - Better interface into Spectrum module
   - Rolling/Smoothed values that account for some historical?
 
-- Constant module (identity)
+- Matrix modules
+- Lenses to read module properties
