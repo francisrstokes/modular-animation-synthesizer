@@ -8,11 +8,17 @@ import {Wave} from './math/Wave';
 import {VectorScale} from './vector/VectorScale';
 import {VectorTranslate} from './vector/VectorTranslate';
 import {VectorRotate} from './vector/VectorRotate';
+import {MatrixRotate} from './vector/MatrixRotate';
+import {MatrixTranslate} from './vector/MatrixTranslate';
+import {MatrixScale} from './vector/MatrixScale';
+import {VectorTransform} from './vector/VectorTransform';
 import {Vectorize} from './vector/Vectorize';
 import {DrawPolygon} from './drawing/DrawPolygon';
 import {DrawEllipse} from './drawing/DrawEllipse';
 import {MapRange} from './interpolation/MapRange';
 import {Step} from './interpolation/Step';
+import {SinMap} from './interpolation/SinMap';
+import {CosMap} from './interpolation/CosMap';
 import {Global} from './util/Global';
 import {Power} from './math/Power';
 import {Gate} from './util/Gate';
@@ -51,10 +57,16 @@ export const modules = [
   VectorScale,
   VectorTranslate,
   VectorRotate,
+  MatrixRotate,
+  MatrixTranslate,
+  MatrixScale,
+  VectorTransform,
   Vectorize,
   Random,
   Unvectorize,
   MapRange,
+  SinMap,
+  CosMap,
   Global,
   Style,
   DrawPolygon,

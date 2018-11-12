@@ -6,6 +6,10 @@ export const isNumberArrayArray = a => isArray(a) && a.every(isNumberArray);
 export const isVector = a => isArray(a) && a.length === 2 && a.every(isNumber);
 export const isPolygon = a => isArray(a) && a.every(isVector);
 export const isPolygonArray = a => isArray(a) && a.every(isPolygon);
+export const isMatrix = a => isArray(a) && a.length === 9 && a.every(isNumber);
+export const isMatrixArray = a => isArray(a) && a.every(isMatrix);
+export const isFunction = a => typeof a === 'function';
+export const isFunctionArray = a => isArray(a) && a.every(isFunction);
 
 const types = [
   ['v', isVector],
