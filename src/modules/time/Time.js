@@ -1,4 +1,4 @@
-import {getTime} from '../../time';
+import {getFrames} from '../../time';
 
 export const Time = {
 	name: 'Time',
@@ -15,7 +15,7 @@ export const Time = {
 		t300: 'Number',
 	},
 	fn: () => {
-		const t = getTime();
+		const t = getFrames();
 		return {
 			t,
 			t2: t/2,

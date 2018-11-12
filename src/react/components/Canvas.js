@@ -17,7 +17,7 @@ import * as editorModeActions from '../actions/editor-mode';
 import * as panActions from '../actions/pan-data';
 import * as globalOffsetActions from '../actions/global-offset';
 
-import { incTime } from '../../time';
+import { incTime, updateTime } from '../../time';
 import { drawRack } from '../../rack/draw-rack';
 
 import {onMouseDown, onMouseUp, onMouseMove} from '../../events';
@@ -69,7 +69,7 @@ class UnconnectedCanvas extends React.Component {
           debugger;
           // Do something
         }
-        incTime();
+        updateTime();
       } else {
         this.mc.background([0,0,0,1]);
         this.mc.strokeWeight(1);

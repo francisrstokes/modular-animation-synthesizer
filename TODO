@@ -9,5 +9,6 @@
 - Better interface into Spectrum module
   - Rolling/Smoothed values that account for some historical?
 
-- Matrix modules
 - Lenses to read module properties
+- Style which produces an object and can be fed to drawing modules
+  - Allows for styling individual elements

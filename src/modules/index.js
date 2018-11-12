@@ -1,4 +1,5 @@
-import {Time} from './util/Time';
+import {Time} from './time/Time';
+import {TrueTime} from './time/TrueTime';
 import {Multiply} from './math/Multiply';
 import {Divide} from './math/Divide';
 import {Add} from './math/Add';
@@ -40,6 +41,7 @@ import { Perlin } from './random-and-noise/Perlin';
 
 export const modules = [
   Time,
+  TrueTime,
   Spectrum,
   Multiply,
   Divide,
