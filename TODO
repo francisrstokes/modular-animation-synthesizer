@@ -1,6 +1,4 @@
 - Use exception to display error help
-- Fix cycle check
-- Incorperate type chechking at module connection time
 - Multi select menu
   - Copy
   - Paste
@@ -12,3 +10,7 @@
 - Lenses to read module properties
 - Style which produces an object and can be fed to drawing modules
   - Allows for styling individual elements
+- Write readme
+- Lenses in reducers (use over)
+
+- Incorperate type chechking at module connection time

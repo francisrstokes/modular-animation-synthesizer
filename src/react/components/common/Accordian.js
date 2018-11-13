@@ -13,6 +13,11 @@ export const AccordianTitle = styled.h2`
   cursor: pointer;
   border-radius: 5px;
   min-height: 30px;
+  box-shadow: 1px 1px 3px -1px;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 
   &.active {
     background-color: #f7f7f7;
@@ -33,5 +38,6 @@ export const AccordionItem = styled.li`
   cursor: pointer;
   &:hover {
     background-color: #ccc;
+    box-shadow: 1px 1px 3px -1px;
   }
 `;

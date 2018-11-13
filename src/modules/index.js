@@ -18,6 +18,7 @@ import {Vectorize} from './vector/Vectorize';
 import {DrawPolygon} from './drawing/DrawPolygon';
 import {DrawEllipse} from './drawing/DrawEllipse';
 import {MapRange} from './interpolation/MapRange';
+import {Mix} from './interpolation/Mix';
 import {Step} from './interpolation/Step';
 import {SinMap} from './interpolation/SinMap';
 import {CosMap} from './interpolation/CosMap';
@@ -69,6 +70,7 @@ export const modules = [
   Random,
   Unvectorize,
   MapRange,
+  Mix,
   SinMap,
   CosMap,
   Global,
