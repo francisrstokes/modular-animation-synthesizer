@@ -3,6 +3,7 @@ import {TrueTime} from './time/TrueTime';
 import {Multiply} from './math/Multiply';
 import {Divide} from './math/Divide';
 import {Add} from './math/Add';
+import {Subtract} from './math/Subtract';
 import {Polygon} from './geometry/Polygon';
 import {Rect} from './geometry/Rect';
 import {Wave} from './math/Wave';
@@ -49,6 +50,7 @@ export const modules = [
   Constant,
   Step,
   Add,
+  Subtract,
   Sqrt,
   Mod,
   Round,
