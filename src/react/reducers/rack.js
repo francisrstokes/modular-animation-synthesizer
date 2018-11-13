@@ -1,5 +1,6 @@
 import {view, lensProp, omit, append} from 'ramda';
 import {rack as initialState} from '../../rack/rack';
+import { checkForCycles } from '../../util/check-for-cycles';
 
 const root = lensProp('rack');
 
@@ -17,7 +18,9 @@ const filterDisconnect = moduleId => md => {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_MODULE': return append(action.payload, state);
+    case 'ADD_MODULE': {
+      return append(action.payload, state);
+    }
 
     case 'REMOVE_MODULE': {
       const moduleId = action.payload;
@@ -83,7 +86,7 @@ export default (state = initialState, action) => {
         outputKey
       } = action.payload;
 
-      return state.map(md => {
+      const newRack = state.map(md => {
         if (md.name !== inputModuleId) return md;
         return {
           ...md,
@@ -96,7 +99,14 @@ export default (state = initialState, action) => {
             }
           }
         };
-      })
+      });
+
+      if (checkForCycles(newRack)) {
+        alert('Action results in a cycle');
+        return state;
+      }
+
+      return newRack;
     }
 
     default: return state;

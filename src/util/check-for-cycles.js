@@ -1,27 +1,28 @@
-const checkInputs = (moduleDef, rack, seen) => {
-  for (const input of Object.values(moduleDef.inputs)) {
-    // Input is a connection
-    if (input.type === 'connection') {
-      if (seen.includes(input.module)) {
-        // Cycle detected
-        console.log('detected cycle!')
-        return true;
-      }
-      seen.push(input.module);
+const checkDependants = (moduleDef, rack, seen) => {
+  const dependants = rack.filter(md =>
+    Object.values(md.inputs).some(input =>
+      input.type === 'connection' && input.module === moduleDef.name
+    )
+  );
 
-      const nextInstance = rack.find(({name}) => name === input.module);
-      if (!nextInstance) throw new Error(`Couldn't find module definition ${input.module}`);
-      return checkInputs(nextInstance, rack, [...seen]);
+  const results = [];
+  for (const dependantModule of dependants) {
+    const seenBranch = [...seen, dependantModule.name];
+    if (seen.includes(dependantModule.name)) {
+      console.log(`detected cycle! ${seenBranch.join(' -> ')}`)
+      return true;
     }
+    results.push(checkDependants(dependantModule, rack, seenBranch));
   }
-  return false;
+
+  return results.reduce((a, b) => a || b, false);
 }
 
-export const checkForCycles = (rack, modules) => {
+export const checkForCycles = rack => {
   for (const moduleDef of rack) {
     const seen = [];
     seen.push(moduleDef.name);
-    if (checkInputs(moduleDef, rack, seen)) {
+    if (checkDependants(moduleDef, rack, seen)) {
       // found a cycle
       return true;
     }
