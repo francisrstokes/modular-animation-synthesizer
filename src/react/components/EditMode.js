@@ -12,8 +12,10 @@ import { copyToClipboard } from '../../util/copy-to-clipboard';
 import { connectSelectorsAndActions } from '../util';
 import {selectors as rackSelectors} from '../reducers/rack';
 import {selectors as globalOffsetSelectors} from '../reducers/global-offset';
-import * as editorModeActions from '../reducers/editor-mode';
+import {selectors as resetTimeSelectors} from '../reducers/reset-time';
+import * as editorModeActions from '../actions/editor-mode';
 import * as rackActions from '../actions/rack';
+import * as resetTimeActions from '../actions/reset-time';
 
 const groupedByTag = groupBy(({tag}) => tag, modules);
 
@@ -35,10 +37,15 @@ const createModule = (moduleName, ctx, globalOffset) => {
 };
 
 const connecter = connectSelectorsAndActions(
-  {...globalOffsetSelectors, ...rackSelectors},
+  {
+    ...globalOffsetSelectors,
+    ...rackSelectors,
+    ...resetTimeSelectors
+  },
   {
     ...rackActions,
-    ...editorModeActions
+    ...editorModeActions,
+    ...resetTimeActions
   }
 );
 
@@ -71,33 +78,36 @@ const AddModules = ({ addModule, ctx, globalOffset }) => {
   </React.Fragment>
 };
 
-export const EditMode = connecter(({
-  enterDeleteMode,
-  enterRawMode,
-  globalOffset,
-  clearModules,
-  addModule,
-  ctx,
-  rack
-}) => {
+export const EditMode = connecter(props => {
+  const {
+    gotoDeleteMode,
+    gotoRawMode,
+    globalOffset,
+    clearModules,
+    addModule,
+    ctx,
+    rack,
+    resetTime,
+    toggleResetTime
+  } = props;
 
   useEffect(() => {
     const handler = e => {
       switch (e.key) {
-        case 'r': return enterRawMode();
-        case 'd': return enterDeleteMode();
+        case 'r': return gotoRawMode();
+        case 'd': return gotoDeleteMode();
         default: return;
       }
     }
     document.body.addEventListener('keydown', handler);
     return () => document.body.removeEventListener('keydown', handler);
-  }, [enterDeleteMode]);
+  }, [gotoDeleteMode]);
 
   return <React.Fragment>
     <AddModules ctx={ctx} addModule={addModule} globalOffset={globalOffset} />
     <br/>
-    <button onClick={enterDeleteMode}>Delete Modules</button>
-    <button onClick={enterRawMode}>Set raw values</button>
+    <button onClick={gotoDeleteMode}>Delete Modules</button>
+    <button onClick={gotoRawMode}>Set raw values</button>
     <br/>
     <button onClick={() => copyToClipboard(JSON.stringify(rack))}>Export</button>
     <hr/>
@@ -107,5 +117,9 @@ export const EditMode = connecter(({
         clearModules();
       }
     }}>Clear all modules</button>
+    <label>
+      Reset time on animate
+      <input type='checkbox' checked={resetTime} onChange={() => toggleResetTime(resetTime)}/>
+    </label>
   </React.Fragment>
 });

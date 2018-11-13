@@ -8,6 +8,7 @@ import * as editorModeActions from '../actions/editor-mode';
 import * as rackActions from '../actions/rack';
 import {selectors as editorModeSelectors} from '../reducers/editor-mode';
 import {selectors as rackSelectors} from '../reducers/rack';
+import {selectors as resetTimeSelectors} from '../reducers/reset-time';
 
 import {w, h} from '../../constants';
 
@@ -16,19 +17,17 @@ import { EditMode } from './EditMode';
 import { DeleteMode } from './DeleteMode';
 import { RawMode } from './RawMode';
 import { Canvas } from './Canvas';
+import { resetTime } from '../../time';
 
 
-const toggleOpen = (currentMode, setEditorMode, setAnimationFn, rack, ctx, mc) => {
+const toggleOpen = (currentMode, setEditorMode) => {
   const nextMode = currentMode === 'animate' ? 'edit' : 'animate';
   setEditorMode(nextMode);
-  if (nextMode === 'animate') {
-    setAnimationFn(generateAnimationFn(rack, mc));
-    ctx.clearRect(0,0,w,h);
-  }
+  return nextMode;
 };
 
 const connecter = connectSelectorsAndActions(
-  {...editorModeSelectors, ...rackSelectors},
+  {...editorModeSelectors, ...rackSelectors, ...resetTimeSelectors},
   {...editorModeActions, ...rackActions}
 );
 
@@ -38,17 +37,10 @@ export const App = connecter(props => {
   const [mc, setMc] = useState(null);
 
   const {
-    isInEditMode,
-    isInDeleteMode,
-    isInRawMode,
-    isInAnimateMode,
-    currentMode,
-    gotoDeleteMode,
-    gotoRawMode,
     gotoEditMode,
-    addModule,
     setEditorMode,
-    rack
+    rack,
+    resetTime: shouldResetTime
   } = props;
 
   return <React.Fragment>
@@ -58,26 +50,29 @@ export const App = connecter(props => {
       setMc={setMc}
     />
 
-    <SidePanel className={isInAnimateMode ? 'closed' : ''}>
+    <SidePanel className={props.isInAnimateMode ? 'closed' : ''}>
       <MainPanel>
         <Title>Edit Animation Graph</Title>
-        {isInDeleteMode
+        {props.isInDeleteMode
           ? <DeleteMode exitDeleteMode={gotoEditMode} />
-          : isInRawMode
+          : props.isInRawMode
             ? <RawMode exitRawMode={gotoEditMode} />
-            : isInEditMode
-              ? <EditMode
-                  ctx={ctx}
-                  enterDeleteMode={gotoDeleteMode}
-                  enterRawMode={gotoRawMode}
-                  addModule={addModule}
-                />
+            : props.isInEditMode
+              ? <EditMode ctx={ctx} />
               : null
         }
       </MainPanel>
       <PanelToggle
-        onClick={() => toggleOpen(currentMode, setEditorMode, setAnimationFn, rack, ctx, mc)}
-      >{isInAnimateMode ? '>' : '<'}</PanelToggle>
+        onClick={() => {
+          const nextMode = toggleOpen(props.currentMode, setEditorMode);
+
+          if (nextMode === 'animate') {
+            if (shouldResetTime) resetTime();
+            setAnimationFn(generateAnimationFn(rack, mc));
+            ctx.clearRect(0,0,w,h);
+          }
+        }}
+      >{props.isInAnimateMode ? '>' : '<'}</PanelToggle>
     </SidePanel>
   </React.Fragment>
 });
