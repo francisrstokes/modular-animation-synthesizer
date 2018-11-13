@@ -7,12 +7,13 @@ export const VectorTranslate = {
   tag: 'Vector',
   inputs: {
     v: 'Vector',
-    tv: 'Vector'
+    tv: 'Vector',
+    multiply: 'Number'
 	},
 	outputs: {
 		output: 'Vector'
   },
-  fn: ({ v, tv }) => {
+  fn: ({ v, tv, multiply }) => {
     let out;
 
     if (isVector(tv)) {
@@ -32,7 +33,11 @@ export const VectorTranslate = {
         out = tv.map(vAdd(v));
       } else if (isPolygon(v)) {
         // 5. Translate each point by each translation vector
-        out = tv.map(tv1 => v.map(vAdd(tv1)));
+        if (multiply) {
+          out = tv.map(tv1 => v.map(vAdd(tv1)));
+        } else {
+          out = zip(v, tv).map(([v, tv]) => vAdd(v, tv));
+        }
       } else if (isPolygonArray(v)) {
         // 6. Translate each polygon by each translation vector
         out = zip(tv, v).map(([v1, poly]) => poly.map(vAdd(v1)));
