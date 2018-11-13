@@ -1,4 +1,4 @@
-import {getCurrentTime, getDeltaTime, getTime} from '../../time';
+import {getCurrentTime, getDeltaTime, getFrames} from '../../time';
 
 export const TrueTime = {
 	name: 'TrueTime',
@@ -15,7 +15,7 @@ export const TrueTime = {
 		return {
       t: getCurrentTime() / divisor,
       dt: getDeltaTime(),
-      frames: getTime() / divisor
+      frames: getFrames() / divisor
 		}
 	}
 };

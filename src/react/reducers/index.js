@@ -6,6 +6,7 @@ import rawValue from './raw-value';
 import dragData from './drag-data';
 import connectingData from './connecting-data';
 import panData from './pan-data';
+import resetTime from './reset-time';
 
 export default combineReducers({
   globalOffset,
@@ -15,4 +16,5 @@ export default combineReducers({
   dragData,
   connectingData,
   panData,
+  resetTime,
 });
