@@ -35,11 +35,27 @@ const getEvaluatableModule = (rack, knownVariables) => {
   })
 }
 
+const pruneOrphanModules = rack => {
+  for (let i = rack.length - 1; i > 0; i--) {
+    const md = rack[i];
+    if (Object.keys(md.inputs).length === 0) {
+      const hasDependants = rack.some(cMd => Object.values(cMd.inputs).some(input =>
+        input.type === 'connection' && input.module === md.name
+      ));
+      if (!hasDependants) {
+        rack.splice(i, 1);
+      }
+    }
+  }
+};
+
 export const generateAnimationFn = (rack, mc) => {
   const copy = JSON.parse(JSON.stringify(rack)).map(moduleDef => {
     moduleDef.isEvaluated = false;
     return moduleDef;
   });
+
+  pruneOrphanModules(copy);
 
   const entryPoints = copy
     .map(md => [findModule(md.moduleName), md])
