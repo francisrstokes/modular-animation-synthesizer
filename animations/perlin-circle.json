@@ -918,15 +918,15 @@
     "name": "Loczcmd",
     "moduleName": "Multiply",
     "inputs": {
-      "a": {
-        "type": "connection",
-        "module": "J3czg1s",
-        "property": "t"
-      },
       "b": {
         "type": "connection",
         "module": "Wwqfncr",
         "property": "output"
+      },
+      "a": {
+        "type": "connection",
+        "module": "Xean2dq",
+        "property": "m"
       }
     },
     "dv": {
@@ -2432,6 +2432,77 @@
           ],
           "socket": [
             147.6796875,
+            60
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Xean2dq",
+    "moduleName": "Power",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "J3czg1s",
+        "property": "t"
+      },
+      "b": {
+        "type": "value",
+        "value": 2
+      }
+    },
+    "dv": {
+      "p": [
+        123,
+        203.5
+      ],
+      "tp": [
+        15,
+        15
+      ],
+      "ip": [
+        15,
+        45
+      ],
+      "op": [
+        112.34228515625,
+        45
+      ],
+      "d": [
+        168.83740234375,
+        88
+      ],
+      "inp": {
+        "a": {
+          "text": [
+            44,
+            63.5
+          ],
+          "socket": [
+            22,
+            60
+          ]
+        },
+        "b": {
+          "text": [
+            44,
+            77.5
+          ],
+          "socket": [
+            22,
+            74
+          ]
+        }
+      },
+      "oup": {
+        "m": {
+          "text": [
+            140.34228515625,
+            63.5
+          ],
+          "socket": [
+            119.34228515625,
             60
           ]
         }
