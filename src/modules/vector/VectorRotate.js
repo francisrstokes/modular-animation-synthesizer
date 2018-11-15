@@ -1,4 +1,6 @@
+import {zip} from 'ramda';
 import {vRotatePointAround} from 'vec-la-fp';
+import {isPolygon, isNumberArray, isVector, isNumber} from '../../util/types';
 
 export const VectorRotate = {
   name: 'VectorRotate',
@@ -13,13 +15,24 @@ export const VectorRotate = {
   },
   fn: ({ v, cp, a }) => {
     const cv = cp ? cp : [0 ,0];
-    if (v.length && Array.isArray(v[0])) {
-      return {
-        output: v.map(vec => vRotatePointAround(a, cv, vec))
-      };
+    let out;
+
+    if (isVector(v)) {
+      if (isNumberArray(a)) {
+        out = a.map(a => vRotatePointAround(a, cv, v));
+      } else if (isNumber(a)) {
+        out = vRotatePointAround(a, cv, v);
+      }
+    } else if (isPolygon(v)) {
+      if (isNumberArray(a)) {
+        out = zip(v, a).map(([v, a]) => vRotatePointAround(a, cv, v));
+      } else if (isNumber(a)) {
+        out = v.map(v => vRotatePointAround(a, cv, v));
+      }
     }
+
     return {
-      output: vRotatePointAround(a, cv, v)
+      output: out
     };
   }
 };

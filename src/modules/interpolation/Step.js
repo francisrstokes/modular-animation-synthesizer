@@ -3,8 +3,13 @@ export const Step = {
   tag: 'Interpolation',
   inputs: {
     edge: 'Number',
-    n: 'Number'
+    n: 'Number',
+    invert: 'Number'
   },
 	outputs: {output: 'Number'},
-  fn: ({ n, edge }) => ({ output: n < edge ? 0 : 1 })
+  fn: ({ n, edge, invert = 0 }) => ({
+    output: invert
+      ? n > edge ? 0 : 1
+      : n < edge ? 0 : 1
+  })
 };

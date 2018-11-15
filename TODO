@@ -3,14 +3,14 @@
   - Copy
   - Paste
   - Delete
-- Way to style draw functions (ith element gets ith style)
 - Better interface into Spectrum module
   - Rolling/Smoothed values that account for some historical?
 
 - Lenses to read module properties
-- Style which produces an object and can be fed to drawing modules
-  - Allows for styling individual elements
 - Write readme
 - Lenses in reducers (use over)
 
 - Incorperate type chechking at module connection time
+
+- Style which produces an object and can be fed to drawing modules
+  - Allows for styling individual elements
