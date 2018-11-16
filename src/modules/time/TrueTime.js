@@ -11,11 +11,9 @@ export const TrueTime = {
     dt: 'Number',
     frames: 'Number'
 	},
-	fn: ({ divisor = 1 }) => {
-		return {
+	fn: ({ divisor = 1 }) => ({
       t: getCurrentTime() / divisor,
       dt: getDeltaTime(),
       frames: getFrames() / divisor
-		}
-	}
+	})
 };

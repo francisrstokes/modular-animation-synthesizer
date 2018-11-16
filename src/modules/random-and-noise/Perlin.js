@@ -3,7 +3,7 @@ import {Noise} from 'noisejs';
 import { isVector, isPolygon, isPolygonArray } from '../../util/types';
 
 let n;
-let s;
+let currentSeed;
 
 const reNorm = x => x + 0.5;
 
@@ -21,8 +21,8 @@ export const Perlin = {
     if (!n) {
       const s = (typeof seed === 'undefined') ? Math.random() : seed;
       n = new Noise(s);
-      s = seed;
-    } else if (seed !== s) {
+      currentSeed = seed;
+    } else if (seed !== currentSeed) {
       n.seed(seed);
     }
 

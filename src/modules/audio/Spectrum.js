@@ -1,7 +1,7 @@
 const fftSize = 256;
 const divSize = Math.floor((fftSize/2) / 3);
 let spectrumData = Array.from({length: fftSize}, () => 0);
-let bufferLength = 0;
+let buffer = new Float32Array(fftSize / 2);
 let analyser = null;
 
 navigator
@@ -14,7 +14,6 @@ navigator
 
     source.connect(analyser);
     analyser.fftSize = fftSize;
-    bufferLength = analyser.frequencyBinCount;
   });
 
 const max = a => a.reduce((a, b) => Math.max(a, b), 0);
@@ -31,13 +30,12 @@ export const Spectrum = {
   },
 	fn: () => {
     // Update the spectrum data
-    const dataArray = new Uint8Array(bufferLength)
-    analyser.getByteTimeDomainData(dataArray);
-    spectrumData = Array.from(dataArray).map(x => x / fftSize);
+    analyser.getFloatFrequencyData(buffer);
+    spectrumData = Array.from(buffer).map(x => 1 - (x + 128) / fftSize);
 
-    const highestLow = max(spectrumData.slice(0, divSize));
+    const highestLow = max(spectrumData.slice(divSize * 2, divSize * 3));
     const highestMid = max(spectrumData.slice(divSize, divSize * 2));
-    const highestHigh = max(spectrumData.slice(divSize * 2, divSize * 3));
+    const highestHigh = max(spectrumData.slice(0, divSize));
 
     return {
       output: spectrumData,
