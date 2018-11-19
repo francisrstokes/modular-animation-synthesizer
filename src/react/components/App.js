@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useStateFunction} from '../hooks/useStateFunction';
 import {generateAnimationFn} from '../../generate-animation-function';
-import {connectSelectorsAndActions} from '../util';
+import {connectSelectorsAndActions, componentSwitch} from '../util';
 import {MainPanel, SidePanel, PanelToggle} from './SidePanel';
 
 import * as editorModeActions from '../actions/editor-mode';
@@ -16,6 +16,7 @@ import {Title} from './common';
 import { EditMode } from './EditMode';
 import { DeleteMode } from './DeleteMode';
 import { RawMode } from './RawMode';
+import {ConnectionMode} from './ConnectionMode';
 import { Canvas } from './Canvas';
 import { resetTime } from '../../time';
 
@@ -53,14 +54,14 @@ export const App = connecter(props => {
     <SidePanel className={props.isInAnimateMode ? 'closed' : ''}>
       <MainPanel>
         <Title>Edit Animation Graph</Title>
-        {props.isInDeleteMode
-          ? <DeleteMode exitDeleteMode={gotoEditMode} />
-          : props.isInRawMode
-            ? <RawMode exitRawMode={gotoEditMode} />
-            : props.isInEditMode
-              ? <EditMode ctx={ctx} />
-              : null
-        }
+
+        {componentSwitch([
+          [props.isInDeleteMode, () => <DeleteMode exitDeleteMode={gotoEditMode} />],
+          [props.isInRawMode, () => <RawMode exitRawMode={gotoEditMode} />],
+          [props.isInConnectingInputMode || props.isInConnectingOutputMode, () => <ConnectionMode cancel={gotoEditMode} connectingFromInput={props.isInConnectingInputMode} />],
+          [props.isInEditMode, () => <EditMode ctx={ctx} />]
+        ])}
+
       </MainPanel>
       <PanelToggle
         onClick={() => {

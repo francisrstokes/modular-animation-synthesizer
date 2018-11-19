@@ -7,29 +7,36 @@ export const start = (props, clickPosition) => {
     globalTranslate,
     gotoConnectingInputMode,
     disconnectModuleInput,
-    setConnectingData
+    gotoConnectingOutputMode,
+    setConnectingData,
   } = props;
-  let connectingFromInput = null;
-  rack.some(md => {
+  return rack.some(md => {
     const pos = globalTranslate(md.dv.p);
     const dim = md.dv.d;
 
     if (pointInRect(pos, dim, clickPosition)) {
-      Object.entries(md.dv.inp).forEach(([inputKey, {socket}]) => {
+      const startedConnection = Object.entries(md.dv.inp).some(([inputKey, {socket}]) => {
         if (pointInCircle(globalTranslate(socket, md.dv.p), socketRadius, clickPosition)) {
-          connectingFromInput = true;
-
           if (md.inputs[inputKey]) {
             disconnectModuleInput(md.name, inputKey);
-            return;
           }
           gotoConnectingInputMode();
           setConnectingData(md.name, inputKey);
+          return true;
+        }
+      });
+
+      if (startedConnection) return true;
+
+      return Object.entries(md.dv.oup).some(([outputKey, {socket}]) => {
+        if (pointInCircle(globalTranslate(socket, md.dv.p), socketRadius, clickPosition)) {
+          gotoConnectingOutputMode();
+          setConnectingData(md.name, outputKey);
+          return true;
         }
       });
     }
   });
-  return connectingFromInput;
 };
 
 
@@ -38,6 +45,7 @@ export const end = (props, clickPosition) => {
     rack,
     globalTranslate,
     isInConnectingInputMode,
+    isInConnectingOutputMode,
     connectingModuleId,
     connectingKey,
     connectModules,
@@ -53,18 +61,23 @@ export const end = (props, clickPosition) => {
         Object.entries(md.dv.oup).forEach(([outputKey, {socket}]) => {
           if (pointInCircle(globalTranslate(socket, md.dv.p), socketRadius, clickPosition)) {
             connectModules(connectingModuleId, md.name, connectingKey, outputKey);
+            gotoEditMode();
+            return true;
+          }
+        });
+      }
+    });
+  };
 
-            // if (checkForCycles(rack, modules)) {
-            //   alert('This action results in a cycle');
-            //   delete inputModule.inputs[key];
-            // }
+  if (isInConnectingOutputMode) {
+    return rack.some(md => {
+      const pos = globalTranslate(md.dv.p);
+      const dim = md.dv.d;
 
-            // inputModule.inputs[key] = {
-            //   type: 'connection',
-            //   module: md.name,
-            //   property: outputKey
-            // }
-
+      if (pointInRect(pos, dim, clickPosition)) {
+        Object.entries(md.dv.inp).forEach(([inputKey, {socket}]) => {
+          if (pointInCircle(globalTranslate(socket, md.dv.p), socketRadius, clickPosition)) {
+            connectModules(md.name, connectingModuleId, inputKey, connectingKey);
             gotoEditMode();
             return true;
           }

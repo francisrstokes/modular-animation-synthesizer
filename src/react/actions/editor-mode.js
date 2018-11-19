@@ -52,6 +52,14 @@ export const gotoConnectingInputMode = () => ({
   }
 });
 
+export const gotoConnectingOutputMode = () => ({
+  type: 'SET_EDITOR_MODE',
+  payload: {
+    mode: 'edit',
+    substate: 'connecting_from_output'
+  }
+});
+
 export const gotoPanMode = () => ({
   type: 'SET_EDITOR_MODE',
   payload: {

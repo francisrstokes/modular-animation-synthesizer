@@ -10,3 +10,10 @@ export const connectSelectorsAndActions = (selectors, actions) => {
     actions
   );
 }
+
+export const componentSwitch = (tests, fallback = () => null) => {
+  for (const [condition, componentFn] of tests) {
+    if (condition) return componentFn();
+  }
+  return fallback();
+};

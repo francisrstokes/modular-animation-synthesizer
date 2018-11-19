@@ -13,7 +13,9 @@ export const onMouseDown = (props) => (e) => {
 
   if (props.isInPureEditMode) {
     if (dragMousedown(props, clickPosition)) return;
-    if (connectStart(props, clickPosition)) return;
+    if (connectStart(props, clickPosition)) {
+      return;
+    }
 
     panStart(props, clickPosition);
     return;

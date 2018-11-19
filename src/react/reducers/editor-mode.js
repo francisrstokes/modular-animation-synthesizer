@@ -27,6 +27,7 @@ export const selectors = {
   isInRawMode: compose(equals('raw'), view(substate)),
   isInPanMode: compose(equals('pan'), view(substate)),
   isInConnectingInputMode: compose(equals('connecting_from_input'), view(substate)),
+  isInConnectingOutputMode: compose(equals('connecting_from_output'), view(substate)),
   isInAnimateMode: compose(equals('animate'), view(mode)),
   currentMode: view(mode),
   currentSubstate: view(substate),
