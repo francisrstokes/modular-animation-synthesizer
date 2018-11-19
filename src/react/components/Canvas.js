@@ -17,10 +17,11 @@ import * as editorModeActions from '../actions/editor-mode';
 import * as panActions from '../actions/pan-data';
 import * as globalOffsetActions from '../actions/global-offset';
 
-import { incTime, updateTime } from '../../time';
+import { updateTime } from '../../time';
 import { drawRack } from '../../rack/draw-rack';
 
 import {onMouseDown, onMouseUp, onMouseMove} from '../../events';
+import { computeModuleDefDrawingValues } from '../../rack/compute-moduledef-drawing-values';
 
 const connecter = connectSelectorsAndActions(
   {
@@ -52,6 +53,17 @@ class UnconnectedCanvas extends React.Component {
     return false;
   }
 
+  setInitialDrawingValuesForModules() {
+    this.ctx.font = `${textSize}px Arial`;
+    this.props.rack.forEach(md => {
+      const dv = {
+        ...computeModuleDefDrawingValues(md, this.ctx),
+        p: md.dv.p
+      }
+      this.props.updateDrawingValues(md.name, dv);
+    });
+  }
+
   componentDidMount() {
     this.ctx = this.ref.current.getContext('2d');
     this.mc = microcan(this.ctx, [w, h]);
@@ -59,7 +71,7 @@ class UnconnectedCanvas extends React.Component {
     this.props.setCtx(this.ctx);
     this.props.setMc(this.mc);
 
-    this.ctx.font = `${textSize}px Arial`;
+    this.setInitialDrawingValuesForModules();
 
     const drawCycle = () => {
       if (this.props.currentMode === 'animate') {
@@ -77,7 +89,9 @@ class UnconnectedCanvas extends React.Component {
       }
       requestAnimationFrame(drawCycle);
     }
-    drawCycle();
+
+    // Wait until the drawing values have been set in redux store
+    setTimeout(drawCycle, 0);
   }
 
   render() {

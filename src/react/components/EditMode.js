@@ -88,7 +88,8 @@ export const EditMode = connecter(props => {
     ctx,
     rack,
     resetTime,
-    toggleResetTime
+    toggleResetTime,
+    updateDrawingValues
   } = props;
 
   useEffect(() => {
@@ -109,7 +110,16 @@ export const EditMode = connecter(props => {
     <button onClick={gotoDeleteMode}>Delete Modules</button>
     <button onClick={gotoRawMode}>Set raw values</button>
     <br/>
-    <button onClick={() => copyToClipboard(JSON.stringify(rack))}>Export</button>
+    <button onClick={() => {
+      const copy = JSON.parse(JSON.stringify(rack));
+      copy.forEach(md => {
+        const pos = md.dv.p;
+        delete md.dv;
+        md.dv = { p: pos };
+      });
+      console.log(copy)
+      copyToClipboard(JSON.stringify(copy));
+    }}>Export</button>
     <hr/>
     <br/>
     <button onClick={() => {

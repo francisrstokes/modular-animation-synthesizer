@@ -1,4 +1,4 @@
-import {view, lensProp, omit, append} from 'ramda';
+import {zip, view, lensProp, omit, append} from 'ramda';
 import {rack as initialState} from '../../rack/rack';
 import { checkForCycles } from '../../util/check-for-cycles';
 
@@ -107,6 +107,19 @@ export default (state = initialState, action) => {
       }
 
       return newRack;
+    }
+
+    case 'UPDATE_DRAWING_VALUES': {
+      return state.map(md => {
+        if (md.name !== action.payload.moduleId) return md;
+        return {
+          ...md,
+          dv: {
+            p: md.dv.p,
+            ...action.payload.drawingValues
+          }
+        }
+      });
     }
 
     default: return state;

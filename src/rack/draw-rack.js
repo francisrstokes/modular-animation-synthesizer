@@ -19,17 +19,23 @@ const drawInputSockets = (mc, ctx, translateToPosition, inputs) => ([key, { text
   mc.drawEllipse(mc.circle(socketRadius, translateToPosition(socket)));
 };
 
-const drawConnections = (mc, translateToPosition, globalTranslate, inputPositions, rack) => ([inputKey, inputObj]) => {
+const drawConnections = (mc, translateToPosition, globalTranslate, inputPositions, rack, ctx) => ([inputKey, inputObj]) => {
   if (inputObj.type === 'connection') {
     const inputModule = rack.find(md => inputObj.module === md.name);
     if (inputModule) {
       const inputProp = inputObj.property;
       const inputPos = inputPositions[inputKey].socket;
       const outputPos = vAdd(inputModule.dv.p, inputModule.dv.oup[inputProp].socket);
-      mc.drawLine(mc.line(
-        translateToPosition(inputPos),
-        globalTranslate(outputPos)
-      ));
+
+      const p1 = vAdd(translateToPosition(inputPos), [-socketRadius, 0]);
+      const p2 = vAdd(globalTranslate(outputPos), [socketRadius, 0]);
+      const bxOffset = 50;
+
+      ctx.beginPath();
+      ctx.moveTo(...p1);
+      ctx.bezierCurveTo(...vAdd(p1, [-bxOffset, 0]), ...vAdd(p2, [bxOffset, 0]), ...p2);
+      ctx.lineWidth = 2;
+      ctx.stroke();
     }
   } else if (inputObj.type === 'value') {
     const inputPos = translateToPosition(inputPositions[inputKey].socket);
@@ -40,6 +46,11 @@ const drawConnections = (mc, translateToPosition, globalTranslate, inputPosition
 }
 
 export const drawRack = (rack, mc, ctx, globalTranslate) => {
+  rack.forEach(md => {
+    const translateToPosition = compose(globalTranslate, vAdd(md.dv.p));
+    Object.entries(md.inputs).forEach(drawConnections(mc, translateToPosition, globalTranslate, md.dv.inp, rack, ctx));
+  });
+
   rack.forEach(moduleDef => {
     const {
       p,
@@ -98,9 +109,4 @@ export const drawRack = (rack, mc, ctx, globalTranslate) => {
     Object.entries(inputPositions).forEach(drawInputSockets(mc, ctx, translateToPosition, moduleDef.inputs));
     Object.entries(outputPositions).forEach(drawOutputSockets(mc, ctx, translateToPosition));
   });
-
-  rack.forEach(md => {
-    const translateToPosition = compose(globalTranslate, vAdd(md.dv.p));
-    Object.entries(md.inputs).forEach(drawConnections(mc, translateToPosition, globalTranslate, md.dv.inp, rack));
-  })
 }

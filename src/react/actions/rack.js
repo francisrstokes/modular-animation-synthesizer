@@ -47,3 +47,12 @@ export const connectModules = (inputModuleId, outputModuleId, inputKey, outputKe
 export const clearModules = () => ({
   type: 'CLEAR_MODULES'
 });
+
+
+export const updateDrawingValues = (moduleId, drawingValues) => ({
+  type: 'UPDATE_DRAWING_VALUES',
+  payload: {
+    moduleId,
+    drawingValues
+  }
+});
