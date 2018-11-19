@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "https://francisrstokes.github.io/modular-animation-synthesizer",
   "dependencies": {
     "microcan-fp": "^0.0.1",
     "noisejs": "^2.1.0",
@@ -17,6 +18,10 @@
   },
   "scripts": {
     "build": "parcel index.html",
+    "build:gh-pages": "parcel build --no-source-maps --public-url 'https://francisrstokes.github.io/modular-animation-synthesizer' index.html --out-dir dist && gh-pages -d dist",
     "watch": "parcel watch index.html"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   }
 }
