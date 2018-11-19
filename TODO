@@ -3,8 +3,6 @@
   - Copy
   - Paste
   - Delete
-- Better interface into Spectrum module
-  - Rolling/Smoothed values that account for some historical?
 
 - Lenses to read module properties
 - Write readme
