@@ -1,1 +1,687 @@
-[{"name":"Tdo0kr7","moduleName":"Constant","inputs":{"x":{"type":"value","value":100}},"dv":{"p":[-946,794.5],"tp":[15,15],"ip":[15,45],"op":[111.5,45],"d":[197.2041015625,74],"inp":{"x":{"text":[44,63.5],"socket":[22,60]}},"oup":{"output":{"text":[139.5,63.5],"socket":[118.5,60]}}}},{"name":"L8d56en","moduleName":"VectorTranslate","inputs":{"tv":{"type":"connection","module":"Xj6heyh","property":"CV"},"v":{"type":"connection","module":"Hqaoc3p","property":"output"}},"dv":{"p":[1866,395.5],"tp":[15,15],"ip":[15,45],"op":[154.8447265625,45],"d":[240.548828125,102],"inp":{"v":{"text":[44,63.5],"socket":[22,60]},"tv":{"text":[44,77.5],"socket":[22,74]},"multiply":{"text":[44,91.5],"socket":[22,88]}},"oup":{"output":{"text":[182.8447265625,63.5],"socket":[161.8447265625,60]}}}},{"name":"Xj6heyh","moduleName":"Global","inputs":{},"dv":{"p":[1593,493.5],"tp":[15,15],"ip":[15,45],"op":[60,45],"d":[133.1796875,200],"inp":{},"oup":{"w":{"text":[88,63.5],"socket":[67,60]},"h":{"text":[88,77.5],"socket":[67,74]},"wh":{"text":[88,91.5],"socket":[67,88]},"CV":{"text":[88,105.5],"socket":[67,102]},"BV":{"text":[88,119.5],"socket":[67,116]},"ZV":{"text":[88,133.5],"socket":[67,130]},"PI":{"text":[88,147.5],"socket":[67,144]},"TAU":{"text":[88,161.5],"socket":[67,158]},"one":{"text":[88,175.5],"socket":[67,172]},"zero":{"text":[88,189.5],"socket":[67,186]}}}},{"name":"S18850n","moduleName":"Style","inputs":{"gateIn":{"type":"connection","module":"L8d56en","property":"output"},"fillR":{"type":"value","value":1},"fillG":{"type":"value","value":1},"fillB":{"type":"value","value":1},"fillA":{"type":"value","value":0.5},"strokeA":{"type":"value","value":0}},"dv":{"p":[2164,472.5],"tp":[15,15],"ip":[15,45],"op":[191.2607421875,45],"d":[288.63232421875,200],"inp":{"gateIn":{"text":[44,63.5],"socket":[22,60]},"fillR":{"text":[44,77.5],"socket":[22,74]},"fillG":{"text":[44,91.5],"socket":[22,88]},"fillB":{"text":[44,105.5],"socket":[22,102]},"fillA":{"text":[44,119.5],"socket":[22,116]},"strokeR":{"text":[44,133.5],"socket":[22,130]},"strokeG":{"text":[44,147.5],"socket":[22,144]},"strokeB":{"text":[44,161.5],"socket":[22,158]},"strokeA":{"text":[44,175.5],"socket":[22,172]},"strokeWeight":{"text":[44,189.5],"socket":[22,186]}},"oup":{"gateOut":{"text":[219.2607421875,63.5],"socket":[198.2607421875,60]}}}},{"name":"Obcr7yi","moduleName":"DrawEllipse","inputs":{"v":{"type":"connection","module":"Xwsmaws","property":"gateOut"},"r":{"type":"value","value":[1,1]}},"dv":{"p":[2760,355.5],"tp":[15,15],"ip":[15,45],"op":[154.8447265625,45],"d":[232.2138671875,116],"inp":{"multiply":{"text":[44,63.5],"socket":[22,60]},"v":{"text":[44,77.5],"socket":[22,74]},"r":{"text":[44,91.5],"socket":[22,88]},"a":{"text":[44,105.5],"socket":[22,102]}},"oup":{"done":{"text":[182.8447265625,63.5],"socket":[161.8447265625,60]}}}},{"name":"Xwsmaws","moduleName":"DrawBackground","inputs":{"gateIn":{"type":"connection","module":"S18850n","property":"gateOut"},"fillR":{"type":"value","value":0},"fillG":{"type":"value","value":0},"fillB":{"type":"value","value":0},"fillA":{"type":"connection","module":"Z1ysvro","property":"output"}},"dv":{"p":[2465,472.5],"tp":[15,15],"ip":[15,45],"op":[145.7041015625,45],"d":[243.07568359375,130],"inp":{"gateIn":{"text":[44,63.5],"socket":[22,60]},"fillR":{"text":[44,77.5],"socket":[22,74]},"fillG":{"text":[44,91.5],"socket":[22,88]},"fillB":{"text":[44,105.5],"socket":[22,102]},"fillA":{"text":[44,119.5],"socket":[22,116]}},"oup":{"gateOut":{"text":[173.7041015625,63.5],"socket":[152.7041015625,60]}}}},{"name":"J3czg1s","moduleName":"TrueTime","inputs":{},"dv":{"p":[-507,222.5],"tp":[15,15],"ip":[15,45],"op":[147.3447265625,45],"d":[237.18701171875,102],"inp":{"divisor":{"text":[44,63.5],"socket":[22,60]}},"oup":{"t":{"text":[175.3447265625,63.5],"socket":[154.3447265625,60]},"dt":{"text":[175.3447265625,77.5],"socket":[154.3447265625,74]},"frames":{"text":[175.3447265625,91.5],"socket":[154.3447265625,88]}}}},{"name":"Hqaoc3p","moduleName":"VectorScale","inputs":{"scale":{"type":"connection","module":"Wdodhrj","property":"output"},"v":{"type":"connection","module":"Vip9nns","property":"output"}},"dv":{"p":[1618,292.5],"tp":[15,15],"ip":[15,45],"op":[139.01708984375,45],"d":[224.72119140625,88],"inp":{"v":{"text":[44,63.5],"socket":[22,60]},"scale":{"text":[44,77.5],"socket":[22,74]}},"oup":{"output":{"text":[167.01708984375,63.5],"socket":[146.01708984375,60]}}}},{"name":"Wdodhrj","moduleName":"Vectorize","inputs":{"x":{"type":"connection","module":"Loczcmd","property":"m"},"y":{"type":"connection","module":"Loczcmd","property":"m"}},"dv":{"p":[1228,144.5],"tp":[15,15],"ip":[15,45],"op":[111.5,45],"d":[197.2041015625,88],"inp":{"x":{"text":[44,63.5],"socket":[22,60]},"y":{"text":[44,77.5],"socket":[22,74]}},"oup":{"output":{"text":[139.5,63.5],"socket":[118.5,60]}}}},{"name":"B3c9ira","moduleName":"Polygon","inputs":{"sides":{"type":"connection","module":"Tdo0kr7","property":"output"}},"dv":{"p":[1040,724.5],"tp":[15,15],"ip":[15,45],"op":[139.01708984375,45],"d":[223.0439453125,74],"inp":{"sides":{"text":[44,63.5],"socket":[22,60]}},"oup":{"points":{"text":[167.01708984375,63.5],"socket":[146.01708984375,60]}}}},{"name":"Loczcmd","moduleName":"Multiply","inputs":{"a":{"type":"connection","module":"Xean2dq","property":"m"},"b":{"type":"connection","module":"Dymk3v4","property":"m"}},"dv":{"p":[784,132.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[168.83740234375,88],"inp":{"a":{"text":[44,63.5],"socket":[22,60]},"b":{"text":[44,77.5],"socket":[22,74]}},"oup":{"m":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}},{"name":"L9vxpvw","moduleName":"TrueTime","inputs":{},"dv":{"p":[1761,751.5],"tp":[15,15],"ip":[15,45],"op":[147.3447265625,45],"d":[237.18701171875,102],"inp":{"divisor":{"text":[44,63.5],"socket":[22,60]}},"oup":{"t":{"text":[175.3447265625,63.5],"socket":[154.3447265625,60]},"dt":{"text":[175.3447265625,77.5],"socket":[154.3447265625,74]},"frames":{"text":[175.3447265625,91.5],"socket":[154.3447265625,88]}}}},{"name":"Tgvmb48","moduleName":"Perlin","inputs":{"seed":{"type":"value","value":0.76543},"v":{"type":"connection","module":"Mp6yr78","property":"output"}},"dv":{"p":[750,460.5],"tp":[15,15],"ip":[15,45],"op":[136.52685546875,45],"d":[222.23095703125,88],"inp":{"seed":{"text":[44,63.5],"socket":[22,60]},"v":{"text":[44,77.5],"socket":[22,74]}},"oup":{"output":{"text":[164.52685546875,63.5],"socket":[143.52685546875,60]}}}},{"name":"Mp6yr78","moduleName":"Vectorize","inputs":{"x":{"type":"connection","module":"Fc1q6le","property":"m"},"y":{"type":"connection","module":"Evjnurm","property":"m"}},"dv":{"p":[543,495.5],"tp":[15,15],"ip":[15,45],"op":[111.5,45],"d":[197.2041015625,88],"inp":{"x":{"text":[44,63.5],"socket":[22,60]},"y":{"text":[44,77.5],"socket":[22,74]}},"oup":{"output":{"text":[139.5,63.5],"socket":[118.5,60]}}}},{"name":"Nrsry6c","moduleName":"Multiply","inputs":{"b":{"type":"value","value":0.031},"a":{"type":"connection","module":"J3czg1s","property":"t"}},"dv":{"p":[24,473.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[168.83740234375,88],"inp":{"a":{"text":[44,63.5],"socket":[22,60]},"b":{"text":[44,77.5],"socket":[22,74]}},"oup":{"m":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}},{"name":"P8blxmr","moduleName":"Multiply","inputs":{"b":{"type":"value","value":0.4},"a":{"type":"connection","module":"J3czg1s","property":"t"}},"dv":{"p":[24,382.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[168.83740234375,88],"inp":{"a":{"text":[44,63.5],"socket":[22,60]},"b":{"text":[44,77.5],"socket":[22,74]}},"oup":{"m":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}},{"name":"Oq4nl2t","moduleName":"Multiply","inputs":{"a":{"type":"connection","module":"Tgvmb48","property":"output"},"b":{"type":"value","value":6.283}},"dv":{"p":[996,459.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[168.83740234375,88],"inp":{"a":{"text":[44,63.5],"socket":[22,60]},"b":{"text":[44,77.5],"socket":[22,74]}},"oup":{"m":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}},{"name":"Mq510j0","moduleName":"Multi","inputs":{"n":{"type":"connection","module":"Tdo0kr7","property":"output"}},"dv":{"p":[-656,695.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[198.04638671875,74],"inp":{"n":{"text":[44,63.5],"socket":[22,60]}},"oup":{"output":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}},{"name":"Seagmhf","moduleName":"Multiply","inputs":{"b":{"type":"connection","module":"Mq510j0","property":"output"},"a":{"type":"connection","module":"M2hhuf5","property":"TAU"}},"dv":{"p":[-506,524.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[168.83740234375,88],"inp":{"a":{"text":[44,63.5],"socket":[22,60]},"b":{"text":[44,77.5],"socket":[22,74]}},"oup":{"m":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}},{"name":"M2hhuf5","moduleName":"Global","inputs":{},"dv":{"p":[-725,420.5],"tp":[15,15],"ip":[15,45],"op":[60,45],"d":[133.1796875,200],"inp":{},"oup":{"w":{"text":[88,63.5],"socket":[67,60]},"h":{"text":[88,77.5],"socket":[67,74]},"wh":{"text":[88,91.5],"socket":[67,88]},"CV":{"text":[88,105.5],"socket":[67,102]},"BV":{"text":[88,119.5],"socket":[67,116]},"ZV":{"text":[88,133.5],"socket":[67,130]},"PI":{"text":[88,147.5],"socket":[67,144]},"TAU":{"text":[88,161.5],"socket":[67,158]},"one":{"text":[88,175.5],"socket":[67,172]},"zero":{"text":[88,189.5],"socket":[67,186]}}}},{"name":"Evjnurm","moduleName":"Add","inputs":{"b":{"type":"connection","module":"Nnmvwnb","property":"output"},"a":{"type":"connection","module":"Nrsry6c","property":"m"}},"dv":{"p":[363,559.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[168.83740234375,88],"inp":{"a":{"text":[44,63.5],"socket":[22,60]},"b":{"text":[44,77.5],"socket":[22,74]}},"oup":{"m":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}},{"name":"Fc1q6le","moduleName":"Add","inputs":{"a":{"type":"connection","module":"P8blxmr","property":"m"},"b":{"type":"connection","module":"Nnmvwnb","property":"output"}},"dv":{"p":[360,468.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[168.83740234375,88],"inp":{"a":{"text":[44,63.5],"socket":[22,60]},"b":{"text":[44,77.5],"socket":[22,74]}},"oup":{"m":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}},{"name":"Oj940pa","moduleName":"Multiply","inputs":{"a":{"type":"connection","module":"Seagmhf","property":"m"},"b":{"type":"value","value":45}},"dv":{"p":[-35,643.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[168.83740234375,88],"inp":{"a":{"text":[44,63.5],"socket":[22,60]},"b":{"text":[44,77.5],"socket":[22,74]}},"oup":{"m":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}},{"name":"Nnmvwnb","moduleName":"SinMap","inputs":{"value":{"type":"connection","module":"Oj940pa","property":"m"},"toA":{"type":"value","value":-3},"toB":{"type":"value","value":3}},"dv":{"p":[144,663.5],"tp":[15,15],"ip":[15,45],"op":[139.859375,45],"d":[225.5634765625,102],"inp":{"toA":{"text":[44,63.5],"socket":[22,60]},"toB":{"text":[44,77.5],"socket":[22,74]},"value":{"text":[44,91.5],"socket":[22,88]}},"oup":{"output":{"text":[167.859375,63.5],"socket":[146.859375,60]}}}},{"name":"Vip9nns","moduleName":"VectorRotate","inputs":{"v":{"type":"connection","module":"B3c9ira","property":"points"},"a":{"type":"connection","module":"C4qhwr4","property":"m"}},"dv":{"p":[1316,432.5],"tp":[15,15],"ip":[15,45],"op":[119.84228515625,45],"d":[205.54638671875,102],"inp":{"v":{"text":[44,63.5],"socket":[22,60]},"cp":{"text":[44,77.5],"socket":[22,74]},"a":{"text":[44,91.5],"socket":[22,88]}},"oup":{"output":{"text":[147.84228515625,63.5],"socket":[126.84228515625,60]}}}},{"name":"P4i2a65","moduleName":"Multiply","inputs":{"a":{"type":"connection","module":"J3czg1s","property":"t"},"b":{"type":"value","value":0.125}},"dv":{"p":[385,305.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[168.83740234375,88],"inp":{"a":{"text":[44,63.5],"socket":[22,60]},"b":{"text":[44,77.5],"socket":[22,74]}},"oup":{"m":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}},{"name":"C4qhwr4","moduleName":"Add","inputs":{"b":{"type":"connection","module":"Oq4nl2t","property":"m"},"a":{"type":"connection","module":"P4i2a65","property":"m"}},"dv":{"p":[1134,344.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[168.83740234375,88],"inp":{"a":{"text":[44,63.5],"socket":[22,60]},"b":{"text":[44,77.5],"socket":[22,74]}},"oup":{"m":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}},{"name":"Uxy56r6","moduleName":"Multiply","inputs":{"b":{"type":"connection","module":"Seagmhf","property":"m"},"a":{"type":"value","value":23}},"dv":{"p":[-291,464.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[168.83740234375,88],"inp":{"a":{"text":[44,63.5],"socket":[22,60]},"b":{"text":[44,77.5],"socket":[22,74]}},"oup":{"m":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}},{"name":"Wwqfncr","moduleName":"SinMap","inputs":{"value":{"type":"connection","module":"Uxy56r6","property":"m"},"toA":{"type":"value","value":30},"toB":{"type":"value","value":-30}},"dv":{"p":[93,92.5],"tp":[15,15],"ip":[15,45],"op":[139.859375,45],"d":[225.5634765625,102],"inp":{"toA":{"text":[44,63.5],"socket":[22,60]},"toB":{"text":[44,77.5],"socket":[22,74]},"value":{"text":[44,91.5],"socket":[22,88]}},"oup":{"output":{"text":[167.859375,63.5],"socket":[146.859375,60]}}}},{"name":"Z1ysvro","moduleName":"Step","inputs":{"edge":{"type":"value","value":1},"n":{"type":"connection","module":"L9vxpvw","property":"t"},"invert":{"type":"value","value":1}},"dv":{"p":[2105,738.5],"tp":[15,15],"ip":[15,45],"op":[140.6796875,45],"d":[226.3837890625,102],"inp":{"edge":{"text":[44,63.5],"socket":[22,60]},"n":{"text":[44,77.5],"socket":[22,74]},"invert":{"text":[44,91.5],"socket":[22,88]}},"oup":{"output":{"text":[168.6796875,63.5],"socket":[147.6796875,60]}}}},{"name":"Xean2dq","moduleName":"Power","inputs":{"a":{"type":"connection","module":"J3czg1s","property":"t"},"b":{"type":"value","value":2}},"dv":{"p":[123,203.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[168.83740234375,88],"inp":{"a":{"text":[44,63.5],"socket":[22,60]},"b":{"text":[44,77.5],"socket":[22,74]}},"oup":{"m":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}},{"name":"Krea49w","moduleName":"Spectrum","inputs":{},"dv":{"p":[118,-28.5],"tp":[15,15],"ip":[15,45],"op":[60,45],"d":[183.21875,116],"inp":{},"oup":{"output":{"text":[88,63.5],"socket":[67,60]},"highestLow":{"text":[88,77.5],"socket":[67,74]},"highestMid":{"text":[88,91.5],"socket":[67,88]},"highestHigh":{"text":[88,105.5],"socket":[67,102]}}}},{"name":"Dymk3v4","moduleName":"Multiply","inputs":{"a":{"type":"connection","module":"Krea49w","property":"highestMid"},"b":{"type":"connection","module":"Wwqfncr","property":"output"}},"dv":{"p":[484,60.5],"tp":[15,15],"ip":[15,45],"op":[112.34228515625,45],"d":[168.83740234375,88],"inp":{"a":{"text":[44,63.5],"socket":[22,60]},"b":{"text":[44,77.5],"socket":[22,74]}},"oup":{"m":{"text":[140.34228515625,63.5],"socket":[119.34228515625,60]}}}}]
+[
+  {
+    "name": "Tdo0kr7",
+    "moduleName": "Constant",
+    "inputs": {
+      "x": {
+        "type": "value",
+        "value": 100
+      }
+    },
+    "dv": {
+      "p": [
+        -946,
+        794.5
+      ]
+    }
+  },
+  {
+    "name": "L8d56en",
+    "moduleName": "VectorTranslate",
+    "inputs": {
+      "tv": {
+        "type": "connection",
+        "module": "Xj6heyh",
+        "property": "CV"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Hqaoc3p",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1866,
+        395.5
+      ]
+    }
+  },
+  {
+    "name": "Xj6heyh",
+    "moduleName": "Global",
+    "inputs": {},
+    "dv": {
+      "p": [
+        1593,
+        493.5
+      ]
+    }
+  },
+  {
+    "name": "S18850n",
+    "moduleName": "Style",
+    "inputs": {
+      "gateIn": {
+        "type": "connection",
+        "module": "L8d56en",
+        "property": "output"
+      },
+      "fillR": {
+        "type": "value",
+        "value": 1
+      },
+      "fillG": {
+        "type": "value",
+        "value": 1
+      },
+      "fillB": {
+        "type": "value",
+        "value": 1
+      },
+      "fillA": {
+        "type": "value",
+        "value": 0.5
+      },
+      "strokeA": {
+        "type": "value",
+        "value": 0
+      }
+    },
+    "dv": {
+      "p": [
+        2164,
+        472.5
+      ]
+    }
+  },
+  {
+    "name": "Obcr7yi",
+    "moduleName": "DrawEllipse",
+    "inputs": {
+      "v": {
+        "type": "connection",
+        "module": "Xwsmaws",
+        "property": "gateOut"
+      },
+      "r": {
+        "type": "value",
+        "value": [
+          1,
+          1
+        ]
+      }
+    },
+    "dv": {
+      "p": [
+        2760,
+        355.5
+      ]
+    }
+  },
+  {
+    "name": "Xwsmaws",
+    "moduleName": "DrawBackground",
+    "inputs": {
+      "gateIn": {
+        "type": "connection",
+        "module": "S18850n",
+        "property": "gateOut"
+      },
+      "fillR": {
+        "type": "value",
+        "value": 0
+      },
+      "fillG": {
+        "type": "value",
+        "value": 0
+      },
+      "fillB": {
+        "type": "value",
+        "value": 0
+      },
+      "fillA": {
+        "type": "connection",
+        "module": "Z1ysvro",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        2465,
+        472.5
+      ]
+    }
+  },
+  {
+    "name": "J3czg1s",
+    "moduleName": "TrueTime",
+    "inputs": {},
+    "dv": {
+      "p": [
+        -507,
+        222.5
+      ]
+    }
+  },
+  {
+    "name": "Hqaoc3p",
+    "moduleName": "VectorScale",
+    "inputs": {
+      "scale": {
+        "type": "connection",
+        "module": "Wdodhrj",
+        "property": "output"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Vip9nns",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1618,
+        292.5
+      ]
+    }
+  },
+  {
+    "name": "Wdodhrj",
+    "moduleName": "Vectorize",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Loczcmd",
+        "property": "m"
+      },
+      "y": {
+        "type": "connection",
+        "module": "Loczcmd",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        1228,
+        144.5
+      ]
+    }
+  },
+  {
+    "name": "B3c9ira",
+    "moduleName": "Polygon",
+    "inputs": {
+      "sides": {
+        "type": "connection",
+        "module": "Tdo0kr7",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1040,
+        724.5
+      ]
+    }
+  },
+  {
+    "name": "Loczcmd",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Xean2dq",
+        "property": "m"
+      },
+      "b": {
+        "type": "connection",
+        "module": "Dymk3v4",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        784,
+        132.5
+      ]
+    }
+  },
+  {
+    "name": "L9vxpvw",
+    "moduleName": "TrueTime",
+    "inputs": {},
+    "dv": {
+      "p": [
+        1761,
+        751.5
+      ]
+    }
+  },
+  {
+    "name": "Tgvmb48",
+    "moduleName": "Perlin",
+    "inputs": {
+      "seed": {
+        "type": "value",
+        "value": 0.76543
+      },
+      "v": {
+        "type": "connection",
+        "module": "Mp6yr78",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        750,
+        460.5
+      ]
+    }
+  },
+  {
+    "name": "Mp6yr78",
+    "moduleName": "Vectorize",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Fc1q6le",
+        "property": "m"
+      },
+      "y": {
+        "type": "connection",
+        "module": "Evjnurm",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        543,
+        495.5
+      ]
+    }
+  },
+  {
+    "name": "Nrsry6c",
+    "moduleName": "Multiply",
+    "inputs": {
+      "b": {
+        "type": "value",
+        "value": 0.031
+      },
+      "a": {
+        "type": "connection",
+        "module": "J3czg1s",
+        "property": "t"
+      }
+    },
+    "dv": {
+      "p": [
+        24,
+        473.5
+      ]
+    }
+  },
+  {
+    "name": "P8blxmr",
+    "moduleName": "Multiply",
+    "inputs": {
+      "b": {
+        "type": "value",
+        "value": 0.4
+      },
+      "a": {
+        "type": "connection",
+        "module": "J3czg1s",
+        "property": "t"
+      }
+    },
+    "dv": {
+      "p": [
+        24,
+        382.5
+      ]
+    }
+  },
+  {
+    "name": "Oq4nl2t",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Tgvmb48",
+        "property": "output"
+      },
+      "b": {
+        "type": "value",
+        "value": 6.283
+      }
+    },
+    "dv": {
+      "p": [
+        996,
+        459.5
+      ]
+    }
+  },
+  {
+    "name": "Mq510j0",
+    "moduleName": "Multi",
+    "inputs": {
+      "n": {
+        "type": "connection",
+        "module": "Tdo0kr7",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        -656,
+        695.5
+      ]
+    }
+  },
+  {
+    "name": "Seagmhf",
+    "moduleName": "Multiply",
+    "inputs": {
+      "b": {
+        "type": "connection",
+        "module": "Mq510j0",
+        "property": "output"
+      },
+      "a": {
+        "type": "connection",
+        "module": "M2hhuf5",
+        "property": "TAU"
+      }
+    },
+    "dv": {
+      "p": [
+        -506,
+        524.5
+      ]
+    }
+  },
+  {
+    "name": "M2hhuf5",
+    "moduleName": "Global",
+    "inputs": {},
+    "dv": {
+      "p": [
+        -725,
+        420.5
+      ]
+    }
+  },
+  {
+    "name": "Evjnurm",
+    "moduleName": "Add",
+    "inputs": {
+      "b": {
+        "type": "connection",
+        "module": "Nnmvwnb",
+        "property": "output"
+      },
+      "a": {
+        "type": "connection",
+        "module": "Nrsry6c",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        363,
+        559.5
+      ]
+    }
+  },
+  {
+    "name": "Fc1q6le",
+    "moduleName": "Add",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "P8blxmr",
+        "property": "m"
+      },
+      "b": {
+        "type": "connection",
+        "module": "Nnmvwnb",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        360,
+        468.5
+      ]
+    }
+  },
+  {
+    "name": "Oj940pa",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Seagmhf",
+        "property": "m"
+      },
+      "b": {
+        "type": "value",
+        "value": 45
+      }
+    },
+    "dv": {
+      "p": [
+        -35,
+        643.5
+      ]
+    }
+  },
+  {
+    "name": "Nnmvwnb",
+    "moduleName": "SinMap",
+    "inputs": {
+      "value": {
+        "type": "connection",
+        "module": "Oj940pa",
+        "property": "m"
+      },
+      "toA": {
+        "type": "value",
+        "value": -3
+      },
+      "toB": {
+        "type": "value",
+        "value": 3
+      }
+    },
+    "dv": {
+      "p": [
+        144,
+        663.5
+      ]
+    }
+  },
+  {
+    "name": "Vip9nns",
+    "moduleName": "VectorRotate",
+    "inputs": {
+      "v": {
+        "type": "connection",
+        "module": "B3c9ira",
+        "property": "points"
+      },
+      "a": {
+        "type": "connection",
+        "module": "C4qhwr4",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        1316,
+        432.5
+      ]
+    }
+  },
+  {
+    "name": "P4i2a65",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "J3czg1s",
+        "property": "t"
+      },
+      "b": {
+        "type": "value",
+        "value": 0.125
+      }
+    },
+    "dv": {
+      "p": [
+        385,
+        305.5
+      ]
+    }
+  },
+  {
+    "name": "C4qhwr4",
+    "moduleName": "Add",
+    "inputs": {
+      "b": {
+        "type": "connection",
+        "module": "Oq4nl2t",
+        "property": "m"
+      },
+      "a": {
+        "type": "connection",
+        "module": "P4i2a65",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        1134,
+        344.5
+      ]
+    }
+  },
+  {
+    "name": "Uxy56r6",
+    "moduleName": "Multiply",
+    "inputs": {
+      "b": {
+        "type": "connection",
+        "module": "Seagmhf",
+        "property": "m"
+      },
+      "a": {
+        "type": "value",
+        "value": 23
+      }
+    },
+    "dv": {
+      "p": [
+        -291,
+        464.5
+      ]
+    }
+  },
+  {
+    "name": "Wwqfncr",
+    "moduleName": "SinMap",
+    "inputs": {
+      "value": {
+        "type": "connection",
+        "module": "Uxy56r6",
+        "property": "m"
+      },
+      "toA": {
+        "type": "value",
+        "value": 30
+      },
+      "toB": {
+        "type": "value",
+        "value": -30
+      }
+    },
+    "dv": {
+      "p": [
+        93,
+        92.5
+      ]
+    }
+  },
+  {
+    "name": "Z1ysvro",
+    "moduleName": "Step",
+    "inputs": {
+      "edge": {
+        "type": "value",
+        "value": 1
+      },
+      "n": {
+        "type": "connection",
+        "module": "L9vxpvw",
+        "property": "t"
+      },
+      "invert": {
+        "type": "value",
+        "value": 1
+      }
+    },
+    "dv": {
+      "p": [
+        2105,
+        738.5
+      ]
+    }
+  },
+  {
+    "name": "Xean2dq",
+    "moduleName": "Power",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "J3czg1s",
+        "property": "t"
+      },
+      "b": {
+        "type": "value",
+        "value": 2
+      }
+    },
+    "dv": {
+      "p": [
+        123,
+        203.5
+      ]
+    }
+  },
+  {
+    "name": "Krea49w",
+    "moduleName": "Spectrum",
+    "inputs": {},
+    "dv": {
+      "p": [
+        118,
+        -28.5
+      ]
+    }
+  },
+  {
+    "name": "Dymk3v4",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Krea49w",
+        "property": "highestMid"
+      },
+      "b": {
+        "type": "connection",
+        "module": "Wwqfncr",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        484,
+        60.5
+      ]
+    }
+  }
+]
