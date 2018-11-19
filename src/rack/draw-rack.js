@@ -1,5 +1,5 @@
 import {compose} from 'ramda';
-import {vAdd} from 'vec-la-fp';
+import {vAdd, vDist} from 'vec-la-fp';
 import {socketRadius} from '../constants';
 import { getTagColor } from './module-tag-colors';
 import { findModule } from '../modules';
@@ -29,7 +29,8 @@ const drawConnections = (mc, translateToPosition, globalTranslate, inputPosition
 
       const p1 = vAdd(translateToPosition(inputPos), [-socketRadius, 0]);
       const p2 = vAdd(globalTranslate(outputPos), [socketRadius, 0]);
-      const bxOffset = 50;
+      const dist = vDist(p1, p2);
+      const bxOffset = dist / 2;
 
       ctx.beginPath();
       ctx.moveTo(...p1);

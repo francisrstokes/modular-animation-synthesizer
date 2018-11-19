@@ -40,6 +40,11 @@ import { Mod } from './math/Mod';
 import { Round } from './math/Round';
 import { Random } from './random-and-noise/Random';
 import { Perlin } from './random-and-noise/Perlin';
+import {HeadTail} from './util/HeadTail';
+import {PushFront} from './util/PushFront';
+import {PushBack} from './util/PushBack';
+import {Screen} from './util/Screen';
+
 
 export const modules = [
   Time,
@@ -47,7 +52,11 @@ export const modules = [
   Spectrum,
   Multiply,
   Divide,
+  Screen,
   Flatten,
+  HeadTail,
+  PushFront,
+  PushBack,
   Constant,
   Step,
   Add,
