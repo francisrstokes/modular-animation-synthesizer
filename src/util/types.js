@@ -10,6 +10,8 @@ export const isMatrix = a => isArray(a) && a.length === 9 && a.every(isNumber);
 export const isMatrixArray = a => isArray(a) && a.every(isMatrix);
 export const isFunction = a => typeof a === 'function';
 export const isFunctionArray = a => isArray(a) && a.every(isFunction);
+export const isStyle = a => typeof a === 'object' && a['@@isStyle'];
+export const isStyleArray = a => isArray(a) && a.every(isStyle);
 
 const types = [
   ['v', isVector],

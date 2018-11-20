@@ -1,16 +1,6 @@
 [
   {
     "name": "Ekv7bh1",
-    "module": {
-      "name": "Multi",
-      "tag": "Interpolation",
-      "inputs": {
-        "n": "Number"
-      },
-      "outputs": {
-        "output": "Number"
-      }
-    },
     "moduleName": "Multi",
     "inputs": {
       "n": {
@@ -20,28 +10,13 @@
     },
     "dv": {
       "p": [
-        -1569,
-        608.5
+        -1882,
+        857.5
       ]
     }
   },
   {
     "name": "Euwi3qa",
-    "module": {
-      "name": "Time",
-      "tag": "Time",
-      "inputs": {},
-      "outputs": {
-        "t": "Number",
-        "t2": "Number",
-        "t10": "Number",
-        "t30": "Number",
-        "t60": "Number",
-        "t100": "Number",
-        "t200": "Number",
-        "t300": "Number"
-      }
-    },
     "moduleName": "Time",
     "inputs": {},
     "dv": {
@@ -53,43 +28,12 @@
   },
   {
     "name": "Coxi4o4",
-    "module": {
-      "name": "Style",
-      "tag": "Drawing",
-      "inputs": {
-        "gateIn": "any",
-        "fillR": "Number",
-        "fillG": "Number",
-        "fillB": "Number",
-        "fillA": "Number",
-        "strokeR": "Number",
-        "strokeG": "Number",
-        "strokeB": "Number",
-        "strokeA": "Number",
-        "strokeWeight": "Number"
-      },
-      "outputs": {
-        "gateOut": "any"
-      }
-    },
     "moduleName": "Style",
     "inputs": {
-      "gateIn": {
-        "type": "connection",
-        "module": "D2lgqg1",
-        "property": "gateOut"
-      },
-      "fillR": {
-        "type": "value",
-        "value": 1
-      },
       "fillG": {
-        "type": "value",
-        "value": 1
-      },
-      "fillB": {
-        "type": "value",
-        "value": 1
+        "type": "connection",
+        "module": "Hhpd22s",
+        "property": "ncosx"
       },
       "strokeA": {
         "type": "value",
@@ -98,31 +42,27 @@
       "fillA": {
         "type": "value",
         "value": 0.7
+      },
+      "fillR": {
+        "type": "connection",
+        "module": "L7kcsm9",
+        "property": "nsinx"
+      },
+      "fillB": {
+        "type": "connection",
+        "module": "Dc1t7c2",
+        "property": "m"
       }
     },
     "dv": {
       "p": [
-        983,
-        604.5
+        -894,
+        1335.5
       ]
     }
   },
   {
     "name": "D2lgqg1",
-    "module": {
-      "name": "DrawBackground",
-      "tag": "Drawing",
-      "inputs": {
-        "gateIn": "any",
-        "fillR": "Number",
-        "fillG": "Number",
-        "fillB": "Number",
-        "fillA": "Number"
-      },
-      "outputs": {
-        "gateOut": "any"
-      }
-    },
     "moduleName": "DrawBackground",
     "inputs": {
       "fillR": {
@@ -145,37 +85,29 @@
     },
     "dv": {
       "p": [
-        736,
-        655.5
+        785,
+        606.5
       ]
     }
   },
   {
     "name": "E21c16l",
-    "module": {
-      "name": "DrawEllipse",
-      "tag": "Drawing",
-      "inputs": {
-        "multiply": "any",
-        "v": "Vector",
-        "r": "Number",
-        "a": "Number"
-      },
-      "outputs": {
-        "done": "Number"
-      }
-    },
     "moduleName": "DrawEllipse",
     "inputs": {
-      "v": {
-        "type": "connection",
-        "module": "Coxi4o4",
-        "property": "gateOut"
-      },
       "r": {
         "type": "connection",
         "module": "L9gp7ir",
         "property": "output"
+      },
+      "style": {
+        "type": "connection",
+        "module": "Coxi4o4",
+        "property": "style"
+      },
+      "v": {
+        "type": "connection",
+        "module": "D2lgqg1",
+        "property": "gateOut"
       }
     },
     "dv": {
@@ -187,17 +119,6 @@
   },
   {
     "name": "Ibaalwv",
-    "module": {
-      "name": "Multiply",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Multiply",
     "inputs": {
       "a": {
@@ -219,17 +140,6 @@
   },
   {
     "name": "Ccfajb5",
-    "module": {
-      "name": "Perlin",
-      "tag": "Random and Noise",
-      "inputs": {
-        "seed": "Number",
-        "v": "Vector"
-      },
-      "outputs": {
-        "output": "Number"
-      }
-    },
     "moduleName": "Perlin",
     "inputs": {
       "v": {
@@ -247,17 +157,6 @@
   },
   {
     "name": "O5bmiij",
-    "module": {
-      "name": "Multiply",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Multiply",
     "inputs": {
       "a": {
@@ -279,17 +178,6 @@
   },
   {
     "name": "J7h9tfv",
-    "module": {
-      "name": "Vectorize",
-      "tag": "Vector",
-      "inputs": {
-        "x": "Number",
-        "y": "Number"
-      },
-      "outputs": {
-        "output": "Vector"
-      }
-    },
     "moduleName": "Vectorize",
     "inputs": {
       "x": {
@@ -312,17 +200,6 @@
   },
   {
     "name": "Kw2zyxs",
-    "module": {
-      "name": "Vectorize",
-      "tag": "Vector",
-      "inputs": {
-        "x": "Number",
-        "y": "Number"
-      },
-      "outputs": {
-        "output": "Vector"
-      }
-    },
     "moduleName": "Vectorize",
     "inputs": {
       "x": {
@@ -345,17 +222,6 @@
   },
   {
     "name": "Yhcto89",
-    "module": {
-      "name": "Perlin",
-      "tag": "Random and Noise",
-      "inputs": {
-        "seed": "Number",
-        "v": "Vector"
-      },
-      "outputs": {
-        "output": "Number"
-      }
-    },
     "moduleName": "Perlin",
     "inputs": {
       "v": {
@@ -373,23 +239,6 @@
   },
   {
     "name": "Ljmmcyc",
-    "module": {
-      "name": "Global",
-      "tag": "Misc",
-      "inputs": {},
-      "outputs": {
-        "w": "Number",
-        "h": "Number",
-        "wh": "Vector",
-        "CV": "Vector",
-        "BV": "Vector",
-        "ZV": "Vector",
-        "PI": "Number",
-        "TAU": "Number",
-        "one": "Number",
-        "zero": "Number"
-      }
-    },
     "moduleName": "Global",
     "inputs": {},
     "dv": {
@@ -401,17 +250,6 @@
   },
   {
     "name": "Hfpnicp",
-    "module": {
-      "name": "Multiply",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Multiply",
     "inputs": {
       "b": {
@@ -434,17 +272,6 @@
   },
   {
     "name": "Bsxncsi",
-    "module": {
-      "name": "Multiply",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Multiply",
     "inputs": {
       "a": {
@@ -467,17 +294,6 @@
   },
   {
     "name": "Bqtnu1g",
-    "module": {
-      "name": "Mod",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Mod",
     "inputs": {
       "a": {
@@ -500,17 +316,6 @@
   },
   {
     "name": "T20v33b",
-    "module": {
-      "name": "Mod",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Mod",
     "inputs": {
       "b": {
@@ -533,17 +338,6 @@
   },
   {
     "name": "Ags2dd7",
-    "module": {
-      "name": "Add",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Add",
     "inputs": {
       "a": {
@@ -566,17 +360,6 @@
   },
   {
     "name": "Nqop2qg",
-    "module": {
-      "name": "Vectorize",
-      "tag": "Vector",
-      "inputs": {
-        "x": "Number",
-        "y": "Number"
-      },
-      "outputs": {
-        "output": "Vector"
-      }
-    },
     "moduleName": "Vectorize",
     "inputs": {
       "y": {
@@ -599,17 +382,6 @@
   },
   {
     "name": "Oydarji",
-    "module": {
-      "name": "Multiply",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Multiply",
     "inputs": {
       "a": {
@@ -624,26 +396,13 @@
     },
     "dv": {
       "p": [
-        -1433,
-        825.5
+        -1484,
+        832.5
       ]
     }
   },
   {
     "name": "Hhpd22s",
-    "module": {
-      "name": "Wave",
-      "tag": "Math",
-      "inputs": {
-        "x": "Number"
-      },
-      "outputs": {
-        "sinx": "Number",
-        "nsinx": "Number",
-        "cosx": "Number",
-        "ncosx": "Number"
-      }
-    },
     "moduleName": "Wave",
     "inputs": {
       "x": {
@@ -654,27 +413,13 @@
     },
     "dv": {
       "p": [
-        -1259,
-        942.5
+        -1291,
+        947.5
       ]
     }
   },
   {
     "name": "Z291sra",
-    "module": {
-      "name": "MapRange",
-      "tag": "Interpolation",
-      "inputs": {
-        "fromA": "Number",
-        "fromB": "Number",
-        "toA": "Number",
-        "toB": "Number",
-        "value": "Number"
-      },
-      "outputs": {
-        "output": "Number"
-      }
-    },
     "moduleName": "MapRange",
     "inputs": {
       "value": {
@@ -708,17 +453,6 @@
   },
   {
     "name": "Zasp13i",
-    "module": {
-      "name": "Divide",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Divide",
     "inputs": {
       "a": {
@@ -741,17 +475,6 @@
   },
   {
     "name": "Qjjwrns",
-    "module": {
-      "name": "Multiply",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Multiply",
     "inputs": {
       "a": {
@@ -766,26 +489,13 @@
     },
     "dv": {
       "p": [
-        -1356,
-        1094.5
+        -1498,
+        1099.5
       ]
     }
   },
   {
     "name": "L7kcsm9",
-    "module": {
-      "name": "Wave",
-      "tag": "Math",
-      "inputs": {
-        "x": "Number"
-      },
-      "outputs": {
-        "sinx": "Number",
-        "nsinx": "Number",
-        "cosx": "Number",
-        "ncosx": "Number"
-      }
-    },
     "moduleName": "Wave",
     "inputs": {
       "x": {
@@ -796,24 +506,13 @@
     },
     "dv": {
       "p": [
-        -1140,
-        1113.5
+        -1285,
+        1114.5
       ]
     }
   },
   {
     "name": "Mthi4x3",
-    "module": {
-      "name": "Add",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Add",
     "inputs": {
       "b": {
@@ -836,20 +535,6 @@
   },
   {
     "name": "Jgmasik",
-    "module": {
-      "name": "MapRange",
-      "tag": "Interpolation",
-      "inputs": {
-        "fromA": "Number",
-        "fromB": "Number",
-        "toA": "Number",
-        "toB": "Number",
-        "value": "Number"
-      },
-      "outputs": {
-        "output": "Number"
-      }
-    },
     "moduleName": "MapRange",
     "inputs": {
       "value": {
@@ -883,17 +568,6 @@
   },
   {
     "name": "Pgmzvxw",
-    "module": {
-      "name": "Divide",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Divide",
     "inputs": {
       "b": {
@@ -916,19 +590,6 @@
   },
   {
     "name": "Syhhpv9",
-    "module": {
-      "name": "Wave",
-      "tag": "Math",
-      "inputs": {
-        "x": "Number"
-      },
-      "outputs": {
-        "sinx": "Number",
-        "nsinx": "Number",
-        "cosx": "Number",
-        "ncosx": "Number"
-      }
-    },
     "moduleName": "Wave",
     "inputs": {
       "x": {
@@ -946,17 +607,6 @@
   },
   {
     "name": "Cina0ej",
-    "module": {
-      "name": "Multiply",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Multiply",
     "inputs": {
       "b": {
@@ -978,19 +628,6 @@
   },
   {
     "name": "B3gedr0",
-    "module": {
-      "name": "Wave",
-      "tag": "Math",
-      "inputs": {
-        "x": "Number"
-      },
-      "outputs": {
-        "sinx": "Number",
-        "nsinx": "Number",
-        "cosx": "Number",
-        "ncosx": "Number"
-      }
-    },
     "moduleName": "Wave",
     "inputs": {
       "x": {
@@ -1008,20 +645,6 @@
   },
   {
     "name": "U353kjq",
-    "module": {
-      "name": "MapRange",
-      "tag": "Interpolation",
-      "inputs": {
-        "fromA": "Number",
-        "fromB": "Number",
-        "toA": "Number",
-        "toB": "Number",
-        "value": "Number"
-      },
-      "outputs": {
-        "output": "Number"
-      }
-    },
     "moduleName": "MapRange",
     "inputs": {
       "fromA": {
@@ -1055,17 +678,6 @@
   },
   {
     "name": "Fmzbrf5",
-    "module": {
-      "name": "Power",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Power",
     "inputs": {
       "a": {
@@ -1087,17 +699,6 @@
   },
   {
     "name": "L9gp7ir",
-    "module": {
-      "name": "Vectorize",
-      "tag": "Vector",
-      "inputs": {
-        "x": "Number",
-        "y": "Number"
-      },
-      "outputs": {
-        "output": "Vector"
-      }
-    },
     "moduleName": "Vectorize",
     "inputs": {
       "x": {
@@ -1120,17 +721,6 @@
   },
   {
     "name": "Uzh534x",
-    "module": {
-      "name": "Add",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Add",
     "inputs": {
       "a": {
@@ -1153,17 +743,6 @@
   },
   {
     "name": "Xllk7wf",
-    "module": {
-      "name": "Multiply",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Multiply",
     "inputs": {
       "a": {
@@ -1185,17 +764,6 @@
   },
   {
     "name": "Ymflljd",
-    "module": {
-      "name": "Add",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Add",
     "inputs": {
       "a": {
@@ -1218,17 +786,6 @@
   },
   {
     "name": "Xp3y5zp",
-    "module": {
-      "name": "Multiply",
-      "tag": "Math",
-      "inputs": {
-        "a": "Number",
-        "b": "Number"
-      },
-      "outputs": {
-        "m": "Number"
-      }
-    },
     "moduleName": "Multiply",
     "inputs": {
       "a": {
@@ -1245,6 +802,27 @@
       "p": [
         -306,
         446.5
+      ]
+    }
+  },
+  {
+    "name": "Dc1t7c2",
+    "moduleName": "Multiply",
+    "inputs": {
+      "b": {
+        "type": "value",
+        "value": 91
+      },
+      "a": {
+        "type": "connection",
+        "module": "Ekv7bh1",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        -1507,
+        1240.5
       ]
     }
   }

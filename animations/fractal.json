@@ -7,6 +7,11 @@
         "type": "connection",
         "module": "Jej7r3x",
         "property": "gateOut"
+      },
+      "style": {
+        "type": "connection",
+        "module": "Im5n7oe",
+        "property": "style"
       }
     },
     "dv": {
@@ -20,11 +25,6 @@
     "name": "Jej7r3x",
     "moduleName": "DrawBackground",
     "inputs": {
-      "gateIn": {
-        "type": "connection",
-        "module": "Im5n7oe",
-        "property": "gateOut"
-      },
       "fillR": {
         "type": "value",
         "value": 0
@@ -40,6 +40,11 @@
       "fillA": {
         "type": "value",
         "value": 0.4
+      },
+      "gateIn": {
+        "type": "connection",
+        "module": "Mulnhi3",
+        "property": "output"
       }
     },
     "dv": {
@@ -69,11 +74,6 @@
         "type": "value",
         "value": 1
       },
-      "gateIn": {
-        "type": "connection",
-        "module": "Mulnhi3",
-        "property": "output"
-      },
       "strokeWeight": {
         "type": "value",
         "value": 10
@@ -85,8 +85,8 @@
     },
     "dv": {
       "p": [
-        550,
-        443.5
+        1112,
+        769.5
       ]
     }
   },
@@ -265,6 +265,11 @@
         "type": "connection",
         "module": "Xnm25xz",
         "property": "output"
+      },
+      "style": {
+        "type": "connection",
+        "module": "Im5n7oe",
+        "property": "style"
       }
     },
     "dv": {
@@ -410,6 +415,11 @@
         "type": "connection",
         "module": "K9tnxs2",
         "property": "output"
+      },
+      "style": {
+        "type": "connection",
+        "module": "Im5n7oe",
+        "property": "style"
       }
     },
     "dv": {

@@ -45,17 +45,12 @@
         "type": "connection",
         "module": "Boidkv8",
         "property": "output"
-      },
-      "gateIn": {
-        "type": "connection",
-        "module": "Okjn4qn",
-        "property": "output"
       }
     },
     "dv": {
       "p": [
-        1324,
-        555.5
+        1327,
+        671.5
       ]
     }
   },
@@ -85,6 +80,11 @@
         "type": "connection",
         "module": "Ztgrnoz",
         "property": "gateOut"
+      },
+      "style": {
+        "type": "connection",
+        "module": "R19fmnk",
+        "property": "style"
       }
     },
     "dv": {
@@ -130,14 +130,14 @@
       },
       "gateIn": {
         "type": "connection",
-        "module": "R19fmnk",
-        "property": "gateOut"
+        "module": "Okjn4qn",
+        "property": "output"
       }
     },
     "dv": {
       "p": [
-        1760,
-        680.5
+        1435,
+        489.5
       ]
     }
   },

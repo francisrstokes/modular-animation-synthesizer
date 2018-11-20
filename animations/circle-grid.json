@@ -22,17 +22,12 @@
       "fillA": {
         "type": "value",
         "value": 0.1
-      },
-      "gateIn": {
-        "type": "connection",
-        "module": "Th6pcfo",
-        "property": "output"
       }
     },
     "dv": {
       "p": [
-        2461,
-        446.5
+        2903,
+        1003.5
       ]
     }
   },
@@ -40,11 +35,6 @@
     "name": "Cnvn5sp",
     "moduleName": "DrawBackground",
     "inputs": {
-      "gateIn": {
-        "type": "connection",
-        "module": "Ny6g0er",
-        "property": "gateOut"
-      },
       "fillR": {
         "type": "value",
         "value": 0
@@ -60,6 +50,11 @@
       "fillA": {
         "type": "value",
         "value": 0.01
+      },
+      "gateIn": {
+        "type": "connection",
+        "module": "Th6pcfo",
+        "property": "output"
       }
     },
     "dv": {
@@ -82,12 +77,17 @@
         "type": "connection",
         "module": "E4jxv13",
         "property": "output"
+      },
+      "style": {
+        "type": "connection",
+        "module": "Ny6g0er",
+        "property": "style"
       }
     },
     "dv": {
       "p": [
-        3199,
-        619.5
+        3386,
+        625.5
       ]
     }
   },

@@ -190,11 +190,6 @@
     "name": "Mfx04qt",
     "moduleName": "Style",
     "inputs": {
-      "gateIn": {
-        "type": "connection",
-        "module": "Mvxxarx",
-        "property": "output"
-      },
       "fillR": {
         "type": "value",
         "value": 1
@@ -214,8 +209,8 @@
     },
     "dv": {
       "p": [
-        1687,
-        487.5
+        1820,
+        689.5
       ]
     }
   },
@@ -225,8 +220,8 @@
     "inputs": {
       "gateIn": {
         "type": "connection",
-        "module": "Mfx04qt",
-        "property": "gateOut"
+        "module": "Mvxxarx",
+        "property": "output"
       },
       "fillR": {
         "type": "value",
@@ -243,8 +238,8 @@
     },
     "dv": {
       "p": [
-        1987,
-        489.5
+        1816,
+        382.5
       ]
     }
   },
@@ -256,6 +251,11 @@
         "type": "connection",
         "module": "Aq9zkiv",
         "property": "gateOut"
+      },
+      "style": {
+        "type": "connection",
+        "module": "Mfx04qt",
+        "property": "style"
       }
     },
     "dv": {

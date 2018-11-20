@@ -7,11 +7,6 @@
         "type": "value",
         "value": 0
       },
-      "gateIn": {
-        "type": "connection",
-        "module": "Amisvmf",
-        "property": "output"
-      },
       "fillA": {
         "type": "value",
         "value": 1
@@ -34,8 +29,8 @@
     },
     "dv": {
       "p": [
-        1167,
-        456.5
+        1165,
+        582.5
       ]
     }
   },
@@ -43,11 +38,6 @@
     "name": "Y01ydrn",
     "moduleName": "DrawBackground",
     "inputs": {
-      "gateIn": {
-        "type": "connection",
-        "module": "Lj0k5ok",
-        "property": "gateOut"
-      },
       "fillR": {
         "type": "value",
         "value": 0
@@ -63,6 +53,11 @@
       "fillA": {
         "type": "value",
         "value": 0.1
+      },
+      "gateIn": {
+        "type": "connection",
+        "module": "Amisvmf",
+        "property": "output"
       }
     },
     "dv": {
@@ -85,6 +80,11 @@
         "type": "connection",
         "module": "Llqzvd6",
         "property": "output"
+      },
+      "style": {
+        "type": "connection",
+        "module": "Lj0k5ok",
+        "property": "style"
       }
     },
     "dv": {

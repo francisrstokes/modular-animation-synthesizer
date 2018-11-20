@@ -52,11 +52,6 @@
     "name": "S18850n",
     "moduleName": "Style",
     "inputs": {
-      "gateIn": {
-        "type": "connection",
-        "module": "L8d56en",
-        "property": "output"
-      },
       "fillR": {
         "type": "value",
         "value": 1
@@ -80,8 +75,8 @@
     },
     "dv": {
       "p": [
-        2164,
-        472.5
+        2455,
+        674.5
       ]
     }
   },
@@ -100,12 +95,17 @@
           2,
           2
         ]
+      },
+      "style": {
+        "type": "connection",
+        "module": "S18850n",
+        "property": "style"
       }
     },
     "dv": {
       "p": [
-        2760,
-        355.5
+        2904,
+        458.5
       ]
     }
   },
@@ -113,11 +113,6 @@
     "name": "Xwsmaws",
     "moduleName": "DrawBackground",
     "inputs": {
-      "gateIn": {
-        "type": "connection",
-        "module": "S18850n",
-        "property": "gateOut"
-      },
       "fillR": {
         "type": "value",
         "value": 0
@@ -134,6 +129,11 @@
         "type": "connection",
         "module": "G84zpqu",
         "property": "m"
+      },
+      "gateIn": {
+        "type": "connection",
+        "module": "L8d56en",
+        "property": "output"
       }
     },
     "dv": {
@@ -253,8 +253,8 @@
     },
     "dv": {
       "p": [
-        2034,
-        702.5
+        2005,
+        632.5
       ]
     }
   },
@@ -274,8 +274,8 @@
     },
     "dv": {
       "p": [
-        2275,
-        710.5
+        2253,
+        660.5
       ]
     }
   },

@@ -99,17 +99,12 @@
       "fillA": {
         "type": "value",
         "value": 0
-      },
-      "gateIn": {
-        "type": "connection",
-        "module": "Z9zv8ua",
-        "property": "output"
       }
     },
     "dv": {
       "p": [
-        3336,
-        -1142
+        3526,
+        -969
       ]
     }
   },
@@ -117,11 +112,6 @@
     "name": "O1g0wek",
     "moduleName": "DrawBackground",
     "inputs": {
-      "gateIn": {
-        "type": "connection",
-        "module": "Bvvv483",
-        "property": "gateOut"
-      },
       "fillR": {
         "type": "value",
         "value": 0
@@ -133,12 +123,17 @@
       "fillB": {
         "type": "value",
         "value": 0
+      },
+      "gateIn": {
+        "type": "connection",
+        "module": "Z9zv8ua",
+        "property": "output"
       }
     },
     "dv": {
       "p": [
-        3625,
-        -1151
+        3467,
+        -1165
       ]
     }
   },
@@ -181,6 +176,11 @@
           2,
           2
         ]
+      },
+      "style": {
+        "type": "connection",
+        "module": "Bvvv483",
+        "property": "style"
       }
     },
     "dv": {

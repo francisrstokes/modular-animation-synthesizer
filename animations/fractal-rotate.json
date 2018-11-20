@@ -40,11 +40,6 @@
         "type": "value",
         "value": 1
       },
-      "gateIn": {
-        "type": "connection",
-        "module": "Xmqbm36",
-        "property": "output"
-      },
       "fillR": {
         "type": "value",
         "value": 1
@@ -60,8 +55,8 @@
     },
     "dv": {
       "p": [
-        1872,
-        -576
+        2075,
+        -353
       ]
     }
   },
@@ -81,20 +76,20 @@
         "type": "value",
         "value": 0
       },
-      "gateIn": {
-        "type": "connection",
-        "module": "Bmu3d7a",
-        "property": "gateOut"
-      },
       "fillA": {
         "type": "value",
         "value": 0.75
+      },
+      "gateIn": {
+        "type": "connection",
+        "module": "Xmqbm36",
+        "property": "output"
       }
     },
     "dv": {
       "p": [
-        2168,
-        -583
+        1993,
+        -584
       ]
     }
   },
@@ -170,6 +165,11 @@
           3,
           3
         ]
+      },
+      "style": {
+        "type": "connection",
+        "module": "Bmu3d7a",
+        "property": "style"
       }
     },
     "dv": {

@@ -115,9 +115,9 @@ export const EditMode = connecter(props => {
       copy.forEach(md => {
         const pos = md.dv.p;
         delete md.dv;
+        delete md.module;
         md.dv = { p: pos };
       });
-      console.log(copy)
       copyToClipboard(JSON.stringify(copy));
     }}>Export</button>
     <hr/>

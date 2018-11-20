@@ -163,11 +163,6 @@
     "module": "Style",
     "moduleName": "Style",
     "inputs": {
-      "gateIn": {
-        "type": "connection",
-        "module": "Ynsfpoh",
-        "property": "gateOut"
-      },
       "fillR": {
         "type": "value",
         "value": 1
@@ -187,8 +182,8 @@
     },
     "dv": {
       "p": [
-        1494,
-        393.5
+        1401,
+        580.5
       ]
     }
   },
@@ -197,17 +192,22 @@
     "module": "DrawEllipse",
     "moduleName": "DrawEllipse",
     "inputs": {
-      "v": {
-        "type": "connection",
-        "module": "Pwne9pg",
-        "property": "gateOut"
-      },
       "r": {
         "type": "value",
         "value": [
           10,
           10
         ]
+      },
+      "v": {
+        "type": "connection",
+        "module": "Ynsfpoh",
+        "property": "gateOut"
+      },
+      "style": {
+        "type": "connection",
+        "module": "Pwne9pg",
+        "property": "style"
       }
     },
     "dv": {

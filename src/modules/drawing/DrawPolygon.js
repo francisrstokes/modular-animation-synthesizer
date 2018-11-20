@@ -1,19 +1,41 @@
-import { isPolygon, isPolygonArray } from '../../util/types';
+import {zip} from 'ramda';
+import { isPolygon, isPolygonArray, isStyleArray, isStyle } from '../../util/types';
+import {applyStyle} from '../../util/apply-style';
 
 export const DrawPolygon = {
   name: 'DrawPolygon',
   tag: 'Drawing',
   inputs: {
-    points: '[Vector]'
+    points: '[Vector]',
+    style: 'style'
 	},
 	outputs: {
     done: 'Number'
   },
-  fn: ({points}, mc) => {
+  fn: ({points, style}, mc) => {
+
+    if (isStyle(style)) {
+      applyStyle(mc, style);
+    }
+
     if (isPolygonArray(points)) {
-      points.forEach(ps => mc.drawPolygon(mc.polygon(ps)));
+      if (isStyleArray(style)) {
+        zip(points, style).forEach(([points, style]) => {
+          applyStyle(mc, style);
+          mc.drawPolygon(mc.polygon(points));
+        });
+      } else {
+        points.forEach(points => mc.drawPolygon(mc.polygon(points)));
+      }
     } else if (isPolygon(points)) {
-      mc.drawPolygon(mc.polygon(points));
+      if (isStyleArray(style)) {
+        style.forEach(style => {
+          applyStyle(mc, style);
+          mc.drawPolygon(mc.polygon(points));
+        });
+      } else {
+        mc.drawPolygon(mc.polygon(points));
+      }
     }
 
     return {
