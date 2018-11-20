@@ -22343,27 +22343,40 @@ var selectors = {
   isInRawMode: (0, _ramda.compose)((0, _ramda.equals)('raw'), (0, _ramda.view)(substate)),
   isInPanMode: (0, _ramda.compose)((0, _ramda.equals)('pan'), (0, _ramda.view)(substate)),
   isInConnectingInputMode: (0, _ramda.compose)((0, _ramda.equals)('connecting_from_input'), (0, _ramda.view)(substate)),
+  isInConnectingOutputMode: (0, _ramda.compose)((0, _ramda.equals)('connecting_from_output'), (0, _ramda.view)(substate)),
   isInAnimateMode: (0, _ramda.compose)((0, _ramda.equals)('animate'), (0, _ramda.view)(mode)),
   currentMode: (0, _ramda.view)(mode),
   currentSubstate: (0, _ramda.view)(substate)
 };
 exports.selectors = selectors;
-},{"ramda":"node_modules/ramda/es/index.js"}],"animations/circle-grid.json":[function(require,module,exports) {
+},{"ramda":"node_modules/ramda/es/index.js"}],"animations/bubbles.json":[function(require,module,exports) {
 module.exports = [{
-  "name": "Ny6g0er",
+  "name": "Ekv7bh1",
+  "moduleName": "Multi",
+  "inputs": {
+    "n": {
+      "type": "value",
+      "value": 30
+    }
+  },
+  "dv": {
+    "p": [-1882, 857.5]
+  }
+}, {
+  "name": "Euwi3qa",
+  "moduleName": "Time",
+  "inputs": {},
+  "dv": {
+    "p": [-919, 613.5]
+  }
+}, {
+  "name": "Coxi4o4",
   "moduleName": "Style",
   "inputs": {
-    "fillR": {
-      "type": "value",
-      "value": 1
-    },
     "fillG": {
-      "type": "value",
-      "value": 1
-    },
-    "fillB": {
-      "type": "value",
-      "value": 1
+      "type": "connection",
+      "module": "Hhpd22s",
+      "property": "ncosx"
     },
     "strokeA": {
       "type": "value",
@@ -22371,26 +22384,26 @@ module.exports = [{
     },
     "fillA": {
       "type": "value",
-      "value": 0.1
+      "value": 0.7
     },
-    "gateIn": {
+    "fillR": {
       "type": "connection",
-      "module": "Th6pcfo",
-      "property": "output"
+      "module": "L7kcsm9",
+      "property": "nsinx"
+    },
+    "fillB": {
+      "type": "connection",
+      "module": "Dc1t7c2",
+      "property": "m"
     }
   },
   "dv": {
-    "p": [2461, 446.5]
+    "p": [-894, 1335.5]
   }
 }, {
-  "name": "Cnvn5sp",
+  "name": "D2lgqg1",
   "moduleName": "DrawBackground",
   "inputs": {
-    "gateIn": {
-      "type": "connection",
-      "module": "Ny6g0er",
-      "property": "gateOut"
-    },
     "fillR": {
       "type": "value",
       "value": 0
@@ -22403,352 +22416,614 @@ module.exports = [{
       "type": "value",
       "value": 0
     },
-    "fillA": {
-      "type": "value",
-      "value": 0.01
+    "gateIn": {
+      "type": "connection",
+      "module": "Nqop2qg",
+      "property": "output"
     }
   },
   "dv": {
-    "p": [2780, 452.5]
+    "p": [785, 606.5]
   }
 }, {
-  "name": "M3cr2u8",
+  "name": "E21c16l",
   "moduleName": "DrawEllipse",
   "inputs": {
-    "v": {
-      "type": "connection",
-      "module": "Cnvn5sp",
-      "property": "gateOut"
-    },
     "r": {
       "type": "connection",
-      "module": "E4jxv13",
+      "module": "L9gp7ir",
       "property": "output"
-    }
-  },
-  "dv": {
-    "p": [3199, 619.5]
-  }
-}, {
-  "name": "Zak2h4n",
-  "moduleName": "TrueTime",
-  "inputs": {},
-  "dv": {
-    "p": [2045, 1001.5]
-  }
-}, {
-  "name": "Nk0ak08",
-  "moduleName": "Multi",
-  "inputs": {
-    "n": {
+    },
+    "style": {
       "type": "connection",
-      "module": "Dufjay4",
-      "property": "output"
+      "module": "Coxi4o4",
+      "property": "style"
+    },
+    "v": {
+      "type": "connection",
+      "module": "D2lgqg1",
+      "property": "gateOut"
     }
   },
   "dv": {
-    "p": [946, 687.5]
+    "p": [1245, 478.5]
   }
 }, {
-  "name": "Sx6pphl",
-  "moduleName": "Global",
-  "inputs": {},
-  "dv": {
-    "p": [477, 631.5]
-  }
-}, {
-  "name": "Oeclxec",
+  "name": "Ibaalwv",
   "moduleName": "Multiply",
   "inputs": {
     "a": {
       "type": "connection",
-      "module": "Lpv2nm8",
+      "module": "Ekv7bh1",
       "property": "output"
     },
     "b": {
-      "type": "connection",
-      "module": "Hk3t1wj",
-      "property": "h"
-    }
-  },
-  "dv": {
-    "p": [1471, 620.5]
-  }
-}, {
-  "name": "Pwvgw84",
-  "moduleName": "Multiply",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "Nk0ak08",
-      "property": "output"
-    },
-    "b": {
-      "type": "connection",
-      "module": "Hk3t1wj",
-      "property": "w"
-    }
-  },
-  "dv": {
-    "p": [1466, 522.5]
-  }
-}, {
-  "name": "Th6pcfo",
-  "moduleName": "Cartesian",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "Pwvgw84",
-      "property": "m"
-    },
-    "b": {
-      "type": "connection",
-      "module": "Oeclxec",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [1665, 555.5]
-  }
-}, {
-  "name": "Dufjay4",
-  "moduleName": "Constant",
-  "inputs": {
-    "x": {
       "type": "value",
       "value": 10
     }
   },
   "dv": {
-    "p": [665, 695.5]
+    "p": [-1328, 585.5]
   }
 }, {
-  "name": "Dfacz6s",
+  "name": "Ccfajb5",
+  "moduleName": "Perlin",
+  "inputs": {
+    "v": {
+      "type": "connection",
+      "module": "J7h9tfv",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [-924, 478.5]
+  }
+}, {
+  "name": "O5bmiij",
   "moduleName": "Multiply",
   "inputs": {
-    "b": {
-      "type": "connection",
-      "module": "Gde6mep",
-      "property": "m"
-    },
     "a": {
       "type": "connection",
-      "module": "Mlyb6jg",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [2323, 846.5]
-  }
-}, {
-  "name": "T8qy4a5",
-  "moduleName": "Add",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "Dfacz6s",
-      "property": "m"
+      "module": "Ekv7bh1",
+      "property": "output"
     },
     "b": {
-      "type": "connection",
-      "module": "Zak2h4n",
-      "property": "t"
-    }
-  },
-  "dv": {
-    "p": [2510, 848.5]
-  }
-}, {
-  "name": "Nzw5i5h",
-  "moduleName": "SinMap",
-  "inputs": {
-    "value": {
-      "type": "connection",
-      "module": "T8qy4a5",
-      "property": "m"
-    },
-    "toA": {
       "type": "value",
-      "value": 0
-    },
-    "toB": {
-      "type": "connection",
-      "module": "Gsn6ufo",
-      "property": "m"
+      "value": 81
     }
   },
   "dv": {
-    "p": [2698, 836.5]
+    "p": [-1329, 689.5]
   }
 }, {
-  "name": "E4jxv13",
+  "name": "J7h9tfv",
   "moduleName": "Vectorize",
   "inputs": {
     "x": {
       "type": "connection",
-      "module": "Nzw5i5h",
-      "property": "output"
+      "module": "O5bmiij",
+      "property": "m"
     },
     "y": {
       "type": "connection",
-      "module": "Nzw5i5h",
-      "property": "output"
+      "module": "Ibaalwv",
+      "property": "m"
     }
   },
   "dv": {
-    "p": [2928, 840.5]
+    "p": [-1145, 586.5]
   }
 }, {
-  "name": "Gde6mep",
-  "moduleName": "Power",
+  "name": "Kw2zyxs",
+  "moduleName": "Vectorize",
   "inputs": {
-    "b": {
-      "type": "value",
-      "value": 2
-    },
-    "a": {
+    "x": {
       "type": "connection",
-      "module": "Rr51hk5",
-      "property": "y"
+      "module": "Ibaalwv",
+      "property": "m"
+    },
+    "y": {
+      "type": "connection",
+      "module": "O5bmiij",
+      "property": "m"
     }
   },
   "dv": {
-    "p": [1983, 847.5]
+    "p": [-1148, 690.5]
   }
 }, {
-  "name": "Rr51hk5",
-  "moduleName": "Unvectorize",
+  "name": "Yhcto89",
+  "moduleName": "Perlin",
   "inputs": {
     "v": {
       "type": "connection",
-      "module": "Th6pcfo",
+      "module": "Kw2zyxs",
       "property": "output"
     }
   },
   "dv": {
-    "p": [1805, 695.5]
+    "p": [-944, 802.5]
   }
 }, {
-  "name": "P8lgzuc",
+  "name": "Ljmmcyc",
+  "moduleName": "Global",
+  "inputs": {},
+  "dv": {
+    "p": [-249, 615.5]
+  }
+}, {
+  "name": "Hfpnicp",
+  "moduleName": "Multiply",
+  "inputs": {
+    "b": {
+      "type": "connection",
+      "module": "Ljmmcyc",
+      "property": "h"
+    },
+    "a": {
+      "type": "connection",
+      "module": "Syhhpv9",
+      "property": "nsinx"
+    }
+  },
+  "dv": {
+    "p": [-86, 814.5]
+  }
+}, {
+  "name": "Bsxncsi",
+  "moduleName": "Multiply",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "Ags2dd7",
+      "property": "m"
+    },
+    "b": {
+      "type": "connection",
+      "module": "Ljmmcyc",
+      "property": "w"
+    }
+  },
+  "dv": {
+    "p": [-72, 511.5]
+  }
+}, {
+  "name": "Bqtnu1g",
+  "moduleName": "Mod",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "Bsxncsi",
+      "property": "m"
+    },
+    "b": {
+      "type": "connection",
+      "module": "Uzh534x",
+      "property": "m"
+    }
+  },
+  "dv": {
+    "p": [124, 587.5]
+  }
+}, {
+  "name": "T20v33b",
+  "moduleName": "Mod",
+  "inputs": {
+    "b": {
+      "type": "connection",
+      "module": "Ljmmcyc",
+      "property": "h"
+    },
+    "a": {
+      "type": "connection",
+      "module": "Hfpnicp",
+      "property": "m"
+    }
+  },
+  "dv": {
+    "p": [119, 702.5]
+  }
+}, {
+  "name": "Ags2dd7",
   "moduleName": "Add",
   "inputs": {
     "a": {
       "type": "connection",
-      "module": "Rr51hk5",
-      "property": "x"
+      "module": "Ccfajb5",
+      "property": "output"
     },
     "b": {
       "type": "connection",
-      "module": "Rr51hk5",
-      "property": "y"
-    }
-  },
-  "dv": {
-    "p": [1981, 696.5]
-  }
-}, {
-  "name": "Mlyb6jg",
-  "moduleName": "Sqrt",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "P8lgzuc",
+      "module": "Zasp13i",
       "property": "m"
     }
   },
   "dv": {
-    "p": [2159, 746.5]
+    "p": [-506, 530.5]
   }
 }, {
-  "name": "Cvtcd2r",
+  "name": "Nqop2qg",
+  "moduleName": "Vectorize",
+  "inputs": {
+    "y": {
+      "type": "connection",
+      "module": "T20v33b",
+      "property": "m"
+    },
+    "x": {
+      "type": "connection",
+      "module": "Ymflljd",
+      "property": "m"
+    }
+  },
+  "dv": {
+    "p": [509, 635.5]
+  }
+}, {
+  "name": "Oydarji",
+  "moduleName": "Multiply",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "Ekv7bh1",
+      "property": "output"
+    },
+    "b": {
+      "type": "value",
+      "value": 241
+    }
+  },
+  "dv": {
+    "p": [-1484, 832.5]
+  }
+}, {
+  "name": "Hhpd22s",
+  "moduleName": "Wave",
+  "inputs": {
+    "x": {
+      "type": "connection",
+      "module": "Oydarji",
+      "property": "m"
+    }
+  },
+  "dv": {
+    "p": [-1291, 947.5]
+  }
+}, {
+  "name": "Z291sra",
+  "moduleName": "MapRange",
+  "inputs": {
+    "value": {
+      "type": "connection",
+      "module": "Hhpd22s",
+      "property": "ncosx"
+    },
+    "fromA": {
+      "type": "value",
+      "value": 0
+    },
+    "fromB": {
+      "type": "value",
+      "value": 1
+    },
+    "toA": {
+      "type": "value",
+      "value": 211
+    },
+    "toB": {
+      "type": "value",
+      "value": 401
+    }
+  },
+  "dv": {
+    "p": [-1055, 939.5]
+  }
+}, {
+  "name": "Zasp13i",
   "moduleName": "Divide",
   "inputs": {
     "a": {
       "type": "connection",
-      "module": "Sx6pphl",
-      "property": "h"
+      "module": "Euwi3qa",
+      "property": "t"
     },
     "b": {
       "type": "connection",
-      "module": "Sx6pphl",
-      "property": "w"
-    }
-  },
-  "dv": {
-    "p": [743, 551.5]
-  }
-}, {
-  "name": "Tjfckff",
-  "moduleName": "Multiply",
-  "inputs": {
-    "b": {
-      "type": "connection",
-      "module": "Cvtcd2r",
-      "property": "m"
-    },
-    "a": {
-      "type": "connection",
-      "module": "Dufjay4",
+      "module": "Z291sra",
       "property": "output"
     }
   },
   "dv": {
-    "p": [946, 553.5]
+    "p": [-703, 651.5]
   }
 }, {
-  "name": "Lpv2nm8",
-  "moduleName": "Multi",
-  "inputs": {
-    "n": {
-      "type": "connection",
-      "module": "Tjfckff",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [1132, 558.5]
-  }
-}, {
-  "name": "Gsn6ufo",
+  "name": "Qjjwrns",
   "moduleName": "Multiply",
   "inputs": {
     "a": {
       "type": "value",
-      "value": 0.5
+      "value": 91
     },
     "b": {
       "type": "connection",
-      "module": "P9q5145",
+      "module": "Ekv7bh1",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [-1498, 1099.5]
+  }
+}, {
+  "name": "L7kcsm9",
+  "moduleName": "Wave",
+  "inputs": {
+    "x": {
+      "type": "connection",
+      "module": "Qjjwrns",
       "property": "m"
     }
   },
   "dv": {
-    "p": [1957, 1195.5]
+    "p": [-1285, 1114.5]
   }
 }, {
-  "name": "P9q5145",
+  "name": "Mthi4x3",
+  "moduleName": "Add",
+  "inputs": {
+    "b": {
+      "type": "connection",
+      "module": "Pgmzvxw",
+      "property": "m"
+    },
+    "a": {
+      "type": "connection",
+      "module": "Yhcto89",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [-502, 918.5]
+  }
+}, {
+  "name": "Jgmasik",
+  "moduleName": "MapRange",
+  "inputs": {
+    "value": {
+      "type": "connection",
+      "module": "L7kcsm9",
+      "property": "nsinx"
+    },
+    "fromA": {
+      "type": "value",
+      "value": 0
+    },
+    "fromB": {
+      "type": "value",
+      "value": 1
+    },
+    "toA": {
+      "type": "value",
+      "value": 31
+    },
+    "toB": {
+      "type": "value",
+      "value": 501
+    }
+  },
+  "dv": {
+    "p": [-924, 1089.5]
+  }
+}, {
+  "name": "Pgmzvxw",
   "moduleName": "Divide",
   "inputs": {
     "b": {
       "type": "connection",
-      "module": "Dufjay4",
+      "module": "Jgmasik",
       "property": "output"
     },
     "a": {
       "type": "connection",
-      "module": "Hk3t1wj",
-      "property": "w"
+      "module": "Euwi3qa",
+      "property": "t"
     }
   },
   "dv": {
-    "p": [1466, 951.5]
+    "p": [-690, 970.5]
   }
 }, {
-  "name": "Hk3t1wj",
-  "moduleName": "Global",
-  "inputs": {},
+  "name": "Syhhpv9",
+  "moduleName": "Wave",
+  "inputs": {
+    "x": {
+      "type": "connection",
+      "module": "Mthi4x3",
+      "property": "m"
+    }
+  },
   "dv": {
-    "p": [1245, 682.5]
+    "p": [-322, 910.5]
+  }
+}, {
+  "name": "Cina0ej",
+  "moduleName": "Multiply",
+  "inputs": {
+    "b": {
+      "type": "connection",
+      "module": "Ekv7bh1",
+      "property": "output"
+    },
+    "a": {
+      "type": "value",
+      "value": 111
+    }
+  },
+  "dv": {
+    "p": [-1215, 357.5]
+  }
+}, {
+  "name": "B3gedr0",
+  "moduleName": "Wave",
+  "inputs": {
+    "x": {
+      "type": "connection",
+      "module": "Cina0ej",
+      "property": "m"
+    }
+  },
+  "dv": {
+    "p": [-963, 310.5]
+  }
+}, {
+  "name": "U353kjq",
+  "moduleName": "MapRange",
+  "inputs": {
+    "fromA": {
+      "type": "value",
+      "value": 0
+    },
+    "fromB": {
+      "type": "value",
+      "value": 1
+    },
+    "toA": {
+      "type": "value",
+      "value": 20
+    },
+    "toB": {
+      "type": "value",
+      "value": 200
+    },
+    "value": {
+      "type": "connection",
+      "module": "Fmzbrf5",
+      "property": "m"
+    }
+  },
+  "dv": {
+    "p": [-519, 305.5]
+  }
+}, {
+  "name": "Fmzbrf5",
+  "moduleName": "Power",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "B3gedr0",
+      "property": "nsinx"
+    },
+    "b": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  "dv": {
+    "p": [-728, 318.5]
+  }
+}, {
+  "name": "L9gp7ir",
+  "moduleName": "Vectorize",
+  "inputs": {
+    "x": {
+      "type": "connection",
+      "module": "U353kjq",
+      "property": "output"
+    },
+    "y": {
+      "type": "connection",
+      "module": "U353kjq",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [75, 333.5]
+  }
+}, {
+  "name": "Uzh534x",
+  "moduleName": "Add",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "Ljmmcyc",
+      "property": "w"
+    },
+    "b": {
+      "type": "connection",
+      "module": "Xp3y5zp",
+      "property": "m"
+    }
+  },
+  "dv": {
+    "p": [-81, 615.5]
+  }
+}, {
+  "name": "Xllk7wf",
+  "moduleName": "Multiply",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "U353kjq",
+      "property": "output"
+    },
+    "b": {
+      "type": "value",
+      "value": -1
+    }
+  },
+  "dv": {
+    "p": [127, 451.5]
+  }
+}, {
+  "name": "Ymflljd",
+  "moduleName": "Add",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "Xllk7wf",
+      "property": "m"
+    },
+    "b": {
+      "type": "connection",
+      "module": "Bqtnu1g",
+      "property": "m"
+    }
+  },
+  "dv": {
+    "p": [324, 607.5]
+  }
+}, {
+  "name": "Xp3y5zp",
+  "moduleName": "Multiply",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "U353kjq",
+      "property": "output"
+    },
+    "b": {
+      "type": "value",
+      "value": 2
+    }
+  },
+  "dv": {
+    "p": [-306, 446.5]
+  }
+}, {
+  "name": "Dc1t7c2",
+  "moduleName": "Multiply",
+  "inputs": {
+    "b": {
+      "type": "value",
+      "value": 91
+    },
+    "a": {
+      "type": "connection",
+      "module": "Ekv7bh1",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [-1507, 1240.5]
   }
 }];
 },{}],"src/rack/rack.js":[function(require,module,exports) {
@@ -22759,7 +23034,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.rack = void 0;
 
-var _circleGrid = _interopRequireDefault(require("../../animations/circle-grid.json"));
+var _bubbles = _interopRequireDefault(require("../../animations/bubbles.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22768,18 +23043,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // import r from '../../animations/perlin-circle.json';
 // import r from '../../animations/blackhole-supernova.json';
 // import r from '../../animations/audio-perlin.json';
+// import r from '../../animations/circle-grid.json';
 // import r from '../../animations/matrix-test.json';
 // import r from '../../animations/fractal-rotate.json';
 // import r from '../../animations/serpinsky.json';
 // import r from '../../animations/rose-compass.json';
-// import r from '../../animations/bubbles.json';
 // import r from '../../animations/fractal.json';
 // import r from '../../animations/silk.json';
 // import r from '../../animations/rings.json';
 // import r from '../../animations/random-color-balls.json';
-var rack = _circleGrid.default;
+// import r from '../../animations/style-test.json';
+var rack = _bubbles.default; // export const rack = [];
+
 exports.rack = rack;
-},{"../../animations/circle-grid.json":"animations/circle-grid.json"}],"src/util/check-for-cycles.js":[function(require,module,exports) {
+},{"../../animations/bubbles.json":"animations/bubbles.json"}],"src/util/check-for-cycles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45293,7 +45570,7 @@ exports.TrueTime = TrueTime;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.tagType = exports.isFunctionArray = exports.isFunction = exports.isMatrixArray = exports.isMatrix = exports.isPolygonArray = exports.isPolygon = exports.isVector = exports.isNumberArrayArray = exports.isNumberArray = exports.isArrayArray = exports.isArray = exports.isNumber = void 0;
+exports.tagType = exports.isStyleArray = exports.isStyle = exports.isFunctionArray = exports.isFunction = exports.isMatrixArray = exports.isMatrix = exports.isPolygonArray = exports.isPolygon = exports.isVector = exports.isNumberArrayArray = exports.isNumberArray = exports.isArrayArray = exports.isArray = exports.isNumber = void 0;
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
@@ -45310,6 +45587,8 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 var isNumber = function isNumber(a) {
   return Number.isFinite(a);
@@ -45382,6 +45661,18 @@ var isFunctionArray = function isFunctionArray(a) {
 };
 
 exports.isFunctionArray = isFunctionArray;
+
+var isStyle = function isStyle(a) {
+  return _typeof(a) === 'object' && a['@@isStyle'];
+};
+
+exports.isStyle = isStyle;
+
+var isStyleArray = function isStyleArray(a) {
+  return isArray(a) && a.every(isStyle);
+};
+
+exports.isStyleArray = isStyleArray;
 var types = [['v', isVector], ['p', isPolygon], ['pa', isPolygonArray], ['n', isNumber], ['na', isNumberArray], ['naa', isNumberArrayArray]];
 
 var tagType = function tagType(inputs) {
@@ -46524,7 +46815,22 @@ var Vectorize = {
   }
 };
 exports.Vectorize = Vectorize;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/drawing/DrawPolygon.js":[function(require,module,exports) {
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/util/apply-style.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.applyStyle = void 0;
+
+var applyStyle = function applyStyle(mc, style) {
+  mc.fill(style.fill);
+  mc.stroke(style.stroke);
+  mc.strokeWeight(style.strokeWeight);
+};
+
+exports.applyStyle = applyStyle;
+},{}],"src/modules/drawing/DrawPolygon.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46532,26 +46838,62 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.DrawPolygon = void 0;
 
+var _ramda = require("ramda");
+
 var _types = require("../../util/types");
+
+var _applyStyle = require("../../util/apply-style");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var DrawPolygon = {
   name: 'DrawPolygon',
   tag: 'Drawing',
   inputs: {
-    points: '[Vector]'
+    points: '[Vector]',
+    style: 'style'
   },
   outputs: {
     done: 'Number'
   },
   fn: function fn(_ref, mc) {
-    var points = _ref.points;
+    var points = _ref.points,
+        style = _ref.style;
+
+    if ((0, _types.isStyle)(style)) {
+      (0, _applyStyle.applyStyle)(mc, style);
+    }
 
     if ((0, _types.isPolygonArray)(points)) {
-      points.forEach(function (ps) {
-        return mc.drawPolygon(mc.polygon(ps));
-      });
+      if ((0, _types.isStyleArray)(style)) {
+        (0, _ramda.zip)(points, style).forEach(function (_ref2) {
+          var _ref3 = _slicedToArray(_ref2, 2),
+              points = _ref3[0],
+              style = _ref3[1];
+
+          (0, _applyStyle.applyStyle)(mc, style);
+          mc.drawPolygon(mc.polygon(points));
+        });
+      } else {
+        points.forEach(function (points) {
+          return mc.drawPolygon(mc.polygon(points));
+        });
+      }
     } else if ((0, _types.isPolygon)(points)) {
-      mc.drawPolygon(mc.polygon(points));
+      if ((0, _types.isStyleArray)(style)) {
+        style.forEach(function (style) {
+          (0, _applyStyle.applyStyle)(mc, style);
+          mc.drawPolygon(mc.polygon(points));
+        });
+      } else {
+        mc.drawPolygon(mc.polygon(points));
+      }
     }
 
     return {
@@ -46560,7 +46902,7 @@ var DrawPolygon = {
   }
 };
 exports.DrawPolygon = DrawPolygon;
-},{"../../util/types":"src/util/types.js"}],"src/modules/drawing/DrawEllipse.js":[function(require,module,exports) {
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js","../../util/apply-style":"src/util/apply-style.js"}],"src/modules/drawing/DrawEllipse.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46571,6 +46913,8 @@ exports.DrawEllipse = void 0;
 var _types = require("../../util/types");
 
 var _ramda = require("ramda");
+
+var _applyStyle = require("../../util/apply-style");
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -46587,7 +46931,8 @@ var DrawEllipse = {
     multiply: 'any',
     v: 'Vector',
     r: 'Number',
-    a: 'Number'
+    a: 'Number',
+    style: 'style'
   },
   outputs: {
     done: 'Number'
@@ -46597,7 +46942,8 @@ var DrawEllipse = {
         v = _ref.v,
         r = _ref.r,
         _ref$a = _ref.a,
-        a = _ref$a === void 0 ? 0 : _ref$a;
+        a = _ref$a === void 0 ? 0 : _ref$a,
+        style = _ref.style;
     var useMultiply = Boolean(multiply);
     var de = mc.drawEllipse;
     var tag = (0, _types.tagType)({
@@ -46606,53 +46952,124 @@ var DrawEllipse = {
       a: a
     });
 
+    if ((0, _types.isStyle)(style)) {
+      (0, _applyStyle.applyStyle)(mc, style);
+    }
+
     switch (tag) {
       case 'a:n,r:v,v:v':
         {
-          de(mc.ellipse(a, r, v));
+          if ((0, _types.isStyleArray)(style)) {
+            style.forEach(function (style) {
+              (0, _applyStyle.applyStyle)(mc, style);
+              de(mc.ellipse(a, r, v));
+            });
+          } else {
+            de(mc.ellipse(a, r, v));
+          }
+
           break;
         }
 
       case 'a:na,r:v,v:v':
         {
-          a.map(function (a) {
-            return de(mc.ellipse(a, r, v));
-          });
+          if ((0, _types.isStyleArray)(style)) {
+            (0, _ramda.zip)(a, style).forEach(function (_ref2) {
+              var _ref3 = _slicedToArray(_ref2, 2),
+                  a = _ref3[0],
+                  style = _ref3[1];
+
+              (0, _applyStyle.applyStyle)(mc, style);
+              de(mc.ellipse(a, r, v));
+            });
+          } else {
+            a.forEach(function (a) {
+              return de(mc.ellipse(a, r, v));
+            });
+          }
+
           break;
         }
 
       case 'a:n,r:p,v:v':
         {
-          r.map(function (r) {
-            return de(mc.ellipse(a, r, v));
-          });
+          if ((0, _types.isStyleArray)(style)) {
+            (0, _ramda.zip)(r, style).forEach(function (_ref4) {
+              var _ref5 = _slicedToArray(_ref4, 2),
+                  r = _ref5[0],
+                  style = _ref5[1];
+
+              (0, _applyStyle.applyStyle)(mc, style);
+              de(mc.ellipse(a, r, v));
+            });
+          } else {
+            r.forEach(function (r) {
+              return de(mc.ellipse(a, r, v));
+            });
+          }
+
           break;
         }
 
       case 'a:n,r:v,v:p':
         {
-          v.map(function (v) {
-            return de(mc.ellipse(a, r, v));
-          });
+          if ((0, _types.isStyleArray)(style)) {
+            (0, _ramda.zip)(v, style).forEach(function (_ref6) {
+              var _ref7 = _slicedToArray(_ref6, 2),
+                  v = _ref7[0],
+                  style = _ref7[1];
+
+              (0, _applyStyle.applyStyle)(mc, style);
+              de(mc.ellipse(a, r, v));
+            });
+          } else {
+            v.forEach(function (v) {
+              return de(mc.ellipse(a, r, v));
+            });
+          }
+
           break;
         }
 
       case 'a:na,r:v,v:p':
         {
           if (useMultiply) {
-            a.map(function (a) {
-              return v.map(function (v) {
+            if ((0, _types.isStyleArray)(style)) {
+              a.map(function (a) {
+                return v.map(function (v) {
+                  return style.map(function (style) {
+                    (0, _applyStyle.applyStyle)(mc, style);
+                    de(mc.ellipse(a, r, v));
+                  });
+                });
+              });
+            } else {
+              a.map(function (a) {
+                return v.map(function (v) {
+                  return de(mc.ellipse(a, r, v));
+                });
+              });
+            }
+          } else {
+            if ((0, _types.isStyleArray)(style)) {
+              (0, _ramda.transpose)([a, v, style]).forEach(function (_ref8) {
+                var _ref9 = _slicedToArray(_ref8, 3),
+                    a = _ref9[0],
+                    v = _ref9[1],
+                    style = _ref9[2];
+
+                (0, _applyStyle.applyStyle)(mc, style);
+                de(mc.ellipse(a, r, v));
+              });
+            } else {
+              (0, _ramda.zip)(a, v).map(function (_ref10) {
+                var _ref11 = _slicedToArray(_ref10, 2),
+                    a = _ref11[0],
+                    v = _ref11[1];
+
                 return de(mc.ellipse(a, r, v));
               });
-            });
-          } else {
-            (0, _ramda.zip)(a, v).map(function (_ref2) {
-              var _ref3 = _slicedToArray(_ref2, 2),
-                  a = _ref3[0],
-                  v = _ref3[1];
-
-              return de(mc.ellipse(a, r, v));
-            });
+            }
           }
 
           break;
@@ -46661,19 +47078,42 @@ var DrawEllipse = {
       case 'a:n,r:p,v:p':
         {
           if (useMultiply) {
-            r.map(function (r) {
-              return v.map(function (v) {
+            if ((0, _types.isStyleArray)(style)) {
+              r.map(function (r) {
+                return v.map(function (v) {
+                  return style.map(function (style) {
+                    (0, _applyStyle.applyStyle)(mc, style);
+                    de(mc.ellipse(a, r, v));
+                  });
+                });
+              });
+            } else {
+              r.map(function (r) {
+                return v.map(function (v) {
+                  return de(mc.ellipse(a, r, v));
+                });
+              });
+            }
+          } else {
+            if ((0, _types.isStyleArray)(style)) {
+              (0, _ramda.transpose)([r, v, style]).map(function (_ref12) {
+                var _ref13 = _slicedToArray(_ref12, 3),
+                    r = _ref13[0],
+                    v = _ref13[1],
+                    style = _ref13[2];
+
+                (0, _applyStyle.applyStyle)(mc, style);
+                de(mc.ellipse(a, r, v));
+              });
+            } else {
+              (0, _ramda.zip)(r, v).map(function (_ref14) {
+                var _ref15 = _slicedToArray(_ref14, 2),
+                    r = _ref15[0],
+                    v = _ref15[1];
+
                 return de(mc.ellipse(a, r, v));
               });
-            });
-          } else {
-            (0, _ramda.zip)(r, v).map(function (_ref4) {
-              var _ref5 = _slicedToArray(_ref4, 2),
-                  r = _ref5[0],
-                  v = _ref5[1];
-
-              return de(mc.ellipse(a, r, v));
-            });
+            }
           }
 
           break;
@@ -46682,22 +47122,48 @@ var DrawEllipse = {
       case 'a:na,r:p,v:p':
         {
           if (useMultiply) {
-            a.map(function (a) {
-              return r.map(function (r) {
-                return v.map(function (v) {
-                  return de(mc.ellipse(a, r, v));
+            if ((0, _types.isStyleArray)(style)) {
+              a.map(function (a) {
+                return r.map(function (r) {
+                  return v.map(function (v) {
+                    return style.map(function (style) {
+                      (0, _applyStyle.applyStyle)(mc, style);
+                      de(mc.ellipse(a, r, v));
+                    });
+                  });
                 });
               });
-            });
+            } else {
+              a.map(function (a) {
+                return r.map(function (r) {
+                  return v.map(function (v) {
+                    return de(mc.ellipse(a, r, v));
+                  });
+                });
+              });
+            }
           } else {
-            (0, _ramda.transpose)(a, r, v).map(function (_ref6) {
-              var _ref7 = _slicedToArray(_ref6, 3),
-                  a = _ref7[0],
-                  r = _ref7[1],
-                  v = _ref7[2];
+            if ((0, _types.isStyleArray)(style)) {
+              (0, _ramda.transpose)(a, r, v, style).map(function (_ref16) {
+                var _ref17 = _slicedToArray(_ref16, 4),
+                    a = _ref17[0],
+                    r = _ref17[1],
+                    v = _ref17[2],
+                    style = _ref17[3];
 
-              return de(mc.ellipse(a, r, v));
-            });
+                (0, _applyStyle.applyStyle)(mc, style);
+                de(mc.ellipse(a, r, v));
+              });
+            } else {
+              (0, _ramda.transpose)(a, r, v).map(function (_ref18) {
+                var _ref19 = _slicedToArray(_ref18, 3),
+                    a = _ref19[0],
+                    r = _ref19[1],
+                    v = _ref19[2];
+
+                return de(mc.ellipse(a, r, v));
+              });
+            }
           }
 
           break;
@@ -46705,44 +47171,102 @@ var DrawEllipse = {
 
       case 'a:n,r:v,v:pa':
         {
-          v.map(function (v) {
-            return de(mc.ellipse(a, r, v));
-          });
+          if ((0, _types.isStyleArray)(style)) {
+            v.map(function (v) {
+              return (0, _ramda.zip)(v, style).map(function (_ref20) {
+                var _ref21 = _slicedToArray(_ref20, 2),
+                    v = _ref21[0],
+                    style = _ref21[1];
+
+                (0, _applyStyle.applyStyle)(mc, style);
+                de(mc.ellipse(a, r, v));
+              });
+            });
+          } else {
+            v.map(function (v) {
+              return de(mc.ellipse(a, r, v));
+            });
+          }
+
           break;
         }
 
       case 'a:n,r:p,v:pa':
         {
-          v.map(function (v) {
-            return r.map(function (r) {
-              return de(mc.ellipse(a, r, v));
+          if ((0, _types.isStyleArray)(style)) {
+            v.map(function (v) {
+              return r.map(function (r) {
+                return style.map(function (style) {
+                  (0, _applyStyle.applyStyle)(mc, style);
+                  de(mc.ellipse(a, r, v));
+                });
+              });
             });
-          });
+          } else {
+            v.map(function (v) {
+              return r.map(function (r) {
+                return de(mc.ellipse(a, r, v));
+              });
+            });
+          }
+
           break;
         }
 
       case 'a:na,r:p,v:pa':
         {
           if (useMultiply) {
-            v.map(function (poly) {
-              return poly.map(function (v) {
-                return a.map(function (a) {
-                  return r.map(function (r) {
-                    return de(mc.ellipse(a, r, v));
+            if ((0, _types.isStyleArray)(style)) {
+              v.map(function (poly) {
+                return poly.map(function (v) {
+                  return a.map(function (a) {
+                    return r.map(function (r) {
+                      return style.map(function (style) {
+                        (0, _applyStyle.applyStyle)(mc, style);
+                        de(mc.ellipse(a, r, v));
+                      });
+                    });
                   });
                 });
               });
-            });
-          } else {
-            v.map(function (v) {
-              return (0, _ramda.zip)(a, r).map(function (_ref8) {
-                var _ref9 = _slicedToArray(_ref8, 2),
-                    a = _ref9[0],
-                    r = _ref9[1];
-
-                return de(mc.ellipse(a, r, v));
+            } else {
+              v.map(function (poly) {
+                return poly.map(function (v) {
+                  return a.map(function (a) {
+                    return r.map(function (r) {
+                      return de(mc.ellipse(a, r, v));
+                    });
+                  });
+                });
               });
-            });
+            }
+          } else {
+            if ((0, _types.isStyleArray)(style)) {
+              (0, _ramda.zip)(v, style).map(function (_ref22) {
+                var _ref23 = _slicedToArray(_ref22, 2),
+                    v = _ref23[0],
+                    style = _ref23[1];
+
+                return (0, _ramda.zip)(a, r).map(function (_ref24) {
+                  var _ref25 = _slicedToArray(_ref24, 2),
+                      a = _ref25[0],
+                      r = _ref25[1];
+
+                  (0, _applyStyle.applyStyle)(mc, style);
+                  de(mc.ellipse(a, r, v));
+                });
+              });
+            } else {
+              v.map(function (v) {
+                return (0, _ramda.zip)(a, r).map(function (_ref26) {
+                  var _ref27 = _slicedToArray(_ref26, 2),
+                      a = _ref27[0],
+                      r = _ref27[1];
+
+                  return de(mc.ellipse(a, r, v));
+                });
+              });
+            }
           }
 
           break;
@@ -46755,7 +47279,7 @@ var DrawEllipse = {
   }
 };
 exports.DrawEllipse = DrawEllipse;
-},{"../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js"}],"src/util/math-util.js":[function(require,module,exports) {
+},{"../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js","../../util/apply-style":"src/util/apply-style.js"}],"src/util/math-util.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -47326,11 +47850,177 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.Style = void 0;
+
+var _ramda = require("ramda");
+
+var _types = require("../../util/types");
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var resolveColor = function resolveColor(R, G, B, A) {
+  var rIsArray = (0, _types.isNumberArray)(R);
+  var gIsArray = (0, _types.isNumberArray)(G);
+  var bIsArray = (0, _types.isNumberArray)(B);
+  var aIsArray = (0, _types.isNumberArray)(A);
+
+  if (rIsArray) {
+    if (gIsArray) {
+      if (bIsArray) {
+        if (aIsArray) {
+          return (0, _ramda.transpose)([R.map(function (x) {
+            return Math.round(x * 255);
+          }), G.map(function (x) {
+            return Math.round(x * 255);
+          }), B.map(function (x) {
+            return Math.round(x * 255);
+          }), A]);
+        } else {
+          return (0, _ramda.transpose)([R, G, B]).map(function (_ref) {
+            var _ref2 = _slicedToArray(_ref, 3),
+                r = _ref2[0],
+                g = _ref2[1],
+                b = _ref2[2];
+
+            return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255), A];
+          });
+        }
+      } else {
+        if (aIsArray) {
+          return (0, _ramda.transpose)([R, G, A]).map(function (_ref3) {
+            var _ref4 = _slicedToArray(_ref3, 3),
+                r = _ref4[0],
+                g = _ref4[1],
+                a = _ref4[2];
+
+            return [Math.round(r * 255), Math.round(g * 255), Math.round(B * 255), a];
+          });
+        } else {
+          return (0, _ramda.zip)(R, G).map(function (_ref5) {
+            var _ref6 = _slicedToArray(_ref5, 2),
+                r = _ref6[0],
+                g = _ref6[1];
+
+            return [Math.round(r * 255), Math.round(g * 255), Math.round(B * 255), A];
+          });
+        }
+      }
+    } else {
+      if (bIsArray) {
+        if (aIsArray) {
+          return (0, _ramda.transpose)([R, B, A]).map(function (_ref7) {
+            var _ref8 = _slicedToArray(_ref7, 3),
+                r = _ref8[0],
+                b = _ref8[1],
+                a = _ref8[2];
+
+            return [Math.round(r * 255), Math.round(G * 255), Math.round(b * 255), a];
+          });
+        } else {
+          return (0, _ramda.zip)(R, B).map(function (_ref9) {
+            var _ref10 = _slicedToArray(_ref9, 2),
+                r = _ref10[0],
+                b = _ref10[1];
+
+            return [Math.round(r * 255), Math.round(G * 255), Math.round(b * 255), A];
+          });
+        }
+      } else {
+        if (aIsArray) {
+          return (0, _ramda.zip)(R, A).map(function (_ref11) {
+            var _ref12 = _slicedToArray(_ref11, 2),
+                r = _ref12[0],
+                a = _ref12[1];
+
+            return [Math.round(r * 255), Math.round(G * 255), Math.round(B * 255), a];
+          });
+        } else {
+          return R.map(function (r) {
+            return [Math.round(r * 255), Math.round(G * 255), Math.round(B * 255), A];
+          });
+        }
+      }
+    }
+  } else {
+    if (gIsArray) {
+      if (bIsArray) {
+        if (aIsArray) {
+          return (0, _ramda.transpose)([G, B, A]).map(function (_ref13) {
+            var _ref14 = _slicedToArray(_ref13, 3),
+                g = _ref14[0],
+                b = _ref14[1],
+                a = _ref14[2];
+
+            return [Math.round(R * 255), Math.round(g * 255), Math.round(b * 255), a];
+          });
+        } else {
+          return (0, _ramda.zip)(G, B).map(function (_ref15) {
+            var _ref16 = _slicedToArray(_ref15, 2),
+                g = _ref16[0],
+                b = _ref16[1];
+
+            return [Math.round(R * 255), Math.round(g * 255), Math.round(b * 255), A];
+          });
+        }
+      } else {
+        if (aIsArray) {
+          return (0, _ramda.zip)(G, A).map(function (_ref17) {
+            var _ref18 = _slicedToArray(_ref17, 2),
+                g = _ref18[0],
+                a = _ref18[1];
+
+            return [Math.round(R * 255), Math.round(g * 255), Math.round(B * 255), a];
+          });
+        } else {
+          return G.map(function (g) {
+            return [Math.round(R * 255), Math.round(g * 255), Math.round(B * 255), A];
+          });
+        }
+      }
+    } else {
+      if (bIsArray) {
+        if (aIsArray) {
+          return (0, _ramda.zip)(B, A).map(function (_ref19) {
+            var _ref20 = _slicedToArray(_ref19, 2),
+                b = _ref20[0],
+                a = _ref20[1];
+
+            return [Math.round(R * 255), Math.round(G * 255), Math.round(b * 255), a];
+          });
+        } else {
+          return B.map(function (b) {
+            return [Math.round(R * 255), Math.round(G * 255), Math.round(b * 255), A];
+          });
+        }
+      } else {
+        if (aIsArray) {
+          return A.map(function (a) {
+            return [Math.round(R * 255), Math.round(G * 255), Math.round(B * 255), a];
+          });
+        } else {
+          return [Math.round(R * 255), Math.round(G * 255), Math.round(B * 255), A];
+        }
+      }
+    }
+  }
+};
+
+var styleTypeObject = {
+  '@@isStyle': true
+};
 var Style = {
   name: 'Style',
   tag: 'Drawing',
   inputs: {
-    gateIn: 'any',
     fillR: 'Number',
     fillG: 'Number',
     fillB: 'Number',
@@ -47342,11 +48032,10 @@ var Style = {
     strokeWeight: 'Number'
   },
   outputs: {
-    gateOut: 'any'
+    style: 'style'
   },
-  fn: function fn(props, mc) {
-    var gateIn = props.gateIn,
-        _props$fillR = props.fillR,
+  fn: function fn(props) {
+    var _props$fillR = props.fillR,
         fillR = _props$fillR === void 0 ? 1 : _props$fillR,
         _props$fillG = props.fillG,
         fillG = _props$fillG === void 0 ? 1 : _props$fillG,
@@ -47364,16 +48053,114 @@ var Style = {
         strokeA = _props$strokeA === void 0 ? 1 : _props$strokeA,
         _props$strokeWeight = props.strokeWeight,
         strokeWeight = _props$strokeWeight === void 0 ? 1 : _props$strokeWeight;
-    mc.fill([fillR * 255, fillG * 255, fillB * 255, fillA]);
-    mc.stroke([strokeR * 255, strokeG * 255, strokeB * 255, strokeA]);
-    mc.strokeWeight(strokeWeight);
+    var stroke = resolveColor(strokeR, strokeG, strokeB, strokeA);
+    var fill = resolveColor(fillR, fillG, fillB, fillA);
+    var out;
+
+    if ((0, _types.isArrayArray)(stroke)) {
+      if ((0, _types.isArrayArray)(fill)) {
+        if ((0, _types.isNumberArray)(strokeWeight)) {
+          out = (0, _ramda.transpose)([stroke, fill, strokeWeight]).map(function (_ref21) {
+            var _ref22 = _slicedToArray(_ref21, 3),
+                stroke = _ref22[0],
+                fill = _ref22[1],
+                strokeWeight = _ref22[2];
+
+            return _objectSpread({}, styleTypeObject, {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            });
+          });
+        } else {
+          out = (0, _ramda.zip)(stroke, fill).map(function (_ref23) {
+            var _ref24 = _slicedToArray(_ref23, 2),
+                stroke = _ref24[0],
+                fill = _ref24[1];
+
+            return _objectSpread({}, styleTypeObject, {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            });
+          });
+        }
+      } else {
+        if ((0, _types.isNumberArray)(strokeWeight)) {
+          out = fill.map(function (fill) {
+            return {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            };
+          });
+        } else {
+          out = (0, _ramda.zip)(fill, strokeWeight).map(function (_ref25) {
+            var _ref26 = _slicedToArray(_ref25, 2),
+                fill = _ref26[0],
+                strokeWeight = _ref26[1];
+
+            return _objectSpread({}, styleTypeObject, {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            });
+          });
+        }
+      }
+    } else {
+      if ((0, _types.isArrayArray)(fill)) {
+        if ((0, _types.isNumberArray)(strokeWeight)) {
+          out = (0, _ramda.zip)(stroke, strokeWeight).map(function (_ref27) {
+            var _ref28 = _slicedToArray(_ref27, 2),
+                stroke = _ref28[0],
+                strokeWeight = _ref28[1];
+
+            return _objectSpread({}, styleTypeObject, {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            });
+          });
+        } else {
+          out = fill.map(function (fill) {
+            return _objectSpread({}, styleTypeObject, {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            });
+          });
+        }
+      } else {
+        if ((0, _types.isNumberArray)(strokeWeight)) {
+          out = (0, _ramda.zip)(strokeWeight, fill).map(function (_ref29) {
+            var _ref30 = _slicedToArray(_ref29, 2),
+                strokeWeight = _ref30[0],
+                fill = _ref30[1];
+
+            return _objectSpread({}, styleTypeObject, {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            });
+          });
+        } else {
+          out = _objectSpread({}, styleTypeObject, {
+            stroke: stroke,
+            fill: fill,
+            strokeWeight: strokeWeight
+          });
+        }
+      }
+    }
+
     return {
-      gateOut: gateIn
+      style: out
     };
   }
 };
 exports.Style = Style;
-},{}],"src/modules/util/LengthOf.js":[function(require,module,exports) {
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/util/LengthOf.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -48292,7 +49079,39 @@ var PushBack = {
   }
 };
 exports.PushBack = PushBack;
-},{"ramda":"node_modules/ramda/es/index.js"}],"src/modules/index.js":[function(require,module,exports) {
+},{"ramda":"node_modules/ramda/es/index.js"}],"src/modules/util/Screen.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Screen = void 0;
+
+var _constants = require("../../constants");
+
+var center = [_constants.w / 2, _constants.h / 2];
+var widthHeight = [_constants.w, _constants.h];
+var Screen = {
+  name: 'Screen',
+  tag: 'Misc',
+  inputs: {},
+  outputs: {
+    width: 'Number',
+    height: 'Number',
+    widthHeight: 'Vector',
+    center: 'Vector'
+  },
+  fn: function fn() {
+    return {
+      width: _constants.w,
+      height: _constants.h,
+      widthHeight: widthHeight,
+      center: center
+    };
+  }
+};
+exports.Screen = Screen;
+},{"../../constants":"src/constants.js"}],"src/modules/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -48390,7 +49209,9 @@ var _PushFront = require("./util/PushFront");
 
 var _PushBack = require("./util/PushBack");
 
-var modules = [_Time.Time, _TrueTime.TrueTime, _Spectrum.Spectrum, _Multiply.Multiply, _Divide.Divide, _Flatten.Flatten, _HeadTail.HeadTail, _PushFront.PushFront, _PushBack.PushBack, _Constant.Constant, _Step.Step, _Add.Add, _Subtract.Subtract, _Sqrt.Sqrt, _Mod.Mod, _Round.Round, _Perlin.Perlin, _Polygon.Polygon, _Rect.Rect, _Wave.Wave, _VectorScale.VectorScale, _VectorTranslate.VectorTranslate, _VectorRotate.VectorRotate, _MatrixRotate.MatrixRotate, _MatrixTranslate.MatrixTranslate, _MatrixScale.MatrixScale, _VectorTransform.VectorTransform, _Vectorize.Vectorize, _Random.Random, _Unvectorize.Unvectorize, _MapRange.MapRange, _Mix.Mix, _SinMap.SinMap, _CosMap.CosMap, _Global.Global, _Style.Style, _DrawPolygon.DrawPolygon, _DrawEllipse.DrawEllipse, _DrawBackground.DrawBackground, _Power.Power, _Gate.Gate, _Multi.Multi, _Arrayify.Arrayify, _LengthOf.LengthOf, _Cartesian.Cartesian];
+var _Screen = require("./util/Screen");
+
+var modules = [_Time.Time, _TrueTime.TrueTime, _Spectrum.Spectrum, _Multiply.Multiply, _Divide.Divide, _Screen.Screen, _Flatten.Flatten, _HeadTail.HeadTail, _PushFront.PushFront, _PushBack.PushBack, _Constant.Constant, _Step.Step, _Add.Add, _Subtract.Subtract, _Sqrt.Sqrt, _Mod.Mod, _Round.Round, _Perlin.Perlin, _Polygon.Polygon, _Rect.Rect, _Wave.Wave, _VectorScale.VectorScale, _VectorTranslate.VectorTranslate, _VectorRotate.VectorRotate, _MatrixRotate.MatrixRotate, _MatrixTranslate.MatrixTranslate, _MatrixScale.MatrixScale, _VectorTransform.VectorTransform, _Vectorize.Vectorize, _Random.Random, _Unvectorize.Unvectorize, _MapRange.MapRange, _Mix.Mix, _SinMap.SinMap, _CosMap.CosMap, _Global.Global, _Style.Style, _DrawPolygon.DrawPolygon, _DrawEllipse.DrawEllipse, _DrawBackground.DrawBackground, _Power.Power, _Gate.Gate, _Multi.Multi, _Arrayify.Arrayify, _LengthOf.LengthOf, _Cartesian.Cartesian];
 exports.modules = modules;
 
 var findModule = function findModule(moduleName) {
@@ -48400,7 +49221,7 @@ var findModule = function findModule(moduleName) {
 };
 
 exports.findModule = findModule;
-},{"./time/Time":"src/modules/time/Time.js","./time/TrueTime":"src/modules/time/TrueTime.js","./math/Multiply":"src/modules/math/Multiply.js","./math/Divide":"src/modules/math/Divide.js","./math/Add":"src/modules/math/Add.js","./math/Subtract":"src/modules/math/Subtract.js","./geometry/Polygon":"src/modules/geometry/Polygon.js","./geometry/Rect":"src/modules/geometry/Rect.js","./math/Wave":"src/modules/math/Wave.js","./vector/VectorScale":"src/modules/vector/VectorScale.js","./vector/VectorTranslate":"src/modules/vector/VectorTranslate.js","./vector/VectorRotate":"src/modules/vector/VectorRotate.js","./vector/MatrixRotate":"src/modules/vector/MatrixRotate.js","./vector/MatrixTranslate":"src/modules/vector/MatrixTranslate.js","./vector/MatrixScale":"src/modules/vector/MatrixScale.js","./vector/VectorTransform":"src/modules/vector/VectorTransform.js","./vector/Vectorize":"src/modules/vector/Vectorize.js","./drawing/DrawPolygon":"src/modules/drawing/DrawPolygon.js","./drawing/DrawEllipse":"src/modules/drawing/DrawEllipse.js","./interpolation/MapRange":"src/modules/interpolation/MapRange.js","./interpolation/Mix":"src/modules/interpolation/Mix.js","./interpolation/Step":"src/modules/interpolation/Step.js","./interpolation/SinMap":"src/modules/interpolation/SinMap.js","./interpolation/CosMap":"src/modules/interpolation/CosMap.js","./util/Global":"src/modules/util/Global.js","./math/Power":"src/modules/math/Power.js","./util/Gate":"src/modules/util/Gate.js","./drawing/DrawBackground":"src/modules/drawing/DrawBackground.js","./interpolation/Multi":"src/modules/interpolation/Multi.js","./util/Arrayify":"src/modules/util/Arrayify.js","./util/Constant":"src/modules/util/Constant.js","./util/Flatten":"src/modules/util/Flatten.js","./drawing/Style":"src/modules/drawing/Style.js","./util/LengthOf":"src/modules/util/LengthOf.js","./audio/Spectrum":"src/modules/audio/Spectrum.js","./math/Cartesian":"src/modules/math/Cartesian.js","./vector/Unvectorize":"src/modules/vector/Unvectorize.js","./math/Sqrt":"src/modules/math/Sqrt.js","./math/Mod":"src/modules/math/Mod.js","./math/Round":"src/modules/math/Round.js","./random-and-noise/Random":"src/modules/random-and-noise/Random.js","./random-and-noise/Perlin":"src/modules/random-and-noise/Perlin.js","./util/HeadTail":"src/modules/util/HeadTail.js","./util/PushFront":"src/modules/util/PushFront.js","./util/PushBack":"src/modules/util/PushBack.js"}],"src/util/run-with-context.js":[function(require,module,exports) {
+},{"./time/Time":"src/modules/time/Time.js","./time/TrueTime":"src/modules/time/TrueTime.js","./math/Multiply":"src/modules/math/Multiply.js","./math/Divide":"src/modules/math/Divide.js","./math/Add":"src/modules/math/Add.js","./math/Subtract":"src/modules/math/Subtract.js","./geometry/Polygon":"src/modules/geometry/Polygon.js","./geometry/Rect":"src/modules/geometry/Rect.js","./math/Wave":"src/modules/math/Wave.js","./vector/VectorScale":"src/modules/vector/VectorScale.js","./vector/VectorTranslate":"src/modules/vector/VectorTranslate.js","./vector/VectorRotate":"src/modules/vector/VectorRotate.js","./vector/MatrixRotate":"src/modules/vector/MatrixRotate.js","./vector/MatrixTranslate":"src/modules/vector/MatrixTranslate.js","./vector/MatrixScale":"src/modules/vector/MatrixScale.js","./vector/VectorTransform":"src/modules/vector/VectorTransform.js","./vector/Vectorize":"src/modules/vector/Vectorize.js","./drawing/DrawPolygon":"src/modules/drawing/DrawPolygon.js","./drawing/DrawEllipse":"src/modules/drawing/DrawEllipse.js","./interpolation/MapRange":"src/modules/interpolation/MapRange.js","./interpolation/Mix":"src/modules/interpolation/Mix.js","./interpolation/Step":"src/modules/interpolation/Step.js","./interpolation/SinMap":"src/modules/interpolation/SinMap.js","./interpolation/CosMap":"src/modules/interpolation/CosMap.js","./util/Global":"src/modules/util/Global.js","./math/Power":"src/modules/math/Power.js","./util/Gate":"src/modules/util/Gate.js","./drawing/DrawBackground":"src/modules/drawing/DrawBackground.js","./interpolation/Multi":"src/modules/interpolation/Multi.js","./util/Arrayify":"src/modules/util/Arrayify.js","./util/Constant":"src/modules/util/Constant.js","./util/Flatten":"src/modules/util/Flatten.js","./drawing/Style":"src/modules/drawing/Style.js","./util/LengthOf":"src/modules/util/LengthOf.js","./audio/Spectrum":"src/modules/audio/Spectrum.js","./math/Cartesian":"src/modules/math/Cartesian.js","./vector/Unvectorize":"src/modules/vector/Unvectorize.js","./math/Sqrt":"src/modules/math/Sqrt.js","./math/Mod":"src/modules/math/Mod.js","./math/Round":"src/modules/math/Round.js","./random-and-noise/Random":"src/modules/random-and-noise/Random.js","./random-and-noise/Perlin":"src/modules/random-and-noise/Perlin.js","./util/HeadTail":"src/modules/util/HeadTail.js","./util/PushFront":"src/modules/util/PushFront.js","./util/PushBack":"src/modules/util/PushBack.js","./util/Screen":"src/modules/util/Screen.js"}],"src/util/run-with-context.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -48558,11 +49379,19 @@ exports.generateAnimationFn = generateAnimationFn;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.connectSelectorsAndActions = void 0;
+exports.componentSwitch = exports.connectSelectorsAndActions = void 0;
 
 var _reactRedux = require("react-redux");
 
 var _ramda = require("ramda");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var connectSelectorsAndActions = function connectSelectorsAndActions(selectors, actions) {
   return (0, _reactRedux.connect)(function (state) {
@@ -48574,6 +49403,42 @@ var connectSelectorsAndActions = function connectSelectorsAndActions(selectors, 
 };
 
 exports.connectSelectorsAndActions = connectSelectorsAndActions;
+
+var componentSwitch = function componentSwitch(tests) {
+  var fallback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {
+    return null;
+  };
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = tests[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var _step$value = _slicedToArray(_step.value, 2),
+          condition = _step$value[0],
+          componentFn = _step$value[1];
+
+      if (condition) return componentFn();
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return != null) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  return fallback();
+};
+
+exports.componentSwitch = componentSwitch;
 },{"react-redux":"node_modules/react-redux/es/index.js","ramda":"node_modules/ramda/es/index.js"}],"node_modules/stylis/stylis.min.js":[function(require,module,exports) {
 var define;
 !function(e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e(null):"function"==typeof define&&define.amd?define(e(null)):window.stylis=e(null)}(function e(a){"use strict";var c=/^\0+/g,r=/[\0\r\f]/g,s=/: */g,t=/zoo|gra/,i=/([,: ])(transform)/g,f=/,+\s*(?![^(]*[)])/g,n=/ +\s*(?![^(]*[)])/g,l=/ *[\0] */g,o=/,\r+?/g,h=/([\t\r\n ])*\f?&/g,u=/:global\(((?:[^\(\)\[\]]*|\[.*\]|\([^\(\)]*\))*)\)/g,d=/\W+/g,b=/@(k\w+)\s*(\S*)\s*/,k=/::(place)/g,p=/:(read-only)/g,g=/\s+(?=[{\];=:>])/g,A=/([[}=:>])\s+/g,C=/(\{[^{]+?);(?=\})/g,w=/\s{2,}/g,v=/([^\(])(:+) */g,m=/[svh]\w+-[tblr]{2}/,x=/\(\s*(.*)\s*\)/g,$=/([\s\S]*?);/g,y=/-self|flex-/g,O=/[^]*?(:[rp][el]a[\w-]+)[^]*/,j=/stretch|:\s*\w+\-(?:conte|avail)/,z=/([^-])(image-set\()/,F="-webkit-",N="-moz-",S="-ms-",B=59,W=125,q=123,D=40,E=41,G=91,H=93,I=10,J=13,K=9,L=64,M=32,P=38,Q=45,R=95,T=42,U=44,V=58,X=39,Y=34,Z=47,_=62,ee=43,ae=126,ce=0,re=12,se=11,te=107,ie=109,fe=115,ne=112,le=111,oe=105,he=99,ue=100,de=112,be=1,ke=1,pe=0,ge=1,Ae=1,Ce=1,we=0,ve=0,me=0,xe=[],$e=[],ye=0,Oe=null,je=-2,ze=-1,Fe=0,Ne=1,Se=2,Be=3,We=0,qe=1,De="",Ee="",Ge="";function He(e,a,s,t,i){for(var f,n,o=0,h=0,u=0,d=0,g=0,A=0,C=0,w=0,m=0,$=0,y=0,O=0,j=0,z=0,R=0,we=0,$e=0,Oe=0,je=0,ze=s.length,Je=ze-1,Re="",Te="",Ue="",Ve="",Xe="",Ye="";R<ze;){if(C=s.charCodeAt(R),R===Je)if(h+d+u+o!==0){if(0!==h)C=h===Z?I:Z;d=u=o=0,ze++,Je++}if(h+d+u+o===0){if(R===Je){if(we>0)Te=Te.replace(r,"");if(Te.trim().length>0){switch(C){case M:case K:case B:case J:case I:break;default:Te+=s.charAt(R)}C=B}}if(1===$e)switch(C){case q:case W:case B:case Y:case X:case D:case E:case U:$e=0;case K:case J:case I:case M:break;default:for($e=0,je=R,g=C,R--,C=B;je<ze;)switch(s.charCodeAt(je++)){case I:case J:case B:++R,C=g,je=ze;break;case V:if(we>0)++R,C=g;case q:je=ze}}switch(C){case q:for(g=(Te=Te.trim()).charCodeAt(0),y=1,je=++R;R<ze;){switch(C=s.charCodeAt(R)){case q:y++;break;case W:y--;break;case Z:switch(A=s.charCodeAt(R+1)){case T:case Z:R=Qe(A,R,Je,s)}break;case G:C++;case D:C++;case Y:case X:for(;R++<Je&&s.charCodeAt(R)!==C;);}if(0===y)break;R++}if(Ue=s.substring(je,R),g===ce)g=(Te=Te.replace(c,"").trim()).charCodeAt(0);switch(g){case L:if(we>0)Te=Te.replace(r,"");switch(A=Te.charCodeAt(1)){case ue:case ie:case fe:case Q:f=a;break;default:f=xe}if(je=(Ue=He(a,f,Ue,A,i+1)).length,me>0&&0===je)je=Te.length;if(ye>0)if(f=Ie(xe,Te,Oe),n=Pe(Be,Ue,f,a,ke,be,je,A,i,t),Te=f.join(""),void 0!==n)if(0===(je=(Ue=n.trim()).length))A=0,Ue="";if(je>0)switch(A){case fe:Te=Te.replace(x,Me);case ue:case ie:case Q:Ue=Te+"{"+Ue+"}";break;case te:if(Ue=(Te=Te.replace(b,"$1 $2"+(qe>0?De:"")))+"{"+Ue+"}",1===Ae||2===Ae&&Le("@"+Ue,3))Ue="@"+F+Ue+"@"+Ue;else Ue="@"+Ue;break;default:if(Ue=Te+Ue,t===de)Ve+=Ue,Ue=""}else Ue="";break;default:Ue=He(a,Ie(a,Te,Oe),Ue,t,i+1)}Xe+=Ue,O=0,$e=0,z=0,we=0,Oe=0,j=0,Te="",Ue="",C=s.charCodeAt(++R);break;case W:case B:if((je=(Te=(we>0?Te.replace(r,""):Te).trim()).length)>1){if(0===z)if((g=Te.charCodeAt(0))===Q||g>96&&g<123)je=(Te=Te.replace(" ",":")).length;if(ye>0)if(void 0!==(n=Pe(Ne,Te,a,e,ke,be,Ve.length,t,i,t)))if(0===(je=(Te=n.trim()).length))Te="\0\0";switch(g=Te.charCodeAt(0),A=Te.charCodeAt(1),g){case ce:break;case L:if(A===oe||A===he){Ye+=Te+s.charAt(R);break}default:if(Te.charCodeAt(je-1)===V)break;Ve+=Ke(Te,g,A,Te.charCodeAt(2))}}O=0,$e=0,z=0,we=0,Oe=0,Te="",C=s.charCodeAt(++R)}}switch(C){case J:case I:if(h+d+u+o+ve===0)switch($){case E:case X:case Y:case L:case ae:case _:case T:case ee:case Z:case Q:case V:case U:case B:case q:case W:break;default:if(z>0)$e=1}if(h===Z)h=0;else if(ge+O===0&&t!==te&&Te.length>0)we=1,Te+="\0";if(ye*We>0)Pe(Fe,Te,a,e,ke,be,Ve.length,t,i,t);be=1,ke++;break;case B:case W:if(h+d+u+o===0){be++;break}default:switch(be++,Re=s.charAt(R),C){case K:case M:if(d+o+h===0)switch(w){case U:case V:case K:case M:Re="";break;default:if(C!==M)Re=" "}break;case ce:Re="\\0";break;case re:Re="\\f";break;case se:Re="\\v";break;case P:if(d+h+o===0&&ge>0)Oe=1,we=1,Re="\f"+Re;break;case 108:if(d+h+o+pe===0&&z>0)switch(R-z){case 2:if(w===ne&&s.charCodeAt(R-3)===V)pe=w;case 8:if(m===le)pe=m}break;case V:if(d+h+o===0)z=R;break;case U:if(h+u+d+o===0)we=1,Re+="\r";break;case Y:case X:if(0===h)d=d===C?0:0===d?C:d;break;case G:if(d+h+u===0)o++;break;case H:if(d+h+u===0)o--;break;case E:if(d+h+o===0)u--;break;case D:if(d+h+o===0){if(0===O)switch(2*w+3*m){case 533:break;default:y=0,O=1}u++}break;case L:if(h+u+d+o+z+j===0)j=1;break;case T:case Z:if(d+o+u>0)break;switch(h){case 0:switch(2*C+3*s.charCodeAt(R+1)){case 235:h=Z;break;case 220:je=R,h=T}break;case T:if(C===Z&&w===T&&je+2!==R){if(33===s.charCodeAt(je+2))Ve+=s.substring(je,R+1);Re="",h=0}}}if(0===h){if(ge+d+o+j===0&&t!==te&&C!==B)switch(C){case U:case ae:case _:case ee:case E:case D:if(0===O){switch(w){case K:case M:case I:case J:Re+="\0";break;default:Re="\0"+Re+(C===U?"":"\0")}we=1}else switch(C){case D:if(z+7===R&&108===w)z=0;O=++y;break;case E:if(0==(O=--y))we=1,Re+="\0"}break;case K:case M:switch(w){case ce:case q:case W:case B:case U:case re:case K:case M:case I:case J:break;default:if(0===O)we=1,Re+="\0"}}if(Te+=Re,C!==M&&C!==K)$=C}}m=w,w=C,R++}if(je=Ve.length,me>0)if(0===je&&0===Xe.length&&0===a[0].length==false)if(t!==ie||1===a.length&&(ge>0?Ee:Ge)===a[0])je=a.join(",").length+2;if(je>0){if(f=0===ge&&t!==te?function(e){for(var a,c,s=0,t=e.length,i=Array(t);s<t;++s){for(var f=e[s].split(l),n="",o=0,h=0,u=0,d=0,b=f.length;o<b;++o){if(0===(h=(c=f[o]).length)&&b>1)continue;if(u=n.charCodeAt(n.length-1),d=c.charCodeAt(0),a="",0!==o)switch(u){case T:case ae:case _:case ee:case M:case D:break;default:a=" "}switch(d){case P:c=a+Ee;case ae:case _:case ee:case M:case E:case D:break;case G:c=a+c+Ee;break;case V:switch(2*c.charCodeAt(1)+3*c.charCodeAt(2)){case 530:if(Ce>0){c=a+c.substring(8,h-1);break}default:if(o<1||f[o-1].length<1)c=a+Ee+c}break;case U:a="";default:if(h>1&&c.indexOf(":")>0)c=a+c.replace(v,"$1"+Ee+"$2");else c=a+c+Ee}n+=c}i[s]=n.replace(r,"").trim()}return i}(a):a,ye>0)if(void 0!==(n=Pe(Se,Ve,f,e,ke,be,je,t,i,t))&&0===(Ve=n).length)return Ye+Ve+Xe;if(Ve=f.join(",")+"{"+Ve+"}",Ae*pe!=0){if(2===Ae&&!Le(Ve,2))pe=0;switch(pe){case le:Ve=Ve.replace(p,":"+N+"$1")+Ve;break;case ne:Ve=Ve.replace(k,"::"+F+"input-$1")+Ve.replace(k,"::"+N+"$1")+Ve.replace(k,":"+S+"input-$1")+Ve}pe=0}}return Ye+Ve+Xe}function Ie(e,a,c){var r=a.trim().split(o),s=r,t=r.length,i=e.length;switch(i){case 0:case 1:for(var f=0,n=0===i?"":e[0]+" ";f<t;++f)s[f]=Je(n,s[f],c,i).trim();break;default:f=0;var l=0;for(s=[];f<t;++f)for(var h=0;h<i;++h)s[l++]=Je(e[h]+" ",r[f],c,i).trim()}return s}function Je(e,a,c,r){var s=a,t=s.charCodeAt(0);if(t<33)t=(s=s.trim()).charCodeAt(0);switch(t){case P:switch(ge+r){case 0:case 1:if(0===e.trim().length)break;default:return s.replace(h,"$1"+e.trim())}break;case V:switch(s.charCodeAt(1)){case 103:if(Ce>0&&ge>0)return s.replace(u,"$1").replace(h,"$1"+Ge);break;default:return e.trim()+s.replace(h,"$1"+e.trim())}default:if(c*ge>0&&s.indexOf("\f")>0)return s.replace(h,(e.charCodeAt(0)===V?"":"$1")+e.trim())}return e+s}function Ke(e,a,c,r){var l,o=0,h=e+";",u=2*a+3*c+4*r;if(944===u)return function(e){var a=e.length,c=e.indexOf(":",9)+1,r=e.substring(0,c).trim(),s=e.substring(c,a-1).trim();switch(e.charCodeAt(9)*qe){case 0:break;case Q:if(110!==e.charCodeAt(10))break;default:for(var t=s.split((s="",f)),i=0,c=0,a=t.length;i<a;c=0,++i){for(var l=t[i],o=l.split(n);l=o[c];){var h=l.charCodeAt(0);if(1===qe&&(h>L&&h<90||h>96&&h<123||h===R||h===Q&&l.charCodeAt(1)!==Q))switch(isNaN(parseFloat(l))+(-1!==l.indexOf("("))){case 1:switch(l){case"infinite":case"alternate":case"backwards":case"running":case"normal":case"forwards":case"both":case"none":case"linear":case"ease":case"ease-in":case"ease-out":case"ease-in-out":case"paused":case"reverse":case"alternate-reverse":case"inherit":case"initial":case"unset":case"step-start":case"step-end":break;default:l+=De}}o[c++]=l}s+=(0===i?"":",")+o.join(" ")}}if(s=r+s+";",1===Ae||2===Ae&&Le(s,1))return F+s+s;return s}(h);else if(0===Ae||2===Ae&&!Le(h,1))return h;switch(u){case 1015:return 97===h.charCodeAt(10)?F+h+h:h;case 951:return 116===h.charCodeAt(3)?F+h+h:h;case 963:return 110===h.charCodeAt(5)?F+h+h:h;case 1009:if(100!==h.charCodeAt(4))break;case 969:case 942:return F+h+h;case 978:return F+h+N+h+h;case 1019:case 983:return F+h+N+h+S+h+h;case 883:if(h.charCodeAt(8)===Q)return F+h+h;if(h.indexOf("image-set(",11)>0)return h.replace(z,"$1"+F+"$2")+h;return h;case 932:if(h.charCodeAt(4)===Q)switch(h.charCodeAt(5)){case 103:return F+"box-"+h.replace("-grow","")+F+h+S+h.replace("grow","positive")+h;case 115:return F+h+S+h.replace("shrink","negative")+h;case 98:return F+h+S+h.replace("basis","preferred-size")+h}return F+h+S+h+h;case 964:return F+h+S+"flex-"+h+h;case 1023:if(99!==h.charCodeAt(8))break;return l=h.substring(h.indexOf(":",15)).replace("flex-","").replace("space-between","justify"),F+"box-pack"+l+F+h+S+"flex-pack"+l+h;case 1005:return t.test(h)?h.replace(s,":"+F)+h.replace(s,":"+N)+h:h;case 1e3:switch(o=(l=h.substring(13).trim()).indexOf("-")+1,l.charCodeAt(0)+l.charCodeAt(o)){case 226:l=h.replace(m,"tb");break;case 232:l=h.replace(m,"tb-rl");break;case 220:l=h.replace(m,"lr");break;default:return h}return F+h+S+l+h;case 1017:if(-1===h.indexOf("sticky",9))return h;case 975:switch(o=(h=e).length-10,u=(l=(33===h.charCodeAt(o)?h.substring(0,o):h).substring(e.indexOf(":",7)+1).trim()).charCodeAt(0)+(0|l.charCodeAt(7))){case 203:if(l.charCodeAt(8)<111)break;case 115:h=h.replace(l,F+l)+";"+h;break;case 207:case 102:h=h.replace(l,F+(u>102?"inline-":"")+"box")+";"+h.replace(l,F+l)+";"+h.replace(l,S+l+"box")+";"+h}return h+";";case 938:if(h.charCodeAt(5)===Q)switch(h.charCodeAt(6)){case 105:return l=h.replace("-items",""),F+h+F+"box-"+l+S+"flex-"+l+h;case 115:return F+h+S+"flex-item-"+h.replace(y,"")+h;default:return F+h+S+"flex-line-pack"+h.replace("align-content","").replace(y,"")+h}break;case 973:case 989:if(h.charCodeAt(3)!==Q||122===h.charCodeAt(4))break;case 931:case 953:if(true===j.test(e))if(115===(l=e.substring(e.indexOf(":")+1)).charCodeAt(0))return Ke(e.replace("stretch","fill-available"),a,c,r).replace(":fill-available",":stretch");else return h.replace(l,F+l)+h.replace(l,N+l.replace("fill-",""))+h;break;case 962:if(h=F+h+(102===h.charCodeAt(5)?S+h:"")+h,c+r===211&&105===h.charCodeAt(13)&&h.indexOf("transform",10)>0)return h.substring(0,h.indexOf(";",27)+1).replace(i,"$1"+F+"$2")+h}return h}function Le(e,a){var c=e.indexOf(1===a?":":"{"),r=e.substring(0,3!==a?c:10),s=e.substring(c+1,e.length-1);return Oe(2!==a?r:r.replace(O,"$1"),s,a)}function Me(e,a){var c=Ke(a,a.charCodeAt(0),a.charCodeAt(1),a.charCodeAt(2));return c!==a+";"?c.replace($," or ($1)").substring(4):"("+a+")"}function Pe(e,a,c,r,s,t,i,f,n,l){for(var o,h=0,u=a;h<ye;++h)switch(o=$e[h].call(Te,e,u,c,r,s,t,i,f,n,l)){case void 0:case false:case true:case null:break;default:u=o}switch(u){case void 0:case false:case true:case null:case a:break;default:return u}}function Qe(e,a,c,r){for(var s=a+1;s<c;++s)switch(r.charCodeAt(s)){case Z:if(e===T)if(r.charCodeAt(s-1)===T&&a+2!==s)return s+1;break;case I:if(e===Z)return s+1}return s}function Re(e){for(var a in e){var c=e[a];switch(a){case"keyframe":qe=0|c;break;case"global":Ce=0|c;break;case"cascade":ge=0|c;break;case"compress":we=0|c;break;case"semicolon":ve=0|c;break;case"preserve":me=0|c;break;case"prefix":if(Oe=null,!c)Ae=0;else if("function"!=typeof c)Ae=1;else Ae=2,Oe=c}}return Re}function Te(a,c){if(void 0!==this&&this.constructor===Te)return e(a);var s=a,t=s.charCodeAt(0);if(t<33)t=(s=s.trim()).charCodeAt(0);if(qe>0)De=s.replace(d,t===G?"":"-");if(t=1,1===ge)Ge=s;else Ee=s;var i,f=[Ge];if(ye>0)if(void 0!==(i=Pe(ze,c,f,f,ke,be,0,0,0,0))&&"string"==typeof i)c=i;var n=He(xe,f,c,0,0);if(ye>0)if(void 0!==(i=Pe(je,n,f,f,ke,be,n.length,0,0,0))&&"string"!=typeof(n=i))t=0;return De="",Ge="",Ee="",pe=0,ke=1,be=1,we*t==0?n:n.replace(r,"").replace(g,"").replace(A,"$1").replace(C,"$1").replace(w," ")}if(Te.use=function e(a){switch(a){case void 0:case null:ye=$e.length=0;break;default:switch(a.constructor){case Array:for(var c=0,r=a.length;c<r;++c)e(a[c]);break;case Function:$e[ye++]=a;break;case Boolean:We=0|!!a}}return e},Te.set=Re,void 0!==a)Re(a);return Te});
@@ -51577,7 +52442,7 @@ exports.SidePanel = SidePanel;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.gotoPanMode = exports.gotoConnectingInputMode = exports.gotoDragMode = exports.gotoRawMode = exports.gotoDeleteMode = exports.gotoAnimateMode = exports.gotoEditMode = exports.setEditorMode = void 0;
+exports.gotoPanMode = exports.gotoConnectingOutputMode = exports.gotoConnectingInputMode = exports.gotoDragMode = exports.gotoRawMode = exports.gotoDeleteMode = exports.gotoAnimateMode = exports.gotoEditMode = exports.setEditorMode = void 0;
 
 var setEditorMode = function setEditorMode(mode) {
   return {
@@ -51660,6 +52525,18 @@ var gotoConnectingInputMode = function gotoConnectingInputMode() {
 };
 
 exports.gotoConnectingInputMode = gotoConnectingInputMode;
+
+var gotoConnectingOutputMode = function gotoConnectingOutputMode() {
+  return {
+    type: 'SET_EDITOR_MODE',
+    payload: {
+      mode: 'edit',
+      substate: 'connecting_from_output'
+    }
+  };
+};
+
+exports.gotoConnectingOutputMode = gotoConnectingOutputMode;
 
 var gotoPanMode = function gotoPanMode() {
   return {
@@ -51774,11 +52651,21 @@ exports.updateDrawingValues = updateDrawingValues;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Row = exports.SubTitle = exports.Title = void 0;
+exports.Column = exports.Row = exports.SubTitle = exports.Title = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject3() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n"]);
@@ -51823,6 +52710,10 @@ exports.SubTitle = SubTitle;
 var Row = _styledComponents.default.div(_templateObject3());
 
 exports.Row = Row;
+
+var Column = _styledComponents.default.div(_templateObject4());
+
+exports.Column = Column;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/react/components/common/Accordian.js":[function(require,module,exports) {
 "use strict";
 
@@ -52224,11 +53115,11 @@ var EditMode = connecter(function (props) {
       copy.forEach(function (md) {
         var pos = md.dv.p;
         delete md.dv;
+        delete md.module;
         md.dv = {
           p: pos
         };
       });
-      console.log(copy);
       (0, _copyToClipboard.copyToClipboard)(JSON.stringify(copy));
     }
   }, "Export"), _react.default.createElement("hr", null), _react.default.createElement("br", null), _react.default.createElement("button", {
@@ -52351,7 +53242,42 @@ var RawMode = connecter(function (_ref) {
   })));
 });
 exports.RawMode = RawMode;
-},{"react":"node_modules/react/index.js","./common":"src/react/components/common/index.js","../reducers/raw-value":"src/react/reducers/raw-value.js","../actions/raw-value":"src/react/actions/raw-value.js","../util":"src/react/util.js"}],"node_modules/microcan-fp/dist/microcan.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./common":"src/react/components/common/index.js","../reducers/raw-value":"src/react/reducers/raw-value.js","../actions/raw-value":"src/react/actions/raw-value.js","../util":"src/react/util.js"}],"src/react/components/ConnectionMode.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ConnectionMode = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _common = require("./common");
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+var ConnectionMode = function ConnectionMode(_ref) {
+  var cancel = _ref.cancel,
+      connectingFromInput = _ref.connectingFromInput;
+  (0, _react.useEffect)(function () {
+    var handler = function handler(e) {
+      if (e.key === 'Escape') {
+        cancel();
+      }
+    };
+
+    document.body.addEventListener('keydown', handler);
+    return function () {
+      return document.body.removeEventListener('keydown', handler);
+    };
+  }, [cancel]);
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_common.Row, null, _react.default.createElement(_common.Column, null, _react.default.createElement(_common.SubTitle, null, "Connecting from ", connectingFromInput ? 'input' : 'output', " to ", !connectingFromInput ? 'input' : 'output'), connectingFromInput ? 'Click an output to complete the connection' : 'Click an input to complete the connection', _react.default.createElement("button", {
+    onClick: cancel
+  }, "Cancel"))));
+};
+
+exports.ConnectionMode = ConnectionMode;
+},{"react":"node_modules/react/index.js","./common":"src/react/components/common/index.js"}],"node_modules/microcan-fp/dist/microcan.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 (function (global, factory) {
@@ -52797,7 +53723,8 @@ var drawConnections = function drawConnections(mc, translateToPosition, globalTr
         var outputPos = (0, _vecLaFp.vAdd)(inputModule.dv.p, inputModule.dv.oup[inputProp].socket);
         var p1 = (0, _vecLaFp.vAdd)(translateToPosition(inputPos), [-_constants.socketRadius, 0]);
         var p2 = (0, _vecLaFp.vAdd)(globalTranslate(outputPos), [_constants.socketRadius, 0]);
-        var bxOffset = 50;
+        var dist = (0, _vecLaFp.vDist)(p1, p2);
+        var bxOffset = dist / 2;
         ctx.beginPath();
         ctx.moveTo.apply(ctx, _toConsumableArray(p1));
         ctx.bezierCurveTo.apply(ctx, _toConsumableArray((0, _vecLaFp.vAdd)(p1, [-bxOffset, 0])).concat(_toConsumableArray((0, _vecLaFp.vAdd)(p2, [bxOffset, 0])), _toConsumableArray(p2)));
@@ -53039,33 +53966,42 @@ var start = function start(props, clickPosition) {
       globalTranslate = props.globalTranslate,
       gotoConnectingInputMode = props.gotoConnectingInputMode,
       disconnectModuleInput = props.disconnectModuleInput,
+      gotoConnectingOutputMode = props.gotoConnectingOutputMode,
       setConnectingData = props.setConnectingData;
-  var connectingFromInput = null;
-  rack.some(function (md) {
+  return rack.some(function (md) {
     var pos = globalTranslate(md.dv.p);
     var dim = md.dv.d;
 
     if ((0, _mathUtil.pointInRect)(pos, dim, clickPosition)) {
-      Object.entries(md.dv.inp).forEach(function (_ref) {
+      var startedConnection = Object.entries(md.dv.inp).some(function (_ref) {
         var _ref2 = _slicedToArray(_ref, 2),
             inputKey = _ref2[0],
             socket = _ref2[1].socket;
 
         if ((0, _mathUtil.pointInCircle)(globalTranslate(socket, md.dv.p), _constants.socketRadius, clickPosition)) {
-          connectingFromInput = true;
-
           if (md.inputs[inputKey]) {
             disconnectModuleInput(md.name, inputKey);
-            return;
           }
 
           gotoConnectingInputMode();
           setConnectingData(md.name, inputKey);
+          return true;
+        }
+      });
+      if (startedConnection) return true;
+      return Object.entries(md.dv.oup).some(function (_ref3) {
+        var _ref4 = _slicedToArray(_ref3, 2),
+            outputKey = _ref4[0],
+            socket = _ref4[1].socket;
+
+        if ((0, _mathUtil.pointInCircle)(globalTranslate(socket, md.dv.p), _constants.socketRadius, clickPosition)) {
+          gotoConnectingOutputMode();
+          setConnectingData(md.name, outputKey);
+          return true;
         }
       });
     }
   });
-  return connectingFromInput;
 };
 
 exports.start = start;
@@ -53074,6 +54010,7 @@ var end = function end(props, clickPosition) {
   var rack = props.rack,
       globalTranslate = props.globalTranslate,
       isInConnectingInputMode = props.isInConnectingInputMode,
+      isInConnectingOutputMode = props.isInConnectingOutputMode,
       connectingModuleId = props.connectingModuleId,
       connectingKey = props.connectingKey,
       connectModules = props.connectModules,
@@ -53085,22 +54022,36 @@ var end = function end(props, clickPosition) {
       var dim = md.dv.d;
 
       if ((0, _mathUtil.pointInRect)(pos, dim, clickPosition)) {
-        Object.entries(md.dv.oup).forEach(function (_ref3) {
-          var _ref4 = _slicedToArray(_ref3, 2),
-              outputKey = _ref4[0],
-              socket = _ref4[1].socket;
+        Object.entries(md.dv.oup).forEach(function (_ref5) {
+          var _ref6 = _slicedToArray(_ref5, 2),
+              outputKey = _ref6[0],
+              socket = _ref6[1].socket;
 
           if ((0, _mathUtil.pointInCircle)(globalTranslate(socket, md.dv.p), _constants.socketRadius, clickPosition)) {
-            connectModules(connectingModuleId, md.name, connectingKey, outputKey); // if (checkForCycles(rack, modules)) {
-            //   alert('This action results in a cycle');
-            //   delete inputModule.inputs[key];
-            // }
-            // inputModule.inputs[key] = {
-            //   type: 'connection',
-            //   module: md.name,
-            //   property: outputKey
-            // }
+            connectModules(connectingModuleId, md.name, connectingKey, outputKey);
+            gotoEditMode();
+            return true;
+          }
+        });
+      }
+    });
+  }
 
+  ;
+
+  if (isInConnectingOutputMode) {
+    return rack.some(function (md) {
+      var pos = globalTranslate(md.dv.p);
+      var dim = md.dv.d;
+
+      if ((0, _mathUtil.pointInRect)(pos, dim, clickPosition)) {
+        Object.entries(md.dv.inp).forEach(function (_ref7) {
+          var _ref8 = _slicedToArray(_ref7, 2),
+              inputKey = _ref8[0],
+              socket = _ref8[1].socket;
+
+          if ((0, _mathUtil.pointInCircle)(globalTranslate(socket, md.dv.p), _constants.socketRadius, clickPosition)) {
+            connectModules(md.name, connectingModuleId, inputKey, connectingKey);
             gotoEditMode();
             return true;
           }
@@ -53173,7 +54124,11 @@ var onMouseDown = function onMouseDown(props) {
 
     if (props.isInPureEditMode) {
       if ((0, _drag.mousedown)(props, clickPosition)) return;
-      if ((0, _connect.start)(props, clickPosition)) return;
+
+      if ((0, _connect.start)(props, clickPosition)) {
+        return;
+      }
+
       (0, _pan.start)(props, clickPosition);
       return;
     }
@@ -53421,6 +54376,8 @@ var _DeleteMode = require("./DeleteMode");
 
 var _RawMode = require("./RawMode");
 
+var _ConnectionMode = require("./ConnectionMode");
+
 var _Canvas = require("./Canvas");
 
 var _time = require("../../time");
@@ -53472,13 +54429,24 @@ var App = connecter(function (props) {
     setMc: setMc
   }), _react.default.createElement(_SidePanel.SidePanel, {
     className: props.isInAnimateMode ? 'closed' : ''
-  }, _react.default.createElement(_SidePanel.MainPanel, null, _react.default.createElement(_common.Title, null, "Edit Animation Graph"), props.isInDeleteMode ? _react.default.createElement(_DeleteMode.DeleteMode, {
-    exitDeleteMode: gotoEditMode
-  }) : props.isInRawMode ? _react.default.createElement(_RawMode.RawMode, {
-    exitRawMode: gotoEditMode
-  }) : props.isInEditMode ? _react.default.createElement(_EditMode.EditMode, {
-    ctx: ctx
-  }) : null), _react.default.createElement(_SidePanel.PanelToggle, {
+  }, _react.default.createElement(_SidePanel.MainPanel, null, _react.default.createElement(_common.Title, null, "Edit Animation Graph"), (0, _util.componentSwitch)([[props.isInDeleteMode, function () {
+    return _react.default.createElement(_DeleteMode.DeleteMode, {
+      exitDeleteMode: gotoEditMode
+    });
+  }], [props.isInRawMode, function () {
+    return _react.default.createElement(_RawMode.RawMode, {
+      exitRawMode: gotoEditMode
+    });
+  }], [props.isInConnectingInputMode || props.isInConnectingOutputMode, function () {
+    return _react.default.createElement(_ConnectionMode.ConnectionMode, {
+      cancel: gotoEditMode,
+      connectingFromInput: props.isInConnectingInputMode
+    });
+  }], [props.isInEditMode, function () {
+    return _react.default.createElement(_EditMode.EditMode, {
+      ctx: ctx
+    });
+  }]])), _react.default.createElement(_SidePanel.PanelToggle, {
     onClick: function onClick() {
       var nextMode = toggleOpen(props.currentMode, setEditorMode);
 
@@ -53491,7 +54459,7 @@ var App = connecter(function (props) {
   }, props.isInAnimateMode ? '>' : '<')));
 });
 exports.App = App;
-},{"react":"node_modules/react/index.js","../hooks/useStateFunction":"src/react/hooks/useStateFunction.js","../../generate-animation-function":"src/generate-animation-function.js","../util":"src/react/util.js","./SidePanel":"src/react/components/SidePanel.js","../actions/editor-mode":"src/react/actions/editor-mode.js","../actions/rack":"src/react/actions/rack.js","../reducers/editor-mode":"src/react/reducers/editor-mode.js","../reducers/rack":"src/react/reducers/rack.js","../reducers/reset-time":"src/react/reducers/reset-time.js","../../constants":"src/constants.js","./common":"src/react/components/common/index.js","./EditMode":"src/react/components/EditMode.js","./DeleteMode":"src/react/components/DeleteMode.js","./RawMode":"src/react/components/RawMode.js","./Canvas":"src/react/components/Canvas.js","../../time":"src/time.js"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../hooks/useStateFunction":"src/react/hooks/useStateFunction.js","../../generate-animation-function":"src/generate-animation-function.js","../util":"src/react/util.js","./SidePanel":"src/react/components/SidePanel.js","../actions/editor-mode":"src/react/actions/editor-mode.js","../actions/rack":"src/react/actions/rack.js","../reducers/editor-mode":"src/react/reducers/editor-mode.js","../reducers/rack":"src/react/reducers/rack.js","../reducers/reset-time":"src/react/reducers/reset-time.js","../../constants":"src/constants.js","./common":"src/react/components/common/index.js","./EditMode":"src/react/components/EditMode.js","./DeleteMode":"src/react/components/DeleteMode.js","./RawMode":"src/react/components/RawMode.js","./ConnectionMode":"src/react/components/ConnectionMode.js","./Canvas":"src/react/components/Canvas.js","../../time":"src/time.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -53536,7 +54504,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49364" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53292" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
