@@ -1,38 +1,19 @@
 import React, {useState} from 'react';
-import {useStateFunction} from '../hooks/useStateFunction';
-import {generateAnimationFn} from '../../generate-animation-function';
-import {connectSelectorsAndActions, componentSwitch} from '../util';
-import {MainPanel, SidePanel, PanelToggle} from './SidePanel';
+import {useStateFunction} from '../../hooks/useStateFunction';
+import {generateAnimationFn} from '../../../generate-animation-function';
+import {componentSwitch} from '../../util';
+import {MainPanel, SidePanel, PanelToggle} from '../SidePanel';
+import {w, h} from '../../../constants';
+import {Title} from '../common';
+import { EditMode } from '../EditMode';
+import { DeleteMode } from '../DeleteMode';
+import { RawMode } from '../RawMode';
+import {ConnectionMode} from '../ConnectionMode';
+import { Canvas } from '../Canvas';
+import { resetTime } from '../../../time';
+import {toggleOpen} from './toggle-open';
 
-import * as editorModeActions from '../actions/editor-mode';
-import * as rackActions from '../actions/rack';
-import {selectors as editorModeSelectors} from '../reducers/editor-mode';
-import {selectors as rackSelectors} from '../reducers/rack';
-import {selectors as resetTimeSelectors} from '../reducers/reset-time';
-
-import {w, h} from '../../constants';
-
-import {Title} from './common';
-import { EditMode } from './EditMode';
-import { DeleteMode } from './DeleteMode';
-import { RawMode } from './RawMode';
-import {ConnectionMode} from './ConnectionMode';
-import { Canvas } from './Canvas';
-import { resetTime } from '../../time';
-
-
-const toggleOpen = (currentMode, setEditorMode) => {
-  const nextMode = currentMode === 'animate' ? 'edit' : 'animate';
-  setEditorMode(nextMode);
-  return nextMode;
-};
-
-const connecter = connectSelectorsAndActions(
-  {...editorModeSelectors, ...rackSelectors, ...resetTimeSelectors},
-  {...editorModeActions, ...rackActions}
-);
-
-export const App = connecter(props => {
+export default props => {
   const [animationFn, setAnimationFn] = useStateFunction(() => {});
   const [ctx, setCtx] = useState(null);
   const [mc, setMc] = useState(null);
@@ -76,4 +57,4 @@ export const App = connecter(props => {
       >{props.isInAnimateMode ? '>' : '<'}</PanelToggle>
     </SidePanel>
   </React.Fragment>
-});
+};

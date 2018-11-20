@@ -1,54 +1,12 @@
 import React, {useEffect} from 'react';
-import {C} from '../../constants';
 import {groupBy} from 'ramda';
-import { modules } from '../../modules';
-import { AccordianTitle, AccordionList, AccordionItem } from './common/Accordian';
-import { useActiveClasses } from '../hooks/useActiveClasses';
-import { generateId } from '../../util/generate-id';
-import { computeModuleDefDrawingValues } from '../../rack/compute-moduledef-drawing-values';
-import { vAdd } from 'vec-la-fp';
-import { copyToClipboard } from '../../util/copy-to-clipboard';
-
-import { connectSelectorsAndActions } from '../util';
-import {selectors as rackSelectors} from '../reducers/rack';
-import {selectors as globalOffsetSelectors} from '../reducers/global-offset';
-import {selectors as resetTimeSelectors} from '../reducers/reset-time';
-import * as editorModeActions from '../actions/editor-mode';
-import * as rackActions from '../actions/rack';
-import * as resetTimeActions from '../actions/reset-time';
+import { modules } from '../../../modules';
+import { AccordianTitle, AccordionList, AccordionItem } from '../common/Accordian';
+import { useActiveClasses } from '../../hooks/useActiveClasses';
+import {createModule} from './create-module';
+import { copyToClipboard } from '../../../util/copy-to-clipboard';
 
 const groupedByTag = groupBy(({tag}) => tag, modules);
-
-const createModule = (moduleName, ctx, globalOffset) => {
-  const md = {
-    name: generateId(),
-    moduleName,
-    inputs:{},
-    dv: null
-  };
-
-  const dv = computeModuleDefDrawingValues(md, ctx);
-  md.dv = {
-    p: vAdd(C, globalOffset.map(c => c * -1)),
-    ...dv
-  };
-
-  return md;
-};
-
-const connecter = connectSelectorsAndActions(
-  {
-    ...globalOffsetSelectors,
-    ...rackSelectors,
-    ...resetTimeSelectors
-  },
-  {
-    ...rackActions,
-    ...editorModeActions,
-    ...resetTimeActions
-  }
-);
-
 
 const AddModules = ({ addModule, ctx, globalOffset }) => {
   const [activeClasses, toggleGroup] = useActiveClasses(groupedByTag);
@@ -78,7 +36,7 @@ const AddModules = ({ addModule, ctx, globalOffset }) => {
   </React.Fragment>
 };
 
-export const EditMode = connecter(props => {
+export default props => {
   const {
     gotoDeleteMode,
     gotoRawMode,
@@ -88,8 +46,7 @@ export const EditMode = connecter(props => {
     ctx,
     rack,
     resetTime,
-    toggleResetTime,
-    updateDrawingValues
+    toggleResetTime
   } = props;
 
   useEffect(() => {
@@ -132,4 +89,4 @@ export const EditMode = connecter(props => {
       <input type='checkbox' checked={resetTime} onChange={() => toggleResetTime(resetTime)}/>
     </label>
   </React.Fragment>
-});
+};

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
-import {Row, Column, SubTitle} from './common';
+import {Row, Column, SubTitle} from '../common';
 
-export const ConnectionMode = ({cancel, connectingFromInput}) => {
+export default ({cancel, connectingFromInput}) => {
   useEffect(() => {
     const handler = e => {
       if (e.key === 'Escape') {

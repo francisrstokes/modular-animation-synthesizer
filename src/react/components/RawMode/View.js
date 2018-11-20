@@ -1,15 +1,8 @@
 import React, {useRef, useEffect} from 'react';
-import {Row, SubTitle} from './common';
-import {selectors as rawValueSelectors} from '../reducers/raw-value';
-import * as rawValueActions from '../actions/raw-value';
-import { connectSelectorsAndActions } from '../util';
+import {Row, SubTitle} from '../common';
 
-const connecter = connectSelectorsAndActions(
-  rawValueSelectors,
-  rawValueActions
-);
 
-export const RawMode = connecter(({exitRawMode, setCurrentRawValue, rawValue}) => {
+export default ({exitRawMode, setCurrentRawValue, rawValue}) => {
   const ref = useRef();
 
   useEffect(() => {
@@ -41,4 +34,4 @@ export const RawMode = connecter(({exitRawMode, setCurrentRawValue, rawValue}) =
       />
     </Row>
   </React.Fragment>
-})
+}

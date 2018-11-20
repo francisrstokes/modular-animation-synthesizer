@@ -1,8 +1,8 @@
+
 import React, {useEffect} from 'react';
-import {Row, SubTitle} from './common';
+import {Row, SubTitle} from '../common';
 
-export const DeleteMode = ({exitDeleteMode}) => {
-
+export default ({exitDeleteMode}) => {
   useEffect(() => {
     const handler = e => (e.key === 'Escape') ? exitDeleteMode() : null;
     document.body.addEventListener('keydown', handler);
@@ -15,4 +15,4 @@ export const DeleteMode = ({exitDeleteMode}) => {
       <button onClick={exitDeleteMode}>Exit Delete Mode</button>
     </Row>
   </React.Fragment>
-}
+};
