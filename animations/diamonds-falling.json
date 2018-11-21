@@ -1,0 +1,688 @@
+[
+  {
+    "name": "Uz4huph",
+    "moduleName": "Polygon",
+    "inputs": {
+      "sides": {
+        "type": "value",
+        "value": 4
+      }
+    },
+    "dv": {
+      "p": [
+        236,
+        168.5
+      ]
+    }
+  },
+  {
+    "name": "Bbzftec",
+    "moduleName": "Constant",
+    "inputs": {
+      "x": {
+        "type": "value",
+        "value": 20
+      }
+    },
+    "dv": {
+      "p": [
+        -168,
+        335.5
+      ]
+    }
+  },
+  {
+    "name": "Fzylcka",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "value",
+        "value": 10
+      },
+      "b": {
+        "type": "connection",
+        "module": "S4avcfo",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        395,
+        332.5
+      ]
+    }
+  },
+  {
+    "name": "I9ieggh",
+    "moduleName": "SinMap",
+    "inputs": {
+      "value": {
+        "type": "connection",
+        "module": "Fzylcka",
+        "property": "m"
+      },
+      "toA": {
+        "type": "value",
+        "value": 10
+      },
+      "toB": {
+        "type": "value",
+        "value": 80
+      }
+    },
+    "dv": {
+      "p": [
+        577,
+        317.5
+      ]
+    }
+  },
+  {
+    "name": "Y3ycewg",
+    "moduleName": "Vectorize",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "I9ieggh",
+        "property": "output"
+      },
+      "y": {
+        "type": "connection",
+        "module": "I9ieggh",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        892,
+        313.5
+      ]
+    }
+  },
+  {
+    "name": "Fjdionn",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "S4avcfo",
+        "property": "output"
+      },
+      "b": {
+        "type": "value",
+        "value": 102
+      }
+    },
+    "dv": {
+      "p": [
+        395,
+        499.5
+      ]
+    }
+  },
+  {
+    "name": "Ssqzwud",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "S4avcfo",
+        "property": "output"
+      },
+      "b": {
+        "type": "value",
+        "value": 62.24
+      }
+    },
+    "dv": {
+      "p": [
+        390,
+        713.5
+      ]
+    }
+  },
+  {
+    "name": "Y0ae40e",
+    "moduleName": "SinMap",
+    "inputs": {
+      "value": {
+        "type": "connection",
+        "module": "Ssqzwud",
+        "property": "m"
+      },
+      "toB": {
+        "type": "connection",
+        "module": "Pwxv1zb",
+        "property": "height"
+      },
+      "toA": {
+        "type": "value",
+        "value": 0
+      }
+    },
+    "dv": {
+      "p": [
+        593,
+        647.5
+      ]
+    }
+  },
+  {
+    "name": "Y1f646c",
+    "moduleName": "SinMap",
+    "inputs": {
+      "value": {
+        "type": "connection",
+        "module": "Fjdionn",
+        "property": "m"
+      },
+      "toB": {
+        "type": "connection",
+        "module": "Pwxv1zb",
+        "property": "width"
+      },
+      "toA": {
+        "type": "value",
+        "value": 0
+      }
+    },
+    "dv": {
+      "p": [
+        594,
+        523.5
+      ]
+    }
+  },
+  {
+    "name": "Pwxv1zb",
+    "moduleName": "Screen",
+    "inputs": {},
+    "dv": {
+      "p": [
+        380,
+        591.5
+      ]
+    }
+  },
+  {
+    "name": "Twtberp",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "S4avcfo",
+        "property": "output"
+      },
+      "b": {
+        "type": "value",
+        "value": 42
+      }
+    },
+    "dv": {
+      "p": [
+        392,
+        897.5
+      ]
+    }
+  },
+  {
+    "name": "Wxrrfx3",
+    "moduleName": "SinMap",
+    "inputs": {
+      "value": {
+        "type": "connection",
+        "module": "Twtberp",
+        "property": "m"
+      },
+      "toA": {
+        "type": "value",
+        "value": 20
+      },
+      "toB": {
+        "type": "value",
+        "value": 100
+      }
+    },
+    "dv": {
+      "p": [
+        578,
+        844.5
+      ]
+    }
+  },
+  {
+    "name": "Zr8k70g",
+    "moduleName": "TrueTime",
+    "inputs": {},
+    "dv": {
+      "p": [
+        575,
+        969.5
+      ]
+    }
+  },
+  {
+    "name": "X28dcw1",
+    "moduleName": "Add",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Y0ae40e",
+        "property": "output"
+      },
+      "b": {
+        "type": "connection",
+        "module": "Ffh2yo6",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        969,
+        719.5
+      ]
+    }
+  },
+  {
+    "name": "Iuo1mnc",
+    "moduleName": "Mod",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "X28dcw1",
+        "property": "m"
+      },
+      "b": {
+        "type": "connection",
+        "module": "Rlk7l5z",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        1244,
+        604.5
+      ]
+    }
+  },
+  {
+    "name": "Tvowuu2",
+    "moduleName": "Screen",
+    "inputs": {},
+    "dv": {
+      "p": [
+        850,
+        590.5
+      ]
+    }
+  },
+  {
+    "name": "Liwtxle",
+    "moduleName": "Vectorize",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Y1f646c",
+        "property": "output"
+      },
+      "y": {
+        "type": "connection",
+        "module": "Iuo1mnc",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        1399,
+        507.5
+      ]
+    }
+  },
+  {
+    "name": "Frxyvw0",
+    "moduleName": "VectorTranslate",
+    "inputs": {
+      "tv": {
+        "type": "connection",
+        "module": "Liwtxle",
+        "property": "output"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Bdygbhn",
+        "property": "output"
+      },
+      "multiply": {
+        "type": "value",
+        "value": 1
+      }
+    },
+    "dv": {
+      "p": [
+        1645,
+        431.5
+      ]
+    }
+  },
+  {
+    "name": "Sqza9ap",
+    "moduleName": "DrawBackground",
+    "inputs": {
+      "gateIn": {
+        "type": "connection",
+        "module": "Frxyvw0",
+        "property": "output"
+      },
+      "fillR": {
+        "type": "value",
+        "value": 0
+      },
+      "fillG": {
+        "type": "value",
+        "value": 0
+      },
+      "fillB": {
+        "type": "value",
+        "value": 0
+      }
+    },
+    "dv": {
+      "p": [
+        1934,
+        453.5
+      ]
+    }
+  },
+  {
+    "name": "V67shxx",
+    "moduleName": "DrawPolygon",
+    "inputs": {
+      "points": {
+        "type": "connection",
+        "module": "Sqza9ap",
+        "property": "gateOut"
+      },
+      "style": {
+        "type": "connection",
+        "module": "Mvmgo0k",
+        "property": "style"
+      }
+    },
+    "dv": {
+      "p": [
+        2247,
+        485.5
+      ]
+    }
+  },
+  {
+    "name": "Mvmgo0k",
+    "moduleName": "Style",
+    "inputs": {
+      "fillA": {
+        "type": "value",
+        "value": 0.2
+      },
+      "strokeR": {
+        "type": "value",
+        "value": 1
+      },
+      "strokeG": {
+        "type": "value",
+        "value": 1
+      },
+      "strokeB": {
+        "type": "value",
+        "value": 1
+      },
+      "strokeA": {
+        "type": "value",
+        "value": 0.5
+      },
+      "fillR": {
+        "type": "connection",
+        "module": "Fm71in8",
+        "property": "ncosx"
+      },
+      "fillG": {
+        "type": "connection",
+        "module": "Rwlu68a",
+        "property": "sinx"
+      },
+      "fillB": {
+        "type": "connection",
+        "module": "Wqmy50o",
+        "property": "ncosx"
+      }
+    },
+    "dv": {
+      "p": [
+        1152,
+        1118.5
+      ]
+    }
+  },
+  {
+    "name": "Bdygbhn",
+    "moduleName": "VectorScale",
+    "inputs": {
+      "scale": {
+        "type": "connection",
+        "module": "Y3ycewg",
+        "property": "output"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Okd6sdz",
+        "property": "output"
+      },
+      "multiply": {
+        "type": "value",
+        "value": 1
+      }
+    },
+    "dv": {
+      "p": [
+        1357,
+        302.5
+      ]
+    }
+  },
+  {
+    "name": "S4avcfo",
+    "moduleName": "Multi",
+    "inputs": {
+      "n": {
+        "type": "connection",
+        "module": "Bbzftec",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        67,
+        540.5
+      ]
+    }
+  },
+  {
+    "name": "Okd6sdz",
+    "moduleName": "Arrayify",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Uz4huph",
+        "property": "points"
+      },
+      "n": {
+        "type": "connection",
+        "module": "Bbzftec",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        506,
+        171.5
+      ]
+    }
+  },
+  {
+    "name": "Ffh2yo6",
+    "moduleName": "Multiply",
+    "inputs": {
+      "b": {
+        "type": "connection",
+        "module": "Zr8k70g",
+        "property": "t"
+      },
+      "a": {
+        "type": "connection",
+        "module": "Wxrrfx3",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        798,
+        841.5
+      ]
+    }
+  },
+  {
+    "name": "Zk7krj1",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "S4avcfo",
+        "property": "output"
+      },
+      "b": {
+        "type": "value",
+        "value": 31
+      }
+    },
+    "dv": {
+      "p": [
+        371,
+        1127.5
+      ]
+    }
+  },
+  {
+    "name": "Qp89pyx",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "S4avcfo",
+        "property": "output"
+      },
+      "b": {
+        "type": "value",
+        "value": 76
+      }
+    },
+    "dv": {
+      "p": [
+        372,
+        1312.5
+      ]
+    }
+  },
+  {
+    "name": "Jnye9l8",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "S4avcfo",
+        "property": "output"
+      },
+      "b": {
+        "type": "value",
+        "value": 66
+      }
+    },
+    "dv": {
+      "p": [
+        373,
+        1217.5
+      ]
+    }
+  },
+  {
+    "name": "Wqmy50o",
+    "moduleName": "Wave",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Qp89pyx",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        562,
+        1314.5
+      ]
+    }
+  },
+  {
+    "name": "Rwlu68a",
+    "moduleName": "Wave",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Jnye9l8",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        562,
+        1194.5
+      ]
+    }
+  },
+  {
+    "name": "Fm71in8",
+    "moduleName": "Wave",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Zk7krj1",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        561,
+        1076.5
+      ]
+    }
+  },
+  {
+    "name": "Rlk7l5z",
+    "moduleName": "Add",
+    "inputs": {
+      "b": {
+        "type": "connection",
+        "module": "Tvowuu2",
+        "property": "height"
+      },
+      "a": {
+        "type": "connection",
+        "module": "I9ieggh",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1065,
+        576.5
+      ]
+    }
+  }
+]

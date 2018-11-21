@@ -1,6 +1,6 @@
 // import r from '../../animations/spectrum-meter.json';
 // import r from '../../animations/acid-worm.json';
-import r from '../../animations/perlin-circle.json';
+// import r from '../../animations/perlin-circle.json';
 // import r from '../../animations/blackhole-supernova.json';
 // import r from '../../animations/audio-perlin.json';
 // import r from '../../animations/circle-grid.json';
@@ -14,6 +14,7 @@ import r from '../../animations/perlin-circle.json';
 // import r from '../../animations/random-color-balls.json';
 // import r from '../../animations/bubbles.json';
 // import r from '../../animations/style-test.json';
+import r from '../../animations/diamonds-falling.json';
 export const rack = r;
 
 // export const rack = [];

@@ -7,13 +7,14 @@ export const VectorScale = {
   name: 'VectorScale',
   tag: 'Vector',
   inputs: {
-		v: 'Vector',
-    scale: 'Number'
-	},
-	outputs: {
-		output: 'Vector'
+    v: 'Vector',
+    scale: 'Number',
+    multiply: 'Number'
   },
-  fn: ({ v, scale }) => {
+  outputs: {
+    output: 'Vector'
+  },
+  fn: ({ v, scale, multiply }) => {
     const tag = tagType({scale, v});
     let out;
 
@@ -47,7 +48,9 @@ export const VectorScale = {
         break;
       }
       case 'scale:p,v:pa': {
-        out = v.map(poly => zip(poly, scale).map(([v1, sv]) => vMultiply(v1, sv)));
+        out = (multiply)
+          ? zip(v, scale).map(([poly, scale]) => poly.map(v => vMultiply(v, scale)))
+          : v.map(poly => zip(poly, scale).map(([v1, sv]) => vMultiply(v1, sv)));
         break;
       }
       case 'scale:pa,v:pa': {
