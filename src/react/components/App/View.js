@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useStateFunction} from '../../hooks/useStateFunction';
-import {generateAnimationFn} from '../../../generate-animation-function';
+import {compile} from '../../../compile-animation';
 import {componentSwitch} from '../../util';
 import {MainPanel, SidePanel, PanelToggle} from '../SidePanel';
 import {w, h} from '../../../constants';
@@ -49,9 +49,15 @@ export default props => {
           const nextMode = toggleOpen(props.currentMode, setEditorMode);
 
           if (nextMode === 'animate') {
-            if (shouldResetTime) resetTime();
-            setAnimationFn(generateAnimationFn(rack, mc));
-            ctx.clearRect(0,0,w,h);
+            compile(rack, mc).map(fn => {
+              if (shouldResetTime) resetTime();
+              setAnimationFn(fn);
+              ctx.clearRect(0,0,w,h);
+            }).orElse(msg => {
+              alert(msg);
+              toggleOpen(props.currentMode, setEditorMode);
+              gotoEditMode();
+            });
           }
         }}
       >{props.isInAnimateMode ? '>' : '<'}</PanelToggle>

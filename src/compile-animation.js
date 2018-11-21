@@ -1,5 +1,6 @@
 import {findModule, modules} from './modules';
 import {runWithContext} from './util/run-with-context';
+import Either from 'data.either';
 
 const inputsToString = inputs => {
   return Object.entries(inputs)
@@ -49,6 +50,25 @@ const pruneOrphanModules = rack => {
   }
 };
 
+const findUnmetRequiredInputs = (rack) => {
+  for (const instance of rack) {
+    const md = findModule(instance.moduleName);
+    const requiredInputs = Object.entries(md.inputs)
+      .filter(([_, input]) => input.required)
+      .map(([key]) => key);
+    for (const reqKey of requiredInputs) {
+      if (!(reqKey in instance.inputs)) {
+        // Unmet required input
+        console.log(`Unmet required input: ${instance.moduleName} (${instance.name}): ${reqKey}`);
+        return {
+          module: instance,
+          input: reqKey
+        };
+      }
+    }
+  }
+}
+
 export const generateAnimationFn = (rack, mc) => {
   const copy = JSON.parse(JSON.stringify(rack)).map(moduleDef => {
     moduleDef.isEvaluated = false;
@@ -84,4 +104,11 @@ export const generateAnimationFn = (rack, mc) => {
   return runWithContext({findModule, mc}, `return () => {\n${fnStr}\n}`);
 }
 
-
+export const compile = (rack, mc) => {
+  const unmet = findUnmetRequiredInputs(rack);
+  if (unmet) {
+    return Either.Left(`Unmet required input: ${unmet.module.moduleName} (${unmet.module.name}): ${unmet.input}`);
+  }
+  const animationFn = generateAnimationFn(rack, mc);
+  return Either.Right(animationFn);
+};

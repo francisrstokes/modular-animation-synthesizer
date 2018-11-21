@@ -33,8 +33,8 @@
     },
     "dv": {
       "p": [
-        865,
-        268.5
+        910,
+        246.5
       ]
     }
   },
@@ -42,21 +42,21 @@
     "name": "Ljjm7n4",
     "moduleName": "VectorTranslate",
     "inputs": {
-      "v": {
-        "type": "connection",
-        "module": "Okwzatd",
-        "property": "output"
-      },
       "tv": {
         "type": "connection",
         "module": "D4dbyo8",
         "property": "center"
+      },
+      "v": {
+        "type": "connection",
+        "module": "Nc8zefb",
+        "property": "output"
       }
     },
     "dv": {
       "p": [
-        1126,
-        432.5
+        1379,
+        401.5
       ]
     }
   },
@@ -77,7 +77,7 @@
     "inputs": {
       "fillA": {
         "type": "value",
-        "value": 0.5
+        "value": 0.25
       },
       "strokeA": {
         "type": "value",
@@ -130,8 +130,8 @@
     },
     "dv": {
       "p": [
-        1662,
-        401.5
+        1950,
+        403.5
       ]
     }
   },
@@ -412,14 +412,11 @@
         "property": "style"
       },
       "r": {
-        "type": "connection",
-        "module": "I7e5800",
-        "property": "output"
-      },
-      "a": {
-        "type": "connection",
-        "module": "V8oexri",
-        "property": "t"
+        "type": "value",
+        "value": [
+          30,
+          30
+        ]
       }
     },
     "dv": {
@@ -466,8 +463,8 @@
     },
     "dv": {
       "p": [
-        1363,
-        280.5
+        1656,
+        269.5
       ]
     }
   },
@@ -565,127 +562,45 @@
     }
   },
   {
-    "name": "V8oexri",
-    "moduleName": "TrueTime",
-    "inputs": {},
-    "dv": {
-      "p": [
-        1234,
-        1084.5
-      ]
-    }
-  },
-  {
-    "name": "Fo2oxuw",
-    "moduleName": "SinMap",
+    "name": "Nc8zefb",
+    "moduleName": "VectorRotate",
     "inputs": {
-      "value": {
+      "v": {
         "type": "connection",
-        "module": "Ry3ddrk",
-        "property": "m"
+        "module": "Okwzatd",
+        "property": "output"
       },
-      "toA": {
-        "type": "value",
-        "value": 1
-      },
-      "toB": {
-        "type": "value",
-        "value": 30
-      }
-    },
-    "dv": {
-      "p": [
-        1764,
-        1147.5
-      ]
-    }
-  },
-  {
-    "name": "N6tx3rw",
-    "moduleName": "SinMap",
-    "inputs": {
-      "toA": {
-        "type": "value",
-        "value": 1
-      },
-      "toB": {
-        "type": "value",
-        "value": 30
-      },
-      "value": {
+      "a": {
         "type": "connection",
-        "module": "Waeapce",
+        "module": "Ij8i4vs",
         "property": "m"
       }
     },
     "dv": {
       "p": [
-        1773,
-        1267.5
+        1134,
+        369.5
       ]
     }
   },
   {
-    "name": "Ry3ddrk",
+    "name": "Ij8i4vs",
     "moduleName": "Multiply",
     "inputs": {
       "a": {
-        "type": "connection",
-        "module": "V8oexri",
-        "property": "t"
+        "type": "value",
+        "value": -1.2
       },
       "b": {
-        "type": "value",
-        "value": 0.6
-      }
-    },
-    "dv": {
-      "p": [
-        1582,
-        1165.5
-      ]
-    }
-  },
-  {
-    "name": "I7e5800",
-    "moduleName": "Vectorize",
-    "inputs": {
-      "x": {
         "type": "connection",
-        "module": "Fo2oxuw",
-        "property": "output"
-      },
-      "y": {
-        "type": "connection",
-        "module": "N6tx3rw",
-        "property": "output"
-      }
-    },
-    "dv": {
-      "p": [
-        2026,
-        1191.5
-      ]
-    }
-  },
-  {
-    "name": "Waeapce",
-    "moduleName": "Multiply",
-    "inputs": {
-      "a": {
-        "type": "connection",
-        "module": "V8oexri",
+        "module": "Ez7jwlk",
         "property": "t"
-      },
-      "b": {
-        "type": "value",
-        "value": 0.4
       }
     },
     "dv": {
       "p": [
-        1600,
-        1278.5
+        649,
+        491.5
       ]
     }
   }
