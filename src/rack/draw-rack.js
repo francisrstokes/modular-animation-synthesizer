@@ -3,6 +3,7 @@ import {vAdd, vDist} from 'vec-la-fp';
 import {socketRadius} from '../constants';
 import { getTagColor } from './module-tag-colors';
 import { findModule } from '../modules';
+import { drawBezier } from './draw-bezier';
 
 const drawOutputSockets = (mc, ctx, translateToPosition) => ([key, { text, socket }]) => {
   ctx.fillText(key, ...translateToPosition(text));
@@ -29,14 +30,9 @@ const drawConnections = (mc, translateToPosition, globalTranslate, inputPosition
 
       const p1 = vAdd(translateToPosition(inputPos), [-socketRadius, 0]);
       const p2 = vAdd(globalTranslate(outputPos), [socketRadius, 0]);
-      const dist = vDist(p1, p2);
+      const dist = Math.abs(p1[0] - p2[0]);
       const bxOffset = dist / 2;
-
-      ctx.beginPath();
-      ctx.moveTo(...p1);
-      ctx.bezierCurveTo(...vAdd(p1, [-bxOffset, 0]), ...vAdd(p2, [bxOffset, 0]), ...p2);
-      ctx.lineWidth = 2;
-      ctx.stroke();
+      drawBezier(ctx, p1, vAdd(p1, [-bxOffset, 0]), vAdd(p2, [bxOffset, 0]), p2)
     }
   } else if (inputObj.type === 'value') {
     const inputPos = translateToPosition(inputPositions[inputKey].socket);
