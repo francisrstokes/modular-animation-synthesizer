@@ -6,8 +6,8 @@ export const MatrixScale = {
   name: 'MatrixScale',
   tag: 'Vector',
   inputs: {
-    m: 'Matrix',
-    v: 'vector',
+    m: {type: 'Matrix', required: false},
+    v: {type: 'Vector', required: true},
 	},
 	outputs: {
 		output: 'Matrix'

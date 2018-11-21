@@ -2,9 +2,6 @@
 
 ## To Pickup
 
-- Model connections in the store
-  - Can be part of rack reducer
-  - Use info to draw the sockets in a more descriptive way
 - Show module names in module
 - Better, more descriptive names for inputs and outputs
 - Error when non-optional inputs are not given (at compile time)
@@ -25,6 +22,7 @@
   - Copy
   - Paste
   - Delete
+- Optimise selector and action imports for components - don't use more than needed
 
 ### Selection Mode:
   - Enter a mode where you can draw a selection Refactoring

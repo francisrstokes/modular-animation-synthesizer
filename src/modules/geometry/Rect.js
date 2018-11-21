@@ -4,8 +4,8 @@ export const Rect = {
   name: 'Rect',
   tag: 'Geometry',
 	inputs: {
-    centered: 'Boolean',
-		dimensions: 'Vector'
+    centered: {type: 'Number', required: false},
+		dimensions: {type: 'Vector', required: true}
 	},
 	outputs: {
 		points: '[Vector]'

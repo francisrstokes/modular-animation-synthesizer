@@ -4,7 +4,7 @@ export const HeadTail = {
   name: 'HeadTail',
   tag: 'Misc',
   inputs: {
-    x: '[any]'
+    x: {type: 'Array', required: true}
   },
 	outputs: {
     head: 'any',

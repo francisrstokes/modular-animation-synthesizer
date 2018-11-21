@@ -6,9 +6,9 @@ export const VectorRotate = {
   name: 'VectorRotate',
   tag: 'Vector',
   inputs: {
-    v: 'Vector',
-    cp: 'Vector',
-    a: 'Number',
+    v: {type: 'Vector', required: true},
+    cp: {type: 'Vector', required: false},
+    a: {type: 'Number', required: true},
 	},
 	outputs: {
 		output: 'Vector'

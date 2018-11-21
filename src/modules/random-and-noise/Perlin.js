@@ -11,8 +11,8 @@ export const Perlin = {
   name: 'Perlin',
   tag: 'Random and Noise',
   inputs: {
-    seed: 'Number',
-    v: 'Vector'
+    seed: {type: 'Number', required: false},
+    v: {type: 'Vector', required: true}
   },
 	outputs: {
 		output: 'Number'

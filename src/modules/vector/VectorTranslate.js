@@ -6,9 +6,9 @@ export const VectorTranslate = {
   name: 'VectorTranslate',
   tag: 'Vector',
   inputs: {
-    v: 'Vector',
-    tv: 'Vector',
-    multiply: 'Number'
+    v: {type: 'Vector', required: true},
+    tv: {type: 'Vector', required: true},
+    multiply: {type: 'Number', required: false}
 	},
 	outputs: {
 		output: 'Vector'

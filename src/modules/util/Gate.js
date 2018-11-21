@@ -2,8 +2,8 @@ export const Gate = {
 	name: 'Gate',
 	tag: 'Misc',
 	inputs: {
-		trigger: 'any',
-		x: 'any',
+		trigger: {type: 'Number', required: true},
+		x: {type: 'any', required: true},
 	},
 	outputs: {
 		output: 'any'

@@ -2,7 +2,7 @@ export const Flatten = {
   name: 'Flatten',
   tag: 'Misc',
   inputs: {
-    x: 'Array'
+    x: {type: 'Array', required: true}
   },
 	outputs: {output: 'Array'},
   fn: ({ x }) => ({

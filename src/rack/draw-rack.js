@@ -1,5 +1,5 @@
 import {compose} from 'ramda';
-import {vAdd, vDist} from 'vec-la-fp';
+import {vAdd} from 'vec-la-fp';
 import {socketRadius} from '../constants';
 import { getTagColor } from './module-tag-colors';
 import { findModule } from '../modules';
@@ -20,14 +20,16 @@ const drawOutputSockets = (mc, ctx, md, connections, translateToPosition) => ([k
 
 const drawInputSockets = (mc, ctx, md, translateToPosition, inputs) => ([key, { text, socket }]) => {
   const isValue = md.inputs[key] && md.inputs[key].type === 'value';
-
   const isConnection = md.inputs[key] && md.inputs[key].type === 'connection';
+  const isRequired = findModule(md.moduleName).inputs[key].required;
 
   const color = isValue
     ? [0, 0, 255, 0.5]
     : isConnection
       ? [255, 255, 255, 0.5]
-      : [0,0,0,0.5];
+      : isRequired
+        ? [255,0,0,0.5]
+        : [0,0,0,0.5];
 
   const input = inputs[key];
   const socketText = isValue

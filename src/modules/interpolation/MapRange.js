@@ -5,11 +5,11 @@ export const MapRange = {
 	name: 'MapRange',
 	tag: 'Interpolation',
 	inputs: {
-		fromA: 'Number',
-		fromB: 'Number',
-		toA: 'Number',
-    toB: 'Number',
-    value: 'Number'
+		fromA: {type: 'Number', required: true},
+		fromB: {type: 'Number', required: true},
+		toA: {type: 'Number', required: true},
+    toB: {type: 'Number', required: true},
+    value: {type: 'Number', required: true},
 	},
 	outputs: {
 		output: 'Number'

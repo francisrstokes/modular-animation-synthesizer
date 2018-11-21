@@ -2,11 +2,11 @@ export const DrawBackground = {
   name: 'DrawBackground',
   tag: 'Drawing',
   inputs: {
-    gateIn: 'any',
-    fillR: 'Number',
-    fillG: 'Number',
-    fillB: 'Number',
-    fillA: 'Number'
+    gateIn: {type: 'any', required: true},
+    fillR: {type: 'Number', required: false},
+    fillG: {type: 'Number', required: false},
+    fillB: {type: 'Number', required: false},
+    fillA: {type: 'Number', required: false},
 	},
 	outputs: {
     gateOut: 'any'

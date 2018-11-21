@@ -6,11 +6,11 @@ export const DrawEllipse = {
   name: 'DrawEllipse',
   tag: 'Drawing',
   inputs: {
-    multiply: 'any',
-    v: 'Vector',
-    r: 'Number',
-    a: 'Number',
-    style: 'style'
+    multiply: {type: 'Number', required: false},
+    v: {type: 'Vector', required: true},
+    r: {type: 'Vector', required: true},
+    a: {type: 'Number', required: false},
+    style: {type: 'Style', required: true}
 	},
 	outputs: {
     done: 'Number'

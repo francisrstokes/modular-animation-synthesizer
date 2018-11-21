@@ -4,7 +4,7 @@ export const LengthOf = {
   name: 'LengthOf',
   tag: 'Misc',
   inputs: {
-    x: 'Array'
+    x: {type: 'Array', required: true}
   },
 	outputs: {
     output: 'Number'

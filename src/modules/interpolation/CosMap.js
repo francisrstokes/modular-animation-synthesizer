@@ -5,9 +5,9 @@ export const CosMap = {
 	name: 'CosMap',
 	tag: 'Interpolation',
 	inputs: {
-		toA: 'Number',
-    toB: 'Number',
-    value: 'Number'
+		toA: {type: 'Number', required: true},
+    toB: {type: 'Number', required: true},
+    value: {type: 'Number', required: true}
 	},
 	outputs: {
 		output: 'Number'

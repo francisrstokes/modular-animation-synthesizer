@@ -5,8 +5,8 @@ export const Vectorize = {
   name: 'Vectorize',
   tag: 'Vector',
   inputs: {
-		x: 'Number',
-    y: 'Number'
+		x: {type: 'Number', required: true},
+    y: {type: 'Number', required: true},
 	},
 	outputs: {
 		output: 'Vector'

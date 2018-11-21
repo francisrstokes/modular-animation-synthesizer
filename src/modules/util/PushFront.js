@@ -4,8 +4,8 @@ export const PushFront = {
   name: 'PushFront',
   tag: 'Misc',
   inputs: {
-    value: 'any',
-    array: '[any]'
+    value: {type: 'any', required: true},
+    array: {type: 'Array', required: true},
   },
 	outputs: {
     output: '[any]'

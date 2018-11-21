@@ -5,7 +5,7 @@ export const Unvectorize = {
   name: 'Unvectorize',
   tag: 'Vector',
   inputs: {
-		v: 'Vector'
+		v: {type: 'Vector', required: true}
 	},
 	outputs: {
     x: 'Number',

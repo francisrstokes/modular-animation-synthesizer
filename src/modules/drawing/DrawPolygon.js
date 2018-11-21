@@ -6,8 +6,8 @@ export const DrawPolygon = {
   name: 'DrawPolygon',
   tag: 'Drawing',
   inputs: {
-    points: '[Vector]',
-    style: 'style'
+    points: {type: 'Polygon', required: true},
+    style: {type: 'Style', required: true}
 	},
 	outputs: {
     done: 'Number'

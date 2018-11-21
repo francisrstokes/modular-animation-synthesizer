@@ -76,17 +76,17 @@ export const Style = {
   name: 'Style',
   tag: 'Drawing',
   inputs: {
-    fillR: 'Number',
-    fillG: 'Number',
-    fillB: 'Number',
-    fillA: 'Number',
+    fillR: {type: 'Number', required: false},
+    fillG: {type: 'Number', required: false},
+    fillB: {type: 'Number', required: false},
+    fillA: {type: 'Number', required: false},
 
-    strokeR: 'Number',
-    strokeG: 'Number',
-    strokeB: 'Number',
-    strokeA: 'Number',
+    strokeR: {type: 'Number', required: false},
+    strokeG: {type: 'Number', required: false},
+    strokeB: {type: 'Number', required: false},
+    strokeA: {type: 'Number', required: false},
 
-    strokeWeight: 'Number'
+    strokeWeight: {type: 'Number', required: false}
 	},
 	outputs: {
     style: 'style'

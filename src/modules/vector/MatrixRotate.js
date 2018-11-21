@@ -6,7 +6,7 @@ export const MatrixRotate = {
   name: 'MatrixRotate',
   tag: 'Vector',
   inputs: {
-    m: 'Matrix',
+    m: {type: 'Matrix', required: false},
     a: 'Number',
 	},
 	outputs: {

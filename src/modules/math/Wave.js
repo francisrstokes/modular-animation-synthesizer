@@ -2,7 +2,7 @@ export const Wave = {
 	name: 'Wave',
 	tag: 'Math',
 	inputs: {
-		x: 'Number'
+		x: {type: 'Number', required: true}
 	},
 	outputs: {
 		sinx: 'Number',

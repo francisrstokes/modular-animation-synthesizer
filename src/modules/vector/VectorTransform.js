@@ -6,8 +6,8 @@ export const VectorTransform = {
   name: 'VectorTransform',
   tag: 'Vector',
   inputs: {
-    v: 'Vector',
-    m: 'Matrix'
+    v: {type: 'Vector', required: true},
+    m: {type: 'Matrix', required: false}
 	},
 	outputs: {
 		output: 'Vector'

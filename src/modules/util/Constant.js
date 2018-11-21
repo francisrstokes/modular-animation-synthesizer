@@ -2,7 +2,7 @@ export const Constant = {
   name: 'Constant',
   tag: 'Misc',
   inputs: {
-    x: 'any'
+    x: {type: 'any', required: true}
   },
 	outputs: {output: 'any'},
   fn: ({ x }) => ({ output: x })

@@ -2,9 +2,9 @@ export const Step = {
   name: 'Step',
   tag: 'Interpolation',
   inputs: {
-    edge: 'Number',
-    n: 'Number',
-    invert: 'Number'
+    edge: {type: 'Number', required: true},
+    n: {type: 'Number', required: true},
+    invert: {type: 'Number', required: false},
   },
 	outputs: {output: 'Number'},
   fn: ({ n, edge, invert = 0 }) => ({

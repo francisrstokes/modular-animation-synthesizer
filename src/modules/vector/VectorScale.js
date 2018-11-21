@@ -7,9 +7,9 @@ export const VectorScale = {
   name: 'VectorScale',
   tag: 'Vector',
   inputs: {
-    v: 'Vector',
-    scale: 'Number',
-    multiply: 'Number'
+    v: {type: 'Vector', required: true},
+    scale: {type: 'Vector', required: true},
+    multiply: {type: 'Number', required: false}
   },
   outputs: {
     output: 'Vector'

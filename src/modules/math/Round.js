@@ -6,7 +6,7 @@ export const Round = {
   name: 'Round',
   tag: 'Math',
   inputs: {
-		a: 'Number'
+		a: {type: 'Number', required: true}
 	},
 	outputs: {
     round: 'Number',

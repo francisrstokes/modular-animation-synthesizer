@@ -4,7 +4,7 @@ export const TrueTime = {
 	name: 'TrueTime',
 	tag: 'Time',
 	inputs: {
-    divisor: 'Number'
+    divisor: {type: 'Number', required: false}
   },
 	outputs: {
     t: 'Number',

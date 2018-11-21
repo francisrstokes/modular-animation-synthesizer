@@ -5,8 +5,8 @@ export const Add = {
   name: 'Add',
   tag: 'Math',
   inputs: {
-		a: 'Number',
-    b: 'Number'
+		a: {type: 'Number', required: true},
+    b: {type: 'Number', required: true}
 	},
 	outputs: {
 		m: 'Number'

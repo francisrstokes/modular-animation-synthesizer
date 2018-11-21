@@ -2,7 +2,7 @@ export const Polygon = {
 	name: 'Polygon',
 	tag: 'Geometry',
 	inputs: {
-		sides: 'Number'
+		sides: {type: 'Number', required: true}
 	},
 	outputs: {
 		points: '[Vector]'

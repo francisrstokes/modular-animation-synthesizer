@@ -7,7 +7,7 @@ export const Sqrt = {
 		a: 'Number'
 	},
 	outputs: {
-		m: 'Number'
+		m: {type: 'Number', required: true}
   },
   fn: ({ a }) => {
     let out;
