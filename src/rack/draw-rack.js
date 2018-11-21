@@ -109,7 +109,7 @@ export const drawRack = (rack, connections, mc, ctx, globalTranslate) => {
     mc.fill([255, 255, 255, 0.5]);
 
     // Module Title
-    ctx.fillText(moduleDef.moduleName, ...translateToPosition(textPosition));
+    ctx.fillText(`${moduleDef.moduleName} (${moduleDef.name})`, ...translateToPosition(textPosition));
 
     // Title box line
     mc.fill([255, 255, 255, 0.25]);

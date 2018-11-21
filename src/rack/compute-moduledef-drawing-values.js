@@ -13,8 +13,6 @@ export const computeModuleDefDrawingValues = (moduleDef, ctx) => {
   let longestWidth = 0;
   const inputKeys = Object.keys(findModule(moduleDef.moduleName).inputs);
   if (inputKeys.length) {
-    longestWidth = ctx.measureText('In').width + margin;
-
     inputKeys.forEach((input, i) => {
       const tw = ctx.measureText(input).width + margin * 1 + socketRadius * 2;
       longestWidth = (longestWidth < tw) ? tw : longestWidth;
