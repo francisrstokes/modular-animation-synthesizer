@@ -1,4 +1,4 @@
-import {zip, view, lensProp, omit, append} from 'ramda';
+import {reduce, compose, view, lensProp, omit, append} from 'ramda';
 import {rack as initialState} from '../../rack/rack';
 import { checkForCycles } from '../../util/check-for-cycles';
 
@@ -126,6 +126,29 @@ export default (state = initialState, action) => {
   }
 };
 
+const selectConnectionsAndValues = compose(
+  reduce((acc, md) => {
+    Object.entries(md.inputs).forEach(([key, value]) => {
+      if (value.type === 'value') {
+        acc.values.push({
+          inputModule: md.name,
+          inputProperty: key
+        });
+      } else if (value.type === 'connection') {
+        acc.connections.push({
+          inputModule: md.name,
+          inputProperty: key,
+          outputModule: value.module,
+          outputProperty: value.property
+        });
+      }
+    })
+    return acc;
+  }, {connections: [], values: []}),
+  view(root)
+)
+
 export const selectors = {
-  rack: view(root)
+  rack: view(root),
+  connections: selectConnectionsAndValues
 };

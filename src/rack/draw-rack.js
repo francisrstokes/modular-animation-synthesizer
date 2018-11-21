@@ -5,18 +5,38 @@ import { getTagColor } from './module-tag-colors';
 import { findModule } from '../modules';
 import { drawBezier } from './draw-bezier';
 
-const drawOutputSockets = (mc, ctx, translateToPosition) => ([key, { text, socket }]) => {
+const drawOutputSockets = (mc, ctx, md, connections, translateToPosition) => ([key, { text, socket }]) => {
+  mc.fill([255, 255, 255, 1]);
   ctx.fillText(key, ...translateToPosition(text));
+
+  const isConnected = connections.connections.find(c =>
+    c.outputModule === md.name && c.outputProperty === key
+  );
+
+  const color = isConnected ? [255, 255, 255, 0.5] : [0,0,0,0.5];
+  mc.fill(color);
   mc.drawEllipse(mc.circle(socketRadius, translateToPosition(socket)));
 };
 
-const drawInputSockets = (mc, ctx, translateToPosition, inputs) => ([key, { text, socket }]) => {
+const drawInputSockets = (mc, ctx, md, translateToPosition, inputs) => ([key, { text, socket }]) => {
+  const isValue = md.inputs[key] && md.inputs[key].type === 'value';
+
+  const isConnection = md.inputs[key] && md.inputs[key].type === 'connection';
+
+  const color = isValue
+    ? [0, 0, 255, 0.5]
+    : isConnection
+      ? [255, 255, 255, 0.5]
+      : [0,0,0,0.5];
+
   const input = inputs[key];
-  const socketText = (input && input.type === 'value')
+  const socketText = isValue
     ? `${key}(${input.value})`
     : key;
 
+  mc.fill([255, 255, 255, 1]);
   ctx.fillText(socketText, ...translateToPosition(text));
+  mc.fill(color);
   mc.drawEllipse(mc.circle(socketRadius, translateToPosition(socket)));
 };
 
@@ -42,7 +62,7 @@ const drawConnections = (mc, translateToPosition, globalTranslate, inputPosition
   }
 }
 
-export const drawRack = (rack, mc, ctx, globalTranslate) => {
+export const drawRack = (rack, connections, mc, ctx, globalTranslate) => {
   rack.forEach(md => {
     const translateToPosition = compose(globalTranslate, vAdd(md.dv.p));
     Object.entries(md.inputs).forEach(drawConnections(mc, translateToPosition, globalTranslate, md.dv.inp, rack, ctx));
@@ -103,7 +123,7 @@ export const drawRack = (rack, mc, ctx, globalTranslate) => {
     // Out
     ctx.fillText('Out', ...translateToPosition(outPosition));
 
-    Object.entries(inputPositions).forEach(drawInputSockets(mc, ctx, translateToPosition, moduleDef.inputs));
-    Object.entries(outputPositions).forEach(drawOutputSockets(mc, ctx, translateToPosition));
+    Object.entries(inputPositions).forEach(drawInputSockets(mc, ctx, moduleDef, translateToPosition, moduleDef.inputs));
+    Object.entries(outputPositions).forEach(drawOutputSockets(mc, ctx, moduleDef, connections, translateToPosition));
   });
 }

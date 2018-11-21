@@ -37,6 +37,7 @@ class Canvas extends React.Component {
     this.setInitialDrawingValuesForModules();
 
     const drawCycle = () => {
+      const {rack, connections, globalTranslate} = this.props;
       if (this.props.currentMode === 'animate') {
         try {
           this.props.animationFn();
@@ -48,7 +49,7 @@ class Canvas extends React.Component {
       } else {
         this.mc.background([0,0,0,1]);
         this.mc.strokeWeight(1);
-        drawRack(this.props.rack, this.mc, this.ctx, this.props.globalTranslate);
+        drawRack(rack, connections, this.mc, this.ctx, globalTranslate);
       }
       requestAnimationFrame(drawCycle);
     }
