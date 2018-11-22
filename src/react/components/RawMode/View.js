@@ -1,4 +1,5 @@
 import React, {useRef, useEffect} from 'react';
+import {useKeydownEvent} from '../../hooks/useKeydownEvent';
 import {Row, SubTitle} from '../common';
 
 
@@ -9,19 +10,15 @@ export default ({exitRawMode, setCurrentRawValue, rawValue}) => {
     ref.current.focus();
   });
 
-  useEffect(() => {
-    const handler = e => {
-      if (e.key === 'Escape') {
-        exitRawMode();
-      }
-      if (document.activeElement !== ref.current) {
-        setCurrentRawValue('')
-        ref.current.focus();
-      }
+  useKeydownEvent(e => {
+    if (e.key === 'Escape') {
+      exitRawMode();
     }
-    document.body.addEventListener('keydown', handler);
-    return () => document.body.removeEventListener('keydown', handler);
-  }, [exitRawMode]);
+    if (document.activeElement !== ref.current) {
+      setCurrentRawValue('')
+      ref.current.focus();
+    }
+  });
 
   return <React.Fragment>
     <Row>

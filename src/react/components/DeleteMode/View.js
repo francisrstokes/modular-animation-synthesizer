@@ -1,13 +1,10 @@
 
 import React, {useEffect} from 'react';
+import {useKeydownEvent} from '../../hooks/useKeydownEvent';
 import {Row, SubTitle} from '../common';
 
 export default ({exitDeleteMode}) => {
-  useEffect(() => {
-    const handler = e => (e.key === 'Escape') ? exitDeleteMode() : null;
-    document.body.addEventListener('keydown', handler);
-    return () => document.body.removeEventListener('keydown', handler);
-  }, [exitDeleteMode]);
+  useKeydownEvent(e => (e.key === 'Escape') ? exitDeleteMode() : null);
 
   return <React.Fragment>
     <Row>

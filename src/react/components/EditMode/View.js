@@ -1,4 +1,5 @@
-import React, {useEffect} from 'react';
+import React from 'react';
+import {useKeydownEvent} from '../../hooks/useKeydownEvent';
 import {groupBy} from 'ramda';
 import { modules } from '../../../modules';
 import { AccordianTitle, AccordionList, AccordionItem } from '../common/Accordian';
@@ -49,17 +50,13 @@ export default props => {
     toggleResetTime
   } = props;
 
-  useEffect(() => {
-    const handler = e => {
-      switch (e.key) {
-        case 'r': return gotoRawMode();
-        case 'd': return gotoDeleteMode();
-        default: return;
-      }
+  useKeydownEvent(e => {
+    switch (e.key) {
+      case 'r': return gotoRawMode();
+      case 'd': return gotoDeleteMode();
+      default: return;
     }
-    document.body.addEventListener('keydown', handler);
-    return () => document.body.removeEventListener('keydown', handler);
-  }, [gotoDeleteMode]);
+  });
 
   return <React.Fragment>
     <AddModules ctx={ctx} addModule={addModule} globalOffset={globalOffset} />
