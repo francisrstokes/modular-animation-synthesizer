@@ -3,7 +3,7 @@ import {useStateFunction} from '../../hooks/useStateFunction';
 import {compile} from '../../../compile-animation';
 import {componentSwitch} from '../../util';
 import {MainPanel, SidePanel, PanelToggle} from '../SidePanel';
-import {w, h} from '../../../constants';
+import {w, h, C} from '../../../constants';
 import {Title} from '../common';
 import { EditMode } from '../EditMode';
 import { DeleteMode } from '../DeleteMode';
@@ -12,6 +12,7 @@ import {ConnectionMode} from '../ConnectionMode';
 import { Canvas } from '../Canvas';
 import { resetTime } from '../../../time';
 import {toggleOpen} from './toggle-open';
+import { vAdd, vSub, vScale } from 'vec-la-fp';
 
 export default props => {
   const [animationFn, setAnimationFn] = useStateFunction(() => {});
@@ -22,7 +23,9 @@ export default props => {
     gotoEditMode,
     setEditorMode,
     rack,
-    resetTime: shouldResetTime
+    resetTime: shouldResetTime,
+    globalOffset,
+    setGlobalOffset
   } = props;
 
   return <React.Fragment>
@@ -53,10 +56,12 @@ export default props => {
               if (shouldResetTime) resetTime();
               setAnimationFn(fn);
               ctx.clearRect(0,0,w,h);
-            }).orElse(msg => {
+            }).orElse(([msg, md]) => {
               alert(msg);
               toggleOpen(props.currentMode, setEditorMode);
               gotoEditMode();
+              const centerModuleOffset = vSub(C, md.dv.p);
+              setGlobalOffset(centerModuleOffset);
             });
           }
         }}
