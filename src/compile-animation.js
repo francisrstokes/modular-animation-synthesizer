@@ -107,7 +107,10 @@ export const generateAnimationFn = (rack, mc) => {
 export const compile = (rack, mc) => {
   const unmet = findUnmetRequiredInputs(rack);
   if (unmet) {
-    return Either.Left(`Unmet required input: ${unmet.module.moduleName} (${unmet.module.name}): ${unmet.input}`);
+    return Either.Left([
+      `Unmet required input: ${unmet.module.moduleName} (${unmet.module.name}): ${unmet.input}`,
+      unmet.module
+    ]);
   }
   const animationFn = generateAnimationFn(rack, mc);
   return Either.Right(animationFn);

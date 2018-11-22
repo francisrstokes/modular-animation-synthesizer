@@ -2,18 +2,16 @@
 
 ## To Pickup
 
-- Show module names in module
 - Better, more descriptive names for inputs and outputs
-- Error when non-optional inputs are not given (at compile time)
 - Modal support
 - Better import and export
 - Validation for json
-
 
 ## Backlog
 
 - Incorperate type chechking at module connection time
 - Use exception to display error help
+  - Exceptions will mostly now come from mismatched types
 - Lenses to read module properties
 - Lenses in reducers (use over)
 - Refactoring!

@@ -7,7 +7,7 @@ export const MatrixRotate = {
   tag: 'Vector',
   inputs: {
     m: {type: 'Matrix', required: false},
-    a: 'Number',
+    a: {type: 'Number', required: true},
 	},
 	outputs: {
 		output: 'Matrix'

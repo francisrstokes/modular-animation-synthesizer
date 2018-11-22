@@ -5,12 +5,14 @@ import { getTagColor } from './module-tag-colors';
 import { findModule } from '../modules';
 import { drawBezier } from './draw-bezier';
 
-const drawOutputSockets = (mc, ctx, md, connections, translateToPosition) => ([key, { text, socket }]) => {
+const drawOutputSockets = (mc, ctx, md, rack, translateToPosition) => ([key, { text, socket }]) => {
   mc.fill([255, 255, 255, 1]);
   ctx.fillText(key, ...translateToPosition(text));
 
-  const isConnected = connections.connections.find(c =>
-    c.outputModule === md.name && c.outputProperty === key
+  const isConnected = rack.some(rMd =>
+    Object.values(rMd.inputs).some(input =>
+      input.type === 'connection' && input.module === md.name && input.property === key
+    )
   );
 
   const color = isConnected ? [255, 255, 255, 0.5] : [0,0,0,0.5];
@@ -64,7 +66,9 @@ const drawConnections = (mc, translateToPosition, globalTranslate, inputPosition
   }
 }
 
-export const drawRack = (rack, connections, mc, ctx, globalTranslate) => {
+export const drawRack = (rack, mc, ctx, globalTranslate) => {
+  mc.background([0,0,0,1]);
+  mc.strokeWeight(2);
   rack.forEach(md => {
     const translateToPosition = compose(globalTranslate, vAdd(md.dv.p));
     Object.entries(md.inputs).forEach(drawConnections(mc, translateToPosition, globalTranslate, md.dv.inp, rack, ctx));
@@ -126,6 +130,6 @@ export const drawRack = (rack, connections, mc, ctx, globalTranslate) => {
     ctx.fillText('Out', ...translateToPosition(outPosition));
 
     Object.entries(inputPositions).forEach(drawInputSockets(mc, ctx, moduleDef, translateToPosition, moduleDef.inputs));
-    Object.entries(outputPositions).forEach(drawOutputSockets(mc, ctx, moduleDef, connections, translateToPosition));
+    Object.entries(outputPositions).forEach(drawOutputSockets(mc, ctx, moduleDef, rack, translateToPosition));
   });
 }
