@@ -22349,59 +22349,29 @@ var selectors = {
   currentSubstate: (0, _ramda.view)(substate)
 };
 exports.selectors = selectors;
-},{"ramda":"node_modules/ramda/es/index.js"}],"animations/bubbles.json":[function(require,module,exports) {
+},{"ramda":"node_modules/ramda/es/index.js"}],"animations/visualizer.json":[function(require,module,exports) {
 module.exports = [{
-  "name": "Ekv7bh1",
-  "moduleName": "Multi",
+  "name": "Tl6lzjp",
+  "moduleName": "Polygon",
   "inputs": {
-    "n": {
-      "type": "value",
-      "value": 30
+    "sides": {
+      "type": "connection",
+      "module": "Timyfzs",
+      "property": "round"
     }
   },
   "dv": {
-    "p": [-1882, 857.5]
+    "p": [1057, 747]
   }
 }, {
-  "name": "Euwi3qa",
-  "moduleName": "Time",
+  "name": "F5pd039",
+  "moduleName": "Spectrum",
   "inputs": {},
   "dv": {
-    "p": [-919, 613.5]
+    "p": [-212, 786]
   }
 }, {
-  "name": "Coxi4o4",
-  "moduleName": "Style",
-  "inputs": {
-    "fillG": {
-      "type": "connection",
-      "module": "Hhpd22s",
-      "property": "ncosx"
-    },
-    "strokeA": {
-      "type": "value",
-      "value": 0
-    },
-    "fillA": {
-      "type": "value",
-      "value": 0.7
-    },
-    "fillR": {
-      "type": "connection",
-      "module": "L7kcsm9",
-      "property": "nsinx"
-    },
-    "fillB": {
-      "type": "connection",
-      "module": "Dc1t7c2",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [-894, 1335.5]
-  }
-}, {
-  "name": "D2lgqg1",
+  "name": "Pbbq2we",
   "moduleName": "DrawBackground",
   "inputs": {
     "fillR": {
@@ -22418,473 +22388,84 @@ module.exports = [{
     },
     "gateIn": {
       "type": "connection",
-      "module": "Nqop2qg",
+      "module": "Qisk8gd",
       "property": "output"
+    },
+    "fillA": {
+      "type": "value",
+      "value": 0.05
     }
   },
   "dv": {
-    "p": [785, 606.5]
+    "p": [2632, 362]
   }
 }, {
-  "name": "E21c16l",
-  "moduleName": "DrawEllipse",
+  "name": "Btzm9ru",
+  "moduleName": "Style",
   "inputs": {
-    "r": {
-      "type": "connection",
-      "module": "L9gp7ir",
-      "property": "output"
+    "strokeWeight": {
+      "type": "value",
+      "value": 3
     },
-    "style": {
+    "strokeR": {
       "type": "connection",
-      "module": "Coxi4o4",
-      "property": "style"
+      "module": "Wydjdyu",
+      "property": "m"
     },
-    "v": {
+    "strokeG": {
       "type": "connection",
-      "module": "D2lgqg1",
-      "property": "gateOut"
+      "module": "W0dhefi",
+      "property": "m"
+    },
+    "strokeB": {
+      "type": "connection",
+      "module": "G1e1gak",
+      "property": "m"
+    },
+    "fillB": {
+      "type": "connection",
+      "module": "G1e1gak",
+      "property": "m"
+    },
+    "fillG": {
+      "type": "connection",
+      "module": "W0dhefi",
+      "property": "m"
+    },
+    "fillR": {
+      "type": "connection",
+      "module": "Wydjdyu",
+      "property": "m"
     }
   },
   "dv": {
-    "p": [1245, 478.5]
+    "p": [478, 1253]
   }
 }, {
-  "name": "Ibaalwv",
-  "moduleName": "Multiply",
+  "name": "Aq0qsk3",
+  "moduleName": "Power",
   "inputs": {
     "a": {
       "type": "connection",
-      "module": "Ekv7bh1",
-      "property": "output"
+      "module": "F5pd039",
+      "property": "highestMid"
     },
     "b": {
       "type": "value",
-      "value": 10
+      "value": 5
     }
   },
   "dv": {
-    "p": [-1328, 585.5]
+    "p": [459, 718]
   }
 }, {
-  "name": "Ccfajb5",
-  "moduleName": "Perlin",
-  "inputs": {
-    "v": {
-      "type": "connection",
-      "module": "J7h9tfv",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [-924, 478.5]
-  }
-}, {
-  "name": "O5bmiij",
-  "moduleName": "Multiply",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "Ekv7bh1",
-      "property": "output"
-    },
-    "b": {
-      "type": "value",
-      "value": 81
-    }
-  },
-  "dv": {
-    "p": [-1329, 689.5]
-  }
-}, {
-  "name": "J7h9tfv",
-  "moduleName": "Vectorize",
-  "inputs": {
-    "x": {
-      "type": "connection",
-      "module": "O5bmiij",
-      "property": "m"
-    },
-    "y": {
-      "type": "connection",
-      "module": "Ibaalwv",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [-1145, 586.5]
-  }
-}, {
-  "name": "Kw2zyxs",
-  "moduleName": "Vectorize",
-  "inputs": {
-    "x": {
-      "type": "connection",
-      "module": "Ibaalwv",
-      "property": "m"
-    },
-    "y": {
-      "type": "connection",
-      "module": "O5bmiij",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [-1148, 690.5]
-  }
-}, {
-  "name": "Yhcto89",
-  "moduleName": "Perlin",
-  "inputs": {
-    "v": {
-      "type": "connection",
-      "module": "Kw2zyxs",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [-944, 802.5]
-  }
-}, {
-  "name": "Ljmmcyc",
-  "moduleName": "Global",
-  "inputs": {},
-  "dv": {
-    "p": [-249, 615.5]
-  }
-}, {
-  "name": "Hfpnicp",
-  "moduleName": "Multiply",
-  "inputs": {
-    "b": {
-      "type": "connection",
-      "module": "Ljmmcyc",
-      "property": "h"
-    },
-    "a": {
-      "type": "connection",
-      "module": "Syhhpv9",
-      "property": "nsinx"
-    }
-  },
-  "dv": {
-    "p": [-86, 814.5]
-  }
-}, {
-  "name": "Bsxncsi",
-  "moduleName": "Multiply",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "Ags2dd7",
-      "property": "m"
-    },
-    "b": {
-      "type": "connection",
-      "module": "Ljmmcyc",
-      "property": "w"
-    }
-  },
-  "dv": {
-    "p": [-72, 511.5]
-  }
-}, {
-  "name": "Bqtnu1g",
-  "moduleName": "Mod",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "Bsxncsi",
-      "property": "m"
-    },
-    "b": {
-      "type": "connection",
-      "module": "Uzh534x",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [124, 587.5]
-  }
-}, {
-  "name": "T20v33b",
-  "moduleName": "Mod",
-  "inputs": {
-    "b": {
-      "type": "connection",
-      "module": "Ljmmcyc",
-      "property": "h"
-    },
-    "a": {
-      "type": "connection",
-      "module": "Hfpnicp",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [119, 702.5]
-  }
-}, {
-  "name": "Ags2dd7",
-  "moduleName": "Add",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "Ccfajb5",
-      "property": "output"
-    },
-    "b": {
-      "type": "connection",
-      "module": "Zasp13i",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [-506, 530.5]
-  }
-}, {
-  "name": "Nqop2qg",
-  "moduleName": "Vectorize",
-  "inputs": {
-    "y": {
-      "type": "connection",
-      "module": "T20v33b",
-      "property": "m"
-    },
-    "x": {
-      "type": "connection",
-      "module": "Ymflljd",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [509, 635.5]
-  }
-}, {
-  "name": "Oydarji",
-  "moduleName": "Multiply",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "Ekv7bh1",
-      "property": "output"
-    },
-    "b": {
-      "type": "value",
-      "value": 241
-    }
-  },
-  "dv": {
-    "p": [-1484, 832.5]
-  }
-}, {
-  "name": "Hhpd22s",
-  "moduleName": "Wave",
-  "inputs": {
-    "x": {
-      "type": "connection",
-      "module": "Oydarji",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [-1291, 947.5]
-  }
-}, {
-  "name": "Z291sra",
-  "moduleName": "MapRange",
+  "name": "Acxhlsz",
+  "moduleName": "Mix",
   "inputs": {
     "value": {
       "type": "connection",
-      "module": "Hhpd22s",
-      "property": "ncosx"
-    },
-    "fromA": {
-      "type": "value",
-      "value": 0
-    },
-    "fromB": {
-      "type": "value",
-      "value": 1
-    },
-    "toA": {
-      "type": "value",
-      "value": 211
-    },
-    "toB": {
-      "type": "value",
-      "value": 401
-    }
-  },
-  "dv": {
-    "p": [-1055, 939.5]
-  }
-}, {
-  "name": "Zasp13i",
-  "moduleName": "Divide",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "Euwi3qa",
-      "property": "t"
-    },
-    "b": {
-      "type": "connection",
-      "module": "Z291sra",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [-703, 651.5]
-  }
-}, {
-  "name": "Qjjwrns",
-  "moduleName": "Multiply",
-  "inputs": {
-    "a": {
-      "type": "value",
-      "value": 91
-    },
-    "b": {
-      "type": "connection",
-      "module": "Ekv7bh1",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [-1498, 1099.5]
-  }
-}, {
-  "name": "L7kcsm9",
-  "moduleName": "Wave",
-  "inputs": {
-    "x": {
-      "type": "connection",
-      "module": "Qjjwrns",
+      "module": "Aq0qsk3",
       "property": "m"
-    }
-  },
-  "dv": {
-    "p": [-1285, 1114.5]
-  }
-}, {
-  "name": "Mthi4x3",
-  "moduleName": "Add",
-  "inputs": {
-    "b": {
-      "type": "connection",
-      "module": "Pgmzvxw",
-      "property": "m"
-    },
-    "a": {
-      "type": "connection",
-      "module": "Yhcto89",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [-502, 918.5]
-  }
-}, {
-  "name": "Jgmasik",
-  "moduleName": "MapRange",
-  "inputs": {
-    "value": {
-      "type": "connection",
-      "module": "L7kcsm9",
-      "property": "nsinx"
-    },
-    "fromA": {
-      "type": "value",
-      "value": 0
-    },
-    "fromB": {
-      "type": "value",
-      "value": 1
-    },
-    "toA": {
-      "type": "value",
-      "value": 31
-    },
-    "toB": {
-      "type": "value",
-      "value": 501
-    }
-  },
-  "dv": {
-    "p": [-924, 1089.5]
-  }
-}, {
-  "name": "Pgmzvxw",
-  "moduleName": "Divide",
-  "inputs": {
-    "b": {
-      "type": "connection",
-      "module": "Jgmasik",
-      "property": "output"
-    },
-    "a": {
-      "type": "connection",
-      "module": "Euwi3qa",
-      "property": "t"
-    }
-  },
-  "dv": {
-    "p": [-690, 970.5]
-  }
-}, {
-  "name": "Syhhpv9",
-  "moduleName": "Wave",
-  "inputs": {
-    "x": {
-      "type": "connection",
-      "module": "Mthi4x3",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [-322, 910.5]
-  }
-}, {
-  "name": "Cina0ej",
-  "moduleName": "Multiply",
-  "inputs": {
-    "b": {
-      "type": "connection",
-      "module": "Ekv7bh1",
-      "property": "output"
-    },
-    "a": {
-      "type": "value",
-      "value": 111
-    }
-  },
-  "dv": {
-    "p": [-1215, 357.5]
-  }
-}, {
-  "name": "B3gedr0",
-  "moduleName": "Wave",
-  "inputs": {
-    "x": {
-      "type": "connection",
-      "module": "Cina0ej",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [-963, 310.5]
-  }
-}, {
-  "name": "U353kjq",
-  "moduleName": "MapRange",
-  "inputs": {
-    "fromA": {
-      "type": "value",
-      "value": 0
-    },
-    "fromB": {
-      "type": "value",
-      "value": 1
     },
     "toA": {
       "type": "value",
@@ -22892,138 +22473,557 @@ module.exports = [{
     },
     "toB": {
       "type": "value",
-      "value": 200
-    },
-    "value": {
-      "type": "connection",
-      "module": "Fmzbrf5",
-      "property": "m"
+      "value": 3
     }
   },
   "dv": {
-    "p": [-519, 305.5]
+    "p": [624, 732]
   }
 }, {
-  "name": "Fmzbrf5",
+  "name": "Akengam",
   "moduleName": "Power",
   "inputs": {
+    "b": {
+      "type": "value",
+      "value": 5
+    },
     "a": {
       "type": "connection",
-      "module": "B3gedr0",
-      "property": "nsinx"
+      "module": "F5pd039",
+      "property": "highestLow"
+    }
+  },
+  "dv": {
+    "p": [472, 597]
+  }
+}, {
+  "name": "Knuf3wv",
+  "moduleName": "Mix",
+  "inputs": {
+    "value": {
+      "type": "connection",
+      "module": "Akengam",
+      "property": "m"
     },
-    "b": {
+    "toA": {
+      "type": "value",
+      "value": 20
+    },
+    "toB": {
       "type": "value",
       "value": 3
     }
   },
   "dv": {
-    "p": [-728, 318.5]
+    "p": [649, 581]
   }
 }, {
-  "name": "L9gp7ir",
+  "name": "Teyq0ap",
+  "moduleName": "Polygon",
+  "inputs": {
+    "sides": {
+      "type": "connection",
+      "module": "A5p7ffd",
+      "property": "round"
+    }
+  },
+  "dv": {
+    "p": [1060, 613]
+  }
+}, {
+  "name": "C6kbf4s",
+  "moduleName": "VectorScale",
+  "inputs": {
+    "scale": {
+      "type": "connection",
+      "module": "W6brfrb",
+      "property": "output"
+    },
+    "v": {
+      "type": "connection",
+      "module": "Tl6lzjp",
+      "property": "points"
+    }
+  },
+  "dv": {
+    "p": [1297, 755]
+  }
+}, {
+  "name": "Ji6hn6t",
+  "moduleName": "TrueTime",
+  "inputs": {
+    "divisor": {
+      "type": "value",
+      "value": 10
+    }
+  },
+  "dv": {
+    "p": [476, 907]
+  }
+}, {
+  "name": "Vbdhx61",
+  "moduleName": "SinMap",
+  "inputs": {
+    "value": {
+      "type": "connection",
+      "module": "Ji6hn6t",
+      "property": "t"
+    },
+    "toA": {
+      "type": "value",
+      "value": 75
+    },
+    "toB": {
+      "type": "value",
+      "value": 200
+    }
+  },
+  "dv": {
+    "p": [766, 888]
+  }
+}, {
+  "name": "W6brfrb",
   "moduleName": "Vectorize",
   "inputs": {
     "x": {
       "type": "connection",
-      "module": "U353kjq",
+      "module": "Vbdhx61",
       "property": "output"
     },
     "y": {
       "type": "connection",
-      "module": "U353kjq",
+      "module": "Vbdhx61",
       "property": "output"
     }
   },
   "dv": {
-    "p": [75, 333.5]
+    "p": [1008, 881]
   }
 }, {
-  "name": "Uzh534x",
-  "moduleName": "Add",
+  "name": "Eicpboh",
+  "moduleName": "VectorScale",
   "inputs": {
-    "a": {
+    "scale": {
       "type": "connection",
-      "module": "Ljmmcyc",
-      "property": "w"
+      "module": "Wkygi4j",
+      "property": "output"
     },
-    "b": {
+    "v": {
       "type": "connection",
-      "module": "Xp3y5zp",
-      "property": "m"
+      "module": "Teyq0ap",
+      "property": "points"
     }
   },
   "dv": {
-    "p": [-81, 615.5]
+    "p": [1290, 626]
   }
 }, {
-  "name": "Xllk7wf",
-  "moduleName": "Multiply",
+  "name": "Xozsxtx",
+  "moduleName": "CosMap",
   "inputs": {
-    "a": {
+    "value": {
       "type": "connection",
-      "module": "U353kjq",
-      "property": "output"
+      "module": "Ji6hn6t",
+      "property": "t"
     },
-    "b": {
+    "toA": {
       "type": "value",
-      "value": -1
-    }
-  },
-  "dv": {
-    "p": [127, 451.5]
-  }
-}, {
-  "name": "Ymflljd",
-  "moduleName": "Add",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "Xllk7wf",
-      "property": "m"
+      "value": 50
     },
-    "b": {
-      "type": "connection",
-      "module": "Bqtnu1g",
-      "property": "m"
+    "toB": {
+      "type": "value",
+      "value": 100
     }
   },
   "dv": {
-    "p": [324, 607.5]
+    "p": [772, 1016]
   }
 }, {
-  "name": "Xp3y5zp",
-  "moduleName": "Multiply",
+  "name": "Wkygi4j",
+  "moduleName": "Vectorize",
   "inputs": {
-    "a": {
+    "x": {
       "type": "connection",
-      "module": "U353kjq",
+      "module": "Xozsxtx",
       "property": "output"
     },
-    "b": {
+    "y": {
+      "type": "connection",
+      "module": "Xozsxtx",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [1001, 1020]
+  }
+}, {
+  "name": "Qisk8gd",
+  "moduleName": "VectorTranslate",
+  "inputs": {
+    "multiply": {
+      "type": "value",
+      "value": 1
+    },
+    "v": {
+      "type": "connection",
+      "module": "Wbh57tb",
+      "property": "output"
+    },
+    "tv": {
+      "type": "connection",
+      "module": "Brx0e8r",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [2357, 387]
+  }
+}, {
+  "name": "Kkmyr5i",
+  "moduleName": "VectorTranslate",
+  "inputs": {
+    "v": {
+      "type": "connection",
+      "module": "Pbbq2we",
+      "property": "gateOut"
+    },
+    "tv": {
+      "type": "connection",
+      "module": "Iub1uu7",
+      "property": "center"
+    }
+  },
+  "dv": {
+    "p": [2913, 227]
+  }
+}, {
+  "name": "Iub1uu7",
+  "moduleName": "Screen",
+  "inputs": {},
+  "dv": {
+    "p": [2608, 203]
+  }
+}, {
+  "name": "H2wfvpr",
+  "moduleName": "TrueTime",
+  "inputs": {},
+  "dv": {
+    "p": [1068, 462]
+  }
+}, {
+  "name": "Wbh57tb",
+  "moduleName": "VectorRotate",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "H2wfvpr",
+      "property": "t"
+    },
+    "v": {
+      "type": "connection",
+      "module": "R15tsoy",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [2051, 385]
+  }
+}, {
+  "name": "Brx0e8r",
+  "moduleName": "VectorRotate",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "H22d2w0",
+      "property": "t"
+    },
+    "v": {
+      "type": "connection",
+      "module": "Av6vpmg",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [2036, 573]
+  }
+}, {
+  "name": "H22d2w0",
+  "moduleName": "TrueTime",
+  "inputs": {
+    "divisor": {
       "type": "value",
       "value": 2
     }
   },
   "dv": {
-    "p": [-306, 446.5]
+    "p": [1309, 909]
   }
 }, {
-  "name": "Dc1t7c2",
-  "moduleName": "Multiply",
+  "name": "Timyfzs",
+  "moduleName": "Round",
   "inputs": {
-    "b": {
-      "type": "value",
-      "value": 91
-    },
     "a": {
       "type": "connection",
-      "module": "Ekv7bh1",
+      "module": "Acxhlsz",
       "property": "output"
     }
   },
   "dv": {
-    "p": [-1507, 1240.5]
+    "p": [853, 732]
+  }
+}, {
+  "name": "A5p7ffd",
+  "moduleName": "Round",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "Knuf3wv",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [872, 587]
+  }
+}, {
+  "name": "Fvh2nt1",
+  "moduleName": "DrawEllipse",
+  "inputs": {
+    "style": {
+      "type": "connection",
+      "module": "Btzm9ru",
+      "property": "style"
+    },
+    "r": {
+      "type": "value",
+      "value": [2, 2]
+    },
+    "v": {
+      "type": "connection",
+      "module": "Ig03vwt",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [3523, 315]
+  }
+}, {
+  "name": "Ig03vwt",
+  "moduleName": "Flatten",
+  "inputs": {
+    "x": {
+      "type": "connection",
+      "module": "Kkmyr5i",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [3171, 223]
+  }
+}, {
+  "name": "W0dhefi",
+  "moduleName": "Power",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "F5pd039",
+      "property": "highestMid"
+    },
+    "b": {
+      "type": "value",
+      "value": 5
+    }
+  },
+  "dv": {
+    "p": [176, 1170]
+  }
+}, {
+  "name": "G1e1gak",
+  "moduleName": "Power",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "F5pd039",
+      "property": "highestHigh"
+    },
+    "b": {
+      "type": "value",
+      "value": 6
+    }
+  },
+  "dv": {
+    "p": [169, 1269]
+  }
+}, {
+  "name": "Wydjdyu",
+  "moduleName": "Power",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "F5pd039",
+      "property": "highestLow"
+    },
+    "b": {
+      "type": "value",
+      "value": 4
+    }
+  },
+  "dv": {
+    "p": [186, 1072]
+  }
+}, {
+  "name": "Nnvm6we",
+  "moduleName": "Spectrum",
+  "inputs": {},
+  "dv": {
+    "p": [811, 225]
+  }
+}, {
+  "name": "Eibpdpc",
+  "moduleName": "Power",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "Nnvm6we",
+      "property": "highestLow"
+    },
+    "b": {
+      "type": "value",
+      "value": 10
+    }
+  },
+  "dv": {
+    "p": [1007, 246]
+  }
+}, {
+  "name": "P4x1eit",
+  "moduleName": "Vectorize",
+  "inputs": {
+    "x": {
+      "type": "connection",
+      "module": "Lvx49do",
+      "property": "output"
+    },
+    "y": {
+      "type": "connection",
+      "module": "Lvx49do",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [1419, 252]
+  }
+}, {
+  "name": "Lvx49do",
+  "moduleName": "Mix",
+  "inputs": {
+    "value": {
+      "type": "connection",
+      "module": "Eibpdpc",
+      "property": "m"
+    },
+    "toA": {
+      "type": "value",
+      "value": -5
+    },
+    "toB": {
+      "type": "value",
+      "value": 5
+    }
+  },
+  "dv": {
+    "p": [1196, 240]
+  }
+}, {
+  "name": "R15tsoy",
+  "moduleName": "VectorScale",
+  "inputs": {
+    "v": {
+      "type": "connection",
+      "module": "Eicpboh",
+      "property": "output"
+    },
+    "scale": {
+      "type": "connection",
+      "module": "P4x1eit",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [1697, 357]
+  }
+}, {
+  "name": "Vxkrgwm",
+  "moduleName": "Power",
+  "inputs": {
+    "b": {
+      "type": "value",
+      "value": 7
+    },
+    "a": {
+      "type": "connection",
+      "module": "Nnvm6we",
+      "property": "highestHigh"
+    }
+  },
+  "dv": {
+    "p": [1008, 345]
+  }
+}, {
+  "name": "Dj3fix2",
+  "moduleName": "Mix",
+  "inputs": {
+    "value": {
+      "type": "connection",
+      "module": "Vxkrgwm",
+      "property": "m"
+    },
+    "toA": {
+      "type": "value",
+      "value": -3
+    },
+    "toB": {
+      "type": "value",
+      "value": 3
+    }
+  },
+  "dv": {
+    "p": [1196, 344]
+  }
+}, {
+  "name": "Fs67c7w",
+  "moduleName": "Vectorize",
+  "inputs": {
+    "y": {
+      "type": "connection",
+      "module": "Dj3fix2",
+      "property": "output"
+    },
+    "x": {
+      "type": "connection",
+      "module": "Dj3fix2",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [1420, 355]
+  }
+}, {
+  "name": "Av6vpmg",
+  "moduleName": "VectorScale",
+  "inputs": {
+    "scale": {
+      "type": "connection",
+      "module": "C6kbf4s",
+      "property": "output"
+    },
+    "v": {
+      "type": "connection",
+      "module": "Fs67c7w",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [1671, 560]
   }
 }];
 },{}],"src/rack/rack.js":[function(require,module,exports) {
@@ -23034,7 +23034,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.rack = void 0;
 
-var _bubbles = _interopRequireDefault(require("../../animations/bubbles.json"));
+var _visualizer = _interopRequireDefault(require("../../animations/visualizer.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23045,6 +23045,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // import r from '../../animations/audio-perlin.json';
 // import r from '../../animations/circle-grid.json';
 // import r from '../../animations/matrix-test.json';
+// import r from '../../animations/gravity-feedback.json';
+// import r from '../../animations/perlin-map.json';
 // import r from '../../animations/fractal-rotate.json';
 // import r from '../../animations/serpinsky.json';
 // import r from '../../animations/rose-compass.json';
@@ -23052,11 +23054,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // import r from '../../animations/silk.json';
 // import r from '../../animations/rings.json';
 // import r from '../../animations/random-color-balls.json';
+// import r from '../../animations/bubbles.json';
 // import r from '../../animations/style-test.json';
-var rack = _bubbles.default; // export const rack = [];
+// import r from '../../animations/diamonds-falling.json';
+var rack = _visualizer.default; // export const rack = [];
 
 exports.rack = rack;
-},{"../../animations/bubbles.json":"animations/bubbles.json"}],"src/util/check-for-cycles.js":[function(require,module,exports) {
+},{"../../animations/visualizer.json":"animations/visualizer.json"}],"src/util/check-for-cycles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -23316,8 +23320,34 @@ var _default = function _default() {
 };
 
 exports.default = _default;
+var selectConnectionsAndValues = (0, _ramda.compose)((0, _ramda.reduce)(function (acc, md) {
+  Object.entries(md.inputs).forEach(function (_ref3) {
+    var _ref4 = _slicedToArray(_ref3, 2),
+        key = _ref4[0],
+        value = _ref4[1];
+
+    if (value.type === 'value') {
+      acc.values.push({
+        inputModule: md.name,
+        inputProperty: key
+      });
+    } else if (value.type === 'connection') {
+      acc.connections.push({
+        inputModule: md.name,
+        inputProperty: key,
+        outputModule: value.module,
+        outputProperty: value.property
+      });
+    }
+  });
+  return acc;
+}, {
+  connections: [],
+  values: []
+}), (0, _ramda.view)(root));
 var selectors = {
-  rack: (0, _ramda.view)(root)
+  rack: (0, _ramda.view)(root),
+  connections: selectConnectionsAndValues
 };
 exports.selectors = selectors;
 },{"ramda":"node_modules/ramda/es/index.js","../../rack/rack":"src/rack/rack.js","../../util/check-for-cycles":"src/util/check-for-cycles.js"}],"src/react/reducers/raw-value.js":[function(require,module,exports) {
@@ -45400,7 +45430,333 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"src/react/hooks/useStateFunction.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"src/react/actions/editor-mode.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.gotoPanMode = exports.gotoConnectingOutputMode = exports.gotoConnectingInputMode = exports.gotoDragMode = exports.gotoRawMode = exports.gotoDeleteMode = exports.gotoAnimateMode = exports.gotoEditMode = exports.setEditorMode = void 0;
+
+var setEditorMode = function setEditorMode(mode) {
+  return {
+    type: 'SET_EDITOR_MODE',
+    payload: {
+      mode: mode,
+      substate: ''
+    }
+  };
+};
+
+exports.setEditorMode = setEditorMode;
+
+var gotoEditMode = function gotoEditMode() {
+  return {
+    type: 'SET_EDITOR_MODE',
+    payload: {
+      mode: 'edit'
+    }
+  };
+};
+
+exports.gotoEditMode = gotoEditMode;
+
+var gotoAnimateMode = function gotoAnimateMode() {
+  return {
+    type: 'SET_EDITOR_MODE',
+    payload: {
+      mode: 'animate'
+    }
+  };
+};
+
+exports.gotoAnimateMode = gotoAnimateMode;
+
+var gotoDeleteMode = function gotoDeleteMode() {
+  return {
+    type: 'SET_EDITOR_MODE',
+    payload: {
+      mode: 'edit',
+      substate: 'delete'
+    }
+  };
+};
+
+exports.gotoDeleteMode = gotoDeleteMode;
+
+var gotoRawMode = function gotoRawMode() {
+  return {
+    type: 'SET_EDITOR_MODE',
+    payload: {
+      mode: 'edit',
+      substate: 'raw'
+    }
+  };
+};
+
+exports.gotoRawMode = gotoRawMode;
+
+var gotoDragMode = function gotoDragMode() {
+  return {
+    type: 'SET_EDITOR_MODE',
+    payload: {
+      mode: 'edit',
+      substate: 'dragging'
+    }
+  };
+};
+
+exports.gotoDragMode = gotoDragMode;
+
+var gotoConnectingInputMode = function gotoConnectingInputMode() {
+  return {
+    type: 'SET_EDITOR_MODE',
+    payload: {
+      mode: 'edit',
+      substate: 'connecting_from_input'
+    }
+  };
+};
+
+exports.gotoConnectingInputMode = gotoConnectingInputMode;
+
+var gotoConnectingOutputMode = function gotoConnectingOutputMode() {
+  return {
+    type: 'SET_EDITOR_MODE',
+    payload: {
+      mode: 'edit',
+      substate: 'connecting_from_output'
+    }
+  };
+};
+
+exports.gotoConnectingOutputMode = gotoConnectingOutputMode;
+
+var gotoPanMode = function gotoPanMode() {
+  return {
+    type: 'SET_EDITOR_MODE',
+    payload: {
+      mode: 'edit',
+      substate: 'pan'
+    }
+  };
+};
+
+exports.gotoPanMode = gotoPanMode;
+},{}],"src/react/actions/rack.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.updateDrawingValues = exports.clearModules = exports.connectModules = exports.disconnectModuleInput = exports.setModulePosition = exports.setRawValue = exports.removeModule = exports.addModule = void 0;
+
+var addModule = function addModule(md) {
+  return {
+    type: 'ADD_MODULE',
+    payload: md
+  };
+};
+
+exports.addModule = addModule;
+
+var removeModule = function removeModule(moduleId) {
+  return {
+    type: 'REMOVE_MODULE',
+    payload: moduleId
+  };
+};
+
+exports.removeModule = removeModule;
+
+var setRawValue = function setRawValue(moduleId, inputKey, value) {
+  return {
+    type: 'SET_RAW_VALUE',
+    payload: {
+      moduleId: moduleId,
+      inputKey: inputKey,
+      value: value
+    }
+  };
+};
+
+exports.setRawValue = setRawValue;
+
+var setModulePosition = function setModulePosition(moduleId, position) {
+  return {
+    type: 'SET_MODULE_POSITION',
+    payload: {
+      moduleId: moduleId,
+      position: position
+    }
+  };
+};
+
+exports.setModulePosition = setModulePosition;
+
+var disconnectModuleInput = function disconnectModuleInput(moduleId, key) {
+  return {
+    type: 'DISCONNECT_MODULE_INPUT',
+    payload: {
+      moduleId: moduleId,
+      key: key
+    }
+  };
+};
+
+exports.disconnectModuleInput = disconnectModuleInput;
+
+var connectModules = function connectModules(inputModuleId, outputModuleId, inputKey, outputKey) {
+  return {
+    type: 'CONNECT_MODULES',
+    payload: {
+      inputModuleId: inputModuleId,
+      outputModuleId: outputModuleId,
+      inputKey: inputKey,
+      outputKey: outputKey
+    }
+  };
+};
+
+exports.connectModules = connectModules;
+
+var clearModules = function clearModules() {
+  return {
+    type: 'CLEAR_MODULES'
+  };
+};
+
+exports.clearModules = clearModules;
+
+var updateDrawingValues = function updateDrawingValues(moduleId, drawingValues) {
+  return {
+    type: 'UPDATE_DRAWING_VALUES',
+    payload: {
+      moduleId: moduleId,
+      drawingValues: drawingValues
+    }
+  };
+};
+
+exports.updateDrawingValues = updateDrawingValues;
+},{}],"src/react/actions/global-offset.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.setGlobalOffset = void 0;
+
+var setGlobalOffset = function setGlobalOffset(position) {
+  return {
+    type: 'SET_GLOBAL_OFFSET',
+    payload: position
+  };
+};
+
+exports.setGlobalOffset = setGlobalOffset;
+},{}],"src/react/components/App/State.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.actions = exports.selectors = void 0;
+
+var editorModeActions = _interopRequireWildcard(require("../../actions/editor-mode"));
+
+var rackActions = _interopRequireWildcard(require("../../actions/rack"));
+
+var globalOffsetActions = _interopRequireWildcard(require("../../actions/global-offset"));
+
+var _editorMode2 = require("../../reducers/editor-mode");
+
+var _rack2 = require("../../reducers/rack");
+
+var _resetTime = require("../../reducers/reset-time");
+
+var _globalOffset2 = require("../../reducers/global-offset");
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var selectors = _objectSpread({}, _editorMode2.selectors, _rack2.selectors, _resetTime.selectors, _globalOffset2.selectors);
+
+exports.selectors = selectors;
+
+var actions = _objectSpread({}, editorModeActions, rackActions, globalOffsetActions);
+
+exports.actions = actions;
+},{"../../actions/editor-mode":"src/react/actions/editor-mode.js","../../actions/rack":"src/react/actions/rack.js","../../actions/global-offset":"src/react/actions/global-offset.js","../../reducers/editor-mode":"src/react/reducers/editor-mode.js","../../reducers/rack":"src/react/reducers/rack.js","../../reducers/reset-time":"src/react/reducers/reset-time.js","../../reducers/global-offset":"src/react/reducers/global-offset.js"}],"src/react/util.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.componentSwitch = exports.connectSelectorsAndActions = void 0;
+
+var _reactRedux = require("react-redux");
+
+var _ramda = require("ramda");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var connectSelectorsAndActions = function connectSelectorsAndActions(selectors, actions) {
+  return (0, _reactRedux.connect)(function (state) {
+    var out = (0, _ramda.map)(function (selectorFn) {
+      return selectorFn(state);
+    }, selectors);
+    return out;
+  }, actions);
+};
+
+exports.connectSelectorsAndActions = connectSelectorsAndActions;
+
+var componentSwitch = function componentSwitch(tests) {
+  var fallback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {
+    return null;
+  };
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = tests[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var _step$value = _slicedToArray(_step.value, 2),
+          condition = _step$value[0],
+          componentFn = _step$value[1];
+
+      if (condition) return componentFn();
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return != null) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  return fallback();
+};
+
+exports.componentSwitch = componentSwitch;
+},{"react-redux":"node_modules/react-redux/es/index.js","ramda":"node_modules/ramda/es/index.js"}],"src/react/hooks/useStateFunction.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45546,7 +45902,10 @@ var TrueTime = {
   name: 'TrueTime',
   tag: 'Time',
   inputs: {
-    divisor: 'Number'
+    divisor: {
+      type: 'Number',
+      required: false
+    }
   },
   outputs: {
     t: 'Number',
@@ -45564,7 +45923,104 @@ var TrueTime = {
   }
 };
 exports.TrueTime = TrueTime;
-},{"../../time":"src/time.js"}],"src/util/types.js":[function(require,module,exports) {
+},{"../../time":"src/time.js"}],"src/modules/time/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "Time", {
+  enumerable: true,
+  get: function () {
+    return _Time.Time;
+  }
+});
+Object.defineProperty(exports, "TrueTime", {
+  enumerable: true,
+  get: function () {
+    return _TrueTime.TrueTime;
+  }
+});
+
+var _Time = require("./Time");
+
+var _TrueTime = require("./TrueTime");
+},{"./Time":"src/modules/time/Time.js","./TrueTime":"src/modules/time/TrueTime.js"}],"src/modules/audio/Spectrum.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Spectrum = void 0;
+var fftSize = 256;
+var divSize = Math.floor(fftSize / 2 / 3);
+var spectrumData = Array.from({
+  length: fftSize
+}, function () {
+  return 0;
+});
+var buffer = new Float32Array(fftSize / 2);
+var analyser = null;
+navigator.mediaDevices.getUserMedia({
+  audio: true,
+  video: false
+}).then(function (stream) {
+  var context = new AudioContext();
+  var source = context.createMediaStreamSource(stream);
+  analyser = context.createAnalyser();
+  source.connect(analyser);
+  analyser.fftSize = fftSize;
+});
+
+var max = function max(a) {
+  return a.reduce(function (a, b) {
+    return Math.max(a, b);
+  }, 0);
+};
+
+var Spectrum = {
+  name: 'Spectrum',
+  tag: 'Audio',
+  inputs: {},
+  outputs: {
+    output: '[Number]',
+    highestLow: 'Number',
+    highestMid: 'Number',
+    highestHigh: 'Number'
+  },
+  fn: function fn() {
+    // Update the spectrum data
+    analyser.getFloatFrequencyData(buffer);
+    spectrumData = Array.from(buffer).map(function (x) {
+      return 1 - (x + 128) / fftSize;
+    });
+    var highestLow = max(spectrumData.slice(divSize * 2, divSize * 3));
+    var highestMid = max(spectrumData.slice(divSize, divSize * 2));
+    var highestHigh = max(spectrumData.slice(0, divSize));
+    return {
+      output: spectrumData,
+      highestLow: highestLow,
+      highestMid: highestMid,
+      highestHigh: highestHigh
+    };
+  }
+};
+exports.Spectrum = Spectrum;
+},{}],"src/modules/audio/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "Spectrum", {
+  enumerable: true,
+  get: function () {
+    return _Spectrum.Spectrum;
+  }
+});
+
+var _Spectrum = require("./Spectrum");
+},{"./Spectrum":"src/modules/audio/Spectrum.js"}],"src/util/types.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45695,137 +46151,7 @@ var tagType = function tagType(inputs) {
 };
 
 exports.tagType = tagType;
-},{}],"src/modules/math/Multiply.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Multiply = void 0;
-
-var _ramda = require("ramda");
-
-var _types = require("../../util/types");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var Multiply = {
-  name: 'Multiply',
-  tag: 'Math',
-  inputs: {
-    a: 'Number',
-    b: 'Number'
-  },
-  outputs: {
-    m: 'Number'
-  },
-  fn: function fn(_ref) {
-    var a = _ref.a,
-        b = _ref.b;
-    var out;
-
-    if ((0, _types.isNumber)(a)) {
-      if ((0, _types.isNumber)(b)) {
-        out = a * b;
-      } else if ((0, _types.isNumberArray)(b)) {
-        out = b.map(function (bv) {
-          return a * bv;
-        });
-      }
-    } else if ((0, _types.isNumberArray)(a)) {
-      if ((0, _types.isNumber)(b)) {
-        out = a.map(function (av) {
-          return av * b;
-        });
-      } else if ((0, _types.isNumberArray)(b)) {
-        out = (0, _ramda.zip)(a, b).map(function (_ref2) {
-          var _ref3 = _slicedToArray(_ref2, 2),
-              av = _ref3[0],
-              bv = _ref3[1];
-
-          return av * bv;
-        });
-      }
-    }
-
-    return {
-      m: out
-    };
-  }
-};
-exports.Multiply = Multiply;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/math/Divide.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Divide = void 0;
-
-var _ramda = require("ramda");
-
-var _types = require("../../util/types");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var Divide = {
-  name: 'Divide',
-  tag: 'Math',
-  inputs: {
-    a: 'Number',
-    b: 'Number'
-  },
-  outputs: {
-    m: 'Number'
-  },
-  fn: function fn(_ref) {
-    var a = _ref.a,
-        b = _ref.b;
-    var out;
-
-    if ((0, _types.isNumber)(a)) {
-      if ((0, _types.isNumber)(b)) {
-        out = a / b;
-      } else if ((0, _types.isNumberArray)(b)) {
-        out = b.map(function (bv) {
-          return a / bv;
-        });
-      }
-    } else if ((0, _types.isNumberArray)(a)) {
-      if ((0, _types.isNumber)(b)) {
-        out = a.map(function (av) {
-          return av / b;
-        });
-      } else if ((0, _types.isNumberArray)(b)) {
-        out = (0, _ramda.zip)(a, b).map(function (_ref2) {
-          var _ref3 = _slicedToArray(_ref2, 2),
-              av = _ref3[0],
-              bv = _ref3[1];
-
-          return av / bv;
-        });
-      }
-    }
-
-    return {
-      m: out
-    };
-  }
-};
-exports.Divide = Divide;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/math/Add.js":[function(require,module,exports) {
+},{}],"src/modules/math/Add.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45849,8 +46175,14 @@ var Add = {
   name: 'Add',
   tag: 'Math',
   inputs: {
-    a: 'Number',
-    b: 'Number'
+    a: {
+      type: 'Number',
+      required: true
+    },
+    b: {
+      type: 'Number',
+      required: true
+    }
   },
   outputs: {
     m: 'Number'
@@ -45890,7 +46222,519 @@ var Add = {
   }
 };
 exports.Add = Add;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/math/Subtract.js":[function(require,module,exports) {
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/math/Cartesian.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Cartesian = void 0;
+
+var _types = require("../../util/types");
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+var cartesianProduct = function cartesianProduct(a, b) {
+  return a.reduce(function (acc, ca) {
+    return _toConsumableArray(acc).concat(_toConsumableArray(b.map(function (cb) {
+      return [ca, cb];
+    })));
+  }, []);
+};
+
+var Cartesian = {
+  name: 'Cartesian',
+  tag: 'Math',
+  inputs: {
+    a: {
+      type: 'Number',
+      required: true
+    },
+    b: {
+      type: 'Number',
+      required: true
+    }
+  },
+  outputs: {
+    output: 'Number'
+  },
+  fn: function fn(_ref) {
+    var a = _ref.a,
+        b = _ref.b;
+    var out;
+
+    if ((0, _types.isNumber)(a)) {
+      if ((0, _types.isNumber)(b)) {
+        out = [a, b];
+      } else if (Array.isArray(b)) {
+        out = b.map(function (b) {
+          return [a, b];
+        });
+      }
+    } else if (Array.isArray(a)) {
+      if ((0, _types.isNumber)(b)) {
+        out = a.map(function (a) {
+          return [a, b];
+        });
+      } else if (Array.isArray(b)) {
+        out = cartesianProduct(a, b);
+      }
+    }
+
+    return {
+      output: out
+    };
+  }
+};
+exports.Cartesian = Cartesian;
+},{"../../util/types":"src/util/types.js"}],"src/modules/math/Divide.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Divide = void 0;
+
+var _ramda = require("ramda");
+
+var _types = require("../../util/types");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Divide = {
+  name: 'Divide',
+  tag: 'Math',
+  inputs: {
+    a: {
+      type: 'Number',
+      required: true
+    },
+    b: {
+      type: 'Number',
+      required: true
+    }
+  },
+  outputs: {
+    m: 'Number'
+  },
+  fn: function fn(_ref) {
+    var a = _ref.a,
+        b = _ref.b;
+    var out;
+
+    if ((0, _types.isNumber)(a)) {
+      if ((0, _types.isNumber)(b)) {
+        out = a / b;
+      } else if ((0, _types.isNumberArray)(b)) {
+        out = b.map(function (bv) {
+          return a / bv;
+        });
+      }
+    } else if ((0, _types.isNumberArray)(a)) {
+      if ((0, _types.isNumber)(b)) {
+        out = a.map(function (av) {
+          return av / b;
+        });
+      } else if ((0, _types.isNumberArray)(b)) {
+        out = (0, _ramda.zip)(a, b).map(function (_ref2) {
+          var _ref3 = _slicedToArray(_ref2, 2),
+              av = _ref3[0],
+              bv = _ref3[1];
+
+          return av / bv;
+        });
+      }
+    }
+
+    return {
+      m: out
+    };
+  }
+};
+exports.Divide = Divide;
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/math/Median.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Median = void 0;
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+var median = function median(a) {
+  var sorted = _toConsumableArray(a).sort(function (a, b) {
+    return a > b;
+  });
+
+  var mid = a.length / 2;
+
+  if (a.length % 2 === 1) {
+    var i1 = Math.floor(mid);
+    var i2 = Math.ceil(mid);
+    return (sorted[i1] + sorted[i2]) / 2;
+  }
+
+  return a[mid];
+};
+
+var Median = {
+  name: 'Median',
+  tag: 'Math',
+  inputs: {
+    x: {
+      type: '[Number]',
+      required: true
+    }
+  },
+  outputs: {
+    median: 'Number'
+  },
+  fn: function fn(_ref) {
+    var x = _ref.x;
+    return {
+      median: median(x)
+    };
+  }
+};
+exports.Median = Median;
+},{}],"src/modules/math/Mod.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Mod = void 0;
+
+var _ramda = require("ramda");
+
+var _types = require("../../util/types");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Mod = {
+  name: 'Mod',
+  tag: 'Math',
+  inputs: {
+    a: {
+      type: 'Number',
+      required: true
+    },
+    b: {
+      type: 'Number',
+      required: true
+    }
+  },
+  outputs: {
+    m: 'Number'
+  },
+  fn: function fn(_ref) {
+    var a = _ref.a,
+        b = _ref.b;
+    var out;
+
+    if ((0, _types.isNumber)(a)) {
+      if ((0, _types.isNumber)(b)) {
+        out = a % b;
+      } else if ((0, _types.isNumberArray)(b)) {
+        out = b.map(function (bv) {
+          return a % bv;
+        });
+      }
+    } else if ((0, _types.isNumberArray)(a)) {
+      if ((0, _types.isNumber)(b)) {
+        out = a.map(function (av) {
+          return av % b;
+        });
+      } else if ((0, _types.isNumberArray)(b)) {
+        out = (0, _ramda.zip)(a, b).map(function (_ref2) {
+          var _ref3 = _slicedToArray(_ref2, 2),
+              av = _ref3[0],
+              bv = _ref3[1];
+
+          return av % bv;
+        });
+      }
+    }
+
+    return {
+      m: out
+    };
+  }
+};
+exports.Mod = Mod;
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/math/Multiply.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Multiply = void 0;
+
+var _ramda = require("ramda");
+
+var _types = require("../../util/types");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Multiply = {
+  name: 'Multiply',
+  tag: 'Math',
+  inputs: {
+    a: {
+      type: 'Number',
+      required: true
+    },
+    b: {
+      type: 'Number',
+      required: true
+    }
+  },
+  outputs: {
+    m: 'Number'
+  },
+  fn: function fn(_ref) {
+    var a = _ref.a,
+        b = _ref.b;
+    var out;
+
+    if ((0, _types.isNumber)(a)) {
+      if ((0, _types.isNumber)(b)) {
+        out = a * b;
+      } else if ((0, _types.isNumberArray)(b)) {
+        out = b.map(function (bv) {
+          return a * bv;
+        });
+      }
+    } else if ((0, _types.isNumberArray)(a)) {
+      if ((0, _types.isNumber)(b)) {
+        out = a.map(function (av) {
+          return av * b;
+        });
+      } else if ((0, _types.isNumberArray)(b)) {
+        out = (0, _ramda.zip)(a, b).map(function (_ref2) {
+          var _ref3 = _slicedToArray(_ref2, 2),
+              av = _ref3[0],
+              bv = _ref3[1];
+
+          return av * bv;
+        });
+      }
+    }
+
+    return {
+      m: out
+    };
+  }
+};
+exports.Multiply = Multiply;
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/math/Power.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Power = void 0;
+
+var _ramda = require("ramda");
+
+var _types = require("../../util/types");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Power = {
+  name: 'Power',
+  tag: 'Math',
+  inputs: {
+    a: {
+      type: 'Number',
+      required: true
+    },
+    b: {
+      type: 'Number',
+      required: true
+    }
+  },
+  outputs: {
+    m: 'Number'
+  },
+  fn: function fn(_ref) {
+    var a = _ref.a,
+        b = _ref.b;
+    var out;
+
+    if ((0, _types.isNumber)(a)) {
+      if ((0, _types.isNumber)(b)) {
+        out = Math.pow(a, b);
+      } else if ((0, _types.isNumberArray)(b)) {
+        out = b.map(function (bv) {
+          return Math.pow(a, bv);
+        });
+      }
+    } else if ((0, _types.isNumberArray)(a)) {
+      if ((0, _types.isNumber)(b)) {
+        out = a.map(function (av) {
+          return Math.pow(av, b);
+        });
+      } else if ((0, _types.isNumberArray)(b)) {
+        out = (0, _ramda.zip)(a, b).map(function (_ref2) {
+          var _ref3 = _slicedToArray(_ref2, 2),
+              av = _ref3[0],
+              bv = _ref3[1];
+
+          return Math.pow(av, bv);
+        });
+      }
+    }
+
+    return {
+      m: out
+    };
+  }
+};
+exports.Power = Power;
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/math/Round.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Round = void 0;
+
+var _types = require("../../util/types");
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var fns = ['round', 'floor', 'ceil'];
+var Round = {
+  name: 'Round',
+  tag: 'Math',
+  inputs: {
+    a: {
+      type: 'Number',
+      required: true
+    }
+  },
+  outputs: {
+    round: 'Number',
+    floor: 'Number',
+    ceil: 'Number'
+  },
+  fn: function fn(_ref) {
+    var a = _ref.a;
+    var out = fns.reduce(function (a, c) {
+      return _objectSpread({}, a, _defineProperty({}, c, 0));
+    }, {});
+
+    if ((0, _types.isNumber)(a)) {
+      fns.forEach(function (fn) {
+        return out[fn] = Math[fn](a);
+      });
+    } else if ((0, _types.isNumberArray)(a)) {
+      fns.forEach(function (fn) {
+        return out[fn] = a.map(function (a) {
+          return Math[fn](a);
+        });
+      });
+    } else if ((0, _types.isNumberArrayArray)(a)) {
+      fns.forEach(function (fn) {
+        return out[fn] = a.map(function (a) {
+          return a.map(function (a) {
+            return Math[fn](a);
+          });
+        });
+      });
+    }
+
+    return out;
+  }
+};
+exports.Round = Round;
+},{"../../util/types":"src/util/types.js"}],"src/modules/math/Sqrt.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Sqrt = void 0;
+
+var _types = require("../../util/types");
+
+var Sqrt = {
+  name: 'Sqrt',
+  tag: 'Math',
+  inputs: {
+    a: 'Number'
+  },
+  outputs: {
+    m: {
+      type: 'Number',
+      required: true
+    }
+  },
+  fn: function fn(_ref) {
+    var a = _ref.a;
+    var out;
+
+    if ((0, _types.isNumber)(a)) {
+      out = Math.sqrt(a);
+    } else if (_types.isNumberArray) {
+      out = a.map(function (a) {
+        return Math.sqrt(a);
+      });
+    } else if (_types.isNumberArrayArray) {
+      out = a.map(function (a) {
+        return a.map(function (a) {
+          return Math.sqrt(a);
+        });
+      });
+    }
+
+    return {
+      m: out
+    };
+  }
+};
+exports.Sqrt = Sqrt;
+},{"../../util/types":"src/util/types.js"}],"src/modules/math/Subtract.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45914,8 +46758,14 @@ var Subtract = {
   name: 'Subtract',
   tag: 'Math',
   inputs: {
-    a: 'Number',
-    b: 'Number'
+    a: {
+      type: 'Number',
+      required: true
+    },
+    b: {
+      type: 'Number',
+      required: true
+    }
   },
   outputs: {
     m: 'Number'
@@ -45955,78 +46805,7 @@ var Subtract = {
   }
 };
 exports.Subtract = Subtract;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/geometry/Polygon.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Polygon = void 0;
-var Polygon = {
-  name: 'Polygon',
-  tag: 'Geometry',
-  inputs: {
-    sides: 'Number'
-  },
-  outputs: {
-    points: '[Vector]'
-  },
-  fn: function fn(_ref) {
-    var sides = _ref.sides;
-    return {
-      points: Array.from({
-        length: Math.ceil(sides)
-      }, function (_, i) {
-        var a = Math.PI * 2 * (i / sides);
-        return [Math.cos(a), Math.sin(a)];
-      })
-    };
-  }
-};
-exports.Polygon = Polygon;
-},{}],"src/modules/geometry/Rect.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Rect = void 0;
-
-var _vecLaFp = require("vec-la-fp");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var Rect = {
-  name: 'Rect',
-  tag: 'Geometry',
-  inputs: {
-    centered: 'Boolean',
-    dimensions: 'Vector'
-  },
-  outputs: {
-    points: '[Vector]'
-  },
-  fn: function fn(_ref) {
-    var centered = _ref.centered,
-        _ref$dimensions = _slicedToArray(_ref.dimensions, 2),
-        w = _ref$dimensions[0],
-        h = _ref$dimensions[1];
-
-    var modifier = centered ? [-w / 2, -h / 2] : [0, 0];
-    var points = [[0, 0], [w, 0], [w, h], [0, h]].map((0, _vecLaFp.vAdd)(modifier));
-    return {
-      points: points
-    };
-  }
-};
-exports.Rect = Rect;
-},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js"}],"src/modules/math/Wave.js":[function(require,module,exports) {
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/math/Wave.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46037,7 +46816,10 @@ var Wave = {
   name: 'Wave',
   tag: 'Math',
   inputs: {
-    x: 'Number'
+    x: {
+      type: 'Number',
+      required: true
+    }
   },
   outputs: {
     sinx: 'Number',
@@ -46062,1476 +46844,233 @@ var Wave = {
   }
 };
 exports.Wave = Wave;
-},{}],"src/modules/vector/VectorScale.js":[function(require,module,exports) {
+},{}],"src/modules/math/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.VectorScale = void 0;
-
-var _ramda = require("ramda");
-
-var _types = require("../../util/types");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var vMultiply = (0, _ramda.curry)(function (_ref, _ref2) {
-  var _ref3 = _slicedToArray(_ref, 2),
-      x = _ref3[0],
-      y = _ref3[1];
-
-  var _ref4 = _slicedToArray(_ref2, 2),
-      x2 = _ref4[0],
-      y2 = _ref4[1];
-
-  return [x * x2, y * y2];
-});
-var VectorScale = {
-  name: 'VectorScale',
-  tag: 'Vector',
-  inputs: {
-    v: 'Vector',
-    scale: 'Number'
-  },
-  outputs: {
-    output: 'Vector'
-  },
-  fn: function fn(_ref5) {
-    var v = _ref5.v,
-        scale = _ref5.scale;
-    var tag = (0, _types.tagType)({
-      scale: scale,
-      v: v
-    });
-    var out;
-
-    switch (tag) {
-      case 'scale:v,v:v':
-        {
-          out = vMultiply(v, scale);
-          break;
-        }
-
-      case 'scale:p,v:v':
-        {
-          out = scale.map(function (sv) {
-            return vMultiply(v, sv);
-          });
-          break;
-        }
-
-      case 'scale:pa,v:v':
-        {
-          out = scale.map(function (scalePoly) {
-            return scalePoly.map(function (sv) {
-              return vMultiply(sv, scrollBv);
-            });
-          });
-          break;
-        }
-
-      case 'scale:v,v:p':
-        {
-          out = v.map(vMultiply(scale));
-          break;
-        }
-
-      case 'scale:p,v:p':
-        {
-          out = (0, _ramda.zip)(v, scale).map(function (_ref6) {
-            var _ref7 = _slicedToArray(_ref6, 2),
-                v1 = _ref7[0],
-                sv = _ref7[1];
-
-            return vMultiply(v1, sv);
-          });
-          break;
-        }
-
-      case 'scale:pa,v:p':
-        {
-          out = scale.map(function (scalePoly) {
-            return (0, _ramda.zip)(v, scalePoly).map(function (_ref8) {
-              var _ref9 = _slicedToArray(_ref8, 2),
-                  v1 = _ref9[0],
-                  sv = _ref9[1];
-
-              return vMultiply(v1, sv);
-            });
-          });
-          break;
-        }
-
-      case 'scale:v,v:pa':
-        {
-          out = v.map(function (poly) {
-            return poly.map(function (v1) {
-              return vMultiply(v1, scale);
-            });
-          });
-          break;
-        }
-
-      case 'scale:p,v:pa':
-        {
-          out = v.map(function (poly) {
-            return (0, _ramda.zip)(poly, scale).map(function (_ref10) {
-              var _ref11 = _slicedToArray(_ref10, 2),
-                  v1 = _ref11[0],
-                  sv = _ref11[1];
-
-              return vMultiply(v1, sv);
-            });
-          });
-          break;
-        }
-
-      case 'scale:pa,v:pa':
-        {
-          out = (0, _ramda.zip)(v, scale).map(function (_ref12) {
-            var _ref13 = _slicedToArray(_ref12, 2),
-                poly = _ref13[0],
-                scalePoly = _ref13[1];
-
-            return (0, _ramda.zip)(poly, scalePoly).map(function (_ref14) {
-              var _ref15 = _slicedToArray(_ref14, 2),
-                  v1 = _ref15[0],
-                  sv = _ref15[1];
-
-              return vMultiply(v1, sv);
-            });
-          });
-          break;
-        }
-    }
-
-    return {
-      output: out
-    };
+Object.defineProperty(exports, "Add", {
+  enumerable: true,
+  get: function () {
+    return _Add.Add;
   }
-};
-exports.VectorScale = VectorScale;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/vector/VectorTranslate.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
 });
-exports.VectorTranslate = void 0;
-
-var _vecLaFp = require("vec-la-fp");
-
-var _types = require("../../util/types");
-
-var _ramda = require("ramda");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var VectorTranslate = {
-  name: 'VectorTranslate',
-  tag: 'Vector',
-  inputs: {
-    v: 'Vector',
-    tv: 'Vector',
-    multiply: 'Number'
-  },
-  outputs: {
-    output: 'Vector'
-  },
-  fn: function fn(_ref) {
-    var v = _ref.v,
-        tv = _ref.tv,
-        multiply = _ref.multiply;
-    var out;
-
-    if ((0, _types.isVector)(tv)) {
-      if ((0, _types.isVector)(v)) {
-        // 1. Simply the point (v) to the translation vector (tv)
-        out = (0, _vecLaFp.vAdd)(v, tv);
-      } else if ((0, _types.isPolygon)(v)) {
-        // 2. Translate each polygon point by translation vector
-        out = v.map((0, _vecLaFp.vAdd)(tv));
-      } else if ((0, _types.isPolygonArray)(v)) {
-        // 3. Translate each polygon by the translation vector
-        out = v.map(function (poly) {
-          return poly.map((0, _vecLaFp.vAdd)(tv));
-        });
-      }
-    } else if ((0, _types.isPolygon)(tv)) {
-      if ((0, _types.isVector)(v)) {
-        // 4. Translate the point by each translation vector
-        out = tv.map((0, _vecLaFp.vAdd)(v));
-      } else if ((0, _types.isPolygon)(v)) {
-        // 5. Translate each point by each translation vector
-        if (multiply) {
-          out = tv.map(function (tv1) {
-            return v.map((0, _vecLaFp.vAdd)(tv1));
-          });
-        } else {
-          out = (0, _ramda.zip)(v, tv).map(function (_ref2) {
-            var _ref3 = _slicedToArray(_ref2, 2),
-                v = _ref3[0],
-                tv = _ref3[1];
-
-            return (0, _vecLaFp.vAdd)(v, tv);
-          });
-        }
-      } else if ((0, _types.isPolygonArray)(v)) {
-        // 6. Translate each polygon by each translation vector
-        out = (0, _ramda.zip)(tv, v).map(function (_ref4) {
-          var _ref5 = _slicedToArray(_ref4, 2),
-              v1 = _ref5[0],
-              poly = _ref5[1];
-
-          return poly.map((0, _vecLaFp.vAdd)(v1));
-        });
-      }
-    } else if ((0, _types.isPolygonArray)(tv)) {
-      if ((0, _types.isVector)(v)) {
-        // 7. Translate each polygon of the translation vector by the point (inverse of 3)
-        out = tv.map(function (poly) {
-          return poly.map((0, _vecLaFp.vAdd)(v));
-        });
-      } else if ((0, _types.isPolygon)(v)) {
-        // Translate each polygon in the translation vector by each point in the polygon (inverse of 6)
-        out = (0, _ramda.zip)(tv, v).map(function (_ref6) {
-          var _ref7 = _slicedToArray(_ref6, 2),
-              poly = _ref7[0],
-              v1 = _ref7[1];
-
-          return poly.map((0, _vecLaFp.vAdd)(v1));
-        });
-      } else if ((0, _types.isPolygonArray)(v)) {
-        // Translate each point in each polygon by each point in each polygon in the translation vector
-        out = (0, _ramda.zip)(tv, v).map(function (_ref8) {
-          var _ref9 = _slicedToArray(_ref8, 2),
-              poly1 = _ref9[0],
-              poly2 = _ref9[1];
-
-          return (0, _ramda.zip)(poly1, poly2).map(function (_ref10) {
-            var _ref11 = _slicedToArray(_ref10, 2),
-                v1 = _ref11[0],
-                v2 = _ref11[1];
-
-            return (0, _vecLaFp.vAdd)(v1, v2);
-          });
-        });
-      }
-    }
-
-    return {
-      output: out
-    };
+Object.defineProperty(exports, "Cartesian", {
+  enumerable: true,
+  get: function () {
+    return _Cartesian.Cartesian;
   }
-};
-exports.VectorTranslate = VectorTranslate;
-},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js"}],"src/modules/vector/VectorRotate.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
 });
-exports.VectorRotate = void 0;
-
-var _ramda = require("ramda");
-
-var _vecLaFp = require("vec-la-fp");
-
-var _types = require("../../util/types");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var VectorRotate = {
-  name: 'VectorRotate',
-  tag: 'Vector',
-  inputs: {
-    v: 'Vector',
-    cp: 'Vector',
-    a: 'Number'
-  },
-  outputs: {
-    output: 'Vector'
-  },
-  fn: function fn(_ref) {
-    var v = _ref.v,
-        cp = _ref.cp,
-        a = _ref.a;
-    var cv = cp ? cp : [0, 0];
-    var out;
-
-    if ((0, _types.isVector)(v)) {
-      if ((0, _types.isNumberArray)(a)) {
-        out = a.map(function (a) {
-          return (0, _vecLaFp.vRotatePointAround)(a, cv, v);
-        });
-      } else if ((0, _types.isNumber)(a)) {
-        out = (0, _vecLaFp.vRotatePointAround)(a, cv, v);
-      }
-    } else if ((0, _types.isPolygon)(v)) {
-      if ((0, _types.isNumberArray)(a)) {
-        out = (0, _ramda.zip)(v, a).map(function (_ref2) {
-          var _ref3 = _slicedToArray(_ref2, 2),
-              v = _ref3[0],
-              a = _ref3[1];
-
-          return (0, _vecLaFp.vRotatePointAround)(a, cv, v);
-        });
-      } else if ((0, _types.isNumber)(a)) {
-        out = v.map(function (v) {
-          return (0, _vecLaFp.vRotatePointAround)(a, cv, v);
-        });
-      }
-    }
-
-    return {
-      output: out
-    };
+Object.defineProperty(exports, "Divide", {
+  enumerable: true,
+  get: function () {
+    return _Divide.Divide;
   }
-};
-exports.VectorRotate = VectorRotate;
-},{"ramda":"node_modules/ramda/es/index.js","vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../util/types":"src/util/types.js"}],"src/modules/vector/MatrixRotate.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
 });
-exports.MatrixRotate = void 0;
-
-var _vecLaFp = require("vec-la-fp");
-
-var _types = require("../../util/types");
-
-var _ramda = require("ramda");
-
-var MatrixRotate = {
-  name: 'MatrixRotate',
-  tag: 'Vector',
-  inputs: {
-    m: 'Matrix',
-    a: 'Number'
-  },
-  outputs: {
-    output: 'Matrix'
-  },
-  fn: function fn(_ref) {
-    var m = _ref.m,
-        a = _ref.a;
-    var out;
-
-    if (!m) {
-      if ((0, _types.isNumber)(a)) {
-        out = (0, _vecLaFp.mRotate)(a);
-      } else if ((0, _types.isNumberArray)(a)) {
-        out = a.map(function (a) {
-          return (0, _vecLaFp.mRotate)(a);
-        });
-      }
-    } else if ((0, _types.isFunction)(m)) {
-      if ((0, _types.isNumber)(a)) {
-        out = (0, _ramda.compose)((0, _vecLaFp.mRotate)(a), m);
-      } else if ((0, _types.isNumberArray)(a)) {
-        out = a.map(function (a) {
-          return (0, _ramda.compose)((0, _vecLaFp.mRotate)(a), m);
-        });
-      }
-    } else if ((0, _types.isFunctionArray)(m)) {
-      if ((0, _types.isNumber)(a)) {
-        out = m.map(function (m) {
-          return (0, _ramda.compose)((0, _vecLaFp.mRotate)(a), m);
-        });
-      } else if ((0, _types.isNumberArray)(a)) {
-        out = a.map(function (a) {
-          return m.map(function (m) {
-            return (0, _ramda.compose)((0, _vecLaFp.mRotate)(a), m);
-          });
-        });
-      }
-    }
-
-    return {
-      output: out
-    };
+Object.defineProperty(exports, "Median", {
+  enumerable: true,
+  get: function () {
+    return _Median.Median;
   }
-};
-exports.MatrixRotate = MatrixRotate;
-},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js"}],"src/modules/vector/MatrixTranslate.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
 });
-exports.MatrixTranslate = void 0;
-
-var _vecLaFp = require("vec-la-fp");
-
-var _types = require("../../util/types");
-
-var _ramda = require("ramda");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var MatrixTranslate = {
-  name: 'MatrixTranslate',
-  tag: 'Vector',
-  inputs: {
-    m: 'Matrix',
-    v: 'vector'
-  },
-  outputs: {
-    output: 'Matrix'
-  },
-  fn: function fn(_ref) {
-    var m = _ref.m,
-        v = _ref.v;
-    var out;
-
-    if (!m) {
-      if ((0, _types.isVector)(v)) {
-        out = (0, _vecLaFp.mTranslate)(v);
-      } else if ((0, _types.isPolygon)(v)) {
-        out = v.map(function (v) {
-          return (0, _vecLaFp.mTranslate)(v);
-        });
-      } else if ((0, _types.isPolygonArray)(v)) {
-        out = v.map(function (poly) {
-          return poly.map(function (v) {
-            return (0, _vecLaFp.mTranslate)(v);
-          });
-        });
-      }
-    } else if ((0, _types.isFunction)(m)) {
-      if ((0, _types.isVector)(v)) {
-        out = (0, _ramda.compose)((0, _vecLaFp.mTranslate)(v), m);
-      } else if ((0, _types.isPolygon)(v)) {
-        out = v.map(function (v) {
-          return (0, _ramda.compose)((0, _vecLaFp.mTranslate)(v), m);
-        });
-      } else if ((0, _types.isPolygonArray)(v)) {
-        out = v.map(function (poly) {
-          return poly.map(function (v) {
-            return (0, _ramda.compose)((0, _vecLaFp.mTranslate)(v), m);
-          });
-        });
-      }
-    } else if ((0, _types.isFunctionArray)(m)) {
-      if ((0, _types.isVector)(v)) {
-        out = m.map(function (m) {
-          return (0, _ramda.compose)((0, _vecLaFp.mTranslate)(v), m);
-        });
-      } else if ((0, _types.isPolygon)(v)) {
-        out = (0, _ramda.zip)(m, v).map(function (_ref2) {
-          var _ref3 = _slicedToArray(_ref2, 2),
-              m = _ref3[0],
-              v = _ref3[1];
-
-          return (0, _ramda.compose)((0, _vecLaFp.mTranslate)(v), m);
-        });
-      } else if ((0, _types.isPolygonArray)(v)) {
-        out = (0, _ramda.zip)(m, v).map(function (_ref4) {
-          var _ref5 = _slicedToArray(_ref4, 2),
-              m = _ref5[0],
-              poly = _ref5[1];
-
-          return poly.map(function (v) {
-            return (0, _ramda.compose)((0, _vecLaFp.mTranslate)(v), m);
-          });
-        });
-      }
-    }
-
-    return {
-      output: out
-    };
+Object.defineProperty(exports, "Mod", {
+  enumerable: true,
+  get: function () {
+    return _Mod.Mod;
   }
-};
-exports.MatrixTranslate = MatrixTranslate;
-},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js"}],"src/modules/vector/MatrixScale.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
 });
-exports.MatrixScale = void 0;
-
-var _vecLaFp = require("vec-la-fp");
-
-var _types = require("../../util/types");
-
-var _ramda = require("ramda");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var MatrixScale = {
-  name: 'MatrixScale',
-  tag: 'Vector',
-  inputs: {
-    m: 'Matrix',
-    v: 'vector'
-  },
-  outputs: {
-    output: 'Matrix'
-  },
-  fn: function fn(_ref) {
-    var m = _ref.m,
-        v = _ref.v;
-    var out;
-
-    if (!m) {
-      if ((0, _types.isVector)(v)) {
-        out = (0, _vecLaFp.mScale)(v);
-      } else if ((0, _types.isPolygon)(v)) {
-        out = v.map(function (v) {
-          return (0, _vecLaFp.mScale)(v);
-        });
-      } else if ((0, _types.isPolygonArray)(v)) {
-        out = v.map(function (poly) {
-          return poly.map(function (v) {
-            return (0, _vecLaFp.mScale)(v);
-          });
-        });
-      }
-    } else if ((0, _types.isFunction)(m)) {
-      if ((0, _types.isVector)(v)) {
-        out = (0, _ramda.compose)((0, _vecLaFp.mScale)(v), m);
-      } else if ((0, _types.isPolygon)(v)) {
-        out = v.map(function (v) {
-          return (0, _ramda.compose)((0, _vecLaFp.mScale)(v), m);
-        });
-      } else if ((0, _types.isPolygonArray)(v)) {
-        out = v.map(function (poly) {
-          return poly.map(function (v) {
-            return (0, _ramda.compose)((0, _vecLaFp.mScale)(v), m);
-          });
-        });
-      }
-    } else if ((0, _types.isFunctionArray)(m)) {
-      if ((0, _types.isVector)(v)) {
-        out = m.map(function (m) {
-          return (0, _ramda.compose)((0, _vecLaFp.mScale)(v), m);
-        });
-      } else if ((0, _types.isPolygon)(v)) {
-        out = (0, _ramda.zip)(m, v).map(function (_ref2) {
-          var _ref3 = _slicedToArray(_ref2, 2),
-              m = _ref3[0],
-              v = _ref3[1];
-
-          return (0, _ramda.compose)((0, _vecLaFp.mScale)(v), m);
-        });
-      } else if ((0, _types.isPolygonArray)(v)) {
-        out = (0, _ramda.zip)(m, v).map(function (_ref4) {
-          var _ref5 = _slicedToArray(_ref4, 2),
-              m = _ref5[0],
-              poly = _ref5[1];
-
-          return poly.map(function (v) {
-            return (0, _ramda.compose)((0, _vecLaFp.mScale)(v), m);
-          });
-        });
-      }
-    }
-
-    return {
-      output: out
-    };
+Object.defineProperty(exports, "Multiply", {
+  enumerable: true,
+  get: function () {
+    return _Multiply.Multiply;
   }
-};
-exports.MatrixScale = MatrixScale;
-},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js"}],"src/modules/vector/VectorTransform.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
 });
-exports.VectorTransform = void 0;
-
-var _vecLaFp = require("vec-la-fp");
-
-var _types = require("../../util/types");
-
-var _ramda = require("ramda");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var VectorTransform = {
-  name: 'VectorTransform',
-  tag: 'Vector',
-  inputs: {
-    v: 'Vector',
-    m: 'Matrix'
-  },
-  outputs: {
-    output: 'Vector'
-  },
-  fn: function fn(_ref) {
-    var v = _ref.v,
-        m = _ref.m;
-    var out;
-
-    if ((0, _types.isFunction)(m)) {
-      var matrix = m(_vecLaFp.mId);
-
-      if ((0, _types.isVector)(v)) {
-        out = (0, _vecLaFp.vTransform)(matrix, v);
-      } else if (_types.isPolygon) {
-        out = v.map((0, _vecLaFp.vTransform)(matrix));
-      } else if ((0, _types.isPolygonArray)(v)) {
-        out = v.map(function (poly) {
-          return poly.map((0, _vecLaFp.vTransform)(matrix));
-        });
-      }
-    } else if ((0, _types.isFunctionArray)(m)) {
-      var _matrix = m.map(function (m) {
-        return m(_vecLaFp.mId);
-      });
-
-      if ((0, _types.isVector)(v)) {
-        out = _matrix.map(function (m) {
-          return (0, _vecLaFp.vTransform)(m, v);
-        });
-      } else if ((0, _types.isPolygon)(v)) {
-        out = (0, _ramda.zip)(_matrix, v).map(function (_ref2) {
-          var _ref3 = _slicedToArray(_ref2, 2),
-              m = _ref3[0],
-              v = _ref3[1];
-
-          return (0, _vecLaFp.vTransform)(m, v);
-        });
-      } else if ((0, _types.isPolygonArray)(v)) {
-        out = (0, _ramda.zip)(_matrix, v).map(function (_ref4) {
-          var _ref5 = _slicedToArray(_ref4, 2),
-              m = _ref5[0],
-              poly = _ref5[1];
-
-          return poly.map((0, _vecLaFp.vTransform)(m));
-        });
-      }
-    }
-
-    return {
-      output: out
-    };
+Object.defineProperty(exports, "Power", {
+  enumerable: true,
+  get: function () {
+    return _Power.Power;
   }
-};
-exports.VectorTransform = VectorTransform;
-},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js"}],"src/modules/vector/Vectorize.js":[function(require,module,exports) {
+});
+Object.defineProperty(exports, "Round", {
+  enumerable: true,
+  get: function () {
+    return _Round.Round;
+  }
+});
+Object.defineProperty(exports, "Sqrt", {
+  enumerable: true,
+  get: function () {
+    return _Sqrt.Sqrt;
+  }
+});
+Object.defineProperty(exports, "Subtract", {
+  enumerable: true,
+  get: function () {
+    return _Subtract.Subtract;
+  }
+});
+Object.defineProperty(exports, "Wave", {
+  enumerable: true,
+  get: function () {
+    return _Wave.Wave;
+  }
+});
+
+var _Add = require("./Add");
+
+var _Cartesian = require("./Cartesian");
+
+var _Divide = require("./Divide");
+
+var _Median = require("./Median");
+
+var _Mod = require("./Mod");
+
+var _Multiply = require("./Multiply");
+
+var _Power = require("./Power");
+
+var _Round = require("./Round");
+
+var _Sqrt = require("./Sqrt");
+
+var _Subtract = require("./Subtract");
+
+var _Wave = require("./Wave");
+},{"./Add":"src/modules/math/Add.js","./Cartesian":"src/modules/math/Cartesian.js","./Divide":"src/modules/math/Divide.js","./Median":"src/modules/math/Median.js","./Mod":"src/modules/math/Mod.js","./Multiply":"src/modules/math/Multiply.js","./Power":"src/modules/math/Power.js","./Round":"src/modules/math/Round.js","./Sqrt":"src/modules/math/Sqrt.js","./Subtract":"src/modules/math/Subtract.js","./Wave":"src/modules/math/Wave.js"}],"src/modules/util/Arrayify.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Vectorize = void 0;
-
-var _ramda = require("ramda");
-
-var _types = require("../../util/types");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var Vectorize = {
-  name: 'Vectorize',
-  tag: 'Vector',
+exports.Arrayify = void 0;
+var Arrayify = {
+  name: 'Arrayify',
+  tag: 'Misc',
   inputs: {
-    x: 'Number',
-    y: 'Number'
+    x: {
+      type: 'Number',
+      required: true
+    },
+    n: {
+      type: 'any',
+      required: true
+    }
   },
   outputs: {
-    output: 'Vector'
+    output: '[any]'
   },
   fn: function fn(_ref) {
     var x = _ref.x,
-        y = _ref.y;
-    var out;
-
-    if ((0, _types.isNumber)(x)) {
-      if ((0, _types.isNumber)(y)) {
-        out = [x, y];
-      } else if ((0, _types.isNumberArray)(y)) {
-        out = y.map(function (yv) {
-          return [x, yv];
-        });
-      }
-    } else if ((0, _types.isNumberArray)(x)) {
-      if ((0, _types.isNumber)(y)) {
-        out = x.map(function (xv) {
-          return [xv, y];
-        });
-      } else if ((0, _types.isNumberArray)(y)) {
-        out = (0, _ramda.zip)(x, y).map(function (_ref2) {
-          var _ref3 = _slicedToArray(_ref2, 2),
-              xv = _ref3[0],
-              yv = _ref3[1];
-
-          return [xv, yv];
-        });
-      }
-    }
-
+        n = _ref.n;
     return {
-      output: out
+      output: Array.from({
+        length: n
+      }, function () {
+        return x;
+      })
     };
   }
 };
-exports.Vectorize = Vectorize;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/util/apply-style.js":[function(require,module,exports) {
+exports.Arrayify = Arrayify;
+},{}],"src/modules/util/Constant.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.applyStyle = void 0;
-
-var applyStyle = function applyStyle(mc, style) {
-  mc.fill(style.fill);
-  mc.stroke(style.stroke);
-  mc.strokeWeight(style.strokeWeight);
-};
-
-exports.applyStyle = applyStyle;
-},{}],"src/modules/drawing/DrawPolygon.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.DrawPolygon = void 0;
-
-var _ramda = require("ramda");
-
-var _types = require("../../util/types");
-
-var _applyStyle = require("../../util/apply-style");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var DrawPolygon = {
-  name: 'DrawPolygon',
-  tag: 'Drawing',
+exports.Constant = void 0;
+var Constant = {
+  name: 'Constant',
+  tag: 'Misc',
   inputs: {
-    points: '[Vector]',
-    style: 'style'
+    x: {
+      type: 'any',
+      required: true
+    }
   },
   outputs: {
-    done: 'Number'
-  },
-  fn: function fn(_ref, mc) {
-    var points = _ref.points,
-        style = _ref.style;
-
-    if ((0, _types.isStyle)(style)) {
-      (0, _applyStyle.applyStyle)(mc, style);
-    }
-
-    if ((0, _types.isPolygonArray)(points)) {
-      if ((0, _types.isStyleArray)(style)) {
-        (0, _ramda.zip)(points, style).forEach(function (_ref2) {
-          var _ref3 = _slicedToArray(_ref2, 2),
-              points = _ref3[0],
-              style = _ref3[1];
-
-          (0, _applyStyle.applyStyle)(mc, style);
-          mc.drawPolygon(mc.polygon(points));
-        });
-      } else {
-        points.forEach(function (points) {
-          return mc.drawPolygon(mc.polygon(points));
-        });
-      }
-    } else if ((0, _types.isPolygon)(points)) {
-      if ((0, _types.isStyleArray)(style)) {
-        style.forEach(function (style) {
-          (0, _applyStyle.applyStyle)(mc, style);
-          mc.drawPolygon(mc.polygon(points));
-        });
-      } else {
-        mc.drawPolygon(mc.polygon(points));
-      }
-    }
-
-    return {
-      done: 1
-    };
-  }
-};
-exports.DrawPolygon = DrawPolygon;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js","../../util/apply-style":"src/util/apply-style.js"}],"src/modules/drawing/DrawEllipse.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.DrawEllipse = void 0;
-
-var _types = require("../../util/types");
-
-var _ramda = require("ramda");
-
-var _applyStyle = require("../../util/apply-style");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var DrawEllipse = {
-  name: 'DrawEllipse',
-  tag: 'Drawing',
-  inputs: {
-    multiply: 'any',
-    v: 'Vector',
-    r: 'Number',
-    a: 'Number',
-    style: 'style'
-  },
-  outputs: {
-    done: 'Number'
-  },
-  fn: function fn(_ref, mc) {
-    var multiply = _ref.multiply,
-        v = _ref.v,
-        r = _ref.r,
-        _ref$a = _ref.a,
-        a = _ref$a === void 0 ? 0 : _ref$a,
-        style = _ref.style;
-    var useMultiply = Boolean(multiply);
-    var de = mc.drawEllipse;
-    var tag = (0, _types.tagType)({
-      v: v,
-      r: r,
-      a: a
-    });
-
-    if ((0, _types.isStyle)(style)) {
-      (0, _applyStyle.applyStyle)(mc, style);
-    }
-
-    switch (tag) {
-      case 'a:n,r:v,v:v':
-        {
-          if ((0, _types.isStyleArray)(style)) {
-            style.forEach(function (style) {
-              (0, _applyStyle.applyStyle)(mc, style);
-              de(mc.ellipse(a, r, v));
-            });
-          } else {
-            de(mc.ellipse(a, r, v));
-          }
-
-          break;
-        }
-
-      case 'a:na,r:v,v:v':
-        {
-          if ((0, _types.isStyleArray)(style)) {
-            (0, _ramda.zip)(a, style).forEach(function (_ref2) {
-              var _ref3 = _slicedToArray(_ref2, 2),
-                  a = _ref3[0],
-                  style = _ref3[1];
-
-              (0, _applyStyle.applyStyle)(mc, style);
-              de(mc.ellipse(a, r, v));
-            });
-          } else {
-            a.forEach(function (a) {
-              return de(mc.ellipse(a, r, v));
-            });
-          }
-
-          break;
-        }
-
-      case 'a:n,r:p,v:v':
-        {
-          if ((0, _types.isStyleArray)(style)) {
-            (0, _ramda.zip)(r, style).forEach(function (_ref4) {
-              var _ref5 = _slicedToArray(_ref4, 2),
-                  r = _ref5[0],
-                  style = _ref5[1];
-
-              (0, _applyStyle.applyStyle)(mc, style);
-              de(mc.ellipse(a, r, v));
-            });
-          } else {
-            r.forEach(function (r) {
-              return de(mc.ellipse(a, r, v));
-            });
-          }
-
-          break;
-        }
-
-      case 'a:n,r:v,v:p':
-        {
-          if ((0, _types.isStyleArray)(style)) {
-            (0, _ramda.zip)(v, style).forEach(function (_ref6) {
-              var _ref7 = _slicedToArray(_ref6, 2),
-                  v = _ref7[0],
-                  style = _ref7[1];
-
-              (0, _applyStyle.applyStyle)(mc, style);
-              de(mc.ellipse(a, r, v));
-            });
-          } else {
-            v.forEach(function (v) {
-              return de(mc.ellipse(a, r, v));
-            });
-          }
-
-          break;
-        }
-
-      case 'a:na,r:v,v:p':
-        {
-          if (useMultiply) {
-            if ((0, _types.isStyleArray)(style)) {
-              a.map(function (a) {
-                return v.map(function (v) {
-                  return style.map(function (style) {
-                    (0, _applyStyle.applyStyle)(mc, style);
-                    de(mc.ellipse(a, r, v));
-                  });
-                });
-              });
-            } else {
-              a.map(function (a) {
-                return v.map(function (v) {
-                  return de(mc.ellipse(a, r, v));
-                });
-              });
-            }
-          } else {
-            if ((0, _types.isStyleArray)(style)) {
-              (0, _ramda.transpose)([a, v, style]).forEach(function (_ref8) {
-                var _ref9 = _slicedToArray(_ref8, 3),
-                    a = _ref9[0],
-                    v = _ref9[1],
-                    style = _ref9[2];
-
-                (0, _applyStyle.applyStyle)(mc, style);
-                de(mc.ellipse(a, r, v));
-              });
-            } else {
-              (0, _ramda.zip)(a, v).map(function (_ref10) {
-                var _ref11 = _slicedToArray(_ref10, 2),
-                    a = _ref11[0],
-                    v = _ref11[1];
-
-                return de(mc.ellipse(a, r, v));
-              });
-            }
-          }
-
-          break;
-        }
-
-      case 'a:n,r:p,v:p':
-        {
-          if (useMultiply) {
-            if ((0, _types.isStyleArray)(style)) {
-              r.map(function (r) {
-                return v.map(function (v) {
-                  return style.map(function (style) {
-                    (0, _applyStyle.applyStyle)(mc, style);
-                    de(mc.ellipse(a, r, v));
-                  });
-                });
-              });
-            } else {
-              r.map(function (r) {
-                return v.map(function (v) {
-                  return de(mc.ellipse(a, r, v));
-                });
-              });
-            }
-          } else {
-            if ((0, _types.isStyleArray)(style)) {
-              (0, _ramda.transpose)([r, v, style]).map(function (_ref12) {
-                var _ref13 = _slicedToArray(_ref12, 3),
-                    r = _ref13[0],
-                    v = _ref13[1],
-                    style = _ref13[2];
-
-                (0, _applyStyle.applyStyle)(mc, style);
-                de(mc.ellipse(a, r, v));
-              });
-            } else {
-              (0, _ramda.zip)(r, v).map(function (_ref14) {
-                var _ref15 = _slicedToArray(_ref14, 2),
-                    r = _ref15[0],
-                    v = _ref15[1];
-
-                return de(mc.ellipse(a, r, v));
-              });
-            }
-          }
-
-          break;
-        }
-
-      case 'a:na,r:p,v:p':
-        {
-          if (useMultiply) {
-            if ((0, _types.isStyleArray)(style)) {
-              a.map(function (a) {
-                return r.map(function (r) {
-                  return v.map(function (v) {
-                    return style.map(function (style) {
-                      (0, _applyStyle.applyStyle)(mc, style);
-                      de(mc.ellipse(a, r, v));
-                    });
-                  });
-                });
-              });
-            } else {
-              a.map(function (a) {
-                return r.map(function (r) {
-                  return v.map(function (v) {
-                    return de(mc.ellipse(a, r, v));
-                  });
-                });
-              });
-            }
-          } else {
-            if ((0, _types.isStyleArray)(style)) {
-              (0, _ramda.transpose)(a, r, v, style).map(function (_ref16) {
-                var _ref17 = _slicedToArray(_ref16, 4),
-                    a = _ref17[0],
-                    r = _ref17[1],
-                    v = _ref17[2],
-                    style = _ref17[3];
-
-                (0, _applyStyle.applyStyle)(mc, style);
-                de(mc.ellipse(a, r, v));
-              });
-            } else {
-              (0, _ramda.transpose)(a, r, v).map(function (_ref18) {
-                var _ref19 = _slicedToArray(_ref18, 3),
-                    a = _ref19[0],
-                    r = _ref19[1],
-                    v = _ref19[2];
-
-                return de(mc.ellipse(a, r, v));
-              });
-            }
-          }
-
-          break;
-        }
-
-      case 'a:n,r:v,v:pa':
-        {
-          if ((0, _types.isStyleArray)(style)) {
-            v.map(function (v) {
-              return (0, _ramda.zip)(v, style).map(function (_ref20) {
-                var _ref21 = _slicedToArray(_ref20, 2),
-                    v = _ref21[0],
-                    style = _ref21[1];
-
-                (0, _applyStyle.applyStyle)(mc, style);
-                de(mc.ellipse(a, r, v));
-              });
-            });
-          } else {
-            v.map(function (v) {
-              return de(mc.ellipse(a, r, v));
-            });
-          }
-
-          break;
-        }
-
-      case 'a:n,r:p,v:pa':
-        {
-          if ((0, _types.isStyleArray)(style)) {
-            v.map(function (v) {
-              return r.map(function (r) {
-                return style.map(function (style) {
-                  (0, _applyStyle.applyStyle)(mc, style);
-                  de(mc.ellipse(a, r, v));
-                });
-              });
-            });
-          } else {
-            v.map(function (v) {
-              return r.map(function (r) {
-                return de(mc.ellipse(a, r, v));
-              });
-            });
-          }
-
-          break;
-        }
-
-      case 'a:na,r:p,v:pa':
-        {
-          if (useMultiply) {
-            if ((0, _types.isStyleArray)(style)) {
-              v.map(function (poly) {
-                return poly.map(function (v) {
-                  return a.map(function (a) {
-                    return r.map(function (r) {
-                      return style.map(function (style) {
-                        (0, _applyStyle.applyStyle)(mc, style);
-                        de(mc.ellipse(a, r, v));
-                      });
-                    });
-                  });
-                });
-              });
-            } else {
-              v.map(function (poly) {
-                return poly.map(function (v) {
-                  return a.map(function (a) {
-                    return r.map(function (r) {
-                      return de(mc.ellipse(a, r, v));
-                    });
-                  });
-                });
-              });
-            }
-          } else {
-            if ((0, _types.isStyleArray)(style)) {
-              (0, _ramda.zip)(v, style).map(function (_ref22) {
-                var _ref23 = _slicedToArray(_ref22, 2),
-                    v = _ref23[0],
-                    style = _ref23[1];
-
-                return (0, _ramda.zip)(a, r).map(function (_ref24) {
-                  var _ref25 = _slicedToArray(_ref24, 2),
-                      a = _ref25[0],
-                      r = _ref25[1];
-
-                  (0, _applyStyle.applyStyle)(mc, style);
-                  de(mc.ellipse(a, r, v));
-                });
-              });
-            } else {
-              v.map(function (v) {
-                return (0, _ramda.zip)(a, r).map(function (_ref26) {
-                  var _ref27 = _slicedToArray(_ref26, 2),
-                      a = _ref27[0],
-                      r = _ref27[1];
-
-                  return de(mc.ellipse(a, r, v));
-                });
-              });
-            }
-          }
-
-          break;
-        }
-    }
-
-    return {
-      done: 1
-    };
-  }
-};
-exports.DrawEllipse = DrawEllipse;
-},{"../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js","../../util/apply-style":"src/util/apply-style.js"}],"src/util/math-util.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.mapRange = exports.pointInCircle = exports.pointInRect = void 0;
-
-var _vecLaFp = require("vec-la-fp");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var pointInRect = function pointInRect(_ref, _ref2, _ref3) {
-  var _ref4 = _slicedToArray(_ref, 2),
-      x = _ref4[0],
-      y = _ref4[1];
-
-  var _ref5 = _slicedToArray(_ref2, 2),
-      w = _ref5[0],
-      h = _ref5[1];
-
-  var _ref6 = _slicedToArray(_ref3, 2),
-      px = _ref6[0],
-      py = _ref6[1];
-
-  return px > x && px < x + w && py > y && py < y + h;
-};
-
-exports.pointInRect = pointInRect;
-
-var pointInCircle = function pointInCircle(cp, r, p) {
-  return (0, _vecLaFp.vDist)(cp, p) <= r;
-};
-
-exports.pointInCircle = pointInCircle;
-
-var mapRange = function mapRange(fromA, fromB, toA, toB, value) {
-  return (value - fromA) / (fromB - fromA) * (toB - toA) + toA;
-};
-
-exports.mapRange = mapRange;
-},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js"}],"src/modules/interpolation/MapRange.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.MapRange = void 0;
-
-var _types = require("../../util/types");
-
-var _mathUtil = require("../../util/math-util");
-
-var MapRange = {
-  name: 'MapRange',
-  tag: 'Interpolation',
-  inputs: {
-    fromA: 'Number',
-    fromB: 'Number',
-    toA: 'Number',
-    toB: 'Number',
-    value: 'Number'
-  },
-  outputs: {
-    output: 'Number'
+    output: 'any'
   },
   fn: function fn(_ref) {
-    var fromA = _ref.fromA,
-        fromB = _ref.fromB,
-        toA = _ref.toA,
-        toB = _ref.toB,
-        value = _ref.value;
-    var out;
-
-    if ((0, _types.isNumberArray)(value)) {
-      out = value.map(function (v) {
-        return (0, _mathUtil.mapRange)(fromA, fromB, toA, toB, v);
-      });
-    } else if ((0, _types.isNumber)(value)) {
-      out = (0, _mathUtil.mapRange)(fromA, fromB, toA, toB, value);
-    }
-
+    var x = _ref.x;
     return {
-      output: out
+      output: x
     };
   }
 };
-exports.MapRange = MapRange;
-},{"../../util/types":"src/util/types.js","../../util/math-util":"src/util/math-util.js"}],"src/modules/interpolation/Mix.js":[function(require,module,exports) {
+exports.Constant = Constant;
+},{}],"src/modules/util/Flatten.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Mix = void 0;
+exports.Flatten = void 0;
 
-var _types = require("../../util/types");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
-var _mathUtil = require("../../util/math-util");
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
 
-var Mix = {
-  name: 'Mix',
-  tag: 'Interpolation',
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+var Flatten = {
+  name: 'Flatten',
+  tag: 'Misc',
   inputs: {
-    toA: 'Number',
-    toB: 'Number',
-    value: 'Number'
+    x: {
+      type: 'Array',
+      required: true
+    }
   },
   outputs: {
-    output: 'Number'
+    output: 'Array'
   },
   fn: function fn(_ref) {
-    var toA = _ref.toA,
-        toB = _ref.toB,
-        value = _ref.value;
-    var out;
-
-    if ((0, _types.isNumberArray)(value)) {
-      out = value.map(function (v) {
-        return (0, _mathUtil.mapRange)(0, 1, toA, toB, v);
-      });
-    } else if ((0, _types.isNumber)(value)) {
-      out = (0, _mathUtil.mapRange)(0, 1, toA, toB, value);
-    }
-
+    var x = _ref.x;
     return {
-      output: out
+      output: x.reduce(function (acc, cur) {
+        return _toConsumableArray(acc).concat(_toConsumableArray(cur));
+      }, [])
     };
   }
 };
-exports.Mix = Mix;
-},{"../../util/types":"src/util/types.js","../../util/math-util":"src/util/math-util.js"}],"src/modules/interpolation/Step.js":[function(require,module,exports) {
+exports.Flatten = Flatten;
+},{}],"src/modules/util/Gate.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Step = void 0;
-var Step = {
-  name: 'Step',
-  tag: 'Interpolation',
+exports.Gate = void 0;
+var Gate = {
+  name: 'Gate',
+  tag: 'Misc',
   inputs: {
-    edge: 'Number',
-    n: 'Number',
-    invert: 'Number'
-  },
-  outputs: {
-    output: 'Number'
-  },
-  fn: function fn(_ref) {
-    var n = _ref.n,
-        edge = _ref.edge,
-        _ref$invert = _ref.invert,
-        invert = _ref$invert === void 0 ? 0 : _ref$invert;
-    return {
-      output: invert ? n > edge ? 0 : 1 : n < edge ? 0 : 1
-    };
-  }
-};
-exports.Step = Step;
-},{}],"src/modules/interpolation/SinMap.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.SinMap = void 0;
-
-var _types = require("../../util/types");
-
-var _mathUtil = require("../../util/math-util");
-
-var SinMap = {
-  name: 'SinMap',
-  tag: 'Interpolation',
-  inputs: {
-    toA: 'Number',
-    toB: 'Number',
-    value: 'Number'
-  },
-  outputs: {
-    output: 'Number'
-  },
-  fn: function fn(_ref) {
-    var toA = _ref.toA,
-        toB = _ref.toB,
-        value = _ref.value;
-    var out;
-
-    if ((0, _types.isNumberArray)(value)) {
-      out = value.map(function (v) {
-        return (0, _mathUtil.mapRange)(-1, 1, toA, toB, Math.sin(v));
-      });
-    } else if ((0, _types.isNumber)(value)) {
-      out = (0, _mathUtil.mapRange)(-1, 1, toA, toB, Math.sin(value));
+    trigger: {
+      type: 'Number',
+      required: true
+    },
+    x: {
+      type: 'any',
+      required: true
     }
-
-    return {
-      output: out
-    };
-  }
-};
-exports.SinMap = SinMap;
-},{"../../util/types":"src/util/types.js","../../util/math-util":"src/util/math-util.js"}],"src/modules/interpolation/CosMap.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.CosMap = void 0;
-
-var _types = require("../../util/types");
-
-var _mathUtil = require("../../util/math-util");
-
-var CosMap = {
-  name: 'CosMap',
-  tag: 'Interpolation',
-  inputs: {
-    toA: 'Number',
-    toB: 'Number',
-    value: 'Number'
   },
   outputs: {
-    output: 'Number'
+    output: 'any'
   },
   fn: function fn(_ref) {
-    var toA = _ref.toA,
-        toB = _ref.toB,
-        value = _ref.value;
-    var out;
-
-    if ((0, _types.isNumberArray)(value)) {
-      out = value.map(function (v) {
-        return (0, _mathUtil.mapRange)(-1, 1, toA, toB, Math.cos(v));
-      });
-    } else if ((0, _types.isNumber)(value)) {
-      out = (0, _mathUtil.mapRange)(-1, 1, toA, toB, Math.cos(value));
-    }
-
+    var x = _ref.x;
     return {
-      output: out
+      output: x
     };
   }
 };
-exports.CosMap = CosMap;
-},{"../../util/types":"src/util/types.js","../../util/math-util":"src/util/math-util.js"}],"src/constants.js":[function(require,module,exports) {
+exports.Gate = Gate;
+},{}],"src/constants.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -47599,568 +47138,39 @@ var Global = {
   }
 };
 exports.Global = Global;
-},{"../../constants":"src/constants.js"}],"src/modules/math/Power.js":[function(require,module,exports) {
+},{"../../constants":"src/constants.js"}],"src/modules/util/HeadTail.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Power = void 0;
+exports.HeadTail = void 0;
 
 var _ramda = require("ramda");
 
-var _types = require("../../util/types");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var Power = {
-  name: 'Power',
-  tag: 'Math',
-  inputs: {
-    a: 'Number',
-    b: 'Number'
-  },
-  outputs: {
-    m: 'Number'
-  },
-  fn: function fn(_ref) {
-    var a = _ref.a,
-        b = _ref.b;
-    var out;
-
-    if ((0, _types.isNumber)(a)) {
-      if ((0, _types.isNumber)(b)) {
-        out = Math.pow(a, b);
-      } else if ((0, _types.isNumberArray)(b)) {
-        out = b.map(function (bv) {
-          return Math.pow(a, bv);
-        });
-      }
-    } else if ((0, _types.isNumberArray)(a)) {
-      if ((0, _types.isNumber)(b)) {
-        out = a.map(function (av) {
-          return Math.pow(av, b);
-        });
-      } else if ((0, _types.isNumberArray)(b)) {
-        out = (0, _ramda.zip)(a, b).map(function (_ref2) {
-          var _ref3 = _slicedToArray(_ref2, 2),
-              av = _ref3[0],
-              bv = _ref3[1];
-
-          return Math.pow(av, bv);
-        });
-      }
-    }
-
-    return {
-      m: out
-    };
-  }
-};
-exports.Power = Power;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/util/Gate.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Gate = void 0;
-var Gate = {
-  name: 'Gate',
+var HeadTail = {
+  name: 'HeadTail',
   tag: 'Misc',
   inputs: {
-    trigger: 'any',
-    x: 'any'
+    x: {
+      type: 'Array',
+      required: true
+    }
   },
   outputs: {
-    output: 'any'
+    head: 'any',
+    tail: '[any]'
   },
   fn: function fn(_ref) {
     var x = _ref.x;
     return {
-      output: x
+      head: (0, _ramda.head)(x),
+      tail: (0, _ramda.tail)(x)
     };
   }
 };
-exports.Gate = Gate;
-},{}],"src/modules/drawing/DrawBackground.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.DrawBackground = void 0;
-var DrawBackground = {
-  name: 'DrawBackground',
-  tag: 'Drawing',
-  inputs: {
-    gateIn: 'any',
-    fillR: 'Number',
-    fillG: 'Number',
-    fillB: 'Number',
-    fillA: 'Number'
-  },
-  outputs: {
-    gateOut: 'any'
-  },
-  fn: function fn(props, mc) {
-    var gateIn = props.gateIn,
-        _props$fillR = props.fillR,
-        fillR = _props$fillR === void 0 ? 1 : _props$fillR,
-        _props$fillG = props.fillG,
-        fillG = _props$fillG === void 0 ? 1 : _props$fillG,
-        _props$fillB = props.fillB,
-        fillB = _props$fillB === void 0 ? 1 : _props$fillB,
-        _props$fillA = props.fillA,
-        fillA = _props$fillA === void 0 ? 1 : _props$fillA;
-    mc.background([fillR * 255, fillG * 255, fillB * 255, fillA]);
-    return {
-      gateOut: gateIn
-    };
-  }
-};
-exports.DrawBackground = DrawBackground;
-},{}],"src/modules/interpolation/Multi.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Multi = void 0;
-var Multi = {
-  name: 'Multi',
-  tag: 'Interpolation',
-  inputs: {
-    n: 'Number'
-  },
-  outputs: {
-    output: 'Number'
-  },
-  fn: function fn(_ref) {
-    var n = _ref.n;
-    return {
-      output: Array.from({
-        length: n
-      }, function (_, i) {
-        return i / (n - 1);
-      })
-    };
-  }
-};
-exports.Multi = Multi;
-},{}],"src/modules/util/Arrayify.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Arrayify = void 0;
-var Arrayify = {
-  name: 'Arrayify',
-  tag: 'Misc',
-  inputs: {
-    x: 'any',
-    n: 'Number'
-  },
-  outputs: {
-    output: '[any]'
-  },
-  fn: function fn(_ref) {
-    var x = _ref.x,
-        n = _ref.n;
-    return {
-      output: Array.from({
-        length: n
-      }, function () {
-        return x;
-      })
-    };
-  }
-};
-exports.Arrayify = Arrayify;
-},{}],"src/modules/util/Constant.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Constant = void 0;
-var Constant = {
-  name: 'Constant',
-  tag: 'Misc',
-  inputs: {
-    x: 'any'
-  },
-  outputs: {
-    output: 'any'
-  },
-  fn: function fn(_ref) {
-    var x = _ref.x;
-    return {
-      output: x
-    };
-  }
-};
-exports.Constant = Constant;
-},{}],"src/modules/util/Flatten.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Flatten = void 0;
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-var Flatten = {
-  name: 'Flatten',
-  tag: 'Misc',
-  inputs: {
-    x: 'Array'
-  },
-  outputs: {
-    output: 'Array'
-  },
-  fn: function fn(_ref) {
-    var x = _ref.x;
-    return {
-      output: x.reduce(function (acc, cur) {
-        return _toConsumableArray(acc).concat(_toConsumableArray(cur));
-      }, [])
-    };
-  }
-};
-exports.Flatten = Flatten;
-},{}],"src/modules/drawing/Style.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Style = void 0;
-
-var _ramda = require("ramda");
-
-var _types = require("../../util/types");
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var resolveColor = function resolveColor(R, G, B, A) {
-  var rIsArray = (0, _types.isNumberArray)(R);
-  var gIsArray = (0, _types.isNumberArray)(G);
-  var bIsArray = (0, _types.isNumberArray)(B);
-  var aIsArray = (0, _types.isNumberArray)(A);
-
-  if (rIsArray) {
-    if (gIsArray) {
-      if (bIsArray) {
-        if (aIsArray) {
-          return (0, _ramda.transpose)([R.map(function (x) {
-            return Math.round(x * 255);
-          }), G.map(function (x) {
-            return Math.round(x * 255);
-          }), B.map(function (x) {
-            return Math.round(x * 255);
-          }), A]);
-        } else {
-          return (0, _ramda.transpose)([R, G, B]).map(function (_ref) {
-            var _ref2 = _slicedToArray(_ref, 3),
-                r = _ref2[0],
-                g = _ref2[1],
-                b = _ref2[2];
-
-            return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255), A];
-          });
-        }
-      } else {
-        if (aIsArray) {
-          return (0, _ramda.transpose)([R, G, A]).map(function (_ref3) {
-            var _ref4 = _slicedToArray(_ref3, 3),
-                r = _ref4[0],
-                g = _ref4[1],
-                a = _ref4[2];
-
-            return [Math.round(r * 255), Math.round(g * 255), Math.round(B * 255), a];
-          });
-        } else {
-          return (0, _ramda.zip)(R, G).map(function (_ref5) {
-            var _ref6 = _slicedToArray(_ref5, 2),
-                r = _ref6[0],
-                g = _ref6[1];
-
-            return [Math.round(r * 255), Math.round(g * 255), Math.round(B * 255), A];
-          });
-        }
-      }
-    } else {
-      if (bIsArray) {
-        if (aIsArray) {
-          return (0, _ramda.transpose)([R, B, A]).map(function (_ref7) {
-            var _ref8 = _slicedToArray(_ref7, 3),
-                r = _ref8[0],
-                b = _ref8[1],
-                a = _ref8[2];
-
-            return [Math.round(r * 255), Math.round(G * 255), Math.round(b * 255), a];
-          });
-        } else {
-          return (0, _ramda.zip)(R, B).map(function (_ref9) {
-            var _ref10 = _slicedToArray(_ref9, 2),
-                r = _ref10[0],
-                b = _ref10[1];
-
-            return [Math.round(r * 255), Math.round(G * 255), Math.round(b * 255), A];
-          });
-        }
-      } else {
-        if (aIsArray) {
-          return (0, _ramda.zip)(R, A).map(function (_ref11) {
-            var _ref12 = _slicedToArray(_ref11, 2),
-                r = _ref12[0],
-                a = _ref12[1];
-
-            return [Math.round(r * 255), Math.round(G * 255), Math.round(B * 255), a];
-          });
-        } else {
-          return R.map(function (r) {
-            return [Math.round(r * 255), Math.round(G * 255), Math.round(B * 255), A];
-          });
-        }
-      }
-    }
-  } else {
-    if (gIsArray) {
-      if (bIsArray) {
-        if (aIsArray) {
-          return (0, _ramda.transpose)([G, B, A]).map(function (_ref13) {
-            var _ref14 = _slicedToArray(_ref13, 3),
-                g = _ref14[0],
-                b = _ref14[1],
-                a = _ref14[2];
-
-            return [Math.round(R * 255), Math.round(g * 255), Math.round(b * 255), a];
-          });
-        } else {
-          return (0, _ramda.zip)(G, B).map(function (_ref15) {
-            var _ref16 = _slicedToArray(_ref15, 2),
-                g = _ref16[0],
-                b = _ref16[1];
-
-            return [Math.round(R * 255), Math.round(g * 255), Math.round(b * 255), A];
-          });
-        }
-      } else {
-        if (aIsArray) {
-          return (0, _ramda.zip)(G, A).map(function (_ref17) {
-            var _ref18 = _slicedToArray(_ref17, 2),
-                g = _ref18[0],
-                a = _ref18[1];
-
-            return [Math.round(R * 255), Math.round(g * 255), Math.round(B * 255), a];
-          });
-        } else {
-          return G.map(function (g) {
-            return [Math.round(R * 255), Math.round(g * 255), Math.round(B * 255), A];
-          });
-        }
-      }
-    } else {
-      if (bIsArray) {
-        if (aIsArray) {
-          return (0, _ramda.zip)(B, A).map(function (_ref19) {
-            var _ref20 = _slicedToArray(_ref19, 2),
-                b = _ref20[0],
-                a = _ref20[1];
-
-            return [Math.round(R * 255), Math.round(G * 255), Math.round(b * 255), a];
-          });
-        } else {
-          return B.map(function (b) {
-            return [Math.round(R * 255), Math.round(G * 255), Math.round(b * 255), A];
-          });
-        }
-      } else {
-        if (aIsArray) {
-          return A.map(function (a) {
-            return [Math.round(R * 255), Math.round(G * 255), Math.round(B * 255), a];
-          });
-        } else {
-          return [Math.round(R * 255), Math.round(G * 255), Math.round(B * 255), A];
-        }
-      }
-    }
-  }
-};
-
-var styleTypeObject = {
-  '@@isStyle': true
-};
-var Style = {
-  name: 'Style',
-  tag: 'Drawing',
-  inputs: {
-    fillR: 'Number',
-    fillG: 'Number',
-    fillB: 'Number',
-    fillA: 'Number',
-    strokeR: 'Number',
-    strokeG: 'Number',
-    strokeB: 'Number',
-    strokeA: 'Number',
-    strokeWeight: 'Number'
-  },
-  outputs: {
-    style: 'style'
-  },
-  fn: function fn(props) {
-    var _props$fillR = props.fillR,
-        fillR = _props$fillR === void 0 ? 1 : _props$fillR,
-        _props$fillG = props.fillG,
-        fillG = _props$fillG === void 0 ? 1 : _props$fillG,
-        _props$fillB = props.fillB,
-        fillB = _props$fillB === void 0 ? 1 : _props$fillB,
-        _props$fillA = props.fillA,
-        fillA = _props$fillA === void 0 ? 1 : _props$fillA,
-        _props$strokeR = props.strokeR,
-        strokeR = _props$strokeR === void 0 ? 1 : _props$strokeR,
-        _props$strokeG = props.strokeG,
-        strokeG = _props$strokeG === void 0 ? 1 : _props$strokeG,
-        _props$strokeB = props.strokeB,
-        strokeB = _props$strokeB === void 0 ? 1 : _props$strokeB,
-        _props$strokeA = props.strokeA,
-        strokeA = _props$strokeA === void 0 ? 1 : _props$strokeA,
-        _props$strokeWeight = props.strokeWeight,
-        strokeWeight = _props$strokeWeight === void 0 ? 1 : _props$strokeWeight;
-    var stroke = resolveColor(strokeR, strokeG, strokeB, strokeA);
-    var fill = resolveColor(fillR, fillG, fillB, fillA);
-    var out;
-
-    if ((0, _types.isArrayArray)(stroke)) {
-      if ((0, _types.isArrayArray)(fill)) {
-        if ((0, _types.isNumberArray)(strokeWeight)) {
-          out = (0, _ramda.transpose)([stroke, fill, strokeWeight]).map(function (_ref21) {
-            var _ref22 = _slicedToArray(_ref21, 3),
-                stroke = _ref22[0],
-                fill = _ref22[1],
-                strokeWeight = _ref22[2];
-
-            return _objectSpread({}, styleTypeObject, {
-              stroke: stroke,
-              fill: fill,
-              strokeWeight: strokeWeight
-            });
-          });
-        } else {
-          out = (0, _ramda.zip)(stroke, fill).map(function (_ref23) {
-            var _ref24 = _slicedToArray(_ref23, 2),
-                stroke = _ref24[0],
-                fill = _ref24[1];
-
-            return _objectSpread({}, styleTypeObject, {
-              stroke: stroke,
-              fill: fill,
-              strokeWeight: strokeWeight
-            });
-          });
-        }
-      } else {
-        if ((0, _types.isNumberArray)(strokeWeight)) {
-          out = fill.map(function (fill) {
-            return {
-              stroke: stroke,
-              fill: fill,
-              strokeWeight: strokeWeight
-            };
-          });
-        } else {
-          out = (0, _ramda.zip)(fill, strokeWeight).map(function (_ref25) {
-            var _ref26 = _slicedToArray(_ref25, 2),
-                fill = _ref26[0],
-                strokeWeight = _ref26[1];
-
-            return _objectSpread({}, styleTypeObject, {
-              stroke: stroke,
-              fill: fill,
-              strokeWeight: strokeWeight
-            });
-          });
-        }
-      }
-    } else {
-      if ((0, _types.isArrayArray)(fill)) {
-        if ((0, _types.isNumberArray)(strokeWeight)) {
-          out = (0, _ramda.zip)(stroke, strokeWeight).map(function (_ref27) {
-            var _ref28 = _slicedToArray(_ref27, 2),
-                stroke = _ref28[0],
-                strokeWeight = _ref28[1];
-
-            return _objectSpread({}, styleTypeObject, {
-              stroke: stroke,
-              fill: fill,
-              strokeWeight: strokeWeight
-            });
-          });
-        } else {
-          out = fill.map(function (fill) {
-            return _objectSpread({}, styleTypeObject, {
-              stroke: stroke,
-              fill: fill,
-              strokeWeight: strokeWeight
-            });
-          });
-        }
-      } else {
-        if ((0, _types.isNumberArray)(strokeWeight)) {
-          out = (0, _ramda.zip)(strokeWeight, fill).map(function (_ref29) {
-            var _ref30 = _slicedToArray(_ref29, 2),
-                strokeWeight = _ref30[0],
-                fill = _ref30[1];
-
-            return _objectSpread({}, styleTypeObject, {
-              stroke: stroke,
-              fill: fill,
-              strokeWeight: strokeWeight
-            });
-          });
-        } else {
-          out = _objectSpread({}, styleTypeObject, {
-            stroke: stroke,
-            fill: fill,
-            strokeWeight: strokeWeight
-          });
-        }
-      }
-    }
-
-    return {
-      style: out
-    };
-  }
-};
-exports.Style = Style;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/util/LengthOf.js":[function(require,module,exports) {
+exports.HeadTail = HeadTail;
+},{"ramda":"node_modules/ramda/es/index.js"}],"src/modules/util/LengthOf.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -48174,7 +47184,10 @@ var LengthOf = {
   name: 'LengthOf',
   tag: 'Misc',
   inputs: {
-    x: 'Array'
+    x: {
+      type: 'Array',
+      required: true
+    }
   },
   outputs: {
     output: 'Number'
@@ -48201,124 +47214,285 @@ var LengthOf = {
   }
 };
 exports.LengthOf = LengthOf;
-},{"../../util/types":"src/util/types.js"}],"src/modules/audio/Spectrum.js":[function(require,module,exports) {
+},{"../../util/types":"src/util/types.js"}],"src/modules/util/PushBack.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Spectrum = void 0;
-var fftSize = 256;
-var divSize = Math.floor(fftSize / 2 / 3);
-var spectrumData = Array.from({
-  length: fftSize
-}, function () {
-  return 0;
-});
-var buffer = new Float32Array(fftSize / 2);
-var analyser = null;
-navigator.mediaDevices.getUserMedia({
-  audio: true,
-  video: false
-}).then(function (stream) {
-  var context = new AudioContext();
-  var source = context.createMediaStreamSource(stream);
-  analyser = context.createAnalyser();
-  source.connect(analyser);
-  analyser.fftSize = fftSize;
-});
+exports.PushBack = void 0;
 
-var max = function max(a) {
-  return a.reduce(function (a, b) {
-    return Math.max(a, b);
-  }, 0);
-};
+var _ramda = require("ramda");
 
-var Spectrum = {
-  name: 'Spectrum',
-  tag: 'Audio',
-  inputs: {},
-  outputs: {
-    output: '[Number]',
-    highestLow: 'Number',
-    highestMid: 'Number',
-    highestHigh: 'Number'
+var PushBack = {
+  name: 'PushBack',
+  tag: 'Misc',
+  inputs: {
+    value: {
+      type: 'any',
+      required: true
+    },
+    array: {
+      type: 'Array',
+      required: true
+    }
   },
-  fn: function fn() {
-    // Update the spectrum data
-    analyser.getFloatFrequencyData(buffer);
-    spectrumData = Array.from(buffer).map(function (x) {
-      return 1 - (x + 128) / fftSize;
-    });
-    var highestLow = max(spectrumData.slice(divSize * 2, divSize * 3));
-    var highestMid = max(spectrumData.slice(divSize, divSize * 2));
-    var highestHigh = max(spectrumData.slice(0, divSize));
+  outputs: {
+    output: '[any]'
+  },
+  fn: function fn(_ref) {
+    var value = _ref.value,
+        array = _ref.array;
     return {
-      output: spectrumData,
-      highestLow: highestLow,
-      highestMid: highestMid,
-      highestHigh: highestHigh
+      output: (0, _ramda.append)(value, array)
     };
   }
 };
-exports.Spectrum = Spectrum;
-},{}],"src/modules/math/Cartesian.js":[function(require,module,exports) {
+exports.PushBack = PushBack;
+},{"ramda":"node_modules/ramda/es/index.js"}],"src/modules/util/PushFront.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Cartesian = void 0;
+exports.PushFront = void 0;
+
+var _ramda = require("ramda");
+
+var PushFront = {
+  name: 'PushFront',
+  tag: 'Misc',
+  inputs: {
+    value: {
+      type: 'any',
+      required: true
+    },
+    array: {
+      type: 'Array',
+      required: true
+    }
+  },
+  outputs: {
+    output: '[any]'
+  },
+  fn: function fn(_ref) {
+    var value = _ref.value,
+        array = _ref.array;
+    return {
+      output: (0, _ramda.prepend)(value, array)
+    };
+  }
+};
+exports.PushFront = PushFront;
+},{"ramda":"node_modules/ramda/es/index.js"}],"src/modules/util/Screen.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Screen = void 0;
+
+var _constants = require("../../constants");
+
+var center = [_constants.w / 2, _constants.h / 2];
+var widthHeight = [_constants.w, _constants.h];
+var Screen = {
+  name: 'Screen',
+  tag: 'Misc',
+  inputs: {},
+  outputs: {
+    width: 'Number',
+    height: 'Number',
+    widthHeight: 'Vector',
+    center: 'Vector'
+  },
+  fn: function fn() {
+    return {
+      width: _constants.w,
+      height: _constants.h,
+      widthHeight: widthHeight,
+      center: center
+    };
+  }
+};
+exports.Screen = Screen;
+},{"../../constants":"src/constants.js"}],"src/modules/util/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "Arrayify", {
+  enumerable: true,
+  get: function () {
+    return _Arrayify.Arrayify;
+  }
+});
+Object.defineProperty(exports, "Constant", {
+  enumerable: true,
+  get: function () {
+    return _Constant.Constant;
+  }
+});
+Object.defineProperty(exports, "Flatten", {
+  enumerable: true,
+  get: function () {
+    return _Flatten.Flatten;
+  }
+});
+Object.defineProperty(exports, "Gate", {
+  enumerable: true,
+  get: function () {
+    return _Gate.Gate;
+  }
+});
+Object.defineProperty(exports, "Global", {
+  enumerable: true,
+  get: function () {
+    return _Global.Global;
+  }
+});
+Object.defineProperty(exports, "HeadTail", {
+  enumerable: true,
+  get: function () {
+    return _HeadTail.HeadTail;
+  }
+});
+Object.defineProperty(exports, "LengthOf", {
+  enumerable: true,
+  get: function () {
+    return _LengthOf.LengthOf;
+  }
+});
+Object.defineProperty(exports, "PushBack", {
+  enumerable: true,
+  get: function () {
+    return _PushBack.PushBack;
+  }
+});
+Object.defineProperty(exports, "PushFront", {
+  enumerable: true,
+  get: function () {
+    return _PushFront.PushFront;
+  }
+});
+Object.defineProperty(exports, "Screen", {
+  enumerable: true,
+  get: function () {
+    return _Screen.Screen;
+  }
+});
+
+var _Arrayify = require("./Arrayify");
+
+var _Constant = require("./Constant");
+
+var _Flatten = require("./Flatten");
+
+var _Gate = require("./Gate");
+
+var _Global = require("./Global");
+
+var _HeadTail = require("./HeadTail");
+
+var _LengthOf = require("./LengthOf");
+
+var _PushBack = require("./PushBack");
+
+var _PushFront = require("./PushFront");
+
+var _Screen = require("./Screen");
+},{"./Arrayify":"src/modules/util/Arrayify.js","./Constant":"src/modules/util/Constant.js","./Flatten":"src/modules/util/Flatten.js","./Gate":"src/modules/util/Gate.js","./Global":"src/modules/util/Global.js","./HeadTail":"src/modules/util/HeadTail.js","./LengthOf":"src/modules/util/LengthOf.js","./PushBack":"src/modules/util/PushBack.js","./PushFront":"src/modules/util/PushFront.js","./Screen":"src/modules/util/Screen.js"}],"src/util/math-util.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.mapRange = exports.pointInCircle = exports.pointInRect = void 0;
+
+var _vecLaFp = require("vec-la-fp");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var pointInRect = function pointInRect(_ref, _ref2, _ref3) {
+  var _ref4 = _slicedToArray(_ref, 2),
+      x = _ref4[0],
+      y = _ref4[1];
+
+  var _ref5 = _slicedToArray(_ref2, 2),
+      w = _ref5[0],
+      h = _ref5[1];
+
+  var _ref6 = _slicedToArray(_ref3, 2),
+      px = _ref6[0],
+      py = _ref6[1];
+
+  return px > x && px < x + w && py > y && py < y + h;
+};
+
+exports.pointInRect = pointInRect;
+
+var pointInCircle = function pointInCircle(cp, r, p) {
+  return (0, _vecLaFp.vDist)(cp, p) <= r;
+};
+
+exports.pointInCircle = pointInCircle;
+
+var mapRange = function mapRange(fromA, fromB, toA, toB, value) {
+  return (value - fromA) / (fromB - fromA) * (toB - toA) + toA;
+};
+
+exports.mapRange = mapRange;
+},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js"}],"src/modules/interpolation/CosMap.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CosMap = void 0;
 
 var _types = require("../../util/types");
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+var _mathUtil = require("../../util/math-util");
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-var cartesianProduct = function cartesianProduct(a, b) {
-  return a.reduce(function (acc, ca) {
-    return _toConsumableArray(acc).concat(_toConsumableArray(b.map(function (cb) {
-      return [ca, cb];
-    })));
-  }, []);
-};
-
-var Cartesian = {
-  name: 'Cartesian',
-  tag: 'Math',
+var CosMap = {
+  name: 'CosMap',
+  tag: 'Interpolation',
   inputs: {
-    a: 'Number',
-    b: 'Number'
+    toA: {
+      type: 'Number',
+      required: true
+    },
+    toB: {
+      type: 'Number',
+      required: true
+    },
+    value: {
+      type: 'Number',
+      required: true
+    }
   },
   outputs: {
     output: 'Number'
   },
   fn: function fn(_ref) {
-    var a = _ref.a,
-        b = _ref.b;
+    var toA = _ref.toA,
+        toB = _ref.toB,
+        value = _ref.value;
     var out;
 
-    if ((0, _types.isNumber)(a)) {
-      if ((0, _types.isNumber)(b)) {
-        out = [a, b];
-      } else if (Array.isArray(b)) {
-        out = b.map(function (b) {
-          return [a, b];
-        });
-      }
-    } else if (Array.isArray(a)) {
-      if ((0, _types.isNumber)(b)) {
-        out = a.map(function (a) {
-          return [a, b];
-        });
-      } else if (Array.isArray(b)) {
-        out = cartesianProduct(a, b);
-      }
+    if ((0, _types.isNumberArray)(value)) {
+      out = value.map(function (v) {
+        return (0, _mathUtil.mapRange)(-1, 1, toA, toB, Math.cos(v));
+      });
+    } else if ((0, _types.isNumber)(value)) {
+      out = (0, _mathUtil.mapRange)(-1, 1, toA, toB, Math.cos(value));
     }
 
     return {
@@ -48326,266 +47500,297 @@ var Cartesian = {
     };
   }
 };
-exports.Cartesian = Cartesian;
-},{"../../util/types":"src/util/types.js"}],"src/modules/vector/Unvectorize.js":[function(require,module,exports) {
+exports.CosMap = CosMap;
+},{"../../util/types":"src/util/types.js","../../util/math-util":"src/util/math-util.js"}],"src/modules/interpolation/MapRange.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Unvectorize = void 0;
-
-var _ramda = require("ramda");
+exports.MapRange = void 0;
 
 var _types = require("../../util/types");
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+var _mathUtil = require("../../util/math-util");
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var Unvectorize = {
-  name: 'Unvectorize',
-  tag: 'Vector',
+var MapRange = {
+  name: 'MapRange',
+  tag: 'Interpolation',
   inputs: {
-    v: 'Vector'
-  },
-  outputs: {
-    x: 'Number',
-    y: 'Number'
-  },
-  fn: function fn(_ref) {
-    var v = _ref.v;
-    var out = {
-      x: 0,
-      y: 0
-    };
-
-    if ((0, _types.isVector)(v)) {
-      out = {
-        x: v[0],
-        y: v[1]
-      };
-    } else if ((0, _types.isPolygon)(v)) {
-      out = v.reduce(function (_ref2, _ref3) {
-        var x = _ref2.x,
-            y = _ref2.y;
-
-        var _ref4 = _slicedToArray(_ref3, 2),
-            nx = _ref4[0],
-            ny = _ref4[1];
-
-        return {
-          x: _toConsumableArray(x).concat([nx]),
-          y: _toConsumableArray(y).concat([ny])
-        };
-      }, {
-        x: [],
-        y: []
-      });
+    fromA: {
+      type: 'Number',
+      required: true
+    },
+    fromB: {
+      type: 'Number',
+      required: true
+    },
+    toA: {
+      type: 'Number',
+      required: true
+    },
+    toB: {
+      type: 'Number',
+      required: true
+    },
+    value: {
+      type: 'Number',
+      required: true
     }
-
-    return out;
-  }
-};
-exports.Unvectorize = Unvectorize;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/math/Sqrt.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Sqrt = void 0;
-
-var _types = require("../../util/types");
-
-var Sqrt = {
-  name: 'Sqrt',
-  tag: 'Math',
-  inputs: {
-    a: 'Number'
   },
-  outputs: {
-    m: 'Number'
-  },
-  fn: function fn(_ref) {
-    var a = _ref.a;
-    var out;
-
-    if ((0, _types.isNumber)(a)) {
-      out = Math.sqrt(a);
-    } else if (_types.isNumberArray) {
-      out = a.map(function (a) {
-        return Math.sqrt(a);
-      });
-    } else if (_types.isNumberArrayArray) {
-      out = a.map(function (a) {
-        return a.map(function (a) {
-          return Math.sqrt(a);
-        });
-      });
-    }
-
-    return {
-      m: out
-    };
-  }
-};
-exports.Sqrt = Sqrt;
-},{"../../util/types":"src/util/types.js"}],"src/modules/math/Mod.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Mod = void 0;
-
-var _ramda = require("ramda");
-
-var _types = require("../../util/types");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var Mod = {
-  name: 'Mod',
-  tag: 'Math',
-  inputs: {
-    a: 'Number',
-    b: 'Number'
-  },
-  outputs: {
-    m: 'Number'
-  },
-  fn: function fn(_ref) {
-    var a = _ref.a,
-        b = _ref.b;
-    var out;
-
-    if ((0, _types.isNumber)(a)) {
-      if ((0, _types.isNumber)(b)) {
-        out = a % b;
-      } else if ((0, _types.isNumberArray)(b)) {
-        out = b.map(function (bv) {
-          return a % bv;
-        });
-      }
-    } else if ((0, _types.isNumberArray)(a)) {
-      if ((0, _types.isNumber)(b)) {
-        out = a.map(function (av) {
-          return av % b;
-        });
-      } else if ((0, _types.isNumberArray)(b)) {
-        out = (0, _ramda.zip)(a, b).map(function (_ref2) {
-          var _ref3 = _slicedToArray(_ref2, 2),
-              av = _ref3[0],
-              bv = _ref3[1];
-
-          return av % bv;
-        });
-      }
-    }
-
-    return {
-      m: out
-    };
-  }
-};
-exports.Mod = Mod;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/math/Round.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Round = void 0;
-
-var _types = require("../../util/types");
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var fns = ['round', 'floor', 'ceil'];
-var Round = {
-  name: 'Round',
-  tag: 'Math',
-  inputs: {
-    a: 'Number'
-  },
-  outputs: {
-    round: 'Number',
-    floor: 'Number',
-    ceil: 'Number'
-  },
-  fn: function fn(_ref) {
-    var a = _ref.a;
-    var out = fns.reduce(function (a, c) {
-      return _objectSpread({}, a, _defineProperty({}, c, 0));
-    }, {});
-
-    if ((0, _types.isNumber)(a)) {
-      fns.forEach(function (fn) {
-        return out[fn] = Math[fn](a);
-      });
-    } else if ((0, _types.isNumberArray)(a)) {
-      fns.forEach(function (fn) {
-        return out[fn] = a.map(function (a) {
-          return Math[fn](a);
-        });
-      });
-    } else if ((0, _types.isNumberArrayArray)(a)) {
-      fns.forEach(function (fn) {
-        return out[fn] = a.map(function (a) {
-          return a.map(function (a) {
-            return Math[fn](a);
-          });
-        });
-      });
-    }
-
-    return out;
-  }
-};
-exports.Round = Round;
-},{"../../util/types":"src/util/types.js"}],"src/modules/random-and-noise/Random.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Random = void 0;
-var Random = {
-  name: 'Random',
-  tag: 'Random and Noise',
-  inputs: {},
   outputs: {
     output: 'Number'
   },
-  fn: function fn() {
+  fn: function fn(_ref) {
+    var fromA = _ref.fromA,
+        fromB = _ref.fromB,
+        toA = _ref.toA,
+        toB = _ref.toB,
+        value = _ref.value;
+    var out;
+
+    if ((0, _types.isNumberArray)(value)) {
+      out = value.map(function (v) {
+        return (0, _mathUtil.mapRange)(fromA, fromB, toA, toB, v);
+      });
+    } else if ((0, _types.isNumber)(value)) {
+      out = (0, _mathUtil.mapRange)(fromA, fromB, toA, toB, value);
+    }
+
     return {
-      output: Math.random()
+      output: out
     };
   }
 };
-exports.Random = Random;
-},{}],"node_modules/noisejs/index.js":[function(require,module,exports) {
+exports.MapRange = MapRange;
+},{"../../util/types":"src/util/types.js","../../util/math-util":"src/util/math-util.js"}],"src/modules/interpolation/Mix.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Mix = void 0;
+
+var _types = require("../../util/types");
+
+var _mathUtil = require("../../util/math-util");
+
+var Mix = {
+  name: 'Mix',
+  tag: 'Interpolation',
+  inputs: {
+    toA: {
+      type: 'Number',
+      required: true
+    },
+    toB: {
+      type: 'Number',
+      required: true
+    },
+    value: {
+      type: 'Number',
+      required: true
+    }
+  },
+  outputs: {
+    output: 'Number'
+  },
+  fn: function fn(_ref) {
+    var toA = _ref.toA,
+        toB = _ref.toB,
+        value = _ref.value;
+    var out;
+
+    if ((0, _types.isNumberArray)(value)) {
+      out = value.map(function (v) {
+        return (0, _mathUtil.mapRange)(0, 1, toA, toB, v);
+      });
+    } else if ((0, _types.isNumber)(value)) {
+      out = (0, _mathUtil.mapRange)(0, 1, toA, toB, value);
+    }
+
+    return {
+      output: out
+    };
+  }
+};
+exports.Mix = Mix;
+},{"../../util/types":"src/util/types.js","../../util/math-util":"src/util/math-util.js"}],"src/modules/interpolation/Multi.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Multi = void 0;
+var Multi = {
+  name: 'Multi',
+  tag: 'Interpolation',
+  inputs: {
+    n: {
+      type: 'Number',
+      required: true
+    }
+  },
+  outputs: {
+    output: 'Number'
+  },
+  fn: function fn(_ref) {
+    var n = _ref.n;
+    return {
+      output: Array.from({
+        length: n
+      }, function (_, i) {
+        return i / (n - 1);
+      })
+    };
+  }
+};
+exports.Multi = Multi;
+},{}],"src/modules/interpolation/SinMap.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.SinMap = void 0;
+
+var _types = require("../../util/types");
+
+var _mathUtil = require("../../util/math-util");
+
+var SinMap = {
+  name: 'SinMap',
+  tag: 'Interpolation',
+  inputs: {
+    toA: {
+      type: 'Number',
+      required: true
+    },
+    toB: {
+      type: 'Number',
+      required: true
+    },
+    value: {
+      type: 'Number',
+      required: true
+    }
+  },
+  outputs: {
+    output: 'Number'
+  },
+  fn: function fn(_ref) {
+    var toA = _ref.toA,
+        toB = _ref.toB,
+        value = _ref.value;
+    var out;
+
+    if ((0, _types.isNumberArray)(value)) {
+      out = value.map(function (v) {
+        return (0, _mathUtil.mapRange)(-1, 1, toA, toB, Math.sin(v));
+      });
+    } else if ((0, _types.isNumber)(value)) {
+      out = (0, _mathUtil.mapRange)(-1, 1, toA, toB, Math.sin(value));
+    }
+
+    return {
+      output: out
+    };
+  }
+};
+exports.SinMap = SinMap;
+},{"../../util/types":"src/util/types.js","../../util/math-util":"src/util/math-util.js"}],"src/modules/interpolation/Step.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Step = void 0;
+var Step = {
+  name: 'Step',
+  tag: 'Interpolation',
+  inputs: {
+    edge: {
+      type: 'Number',
+      required: true
+    },
+    n: {
+      type: 'Number',
+      required: true
+    },
+    invert: {
+      type: 'Number',
+      required: false
+    }
+  },
+  outputs: {
+    output: 'Number'
+  },
+  fn: function fn(_ref) {
+    var n = _ref.n,
+        edge = _ref.edge,
+        _ref$invert = _ref.invert,
+        invert = _ref$invert === void 0 ? 0 : _ref$invert;
+    return {
+      output: invert ? n > edge ? 0 : 1 : n < edge ? 0 : 1
+    };
+  }
+};
+exports.Step = Step;
+},{}],"src/modules/interpolation/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "CosMap", {
+  enumerable: true,
+  get: function () {
+    return _CosMap.CosMap;
+  }
+});
+Object.defineProperty(exports, "MapRange", {
+  enumerable: true,
+  get: function () {
+    return _MapRange.MapRange;
+  }
+});
+Object.defineProperty(exports, "Mix", {
+  enumerable: true,
+  get: function () {
+    return _Mix.Mix;
+  }
+});
+Object.defineProperty(exports, "Multi", {
+  enumerable: true,
+  get: function () {
+    return _Multi.Multi;
+  }
+});
+Object.defineProperty(exports, "SinMap", {
+  enumerable: true,
+  get: function () {
+    return _SinMap.SinMap;
+  }
+});
+Object.defineProperty(exports, "Step", {
+  enumerable: true,
+  get: function () {
+    return _Step.Step;
+  }
+});
+
+var _CosMap = require("./CosMap");
+
+var _MapRange = require("./MapRange");
+
+var _Mix = require("./Mix");
+
+var _Multi = require("./Multi");
+
+var _SinMap = require("./SinMap");
+
+var _Step = require("./Step");
+},{"./CosMap":"src/modules/interpolation/CosMap.js","./MapRange":"src/modules/interpolation/MapRange.js","./Mix":"src/modules/interpolation/Mix.js","./Multi":"src/modules/interpolation/Multi.js","./SinMap":"src/modules/interpolation/SinMap.js","./Step":"src/modules/interpolation/Step.js"}],"node_modules/noisejs/index.js":[function(require,module,exports) {
 var global = arguments[3];
 /*
  * A speed-improved perlin and simplex noise algorithms for 2D.
@@ -48946,8 +48151,14 @@ var Perlin = {
   name: 'Perlin',
   tag: 'Random and Noise',
   inputs: {
-    seed: 'Number',
-    v: 'Vector'
+    seed: {
+      type: 'Number',
+      required: false
+    },
+    v: {
+      type: 'Vector',
+      required: true
+    }
   },
   outputs: {
     output: 'Number'
@@ -48992,126 +48203,2263 @@ var Perlin = {
   }
 };
 exports.Perlin = Perlin;
-},{"noisejs":"node_modules/noisejs/index.js","../../util/types":"src/util/types.js"}],"src/modules/util/HeadTail.js":[function(require,module,exports) {
+},{"noisejs":"node_modules/noisejs/index.js","../../util/types":"src/util/types.js"}],"src/modules/random-and-noise/Random.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.HeadTail = void 0;
-
-var _ramda = require("ramda");
-
-var HeadTail = {
-  name: 'HeadTail',
-  tag: 'Misc',
-  inputs: {
-    x: '[any]'
-  },
-  outputs: {
-    head: 'any',
-    tail: '[any]'
-  },
-  fn: function fn(_ref) {
-    var x = _ref.x;
-    return {
-      head: (0, _ramda.head)(x),
-      tail: (0, _ramda.tail)(x)
-    };
-  }
-};
-exports.HeadTail = HeadTail;
-},{"ramda":"node_modules/ramda/es/index.js"}],"src/modules/util/PushFront.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.PushFront = void 0;
-
-var _ramda = require("ramda");
-
-var PushFront = {
-  name: 'PushFront',
-  tag: 'Misc',
-  inputs: {
-    value: 'any',
-    array: '[any]'
-  },
-  outputs: {
-    output: '[any]'
-  },
-  fn: function fn(_ref) {
-    var value = _ref.value,
-        array = _ref.array;
-    return {
-      output: (0, _ramda.prepend)(value, array)
-    };
-  }
-};
-exports.PushFront = PushFront;
-},{"ramda":"node_modules/ramda/es/index.js"}],"src/modules/util/PushBack.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.PushBack = void 0;
-
-var _ramda = require("ramda");
-
-var PushBack = {
-  name: 'PushBack',
-  tag: 'Misc',
-  inputs: {
-    value: 'any',
-    array: '[any]'
-  },
-  outputs: {
-    output: '[any]'
-  },
-  fn: function fn(_ref) {
-    var value = _ref.value,
-        array = _ref.array;
-    return {
-      output: (0, _ramda.append)(value, array)
-    };
-  }
-};
-exports.PushBack = PushBack;
-},{"ramda":"node_modules/ramda/es/index.js"}],"src/modules/util/Screen.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Screen = void 0;
-
-var _constants = require("../../constants");
-
-var center = [_constants.w / 2, _constants.h / 2];
-var widthHeight = [_constants.w, _constants.h];
-var Screen = {
-  name: 'Screen',
-  tag: 'Misc',
+exports.Random = void 0;
+var Random = {
+  name: 'Random',
+  tag: 'Random and Noise',
   inputs: {},
   outputs: {
-    width: 'Number',
-    height: 'Number',
-    widthHeight: 'Vector',
-    center: 'Vector'
+    output: 'Number'
   },
   fn: function fn() {
     return {
-      width: _constants.w,
-      height: _constants.h,
-      widthHeight: widthHeight,
-      center: center
+      output: Math.random()
     };
   }
 };
-exports.Screen = Screen;
-},{"../../constants":"src/constants.js"}],"src/modules/index.js":[function(require,module,exports) {
+exports.Random = Random;
+},{}],"src/modules/random-and-noise/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "Perlin", {
+  enumerable: true,
+  get: function () {
+    return _Perlin.Perlin;
+  }
+});
+Object.defineProperty(exports, "Random", {
+  enumerable: true,
+  get: function () {
+    return _Random.Random;
+  }
+});
+
+var _Perlin = require("./Perlin");
+
+var _Random = require("./Random");
+},{"./Perlin":"src/modules/random-and-noise/Perlin.js","./Random":"src/modules/random-and-noise/Random.js"}],"src/modules/geometry/Polygon.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Polygon = void 0;
+var Polygon = {
+  name: 'Polygon',
+  tag: 'Geometry',
+  inputs: {
+    sides: {
+      type: 'Number',
+      required: true
+    }
+  },
+  outputs: {
+    points: '[Vector]'
+  },
+  fn: function fn(_ref) {
+    var sides = _ref.sides;
+    return {
+      points: Array.from({
+        length: Math.ceil(sides)
+      }, function (_, i) {
+        var a = Math.PI * 2 * (i / sides);
+        return [Math.cos(a), Math.sin(a)];
+      })
+    };
+  }
+};
+exports.Polygon = Polygon;
+},{}],"src/modules/geometry/Rect.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Rect = void 0;
+
+var _vecLaFp = require("vec-la-fp");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Rect = {
+  name: 'Rect',
+  tag: 'Geometry',
+  inputs: {
+    centered: {
+      type: 'Number',
+      required: false
+    },
+    dimensions: {
+      type: 'Vector',
+      required: true
+    }
+  },
+  outputs: {
+    points: '[Vector]'
+  },
+  fn: function fn(_ref) {
+    var centered = _ref.centered,
+        _ref$dimensions = _slicedToArray(_ref.dimensions, 2),
+        w = _ref$dimensions[0],
+        h = _ref$dimensions[1];
+
+    var modifier = centered ? [-w / 2, -h / 2] : [0, 0];
+    var points = [[0, 0], [w, 0], [w, h], [0, h]].map((0, _vecLaFp.vAdd)(modifier));
+    return {
+      points: points
+    };
+  }
+};
+exports.Rect = Rect;
+},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js"}],"src/modules/geometry/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "Polygon", {
+  enumerable: true,
+  get: function () {
+    return _Polygon.Polygon;
+  }
+});
+Object.defineProperty(exports, "Rect", {
+  enumerable: true,
+  get: function () {
+    return _Rect.Rect;
+  }
+});
+
+var _Polygon = require("./Polygon");
+
+var _Rect = require("./Rect");
+},{"./Polygon":"src/modules/geometry/Polygon.js","./Rect":"src/modules/geometry/Rect.js"}],"src/modules/vector/MatrixRotate.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.MatrixRotate = void 0;
+
+var _vecLaFp = require("vec-la-fp");
+
+var _types = require("../../util/types");
+
+var _ramda = require("ramda");
+
+var MatrixRotate = {
+  name: 'MatrixRotate',
+  tag: 'Vector',
+  inputs: {
+    m: {
+      type: 'Matrix',
+      required: false
+    },
+    a: {
+      type: 'Number',
+      required: true
+    }
+  },
+  outputs: {
+    output: 'Matrix'
+  },
+  fn: function fn(_ref) {
+    var m = _ref.m,
+        a = _ref.a;
+    var out;
+
+    if (!m) {
+      if ((0, _types.isNumber)(a)) {
+        out = (0, _vecLaFp.mRotate)(a);
+      } else if ((0, _types.isNumberArray)(a)) {
+        out = a.map(function (a) {
+          return (0, _vecLaFp.mRotate)(a);
+        });
+      }
+    } else if ((0, _types.isFunction)(m)) {
+      if ((0, _types.isNumber)(a)) {
+        out = (0, _ramda.compose)((0, _vecLaFp.mRotate)(a), m);
+      } else if ((0, _types.isNumberArray)(a)) {
+        out = a.map(function (a) {
+          return (0, _ramda.compose)((0, _vecLaFp.mRotate)(a), m);
+        });
+      }
+    } else if ((0, _types.isFunctionArray)(m)) {
+      if ((0, _types.isNumber)(a)) {
+        out = m.map(function (m) {
+          return (0, _ramda.compose)((0, _vecLaFp.mRotate)(a), m);
+        });
+      } else if ((0, _types.isNumberArray)(a)) {
+        out = a.map(function (a) {
+          return m.map(function (m) {
+            return (0, _ramda.compose)((0, _vecLaFp.mRotate)(a), m);
+          });
+        });
+      }
+    }
+
+    return {
+      output: out
+    };
+  }
+};
+exports.MatrixRotate = MatrixRotate;
+},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js"}],"src/modules/vector/MatrixScale.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.MatrixScale = void 0;
+
+var _vecLaFp = require("vec-la-fp");
+
+var _types = require("../../util/types");
+
+var _ramda = require("ramda");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var MatrixScale = {
+  name: 'MatrixScale',
+  tag: 'Vector',
+  inputs: {
+    m: {
+      type: 'Matrix',
+      required: false
+    },
+    v: {
+      type: 'Vector',
+      required: true
+    }
+  },
+  outputs: {
+    output: 'Matrix'
+  },
+  fn: function fn(_ref) {
+    var m = _ref.m,
+        v = _ref.v;
+    var out;
+
+    if (!m) {
+      if ((0, _types.isVector)(v)) {
+        out = (0, _vecLaFp.mScale)(v);
+      } else if ((0, _types.isPolygon)(v)) {
+        out = v.map(function (v) {
+          return (0, _vecLaFp.mScale)(v);
+        });
+      } else if ((0, _types.isPolygonArray)(v)) {
+        out = v.map(function (poly) {
+          return poly.map(function (v) {
+            return (0, _vecLaFp.mScale)(v);
+          });
+        });
+      }
+    } else if ((0, _types.isFunction)(m)) {
+      if ((0, _types.isVector)(v)) {
+        out = (0, _ramda.compose)((0, _vecLaFp.mScale)(v), m);
+      } else if ((0, _types.isPolygon)(v)) {
+        out = v.map(function (v) {
+          return (0, _ramda.compose)((0, _vecLaFp.mScale)(v), m);
+        });
+      } else if ((0, _types.isPolygonArray)(v)) {
+        out = v.map(function (poly) {
+          return poly.map(function (v) {
+            return (0, _ramda.compose)((0, _vecLaFp.mScale)(v), m);
+          });
+        });
+      }
+    } else if ((0, _types.isFunctionArray)(m)) {
+      if ((0, _types.isVector)(v)) {
+        out = m.map(function (m) {
+          return (0, _ramda.compose)((0, _vecLaFp.mScale)(v), m);
+        });
+      } else if ((0, _types.isPolygon)(v)) {
+        out = (0, _ramda.zip)(m, v).map(function (_ref2) {
+          var _ref3 = _slicedToArray(_ref2, 2),
+              m = _ref3[0],
+              v = _ref3[1];
+
+          return (0, _ramda.compose)((0, _vecLaFp.mScale)(v), m);
+        });
+      } else if ((0, _types.isPolygonArray)(v)) {
+        out = (0, _ramda.zip)(m, v).map(function (_ref4) {
+          var _ref5 = _slicedToArray(_ref4, 2),
+              m = _ref5[0],
+              poly = _ref5[1];
+
+          return poly.map(function (v) {
+            return (0, _ramda.compose)((0, _vecLaFp.mScale)(v), m);
+          });
+        });
+      }
+    }
+
+    return {
+      output: out
+    };
+  }
+};
+exports.MatrixScale = MatrixScale;
+},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js"}],"src/modules/vector/MatrixTranslate.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.MatrixTranslate = void 0;
+
+var _vecLaFp = require("vec-la-fp");
+
+var _types = require("../../util/types");
+
+var _ramda = require("ramda");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var MatrixTranslate = {
+  name: 'MatrixTranslate',
+  tag: 'Vector',
+  inputs: {
+    m: {
+      type: 'Matrix',
+      required: false
+    },
+    v: {
+      type: 'Vector',
+      required: true
+    }
+  },
+  outputs: {
+    output: 'Matrix'
+  },
+  fn: function fn(_ref) {
+    var m = _ref.m,
+        v = _ref.v;
+    var out;
+
+    if (!m) {
+      if ((0, _types.isVector)(v)) {
+        out = (0, _vecLaFp.mTranslate)(v);
+      } else if ((0, _types.isPolygon)(v)) {
+        out = v.map(function (v) {
+          return (0, _vecLaFp.mTranslate)(v);
+        });
+      } else if ((0, _types.isPolygonArray)(v)) {
+        out = v.map(function (poly) {
+          return poly.map(function (v) {
+            return (0, _vecLaFp.mTranslate)(v);
+          });
+        });
+      }
+    } else if ((0, _types.isFunction)(m)) {
+      if ((0, _types.isVector)(v)) {
+        out = (0, _ramda.compose)((0, _vecLaFp.mTranslate)(v), m);
+      } else if ((0, _types.isPolygon)(v)) {
+        out = v.map(function (v) {
+          return (0, _ramda.compose)((0, _vecLaFp.mTranslate)(v), m);
+        });
+      } else if ((0, _types.isPolygonArray)(v)) {
+        out = v.map(function (poly) {
+          return poly.map(function (v) {
+            return (0, _ramda.compose)((0, _vecLaFp.mTranslate)(v), m);
+          });
+        });
+      }
+    } else if ((0, _types.isFunctionArray)(m)) {
+      if ((0, _types.isVector)(v)) {
+        out = m.map(function (m) {
+          return (0, _ramda.compose)((0, _vecLaFp.mTranslate)(v), m);
+        });
+      } else if ((0, _types.isPolygon)(v)) {
+        out = (0, _ramda.zip)(m, v).map(function (_ref2) {
+          var _ref3 = _slicedToArray(_ref2, 2),
+              m = _ref3[0],
+              v = _ref3[1];
+
+          return (0, _ramda.compose)((0, _vecLaFp.mTranslate)(v), m);
+        });
+      } else if ((0, _types.isPolygonArray)(v)) {
+        out = (0, _ramda.zip)(m, v).map(function (_ref4) {
+          var _ref5 = _slicedToArray(_ref4, 2),
+              m = _ref5[0],
+              poly = _ref5[1];
+
+          return poly.map(function (v) {
+            return (0, _ramda.compose)((0, _vecLaFp.mTranslate)(v), m);
+          });
+        });
+      }
+    }
+
+    return {
+      output: out
+    };
+  }
+};
+exports.MatrixTranslate = MatrixTranslate;
+},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js"}],"src/modules/vector/Unvectorize.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Unvectorize = void 0;
+
+var _ramda = require("ramda");
+
+var _types = require("../../util/types");
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Unvectorize = {
+  name: 'Unvectorize',
+  tag: 'Vector',
+  inputs: {
+    v: {
+      type: 'Vector',
+      required: true
+    }
+  },
+  outputs: {
+    x: 'Number',
+    y: 'Number'
+  },
+  fn: function fn(_ref) {
+    var v = _ref.v;
+    var out = {
+      x: 0,
+      y: 0
+    };
+
+    if ((0, _types.isVector)(v)) {
+      out = {
+        x: v[0],
+        y: v[1]
+      };
+    } else if ((0, _types.isPolygon)(v)) {
+      out = v.reduce(function (_ref2, _ref3) {
+        var x = _ref2.x,
+            y = _ref2.y;
+
+        var _ref4 = _slicedToArray(_ref3, 2),
+            nx = _ref4[0],
+            ny = _ref4[1];
+
+        return {
+          x: _toConsumableArray(x).concat([nx]),
+          y: _toConsumableArray(y).concat([ny])
+        };
+      }, {
+        x: [],
+        y: []
+      });
+    }
+
+    return out;
+  }
+};
+exports.Unvectorize = Unvectorize;
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/vector/VectorRotate.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.VectorRotate = void 0;
+
+var _ramda = require("ramda");
+
+var _vecLaFp = require("vec-la-fp");
+
+var _types = require("../../util/types");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var VectorRotate = {
+  name: 'VectorRotate',
+  tag: 'Vector',
+  inputs: {
+    v: {
+      type: 'Vector',
+      required: true
+    },
+    cp: {
+      type: 'Vector',
+      required: false
+    },
+    a: {
+      type: 'Number',
+      required: true
+    }
+  },
+  outputs: {
+    output: 'Vector'
+  },
+  fn: function fn(_ref) {
+    var v = _ref.v,
+        cp = _ref.cp,
+        a = _ref.a;
+    var cv = cp ? cp : [0, 0];
+    var out;
+
+    if ((0, _types.isVector)(v)) {
+      if ((0, _types.isNumberArray)(a)) {
+        out = a.map(function (a) {
+          return (0, _vecLaFp.vRotatePointAround)(a, cv, v);
+        });
+      } else if ((0, _types.isNumber)(a)) {
+        out = (0, _vecLaFp.vRotatePointAround)(a, cv, v);
+      }
+    } else if ((0, _types.isPolygon)(v)) {
+      if ((0, _types.isNumberArray)(a)) {
+        out = (0, _ramda.zip)(v, a).map(function (_ref2) {
+          var _ref3 = _slicedToArray(_ref2, 2),
+              v = _ref3[0],
+              a = _ref3[1];
+
+          return (0, _vecLaFp.vRotatePointAround)(a, cv, v);
+        });
+      } else if ((0, _types.isNumber)(a)) {
+        out = v.map(function (v) {
+          return (0, _vecLaFp.vRotatePointAround)(a, cv, v);
+        });
+      }
+    }
+
+    return {
+      output: out
+    };
+  }
+};
+exports.VectorRotate = VectorRotate;
+},{"ramda":"node_modules/ramda/es/index.js","vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../util/types":"src/util/types.js"}],"src/modules/vector/VectorScale.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.VectorScale = void 0;
+
+var _ramda = require("ramda");
+
+var _types = require("../../util/types");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var vMultiply = (0, _ramda.curry)(function (_ref, _ref2) {
+  var _ref3 = _slicedToArray(_ref, 2),
+      x = _ref3[0],
+      y = _ref3[1];
+
+  var _ref4 = _slicedToArray(_ref2, 2),
+      x2 = _ref4[0],
+      y2 = _ref4[1];
+
+  return [x * x2, y * y2];
+});
+var VectorScale = {
+  name: 'VectorScale',
+  tag: 'Vector',
+  inputs: {
+    v: {
+      type: 'Vector',
+      required: true
+    },
+    scale: {
+      type: 'Vector',
+      required: true
+    },
+    multiply: {
+      type: 'Number',
+      required: false
+    }
+  },
+  outputs: {
+    output: 'Vector'
+  },
+  fn: function fn(_ref5) {
+    var v = _ref5.v,
+        scale = _ref5.scale,
+        multiply = _ref5.multiply;
+    var tag = (0, _types.tagType)({
+      scale: scale,
+      v: v
+    });
+    var out;
+
+    switch (tag) {
+      case 'scale:v,v:v':
+        {
+          out = vMultiply(v, scale);
+          break;
+        }
+
+      case 'scale:p,v:v':
+        {
+          out = scale.map(function (sv) {
+            return vMultiply(v, sv);
+          });
+          break;
+        }
+
+      case 'scale:pa,v:v':
+        {
+          out = scale.map(function (scalePoly) {
+            return scalePoly.map(function (sv) {
+              return vMultiply(sv, scrollBv);
+            });
+          });
+          break;
+        }
+
+      case 'scale:v,v:p':
+        {
+          out = v.map(vMultiply(scale));
+          break;
+        }
+
+      case 'scale:p,v:p':
+        {
+          out = (0, _ramda.zip)(v, scale).map(function (_ref6) {
+            var _ref7 = _slicedToArray(_ref6, 2),
+                v1 = _ref7[0],
+                sv = _ref7[1];
+
+            return vMultiply(v1, sv);
+          });
+          break;
+        }
+
+      case 'scale:pa,v:p':
+        {
+          out = scale.map(function (scalePoly) {
+            return (0, _ramda.zip)(v, scalePoly).map(function (_ref8) {
+              var _ref9 = _slicedToArray(_ref8, 2),
+                  v1 = _ref9[0],
+                  sv = _ref9[1];
+
+              return vMultiply(v1, sv);
+            });
+          });
+          break;
+        }
+
+      case 'scale:v,v:pa':
+        {
+          out = v.map(function (poly) {
+            return poly.map(function (v1) {
+              return vMultiply(v1, scale);
+            });
+          });
+          break;
+        }
+
+      case 'scale:p,v:pa':
+        {
+          out = multiply ? (0, _ramda.zip)(v, scale).map(function (_ref10) {
+            var _ref11 = _slicedToArray(_ref10, 2),
+                poly = _ref11[0],
+                scale = _ref11[1];
+
+            return poly.map(function (v) {
+              return vMultiply(v, scale);
+            });
+          }) : v.map(function (poly) {
+            return (0, _ramda.zip)(poly, scale).map(function (_ref12) {
+              var _ref13 = _slicedToArray(_ref12, 2),
+                  v1 = _ref13[0],
+                  sv = _ref13[1];
+
+              return vMultiply(v1, sv);
+            });
+          });
+          break;
+        }
+
+      case 'scale:pa,v:pa':
+        {
+          out = (0, _ramda.zip)(v, scale).map(function (_ref14) {
+            var _ref15 = _slicedToArray(_ref14, 2),
+                poly = _ref15[0],
+                scalePoly = _ref15[1];
+
+            return (0, _ramda.zip)(poly, scalePoly).map(function (_ref16) {
+              var _ref17 = _slicedToArray(_ref16, 2),
+                  v1 = _ref17[0],
+                  sv = _ref17[1];
+
+              return vMultiply(v1, sv);
+            });
+          });
+          break;
+        }
+    }
+
+    return {
+      output: out
+    };
+  }
+};
+exports.VectorScale = VectorScale;
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/vector/VectorTransform.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.VectorTransform = void 0;
+
+var _vecLaFp = require("vec-la-fp");
+
+var _types = require("../../util/types");
+
+var _ramda = require("ramda");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var VectorTransform = {
+  name: 'VectorTransform',
+  tag: 'Vector',
+  inputs: {
+    v: {
+      type: 'Vector',
+      required: true
+    },
+    m: {
+      type: 'Matrix',
+      required: false
+    }
+  },
+  outputs: {
+    output: 'Vector'
+  },
+  fn: function fn(_ref) {
+    var v = _ref.v,
+        m = _ref.m;
+    var out;
+
+    if ((0, _types.isFunction)(m)) {
+      var matrix = m(_vecLaFp.mId);
+
+      if ((0, _types.isVector)(v)) {
+        out = (0, _vecLaFp.vTransform)(matrix, v);
+      } else if (_types.isPolygon) {
+        out = v.map((0, _vecLaFp.vTransform)(matrix));
+      } else if ((0, _types.isPolygonArray)(v)) {
+        out = v.map(function (poly) {
+          return poly.map((0, _vecLaFp.vTransform)(matrix));
+        });
+      }
+    } else if ((0, _types.isFunctionArray)(m)) {
+      var _matrix = m.map(function (m) {
+        return m(_vecLaFp.mId);
+      });
+
+      if ((0, _types.isVector)(v)) {
+        out = _matrix.map(function (m) {
+          return (0, _vecLaFp.vTransform)(m, v);
+        });
+      } else if ((0, _types.isPolygon)(v)) {
+        out = (0, _ramda.zip)(_matrix, v).map(function (_ref2) {
+          var _ref3 = _slicedToArray(_ref2, 2),
+              m = _ref3[0],
+              v = _ref3[1];
+
+          return (0, _vecLaFp.vTransform)(m, v);
+        });
+      } else if ((0, _types.isPolygonArray)(v)) {
+        out = (0, _ramda.zip)(_matrix, v).map(function (_ref4) {
+          var _ref5 = _slicedToArray(_ref4, 2),
+              m = _ref5[0],
+              poly = _ref5[1];
+
+          return poly.map((0, _vecLaFp.vTransform)(m));
+        });
+      }
+    }
+
+    return {
+      output: out
+    };
+  }
+};
+exports.VectorTransform = VectorTransform;
+},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js"}],"src/modules/vector/VectorTranslate.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.VectorTranslate = void 0;
+
+var _vecLaFp = require("vec-la-fp");
+
+var _types = require("../../util/types");
+
+var _ramda = require("ramda");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var VectorTranslate = {
+  name: 'VectorTranslate',
+  tag: 'Vector',
+  inputs: {
+    v: {
+      type: 'Vector',
+      required: true
+    },
+    tv: {
+      type: 'Vector',
+      required: true
+    },
+    multiply: {
+      type: 'Number',
+      required: false
+    }
+  },
+  outputs: {
+    output: 'Vector'
+  },
+  fn: function fn(_ref) {
+    var v = _ref.v,
+        tv = _ref.tv,
+        multiply = _ref.multiply;
+    var out;
+
+    if ((0, _types.isVector)(tv)) {
+      if ((0, _types.isVector)(v)) {
+        // 1. Simply the point (v) to the translation vector (tv)
+        out = (0, _vecLaFp.vAdd)(v, tv);
+      } else if ((0, _types.isPolygon)(v)) {
+        // 2. Translate each polygon point by translation vector
+        out = v.map((0, _vecLaFp.vAdd)(tv));
+      } else if ((0, _types.isPolygonArray)(v)) {
+        // 3. Translate each polygon by the translation vector
+        out = v.map(function (poly) {
+          return poly.map((0, _vecLaFp.vAdd)(tv));
+        });
+      }
+    } else if ((0, _types.isPolygon)(tv)) {
+      if ((0, _types.isVector)(v)) {
+        // 4. Translate the point by each translation vector
+        out = tv.map((0, _vecLaFp.vAdd)(v));
+      } else if ((0, _types.isPolygon)(v)) {
+        // 5. Translate each point by each translation vector
+        if (multiply) {
+          out = tv.map(function (tv1) {
+            return v.map((0, _vecLaFp.vAdd)(tv1));
+          });
+        } else {
+          out = (0, _ramda.zip)(v, tv).map(function (_ref2) {
+            var _ref3 = _slicedToArray(_ref2, 2),
+                v = _ref3[0],
+                tv = _ref3[1];
+
+            return (0, _vecLaFp.vAdd)(v, tv);
+          });
+        }
+      } else if ((0, _types.isPolygonArray)(v)) {
+        // 6. Translate each polygon by each translation vector
+        out = (0, _ramda.zip)(tv, v).map(function (_ref4) {
+          var _ref5 = _slicedToArray(_ref4, 2),
+              v1 = _ref5[0],
+              poly = _ref5[1];
+
+          return poly.map((0, _vecLaFp.vAdd)(v1));
+        });
+      }
+    } else if ((0, _types.isPolygonArray)(tv)) {
+      if ((0, _types.isVector)(v)) {
+        // 7. Translate each polygon of the translation vector by the point (inverse of 3)
+        out = tv.map(function (poly) {
+          return poly.map((0, _vecLaFp.vAdd)(v));
+        });
+      } else if ((0, _types.isPolygon)(v)) {
+        // Translate each polygon in the translation vector by each point in the polygon (inverse of 6)
+        out = (0, _ramda.zip)(tv, v).map(function (_ref6) {
+          var _ref7 = _slicedToArray(_ref6, 2),
+              poly = _ref7[0],
+              v1 = _ref7[1];
+
+          return poly.map((0, _vecLaFp.vAdd)(v1));
+        });
+      } else if ((0, _types.isPolygonArray)(v)) {
+        // Translate each point in each polygon by each point in each polygon in the translation vector
+        out = (0, _ramda.zip)(tv, v).map(function (_ref8) {
+          var _ref9 = _slicedToArray(_ref8, 2),
+              poly1 = _ref9[0],
+              poly2 = _ref9[1];
+
+          return (0, _ramda.zip)(poly1, poly2).map(function (_ref10) {
+            var _ref11 = _slicedToArray(_ref10, 2),
+                v1 = _ref11[0],
+                v2 = _ref11[1];
+
+            return (0, _vecLaFp.vAdd)(v1, v2);
+          });
+        });
+      }
+    }
+
+    return {
+      output: out
+    };
+  }
+};
+exports.VectorTranslate = VectorTranslate;
+},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js"}],"src/modules/vector/Vectorize.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Vectorize = void 0;
+
+var _ramda = require("ramda");
+
+var _types = require("../../util/types");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Vectorize = {
+  name: 'Vectorize',
+  tag: 'Vector',
+  inputs: {
+    x: {
+      type: 'Number',
+      required: true
+    },
+    y: {
+      type: 'Number',
+      required: true
+    }
+  },
+  outputs: {
+    output: 'Vector'
+  },
+  fn: function fn(_ref) {
+    var x = _ref.x,
+        y = _ref.y;
+    var out;
+
+    if ((0, _types.isNumber)(x)) {
+      if ((0, _types.isNumber)(y)) {
+        out = [x, y];
+      } else if ((0, _types.isNumberArray)(y)) {
+        out = y.map(function (yv) {
+          return [x, yv];
+        });
+      }
+    } else if ((0, _types.isNumberArray)(x)) {
+      if ((0, _types.isNumber)(y)) {
+        out = x.map(function (xv) {
+          return [xv, y];
+        });
+      } else if ((0, _types.isNumberArray)(y)) {
+        out = (0, _ramda.zip)(x, y).map(function (_ref2) {
+          var _ref3 = _slicedToArray(_ref2, 2),
+              xv = _ref3[0],
+              yv = _ref3[1];
+
+          return [xv, yv];
+        });
+      }
+    }
+
+    return {
+      output: out
+    };
+  }
+};
+exports.Vectorize = Vectorize;
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/vector/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "MatrixRotate", {
+  enumerable: true,
+  get: function () {
+    return _MatrixRotate.MatrixRotate;
+  }
+});
+Object.defineProperty(exports, "MatrixScale", {
+  enumerable: true,
+  get: function () {
+    return _MatrixScale.MatrixScale;
+  }
+});
+Object.defineProperty(exports, "MatrixTranslate", {
+  enumerable: true,
+  get: function () {
+    return _MatrixTranslate.MatrixTranslate;
+  }
+});
+Object.defineProperty(exports, "Unvectorize", {
+  enumerable: true,
+  get: function () {
+    return _Unvectorize.Unvectorize;
+  }
+});
+Object.defineProperty(exports, "VectorRotate", {
+  enumerable: true,
+  get: function () {
+    return _VectorRotate.VectorRotate;
+  }
+});
+Object.defineProperty(exports, "VectorScale", {
+  enumerable: true,
+  get: function () {
+    return _VectorScale.VectorScale;
+  }
+});
+Object.defineProperty(exports, "VectorTransform", {
+  enumerable: true,
+  get: function () {
+    return _VectorTransform.VectorTransform;
+  }
+});
+Object.defineProperty(exports, "VectorTranslate", {
+  enumerable: true,
+  get: function () {
+    return _VectorTranslate.VectorTranslate;
+  }
+});
+Object.defineProperty(exports, "Vectorize", {
+  enumerable: true,
+  get: function () {
+    return _Vectorize.Vectorize;
+  }
+});
+
+var _MatrixRotate = require("./MatrixRotate");
+
+var _MatrixScale = require("./MatrixScale");
+
+var _MatrixTranslate = require("./MatrixTranslate");
+
+var _Unvectorize = require("./Unvectorize");
+
+var _VectorRotate = require("./VectorRotate");
+
+var _VectorScale = require("./VectorScale");
+
+var _VectorTransform = require("./VectorTransform");
+
+var _VectorTranslate = require("./VectorTranslate");
+
+var _Vectorize = require("./Vectorize");
+},{"./MatrixRotate":"src/modules/vector/MatrixRotate.js","./MatrixScale":"src/modules/vector/MatrixScale.js","./MatrixTranslate":"src/modules/vector/MatrixTranslate.js","./Unvectorize":"src/modules/vector/Unvectorize.js","./VectorRotate":"src/modules/vector/VectorRotate.js","./VectorScale":"src/modules/vector/VectorScale.js","./VectorTransform":"src/modules/vector/VectorTransform.js","./VectorTranslate":"src/modules/vector/VectorTranslate.js","./Vectorize":"src/modules/vector/Vectorize.js"}],"src/modules/drawing/DrawBackground.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DrawBackground = void 0;
+var DrawBackground = {
+  name: 'DrawBackground',
+  tag: 'Drawing',
+  inputs: {
+    gateIn: {
+      type: 'any',
+      required: true
+    },
+    fillR: {
+      type: 'Number',
+      required: false
+    },
+    fillG: {
+      type: 'Number',
+      required: false
+    },
+    fillB: {
+      type: 'Number',
+      required: false
+    },
+    fillA: {
+      type: 'Number',
+      required: false
+    }
+  },
+  outputs: {
+    gateOut: 'any'
+  },
+  fn: function fn(props, mc) {
+    var gateIn = props.gateIn,
+        _props$fillR = props.fillR,
+        fillR = _props$fillR === void 0 ? 1 : _props$fillR,
+        _props$fillG = props.fillG,
+        fillG = _props$fillG === void 0 ? 1 : _props$fillG,
+        _props$fillB = props.fillB,
+        fillB = _props$fillB === void 0 ? 1 : _props$fillB,
+        _props$fillA = props.fillA,
+        fillA = _props$fillA === void 0 ? 1 : _props$fillA;
+    mc.background([fillR * 255, fillG * 255, fillB * 255, fillA]);
+    return {
+      gateOut: gateIn
+    };
+  }
+};
+exports.DrawBackground = DrawBackground;
+},{}],"src/util/apply-style.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.applyStyle = void 0;
+
+var applyStyle = function applyStyle(mc, style) {
+  mc.fill(style.fill);
+  mc.stroke(style.stroke);
+  mc.strokeWeight(style.strokeWeight);
+};
+
+exports.applyStyle = applyStyle;
+},{}],"src/modules/drawing/DrawEllipse.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DrawEllipse = void 0;
+
+var _types = require("../../util/types");
+
+var _ramda = require("ramda");
+
+var _applyStyle = require("../../util/apply-style");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var DrawEllipse = {
+  name: 'DrawEllipse',
+  tag: 'Drawing',
+  inputs: {
+    multiply: {
+      type: 'Number',
+      required: false
+    },
+    v: {
+      type: 'Vector',
+      required: true
+    },
+    r: {
+      type: 'Vector',
+      required: true
+    },
+    a: {
+      type: 'Number',
+      required: false
+    },
+    style: {
+      type: 'Style',
+      required: true
+    }
+  },
+  outputs: {
+    done: 'Number'
+  },
+  fn: function fn(_ref, mc) {
+    var multiply = _ref.multiply,
+        v = _ref.v,
+        r = _ref.r,
+        _ref$a = _ref.a,
+        a = _ref$a === void 0 ? 0 : _ref$a,
+        style = _ref.style;
+    var useMultiply = Boolean(multiply);
+    var de = mc.drawEllipse;
+    var tag = (0, _types.tagType)({
+      v: v,
+      r: r,
+      a: a
+    });
+
+    if ((0, _types.isStyle)(style)) {
+      (0, _applyStyle.applyStyle)(mc, style);
+    }
+
+    switch (tag) {
+      case 'a:n,r:v,v:v':
+        {
+          if ((0, _types.isStyleArray)(style)) {
+            style.forEach(function (style) {
+              (0, _applyStyle.applyStyle)(mc, style);
+              de(mc.ellipse(a, r, v));
+            });
+          } else {
+            de(mc.ellipse(a, r, v));
+          }
+
+          break;
+        }
+
+      case 'a:na,r:v,v:v':
+        {
+          if ((0, _types.isStyleArray)(style)) {
+            (0, _ramda.zip)(a, style).forEach(function (_ref2) {
+              var _ref3 = _slicedToArray(_ref2, 2),
+                  a = _ref3[0],
+                  style = _ref3[1];
+
+              (0, _applyStyle.applyStyle)(mc, style);
+              de(mc.ellipse(a, r, v));
+            });
+          } else {
+            a.forEach(function (a) {
+              return de(mc.ellipse(a, r, v));
+            });
+          }
+
+          break;
+        }
+
+      case 'a:n,r:p,v:v':
+        {
+          if ((0, _types.isStyleArray)(style)) {
+            (0, _ramda.zip)(r, style).forEach(function (_ref4) {
+              var _ref5 = _slicedToArray(_ref4, 2),
+                  r = _ref5[0],
+                  style = _ref5[1];
+
+              (0, _applyStyle.applyStyle)(mc, style);
+              de(mc.ellipse(a, r, v));
+            });
+          } else {
+            r.forEach(function (r) {
+              return de(mc.ellipse(a, r, v));
+            });
+          }
+
+          break;
+        }
+
+      case 'a:n,r:v,v:p':
+        {
+          if ((0, _types.isStyleArray)(style)) {
+            (0, _ramda.zip)(v, style).forEach(function (_ref6) {
+              var _ref7 = _slicedToArray(_ref6, 2),
+                  v = _ref7[0],
+                  style = _ref7[1];
+
+              (0, _applyStyle.applyStyle)(mc, style);
+              de(mc.ellipse(a, r, v));
+            });
+          } else {
+            v.forEach(function (v) {
+              return de(mc.ellipse(a, r, v));
+            });
+          }
+
+          break;
+        }
+
+      case 'a:na,r:v,v:p':
+        {
+          if (useMultiply) {
+            if ((0, _types.isStyleArray)(style)) {
+              a.map(function (a) {
+                return v.map(function (v) {
+                  return style.map(function (style) {
+                    (0, _applyStyle.applyStyle)(mc, style);
+                    de(mc.ellipse(a, r, v));
+                  });
+                });
+              });
+            } else {
+              a.map(function (a) {
+                return v.map(function (v) {
+                  return de(mc.ellipse(a, r, v));
+                });
+              });
+            }
+          } else {
+            if ((0, _types.isStyleArray)(style)) {
+              (0, _ramda.transpose)([a, v, style]).forEach(function (_ref8) {
+                var _ref9 = _slicedToArray(_ref8, 3),
+                    a = _ref9[0],
+                    v = _ref9[1],
+                    style = _ref9[2];
+
+                (0, _applyStyle.applyStyle)(mc, style);
+                de(mc.ellipse(a, r, v));
+              });
+            } else {
+              (0, _ramda.zip)(a, v).map(function (_ref10) {
+                var _ref11 = _slicedToArray(_ref10, 2),
+                    a = _ref11[0],
+                    v = _ref11[1];
+
+                return de(mc.ellipse(a, r, v));
+              });
+            }
+          }
+
+          break;
+        }
+
+      case 'a:n,r:p,v:p':
+        {
+          if (useMultiply) {
+            if ((0, _types.isStyleArray)(style)) {
+              r.map(function (r) {
+                return v.map(function (v) {
+                  return style.map(function (style) {
+                    (0, _applyStyle.applyStyle)(mc, style);
+                    de(mc.ellipse(a, r, v));
+                  });
+                });
+              });
+            } else {
+              r.map(function (r) {
+                return v.map(function (v) {
+                  return de(mc.ellipse(a, r, v));
+                });
+              });
+            }
+          } else {
+            if ((0, _types.isStyleArray)(style)) {
+              (0, _ramda.transpose)([r, v, style]).map(function (_ref12) {
+                var _ref13 = _slicedToArray(_ref12, 3),
+                    r = _ref13[0],
+                    v = _ref13[1],
+                    style = _ref13[2];
+
+                (0, _applyStyle.applyStyle)(mc, style);
+                de(mc.ellipse(a, r, v));
+              });
+            } else {
+              (0, _ramda.zip)(r, v).map(function (_ref14) {
+                var _ref15 = _slicedToArray(_ref14, 2),
+                    r = _ref15[0],
+                    v = _ref15[1];
+
+                return de(mc.ellipse(a, r, v));
+              });
+            }
+          }
+
+          break;
+        }
+
+      case 'a:na,r:p,v:p':
+        {
+          if (useMultiply) {
+            if ((0, _types.isStyleArray)(style)) {
+              a.map(function (a) {
+                return r.map(function (r) {
+                  return v.map(function (v) {
+                    return style.map(function (style) {
+                      (0, _applyStyle.applyStyle)(mc, style);
+                      de(mc.ellipse(a, r, v));
+                    });
+                  });
+                });
+              });
+            } else {
+              a.map(function (a) {
+                return r.map(function (r) {
+                  return v.map(function (v) {
+                    return de(mc.ellipse(a, r, v));
+                  });
+                });
+              });
+            }
+          } else {
+            if ((0, _types.isStyleArray)(style)) {
+              (0, _ramda.transpose)(a, r, v, style).map(function (_ref16) {
+                var _ref17 = _slicedToArray(_ref16, 4),
+                    a = _ref17[0],
+                    r = _ref17[1],
+                    v = _ref17[2],
+                    style = _ref17[3];
+
+                (0, _applyStyle.applyStyle)(mc, style);
+                de(mc.ellipse(a, r, v));
+              });
+            } else {
+              (0, _ramda.transpose)(a, r, v).map(function (_ref18) {
+                var _ref19 = _slicedToArray(_ref18, 3),
+                    a = _ref19[0],
+                    r = _ref19[1],
+                    v = _ref19[2];
+
+                return de(mc.ellipse(a, r, v));
+              });
+            }
+          }
+
+          break;
+        }
+
+      case 'a:n,r:v,v:pa':
+        {
+          if ((0, _types.isStyleArray)(style)) {
+            v.map(function (v) {
+              return (0, _ramda.zip)(v, style).map(function (_ref20) {
+                var _ref21 = _slicedToArray(_ref20, 2),
+                    v = _ref21[0],
+                    style = _ref21[1];
+
+                (0, _applyStyle.applyStyle)(mc, style);
+                de(mc.ellipse(a, r, v));
+              });
+            });
+          } else {
+            v.map(function (v) {
+              return de(mc.ellipse(a, r, v));
+            });
+          }
+
+          break;
+        }
+
+      case 'a:n,r:p,v:pa':
+        {
+          if ((0, _types.isStyleArray)(style)) {
+            v.map(function (v) {
+              return r.map(function (r) {
+                return style.map(function (style) {
+                  (0, _applyStyle.applyStyle)(mc, style);
+                  de(mc.ellipse(a, r, v));
+                });
+              });
+            });
+          } else {
+            v.map(function (v) {
+              return r.map(function (r) {
+                return de(mc.ellipse(a, r, v));
+              });
+            });
+          }
+
+          break;
+        }
+
+      case 'a:na,r:p,v:pa':
+        {
+          if (useMultiply) {
+            if ((0, _types.isStyleArray)(style)) {
+              v.map(function (poly) {
+                return poly.map(function (v) {
+                  return a.map(function (a) {
+                    return r.map(function (r) {
+                      return style.map(function (style) {
+                        (0, _applyStyle.applyStyle)(mc, style);
+                        de(mc.ellipse(a, r, v));
+                      });
+                    });
+                  });
+                });
+              });
+            } else {
+              v.map(function (poly) {
+                return poly.map(function (v) {
+                  return a.map(function (a) {
+                    return r.map(function (r) {
+                      return de(mc.ellipse(a, r, v));
+                    });
+                  });
+                });
+              });
+            }
+          } else {
+            if ((0, _types.isStyleArray)(style)) {
+              (0, _ramda.zip)(v, style).map(function (_ref22) {
+                var _ref23 = _slicedToArray(_ref22, 2),
+                    v = _ref23[0],
+                    style = _ref23[1];
+
+                return (0, _ramda.zip)(a, r).map(function (_ref24) {
+                  var _ref25 = _slicedToArray(_ref24, 2),
+                      a = _ref25[0],
+                      r = _ref25[1];
+
+                  (0, _applyStyle.applyStyle)(mc, style);
+                  de(mc.ellipse(a, r, v));
+                });
+              });
+            } else {
+              v.map(function (v) {
+                return (0, _ramda.zip)(a, r).map(function (_ref26) {
+                  var _ref27 = _slicedToArray(_ref26, 2),
+                      a = _ref27[0],
+                      r = _ref27[1];
+
+                  return de(mc.ellipse(a, r, v));
+                });
+              });
+            }
+          }
+
+          break;
+        }
+    }
+
+    return {
+      done: 1
+    };
+  }
+};
+exports.DrawEllipse = DrawEllipse;
+},{"../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js","../../util/apply-style":"src/util/apply-style.js"}],"src/modules/drawing/DrawLine.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DrawLine = void 0;
+
+var _ramda = require("ramda");
+
+var _types = require("../../util/types");
+
+var _applyStyle = require("../../util/apply-style");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var DrawLine = {
+  name: 'DrawLine',
+  tag: 'Drawing',
+  inputs: {
+    points: {
+      type: 'Polygon',
+      required: true
+    },
+    style: {
+      type: 'Style',
+      required: true
+    }
+  },
+  outputs: {
+    done: 'Number'
+  },
+  fn: function fn(_ref, mc) {
+    var points = _ref.points,
+        style = _ref.style;
+
+    if ((0, _types.isStyle)(style)) {
+      (0, _applyStyle.applyStyle)(mc, style);
+    } // [ ps1, ps2, ..., psN ]
+
+
+    if ((0, _types.isPolygonArray)(points)) {
+      if ((0, _types.isStyleArray)(style)) {
+        (0, _ramda.zip)(points, style).forEach(function (_ref2) {
+          var _ref3 = _slicedToArray(_ref2, 2),
+              points = _ref3[0],
+              style = _ref3[1];
+
+          (0, _applyStyle.applyStyle)(mc, style);
+          points.forEach(function (p, i) {
+            if (i === points.length - 1) return;
+            var p2 = points[i + 1];
+            mc.drawLine(mc.line(p, p2));
+          });
+        });
+      } else {
+        points.forEach(function (points) {
+          return points.forEach(function (p, i) {
+            if (i === points.length - 1) return;
+            var p2 = points[i + 1];
+            mc.drawLine(mc.line(p, p2));
+          });
+        });
+      }
+    } else if ((0, _types.isPolygon)(points)) {
+      // [p1, p2, ..., pN]
+      if ((0, _types.isStyleArray)(style)) {
+        style.forEach(function (style) {
+          (0, _applyStyle.applyStyle)(mc, style);
+          points.forEach(function (p, i) {
+            if (i === points.length - 1) return;
+            var p2 = points[i + 1];
+            mc.drawLine(mc.line(p, p2));
+          });
+        });
+      } else {
+        points.forEach(function (p, i) {
+          if (i === points.length - 1) return;
+          var p2 = points[i + 1];
+          mc.drawLine(mc.line(p, p2));
+        });
+      }
+    }
+
+    return {
+      done: 1
+    };
+  }
+};
+exports.DrawLine = DrawLine;
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js","../../util/apply-style":"src/util/apply-style.js"}],"src/modules/drawing/DrawPolygon.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DrawPolygon = void 0;
+
+var _ramda = require("ramda");
+
+var _types = require("../../util/types");
+
+var _applyStyle = require("../../util/apply-style");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var DrawPolygon = {
+  name: 'DrawPolygon',
+  tag: 'Drawing',
+  inputs: {
+    points: {
+      type: 'Polygon',
+      required: true
+    },
+    style: {
+      type: 'Style',
+      required: true
+    }
+  },
+  outputs: {
+    done: 'Number'
+  },
+  fn: function fn(_ref, mc) {
+    var points = _ref.points,
+        style = _ref.style;
+
+    if ((0, _types.isStyle)(style)) {
+      (0, _applyStyle.applyStyle)(mc, style);
+    }
+
+    if ((0, _types.isPolygonArray)(points)) {
+      if ((0, _types.isStyleArray)(style)) {
+        (0, _ramda.zip)(points, style).forEach(function (_ref2) {
+          var _ref3 = _slicedToArray(_ref2, 2),
+              points = _ref3[0],
+              style = _ref3[1];
+
+          (0, _applyStyle.applyStyle)(mc, style);
+          mc.drawPolygon(mc.polygon(points));
+        });
+      } else {
+        points.forEach(function (points) {
+          return mc.drawPolygon(mc.polygon(points));
+        });
+      }
+    } else if ((0, _types.isPolygon)(points)) {
+      if ((0, _types.isStyleArray)(style)) {
+        style.forEach(function (style) {
+          (0, _applyStyle.applyStyle)(mc, style);
+          mc.drawPolygon(mc.polygon(points));
+        });
+      } else {
+        mc.drawPolygon(mc.polygon(points));
+      }
+    }
+
+    return {
+      done: 1
+    };
+  }
+};
+exports.DrawPolygon = DrawPolygon;
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js","../../util/apply-style":"src/util/apply-style.js"}],"src/modules/drawing/Style.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Style = void 0;
+
+var _ramda = require("ramda");
+
+var _types = require("../../util/types");
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var resolveColor = function resolveColor(R, G, B, A) {
+  var rIsArray = (0, _types.isNumberArray)(R);
+  var gIsArray = (0, _types.isNumberArray)(G);
+  var bIsArray = (0, _types.isNumberArray)(B);
+  var aIsArray = (0, _types.isNumberArray)(A);
+
+  if (rIsArray) {
+    if (gIsArray) {
+      if (bIsArray) {
+        if (aIsArray) {
+          return (0, _ramda.transpose)([R.map(function (x) {
+            return Math.round(x * 255);
+          }), G.map(function (x) {
+            return Math.round(x * 255);
+          }), B.map(function (x) {
+            return Math.round(x * 255);
+          }), A]);
+        } else {
+          return (0, _ramda.transpose)([R, G, B]).map(function (_ref) {
+            var _ref2 = _slicedToArray(_ref, 3),
+                r = _ref2[0],
+                g = _ref2[1],
+                b = _ref2[2];
+
+            return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255), A];
+          });
+        }
+      } else {
+        if (aIsArray) {
+          return (0, _ramda.transpose)([R, G, A]).map(function (_ref3) {
+            var _ref4 = _slicedToArray(_ref3, 3),
+                r = _ref4[0],
+                g = _ref4[1],
+                a = _ref4[2];
+
+            return [Math.round(r * 255), Math.round(g * 255), Math.round(B * 255), a];
+          });
+        } else {
+          return (0, _ramda.zip)(R, G).map(function (_ref5) {
+            var _ref6 = _slicedToArray(_ref5, 2),
+                r = _ref6[0],
+                g = _ref6[1];
+
+            return [Math.round(r * 255), Math.round(g * 255), Math.round(B * 255), A];
+          });
+        }
+      }
+    } else {
+      if (bIsArray) {
+        if (aIsArray) {
+          return (0, _ramda.transpose)([R, B, A]).map(function (_ref7) {
+            var _ref8 = _slicedToArray(_ref7, 3),
+                r = _ref8[0],
+                b = _ref8[1],
+                a = _ref8[2];
+
+            return [Math.round(r * 255), Math.round(G * 255), Math.round(b * 255), a];
+          });
+        } else {
+          return (0, _ramda.zip)(R, B).map(function (_ref9) {
+            var _ref10 = _slicedToArray(_ref9, 2),
+                r = _ref10[0],
+                b = _ref10[1];
+
+            return [Math.round(r * 255), Math.round(G * 255), Math.round(b * 255), A];
+          });
+        }
+      } else {
+        if (aIsArray) {
+          return (0, _ramda.zip)(R, A).map(function (_ref11) {
+            var _ref12 = _slicedToArray(_ref11, 2),
+                r = _ref12[0],
+                a = _ref12[1];
+
+            return [Math.round(r * 255), Math.round(G * 255), Math.round(B * 255), a];
+          });
+        } else {
+          return R.map(function (r) {
+            return [Math.round(r * 255), Math.round(G * 255), Math.round(B * 255), A];
+          });
+        }
+      }
+    }
+  } else {
+    if (gIsArray) {
+      if (bIsArray) {
+        if (aIsArray) {
+          return (0, _ramda.transpose)([G, B, A]).map(function (_ref13) {
+            var _ref14 = _slicedToArray(_ref13, 3),
+                g = _ref14[0],
+                b = _ref14[1],
+                a = _ref14[2];
+
+            return [Math.round(R * 255), Math.round(g * 255), Math.round(b * 255), a];
+          });
+        } else {
+          return (0, _ramda.zip)(G, B).map(function (_ref15) {
+            var _ref16 = _slicedToArray(_ref15, 2),
+                g = _ref16[0],
+                b = _ref16[1];
+
+            return [Math.round(R * 255), Math.round(g * 255), Math.round(b * 255), A];
+          });
+        }
+      } else {
+        if (aIsArray) {
+          return (0, _ramda.zip)(G, A).map(function (_ref17) {
+            var _ref18 = _slicedToArray(_ref17, 2),
+                g = _ref18[0],
+                a = _ref18[1];
+
+            return [Math.round(R * 255), Math.round(g * 255), Math.round(B * 255), a];
+          });
+        } else {
+          return G.map(function (g) {
+            return [Math.round(R * 255), Math.round(g * 255), Math.round(B * 255), A];
+          });
+        }
+      }
+    } else {
+      if (bIsArray) {
+        if (aIsArray) {
+          return (0, _ramda.zip)(B, A).map(function (_ref19) {
+            var _ref20 = _slicedToArray(_ref19, 2),
+                b = _ref20[0],
+                a = _ref20[1];
+
+            return [Math.round(R * 255), Math.round(G * 255), Math.round(b * 255), a];
+          });
+        } else {
+          return B.map(function (b) {
+            return [Math.round(R * 255), Math.round(G * 255), Math.round(b * 255), A];
+          });
+        }
+      } else {
+        if (aIsArray) {
+          return A.map(function (a) {
+            return [Math.round(R * 255), Math.round(G * 255), Math.round(B * 255), a];
+          });
+        } else {
+          return [Math.round(R * 255), Math.round(G * 255), Math.round(B * 255), A];
+        }
+      }
+    }
+  }
+};
+
+var styleTypeObject = {
+  '@@isStyle': true
+};
+var Style = {
+  name: 'Style',
+  tag: 'Drawing',
+  inputs: {
+    fillR: {
+      type: 'Number',
+      required: false
+    },
+    fillG: {
+      type: 'Number',
+      required: false
+    },
+    fillB: {
+      type: 'Number',
+      required: false
+    },
+    fillA: {
+      type: 'Number',
+      required: false
+    },
+    strokeR: {
+      type: 'Number',
+      required: false
+    },
+    strokeG: {
+      type: 'Number',
+      required: false
+    },
+    strokeB: {
+      type: 'Number',
+      required: false
+    },
+    strokeA: {
+      type: 'Number',
+      required: false
+    },
+    strokeWeight: {
+      type: 'Number',
+      required: false
+    }
+  },
+  outputs: {
+    style: 'style'
+  },
+  fn: function fn(props) {
+    var _props$fillR = props.fillR,
+        fillR = _props$fillR === void 0 ? 1 : _props$fillR,
+        _props$fillG = props.fillG,
+        fillG = _props$fillG === void 0 ? 1 : _props$fillG,
+        _props$fillB = props.fillB,
+        fillB = _props$fillB === void 0 ? 1 : _props$fillB,
+        _props$fillA = props.fillA,
+        fillA = _props$fillA === void 0 ? 1 : _props$fillA,
+        _props$strokeR = props.strokeR,
+        strokeR = _props$strokeR === void 0 ? 1 : _props$strokeR,
+        _props$strokeG = props.strokeG,
+        strokeG = _props$strokeG === void 0 ? 1 : _props$strokeG,
+        _props$strokeB = props.strokeB,
+        strokeB = _props$strokeB === void 0 ? 1 : _props$strokeB,
+        _props$strokeA = props.strokeA,
+        strokeA = _props$strokeA === void 0 ? 1 : _props$strokeA,
+        _props$strokeWeight = props.strokeWeight,
+        strokeWeight = _props$strokeWeight === void 0 ? 1 : _props$strokeWeight;
+    var stroke = resolveColor(strokeR, strokeG, strokeB, strokeA);
+    var fill = resolveColor(fillR, fillG, fillB, fillA);
+    var out;
+
+    if ((0, _types.isArrayArray)(stroke)) {
+      if ((0, _types.isArrayArray)(fill)) {
+        if ((0, _types.isNumberArray)(strokeWeight)) {
+          out = (0, _ramda.transpose)([stroke, fill, strokeWeight]).map(function (_ref21) {
+            var _ref22 = _slicedToArray(_ref21, 3),
+                stroke = _ref22[0],
+                fill = _ref22[1],
+                strokeWeight = _ref22[2];
+
+            return _objectSpread({}, styleTypeObject, {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            });
+          });
+        } else {
+          out = (0, _ramda.zip)(stroke, fill).map(function (_ref23) {
+            var _ref24 = _slicedToArray(_ref23, 2),
+                stroke = _ref24[0],
+                fill = _ref24[1];
+
+            return _objectSpread({}, styleTypeObject, {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            });
+          });
+        }
+      } else {
+        if ((0, _types.isNumberArray)(strokeWeight)) {
+          out = fill.map(function (fill) {
+            return {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            };
+          });
+        } else {
+          out = (0, _ramda.zip)(fill, strokeWeight).map(function (_ref25) {
+            var _ref26 = _slicedToArray(_ref25, 2),
+                fill = _ref26[0],
+                strokeWeight = _ref26[1];
+
+            return _objectSpread({}, styleTypeObject, {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            });
+          });
+        }
+      }
+    } else {
+      if ((0, _types.isArrayArray)(fill)) {
+        if ((0, _types.isNumberArray)(strokeWeight)) {
+          out = (0, _ramda.zip)(stroke, strokeWeight).map(function (_ref27) {
+            var _ref28 = _slicedToArray(_ref27, 2),
+                stroke = _ref28[0],
+                strokeWeight = _ref28[1];
+
+            return _objectSpread({}, styleTypeObject, {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            });
+          });
+        } else {
+          out = fill.map(function (fill) {
+            return _objectSpread({}, styleTypeObject, {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            });
+          });
+        }
+      } else {
+        if ((0, _types.isNumberArray)(strokeWeight)) {
+          out = (0, _ramda.zip)(strokeWeight, fill).map(function (_ref29) {
+            var _ref30 = _slicedToArray(_ref29, 2),
+                strokeWeight = _ref30[0],
+                fill = _ref30[1];
+
+            return _objectSpread({}, styleTypeObject, {
+              stroke: stroke,
+              fill: fill,
+              strokeWeight: strokeWeight
+            });
+          });
+        } else {
+          out = _objectSpread({}, styleTypeObject, {
+            stroke: stroke,
+            fill: fill,
+            strokeWeight: strokeWeight
+          });
+        }
+      }
+    }
+
+    return {
+      style: out
+    };
+  }
+};
+exports.Style = Style;
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js"}],"src/modules/drawing/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "DrawBackground", {
+  enumerable: true,
+  get: function () {
+    return _DrawBackground.DrawBackground;
+  }
+});
+Object.defineProperty(exports, "DrawEllipse", {
+  enumerable: true,
+  get: function () {
+    return _DrawEllipse.DrawEllipse;
+  }
+});
+Object.defineProperty(exports, "DrawLine", {
+  enumerable: true,
+  get: function () {
+    return _DrawLine.DrawLine;
+  }
+});
+Object.defineProperty(exports, "DrawPolygon", {
+  enumerable: true,
+  get: function () {
+    return _DrawPolygon.DrawPolygon;
+  }
+});
+Object.defineProperty(exports, "Style", {
+  enumerable: true,
+  get: function () {
+    return _Style.Style;
+  }
+});
+
+var _DrawBackground = require("./DrawBackground");
+
+var _DrawEllipse = require("./DrawEllipse");
+
+var _DrawLine = require("./DrawLine");
+
+var _DrawPolygon = require("./DrawPolygon");
+
+var _Style = require("./Style");
+},{"./DrawBackground":"src/modules/drawing/DrawBackground.js","./DrawEllipse":"src/modules/drawing/DrawEllipse.js","./DrawLine":"src/modules/drawing/DrawLine.js","./DrawPolygon":"src/modules/drawing/DrawPolygon.js","./Style":"src/modules/drawing/Style.js"}],"src/modules/feedback/state.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {};
+exports.default = _default;
+},{}],"src/modules/feedback/FeedbackIn.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.FeedbackIn = void 0;
+
+var _state = _interopRequireDefault(require("./state"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var FeedbackIn = {
+  name: 'FeedbackIn',
+  tag: 'Feedback',
+  inputs: {
+    key: {
+      type: 'any',
+      required: true
+    },
+    x: {
+      type: 'any',
+      required: true
+    }
+  },
+  outputs: {
+    x: 'any'
+  },
+  fn: function fn(_ref) {
+    var key = _ref.key,
+        x = _ref.x;
+    _state.default[key] = x;
+    return {
+      x: x
+    };
+  }
+};
+exports.FeedbackIn = FeedbackIn;
+},{"./state":"src/modules/feedback/state.js"}],"src/modules/feedback/FeedbackOut.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.FeedbackOut = void 0;
+
+var _state = _interopRequireDefault(require("./state"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var FeedbackOut = {
+  name: 'FeedbackOut',
+  tag: 'Feedback',
+  inputs: {
+    key: {
+      type: 'any',
+      required: true
+    },
+    initial: {
+      type: 'any',
+      required: true
+    }
+  },
+  outputs: {
+    x: 'any'
+  },
+  fn: function fn(_ref) {
+    var key = _ref.key,
+        initial = _ref.initial;
+
+    if (!(key in _state.default)) {
+      _state.default[key] = initial;
+      return {
+        x: initial
+      };
+    }
+
+    return {
+      x: _state.default[key]
+    };
+  }
+};
+exports.FeedbackOut = FeedbackOut;
+},{"./state":"src/modules/feedback/state.js"}],"src/modules/feedback/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "FeedbackIn", {
+  enumerable: true,
+  get: function () {
+    return _FeedbackIn.FeedbackIn;
+  }
+});
+Object.defineProperty(exports, "FeedbackOut", {
+  enumerable: true,
+  get: function () {
+    return _FeedbackOut.FeedbackOut;
+  }
+});
+
+var _FeedbackIn = require("./FeedbackIn");
+
+var _FeedbackOut = require("./FeedbackOut");
+},{"./FeedbackIn":"src/modules/feedback/FeedbackIn.js","./FeedbackOut":"src/modules/feedback/FeedbackOut.js"}],"src/modules/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -49119,99 +50467,38 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.findModule = exports.modules = void 0;
 
-var _Time = require("./time/Time");
+var Time = _interopRequireWildcard(require("./time"));
 
-var _TrueTime = require("./time/TrueTime");
+var Audio = _interopRequireWildcard(require("./audio"));
 
-var _Multiply = require("./math/Multiply");
+var Mathematics = _interopRequireWildcard(require("./math"));
 
-var _Divide = require("./math/Divide");
+var Misc = _interopRequireWildcard(require("./util"));
 
-var _Add = require("./math/Add");
+var Interpolation = _interopRequireWildcard(require("./interpolation"));
 
-var _Subtract = require("./math/Subtract");
+var RandomAndNoise = _interopRequireWildcard(require("./random-and-noise"));
 
-var _Polygon = require("./geometry/Polygon");
+var Geometry = _interopRequireWildcard(require("./geometry"));
 
-var _Rect = require("./geometry/Rect");
+var Vector = _interopRequireWildcard(require("./vector"));
 
-var _Wave = require("./math/Wave");
+var Drawing = _interopRequireWildcard(require("./drawing"));
 
-var _VectorScale = require("./vector/VectorScale");
+var Feedback = _interopRequireWildcard(require("./feedback"));
 
-var _VectorTranslate = require("./vector/VectorTranslate");
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
-var _VectorRotate = require("./vector/VectorRotate");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
-var _MatrixRotate = require("./vector/MatrixRotate");
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
 
-var _MatrixTranslate = require("./vector/MatrixTranslate");
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
 
-var _MatrixScale = require("./vector/MatrixScale");
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
-var _VectorTransform = require("./vector/VectorTransform");
+var modules = _toConsumableArray(Object.values(Time)).concat(_toConsumableArray(Object.values(Audio)), _toConsumableArray(Object.values(Mathematics)), _toConsumableArray(Object.values(Misc)), _toConsumableArray(Object.values(Interpolation)), _toConsumableArray(Object.values(RandomAndNoise)), _toConsumableArray(Object.values(Geometry)), _toConsumableArray(Object.values(Vector)), _toConsumableArray(Object.values(Drawing)), _toConsumableArray(Object.values(Feedback)));
 
-var _Vectorize = require("./vector/Vectorize");
-
-var _DrawPolygon = require("./drawing/DrawPolygon");
-
-var _DrawEllipse = require("./drawing/DrawEllipse");
-
-var _MapRange = require("./interpolation/MapRange");
-
-var _Mix = require("./interpolation/Mix");
-
-var _Step = require("./interpolation/Step");
-
-var _SinMap = require("./interpolation/SinMap");
-
-var _CosMap = require("./interpolation/CosMap");
-
-var _Global = require("./util/Global");
-
-var _Power = require("./math/Power");
-
-var _Gate = require("./util/Gate");
-
-var _DrawBackground = require("./drawing/DrawBackground");
-
-var _Multi = require("./interpolation/Multi");
-
-var _Arrayify = require("./util/Arrayify");
-
-var _Constant = require("./util/Constant");
-
-var _Flatten = require("./util/Flatten");
-
-var _Style = require("./drawing/Style");
-
-var _LengthOf = require("./util/LengthOf");
-
-var _Spectrum = require("./audio/Spectrum");
-
-var _Cartesian = require("./math/Cartesian");
-
-var _Unvectorize = require("./vector/Unvectorize");
-
-var _Sqrt = require("./math/Sqrt");
-
-var _Mod = require("./math/Mod");
-
-var _Round = require("./math/Round");
-
-var _Random = require("./random-and-noise/Random");
-
-var _Perlin = require("./random-and-noise/Perlin");
-
-var _HeadTail = require("./util/HeadTail");
-
-var _PushFront = require("./util/PushFront");
-
-var _PushBack = require("./util/PushBack");
-
-var _Screen = require("./util/Screen");
-
-var modules = [_Time.Time, _TrueTime.TrueTime, _Spectrum.Spectrum, _Multiply.Multiply, _Divide.Divide, _Screen.Screen, _Flatten.Flatten, _HeadTail.HeadTail, _PushFront.PushFront, _PushBack.PushBack, _Constant.Constant, _Step.Step, _Add.Add, _Subtract.Subtract, _Sqrt.Sqrt, _Mod.Mod, _Round.Round, _Perlin.Perlin, _Polygon.Polygon, _Rect.Rect, _Wave.Wave, _VectorScale.VectorScale, _VectorTranslate.VectorTranslate, _VectorRotate.VectorRotate, _MatrixRotate.MatrixRotate, _MatrixTranslate.MatrixTranslate, _MatrixScale.MatrixScale, _VectorTransform.VectorTransform, _Vectorize.Vectorize, _Random.Random, _Unvectorize.Unvectorize, _MapRange.MapRange, _Mix.Mix, _SinMap.SinMap, _CosMap.CosMap, _Global.Global, _Style.Style, _DrawPolygon.DrawPolygon, _DrawEllipse.DrawEllipse, _DrawBackground.DrawBackground, _Power.Power, _Gate.Gate, _Multi.Multi, _Arrayify.Arrayify, _LengthOf.LengthOf, _Cartesian.Cartesian];
 exports.modules = modules;
 
 var findModule = function findModule(moduleName) {
@@ -49221,7 +50508,7 @@ var findModule = function findModule(moduleName) {
 };
 
 exports.findModule = findModule;
-},{"./time/Time":"src/modules/time/Time.js","./time/TrueTime":"src/modules/time/TrueTime.js","./math/Multiply":"src/modules/math/Multiply.js","./math/Divide":"src/modules/math/Divide.js","./math/Add":"src/modules/math/Add.js","./math/Subtract":"src/modules/math/Subtract.js","./geometry/Polygon":"src/modules/geometry/Polygon.js","./geometry/Rect":"src/modules/geometry/Rect.js","./math/Wave":"src/modules/math/Wave.js","./vector/VectorScale":"src/modules/vector/VectorScale.js","./vector/VectorTranslate":"src/modules/vector/VectorTranslate.js","./vector/VectorRotate":"src/modules/vector/VectorRotate.js","./vector/MatrixRotate":"src/modules/vector/MatrixRotate.js","./vector/MatrixTranslate":"src/modules/vector/MatrixTranslate.js","./vector/MatrixScale":"src/modules/vector/MatrixScale.js","./vector/VectorTransform":"src/modules/vector/VectorTransform.js","./vector/Vectorize":"src/modules/vector/Vectorize.js","./drawing/DrawPolygon":"src/modules/drawing/DrawPolygon.js","./drawing/DrawEllipse":"src/modules/drawing/DrawEllipse.js","./interpolation/MapRange":"src/modules/interpolation/MapRange.js","./interpolation/Mix":"src/modules/interpolation/Mix.js","./interpolation/Step":"src/modules/interpolation/Step.js","./interpolation/SinMap":"src/modules/interpolation/SinMap.js","./interpolation/CosMap":"src/modules/interpolation/CosMap.js","./util/Global":"src/modules/util/Global.js","./math/Power":"src/modules/math/Power.js","./util/Gate":"src/modules/util/Gate.js","./drawing/DrawBackground":"src/modules/drawing/DrawBackground.js","./interpolation/Multi":"src/modules/interpolation/Multi.js","./util/Arrayify":"src/modules/util/Arrayify.js","./util/Constant":"src/modules/util/Constant.js","./util/Flatten":"src/modules/util/Flatten.js","./drawing/Style":"src/modules/drawing/Style.js","./util/LengthOf":"src/modules/util/LengthOf.js","./audio/Spectrum":"src/modules/audio/Spectrum.js","./math/Cartesian":"src/modules/math/Cartesian.js","./vector/Unvectorize":"src/modules/vector/Unvectorize.js","./math/Sqrt":"src/modules/math/Sqrt.js","./math/Mod":"src/modules/math/Mod.js","./math/Round":"src/modules/math/Round.js","./random-and-noise/Random":"src/modules/random-and-noise/Random.js","./random-and-noise/Perlin":"src/modules/random-and-noise/Perlin.js","./util/HeadTail":"src/modules/util/HeadTail.js","./util/PushFront":"src/modules/util/PushFront.js","./util/PushBack":"src/modules/util/PushBack.js","./util/Screen":"src/modules/util/Screen.js"}],"src/util/run-with-context.js":[function(require,module,exports) {
+},{"./time":"src/modules/time/index.js","./audio":"src/modules/audio/index.js","./math":"src/modules/math/index.js","./util":"src/modules/util/index.js","./interpolation":"src/modules/interpolation/index.js","./random-and-noise":"src/modules/random-and-noise/index.js","./geometry":"src/modules/geometry/index.js","./vector":"src/modules/vector/index.js","./drawing":"src/modules/drawing/index.js","./feedback":"src/modules/feedback/index.js"}],"src/util/run-with-context.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -49244,17 +50531,494 @@ var runWithContext = function runWithContext(context, fnStr) {
 };
 
 exports.runWithContext = runWithContext;
-},{}],"src/generate-animation-function.js":[function(require,module,exports) {
+},{}],"node_modules/data.either/lib/either.js":[function(require,module,exports) {
+// Copyright (c) 2013-2014 Quildreen Motta <quildreen@gmail.com>
+//
+// Permission is hereby granted, free of charge, to any person
+// obtaining a copy of this software and associated documentation files
+// (the "Software"), to deal in the Software without restriction,
+// including without limitation the rights to use, copy, modify, merge,
+// publish, distribute, sublicense, and/or sell copies of the Software,
+// and to permit persons to whom the Software is furnished to do so,
+// subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be
+// included in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+// LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+// OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+/**
+ * @module lib/either
+ */
+module.exports = Either
+
+// -- Aliases ----------------------------------------------------------
+var clone         = Object.create
+var unimplemented = function(){ throw new Error('Not implemented.') }
+var noop          = function(){ return this                         }
+
+
+// -- Implementation ---------------------------------------------------
+
+/**
+ * The `Either(a, b)` structure represents the logical disjunction between `a`
+ * and `b`. In other words, `Either` may contain either a value of type `a` or
+ * a value of type `b`, at any given time. This particular implementation is
+ * biased on the right value (`b`), thus projections will take the right value
+ * over the left one.
+ *
+ * This class models two different cases: `Left a` and `Right b`, and can hold
+ * one of the cases at any given time. The projections are, none the less,
+ * biased for the `Right` case, thus a common use case for this structure is to
+ * hold the results of computations that may fail, when you want to store
+ * additional information on the failure (instead of throwing an exception).
+ *
+ * Furthermore, the values of `Either(a, b)` can be combined and manipulated by
+ * using the expressive monadic operations. This allows safely sequencing
+ * operations that may fail, and safely composing values that you don't know
+ * whether they're present or not, failing early (returning a `Left a`) if any
+ * of the operations fail.
+ *
+ * While this class can certainly model input validations, the [Validation][]
+ * structure lends itself better to that use case, since it can naturally
+ * aggregate failures — monads shortcut on the first failure.
+ *
+ * [Validation]: https://github.com/folktale/data.validation
+ *
+ *
+ * @class
+ * @summary
+ * Either[α, β] <: Applicative[β]
+ *               , Functor[β]
+ *               , Chain[β]
+ *               , Show
+ *               , Eq
+ */
+function Either() { }
+
+Left.prototype = clone(Either.prototype)
+function Left(a) {
+  this.value = a
+}
+
+Right.prototype = clone(Either.prototype)
+function Right(a) {
+  this.value = a
+}
+
+// -- Constructors -----------------------------------------------------
+
+/**
+ * Constructs a new `Either[α, β]` structure holding a `Left` value. This
+ * usually represents a failure due to the right-bias of this structure.
+ *
+ * @summary a → Either[α, β]
+ */
+Either.Left = function(a) {
+  return new Left(a)
+}
+Either.prototype.Left = Either.Left
+
+/**
+ * Constructs a new `Either[α, β]` structure holding a `Right` value. This
+ * usually represents a successful value due to the right bias of this
+ * structure.
+ *
+ * @summary β → Either[α, β]
+ */
+Either.Right = function(a) {
+  return new Right(a)
+}
+Either.prototype.Right = Either.Right
+
+
+// -- Conversions ------------------------------------------------------
+
+/**
+ * Constructs a new `Either[α, β]` structure from a nullable type.
+ *
+ * Takes the `Left` case if the value is `null` or `undefined`. Takes the
+ * `Right` case otherwise.
+ *
+ * @summary α → Either[α, α]
+ */
+Either.fromNullable = function(a) {
+  return a != null?       new Right(a)
+  :      /* otherwise */  new Left(a)
+}
+Either.prototype.fromNullable = Either.fromNullable
+
+/**
+ * Constructs a new `Either[α, β]` structure from a `Validation[α, β]` type.
+ *
+ * @summary Validation[α, β] → Either[α, β]
+ */
+Either.fromValidation = function(a) {
+  return a.fold(Either.Left, Either.Right)
+}
+
+/**
+ * Executes a synchronous computation that may throw and converts it to an
+ * Either type.
+ *
+ * @summary (α₁, α₂, ..., αₙ -> β :: throws γ) -> (α₁, α₂, ..., αₙ -> Either[γ, β])
+ */
+Either.try = function(f) {
+  return function() {
+    try {
+      return new Right(f.apply(null, arguments))
+    } catch(e) {
+      return new Left(e)
+    }
+  }
+}
+
+
+// -- Predicates -------------------------------------------------------
+
+/**
+ * True if the `Either[α, β]` contains a `Left` value.
+ *
+ * @summary Boolean
+ */
+Either.prototype.isLeft = false
+Left.prototype.isLeft   = true
+
+/**
+ * True if the `Either[α, β]` contains a `Right` value.
+ *
+ * @summary Boolean
+ */
+Either.prototype.isRight = false
+Right.prototype.isRight  = true
+
+
+// -- Applicative ------------------------------------------------------
+
+/**
+ * Creates a new `Either[α, β]` instance holding the `Right` value `b`.
+ *
+ * `b` can be any value, including `null`, `undefined` or another
+ * `Either[α, β]` structure.
+ *
+ * @summary β → Either[α, β]
+ */
+Either.of = function(a) {
+  return new Right(a)
+}
+Either.prototype.of = Either.of
+
+
+/**
+ * Applies the function inside the `Right` case of the `Either[α, β]` structure
+ * to another applicative type.
+ *
+ * The `Either[α, β]` should contain a function value, otherwise a `TypeError`
+ * is thrown.
+ *
+ * @method
+ * @summary (@Either[α, β → γ], f:Applicative[_]) => f[β] → f[γ]
+ */
+Either.prototype.ap = unimplemented
+
+Left.prototype.ap = function(b) {
+  return this
+}
+
+Right.prototype.ap = function(b) {
+  return b.map(this.value)
+}
+
+
+// -- Functor ----------------------------------------------------------
+
+/**
+ * Transforms the `Right` value of the `Either[α, β]` structure using a regular
+ * unary function.
+ *
+ * @method
+ * @summary (@Either[α, β]) => (β → γ) → Either[α, γ]
+ */
+Either.prototype.map = unimplemented
+Left.prototype.map   = noop
+
+Right.prototype.map = function(f) {
+  return this.of(f(this.value))
+}
+
+
+// -- Chain ------------------------------------------------------------
+
+/**
+ * Transforms the `Right` value of the `Either[α, β]` structure using an unary
+ * function to monads.
+ *
+ * @method
+ * @summary (@Either[α, β], m:Monad[_]) => (β → m[γ]) → m[γ]
+ */
+Either.prototype.chain = unimplemented
+Left.prototype.chain   = noop
+
+Right.prototype.chain = function(f) {
+  return f(this.value)
+}
+
+// -- Semigroup ----------------------------------------------------------
+
+/**
+ * Concats the `Right` value of the `Either[α, β]` structure with another `Right` or keeps the `Left` on either side
+ *
+ * @method
+ * @summary (@Either[α, m:Monoid]) => Either[β, m] → Either[α, m]
+ */
+Either.prototype.concat = unimplemented
+
+Left.prototype.concat = function(other) {
+  return this
+}
+
+Right.prototype.concat = function(other) {
+  var that = this
+  return other.fold(function(_){
+                      return other
+                    },
+                    function(y) {
+                      return that.Right(that.value.concat(y))
+                    })
+}
+
+
+// -- Show -------------------------------------------------------------
+
+/**
+ * Returns a textual representation of the `Either[α, β]` structure.
+ *
+ * @method
+ * @summary (@Either[α, β]) => Void → String
+ */
+Either.prototype.toString = unimplemented
+
+Left.prototype.toString = function() {
+  return 'Either.Left(' + this.value + ')'
+}
+
+Right.prototype.toString = function() {
+  return 'Either.Right(' + this.value + ')'
+}
+
+
+// -- Eq ---------------------------------------------------------------
+
+/**
+ * Tests if an `Either[α, β]` structure is equal to another `Either[α, β]`
+ * structure.
+ *
+ * @method
+ * @summary (@Either[α, β]) => Either[α, β] → Boolean
+ */
+Either.prototype.isEqual = unimplemented
+
+Left.prototype.isEqual = function(a) {
+  return a.isLeft && (a.value === this.value)
+}
+
+Right.prototype.isEqual = function(a) {
+  return a.isRight && (a.value === this.value)
+}
+
+
+// -- Extracting and recovering ----------------------------------------
+
+/**
+ * Extracts the `Right` value out of the `Either[α, β]` structure, if it
+ * exists. Otherwise throws a `TypeError`.
+ *
+ * @method
+ * @summary (@Either[α, β]) => Void → β         :: partial, throws
+ * @see {@link module:lib/either~Either#getOrElse} — A getter that can handle failures.
+ * @see {@link module:lib/either~Either#merge} — The convergence of both values.
+ * @throws {TypeError} if the structure has no `Right` value.
+ */
+Either.prototype.get = unimplemented
+
+Left.prototype.get = function() {
+  throw new TypeError("Can't extract the value of a Left(a).")
+}
+
+Right.prototype.get = function() {
+  return this.value
+}
+
+
+/**
+ * Extracts the `Right` value out of the `Either[α, β]` structure. If the
+ * structure doesn't have a `Right` value, returns the given default.
+ *
+ * @method
+ * @summary (@Either[α, β]) => β → β
+ */
+Either.prototype.getOrElse = unimplemented
+
+Left.prototype.getOrElse = function(a) {
+  return a
+}
+
+Right.prototype.getOrElse = function(_) {
+  return this.value
+}
+
+
+/**
+ * Transforms a `Left` value into a new `Either[α, β]` structure. Does nothing
+ * if the structure contain a `Right` value.
+ *
+ * @method
+ * @summary (@Either[α, β]) => (α → Either[γ, β]) → Either[γ, β]
+ */
+Either.prototype.orElse = unimplemented
+Right.prototype.orElse  = noop
+
+Left.prototype.orElse = function(f) {
+  return f(this.value)
+}
+
+
+/**
+ * Returns the value of whichever side of the disjunction that is present.
+ *
+ * @summary (@Either[α, α]) => Void → α
+ */
+Either.prototype.merge = function() {
+  return this.value
+}
+
+
+// -- Folds and Extended Transformations -------------------------------
+
+/**
+ * Applies a function to each case in this data structure.
+ *
+ * @method
+ * @summary (@Either[α, β]) => (α → γ), (β → γ) → γ
+ */
+Either.prototype.fold = unimplemented
+
+Left.prototype.fold = function(f, _) {
+  return f(this.value)
+}
+
+Right.prototype.fold = function(_, g) {
+  return g(this.value)
+}
+
+/**
+ * Catamorphism.
+ * 
+ * @method
+ * @summary (@Either[α, β]) => { Left: α → γ, Right: β → γ } → γ
+ */
+Either.prototype.cata = unimplemented
+
+Left.prototype.cata = function(pattern) {
+  return pattern.Left(this.value)
+}
+
+Right.prototype.cata = function(pattern) {
+  return pattern.Right(this.value)
+}
+
+
+/**
+ * Swaps the disjunction values.
+ *
+ * @method
+ * @summary (@Either[α, β]) => Void → Either[β, α]
+ */
+Either.prototype.swap = unimplemented
+
+Left.prototype.swap = function() {
+  return this.Right(this.value)
+}
+
+Right.prototype.swap = function() {
+  return this.Left(this.value)
+}
+
+
+/**
+ * Maps both sides of the disjunction.
+ *
+ * @method
+ * @summary (@Either[α, β]) => (α → γ), (β → δ) → Either[γ, δ]
+ */
+Either.prototype.bimap = unimplemented
+
+Left.prototype.bimap = function(f, _) {
+  return this.Left(f(this.value))
+}
+
+Right.prototype.bimap = function(_, g) {
+  return this.Right(g(this.value))
+}
+
+
+/**
+ * Maps the left side of the disjunction.
+ *
+ * @method
+ * @summary (@Either[α, β]) => (α → γ) → Either[γ, β]
+ */
+Either.prototype.leftMap = unimplemented
+Right.prototype.leftMap  = noop
+
+Left.prototype.leftMap = function(f) {
+  return this.Left(f(this.value))
+}
+
+},{}],"node_modules/data.either/lib/index.js":[function(require,module,exports) {
+// Copyright (c) 2013-2014 Quildreen Motta <quildreen@gmail.com>
+//
+// Permission is hereby granted, free of charge, to any person
+// obtaining a copy of this software and associated documentation files
+// (the "Software"), to deal in the Software without restriction,
+// including without limitation the rights to use, copy, modify, merge,
+// publish, distribute, sublicense, and/or sell copies of the Software,
+// and to permit persons to whom the Software is furnished to do so,
+// subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be
+// included in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+// LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+// OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+module.exports = require('./either')
+},{"./either":"node_modules/data.either/lib/either.js"}],"src/compile-animation.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.generateAnimationFn = void 0;
+exports.compile = exports.generateAnimationFn = void 0;
 
 var _modules = require("./modules");
 
 var _runWithContext = require("./util/run-with-context");
+
+var _data = _interopRequireDefault(require("data.either"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
@@ -49327,6 +51091,75 @@ var pruneOrphanModules = function pruneOrphanModules(rack) {
   }
 };
 
+var findUnmetRequiredInputs = function findUnmetRequiredInputs(rack) {
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = rack[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var instance = _step.value;
+      var md = (0, _modules.findModule)(instance.moduleName);
+      var requiredInputs = Object.entries(md.inputs).filter(function (_ref4) {
+        var _ref5 = _slicedToArray(_ref4, 2),
+            _ = _ref5[0],
+            input = _ref5[1];
+
+        return input.required;
+      }).map(function (_ref6) {
+        var _ref7 = _slicedToArray(_ref6, 1),
+            key = _ref7[0];
+
+        return key;
+      });
+      var _iteratorNormalCompletion2 = true;
+      var _didIteratorError2 = false;
+      var _iteratorError2 = undefined;
+
+      try {
+        for (var _iterator2 = requiredInputs[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+          var reqKey = _step2.value;
+
+          if (!(reqKey in instance.inputs)) {
+            // Unmet required input
+            console.log("Unmet required input: ".concat(instance.moduleName, " (").concat(instance.name, "): ").concat(reqKey));
+            return {
+              module: instance,
+              input: reqKey
+            };
+          }
+        }
+      } catch (err) {
+        _didIteratorError2 = true;
+        _iteratorError2 = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
+            _iterator2.return();
+          }
+        } finally {
+          if (_didIteratorError2) {
+            throw _iteratorError2;
+          }
+        }
+      }
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return != null) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+};
+
 var generateAnimationFn = function generateAnimationFn(rack, mc) {
   var copy = JSON.parse(JSON.stringify(rack)).map(function (moduleDef) {
     moduleDef.isEvaluated = false;
@@ -49335,15 +51168,15 @@ var generateAnimationFn = function generateAnimationFn(rack, mc) {
   pruneOrphanModules(copy);
   var entryPoints = copy.map(function (md) {
     return [(0, _modules.findModule)(md.moduleName), md];
-  }).filter(function (_ref4) {
-    var _ref5 = _slicedToArray(_ref4, 1),
-        module = _ref5[0];
+  }).filter(function (_ref8) {
+    var _ref9 = _slicedToArray(_ref8, 1),
+        module = _ref9[0];
 
     return Object.keys(module.inputs).length === 0;
-  }).map(function (_ref6) {
-    var _ref7 = _slicedToArray(_ref6, 2),
-        _ = _ref7[0],
-        md = _ref7[1];
+  }).map(function (_ref10) {
+    var _ref11 = _slicedToArray(_ref10, 2),
+        _ = _ref11[0],
+        md = _ref11[1];
 
     return md;
   });
@@ -49373,73 +51206,20 @@ var generateAnimationFn = function generateAnimationFn(rack, mc) {
 };
 
 exports.generateAnimationFn = generateAnimationFn;
-},{"./modules":"src/modules/index.js","./util/run-with-context":"src/util/run-with-context.js"}],"src/react/util.js":[function(require,module,exports) {
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.componentSwitch = exports.connectSelectorsAndActions = void 0;
+var compile = function compile(rack, mc) {
+  var unmet = findUnmetRequiredInputs(rack);
 
-var _reactRedux = require("react-redux");
-
-var _ramda = require("ramda");
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var connectSelectorsAndActions = function connectSelectorsAndActions(selectors, actions) {
-  return (0, _reactRedux.connect)(function (state) {
-    var out = (0, _ramda.map)(function (selectorFn) {
-      return selectorFn(state);
-    }, selectors);
-    return out;
-  }, actions);
-};
-
-exports.connectSelectorsAndActions = connectSelectorsAndActions;
-
-var componentSwitch = function componentSwitch(tests) {
-  var fallback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {
-    return null;
-  };
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = tests[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var _step$value = _slicedToArray(_step.value, 2),
-          condition = _step$value[0],
-          componentFn = _step$value[1];
-
-      if (condition) return componentFn();
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return != null) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
+  if (unmet) {
+    return _data.default.Left(["Unmet required input: ".concat(unmet.module.moduleName, " (").concat(unmet.module.name, "): ").concat(unmet.input), unmet.module]);
   }
 
-  return fallback();
+  var animationFn = generateAnimationFn(rack, mc);
+  return _data.default.Right(animationFn);
 };
 
-exports.componentSwitch = componentSwitch;
-},{"react-redux":"node_modules/react-redux/es/index.js","ramda":"node_modules/ramda/es/index.js"}],"node_modules/stylis/stylis.min.js":[function(require,module,exports) {
+exports.compile = compile;
+},{"./modules":"src/modules/index.js","./util/run-with-context":"src/util/run-with-context.js","data.either":"node_modules/data.either/lib/index.js"}],"node_modules/stylis/stylis.min.js":[function(require,module,exports) {
 var define;
 !function(e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e(null):"function"==typeof define&&define.amd?define(e(null)):window.stylis=e(null)}(function e(a){"use strict";var c=/^\0+/g,r=/[\0\r\f]/g,s=/: */g,t=/zoo|gra/,i=/([,: ])(transform)/g,f=/,+\s*(?![^(]*[)])/g,n=/ +\s*(?![^(]*[)])/g,l=/ *[\0] */g,o=/,\r+?/g,h=/([\t\r\n ])*\f?&/g,u=/:global\(((?:[^\(\)\[\]]*|\[.*\]|\([^\(\)]*\))*)\)/g,d=/\W+/g,b=/@(k\w+)\s*(\S*)\s*/,k=/::(place)/g,p=/:(read-only)/g,g=/\s+(?=[{\];=:>])/g,A=/([[}=:>])\s+/g,C=/(\{[^{]+?);(?=\})/g,w=/\s{2,}/g,v=/([^\(])(:+) */g,m=/[svh]\w+-[tblr]{2}/,x=/\(\s*(.*)\s*\)/g,$=/([\s\S]*?);/g,y=/-self|flex-/g,O=/[^]*?(:[rp][el]a[\w-]+)[^]*/,j=/stretch|:\s*\w+\-(?:conte|avail)/,z=/([^-])(image-set\()/,F="-webkit-",N="-moz-",S="-ms-",B=59,W=125,q=123,D=40,E=41,G=91,H=93,I=10,J=13,K=9,L=64,M=32,P=38,Q=45,R=95,T=42,U=44,V=58,X=39,Y=34,Z=47,_=62,ee=43,ae=126,ce=0,re=12,se=11,te=107,ie=109,fe=115,ne=112,le=111,oe=105,he=99,ue=100,de=112,be=1,ke=1,pe=0,ge=1,Ae=1,Ce=1,we=0,ve=0,me=0,xe=[],$e=[],ye=0,Oe=null,je=-2,ze=-1,Fe=0,Ne=1,Se=2,Be=3,We=0,qe=1,De="",Ee="",Ge="";function He(e,a,s,t,i){for(var f,n,o=0,h=0,u=0,d=0,g=0,A=0,C=0,w=0,m=0,$=0,y=0,O=0,j=0,z=0,R=0,we=0,$e=0,Oe=0,je=0,ze=s.length,Je=ze-1,Re="",Te="",Ue="",Ve="",Xe="",Ye="";R<ze;){if(C=s.charCodeAt(R),R===Je)if(h+d+u+o!==0){if(0!==h)C=h===Z?I:Z;d=u=o=0,ze++,Je++}if(h+d+u+o===0){if(R===Je){if(we>0)Te=Te.replace(r,"");if(Te.trim().length>0){switch(C){case M:case K:case B:case J:case I:break;default:Te+=s.charAt(R)}C=B}}if(1===$e)switch(C){case q:case W:case B:case Y:case X:case D:case E:case U:$e=0;case K:case J:case I:case M:break;default:for($e=0,je=R,g=C,R--,C=B;je<ze;)switch(s.charCodeAt(je++)){case I:case J:case B:++R,C=g,je=ze;break;case V:if(we>0)++R,C=g;case q:je=ze}}switch(C){case q:for(g=(Te=Te.trim()).charCodeAt(0),y=1,je=++R;R<ze;){switch(C=s.charCodeAt(R)){case q:y++;break;case W:y--;break;case Z:switch(A=s.charCodeAt(R+1)){case T:case Z:R=Qe(A,R,Je,s)}break;case G:C++;case D:C++;case Y:case X:for(;R++<Je&&s.charCodeAt(R)!==C;);}if(0===y)break;R++}if(Ue=s.substring(je,R),g===ce)g=(Te=Te.replace(c,"").trim()).charCodeAt(0);switch(g){case L:if(we>0)Te=Te.replace(r,"");switch(A=Te.charCodeAt(1)){case ue:case ie:case fe:case Q:f=a;break;default:f=xe}if(je=(Ue=He(a,f,Ue,A,i+1)).length,me>0&&0===je)je=Te.length;if(ye>0)if(f=Ie(xe,Te,Oe),n=Pe(Be,Ue,f,a,ke,be,je,A,i,t),Te=f.join(""),void 0!==n)if(0===(je=(Ue=n.trim()).length))A=0,Ue="";if(je>0)switch(A){case fe:Te=Te.replace(x,Me);case ue:case ie:case Q:Ue=Te+"{"+Ue+"}";break;case te:if(Ue=(Te=Te.replace(b,"$1 $2"+(qe>0?De:"")))+"{"+Ue+"}",1===Ae||2===Ae&&Le("@"+Ue,3))Ue="@"+F+Ue+"@"+Ue;else Ue="@"+Ue;break;default:if(Ue=Te+Ue,t===de)Ve+=Ue,Ue=""}else Ue="";break;default:Ue=He(a,Ie(a,Te,Oe),Ue,t,i+1)}Xe+=Ue,O=0,$e=0,z=0,we=0,Oe=0,j=0,Te="",Ue="",C=s.charCodeAt(++R);break;case W:case B:if((je=(Te=(we>0?Te.replace(r,""):Te).trim()).length)>1){if(0===z)if((g=Te.charCodeAt(0))===Q||g>96&&g<123)je=(Te=Te.replace(" ",":")).length;if(ye>0)if(void 0!==(n=Pe(Ne,Te,a,e,ke,be,Ve.length,t,i,t)))if(0===(je=(Te=n.trim()).length))Te="\0\0";switch(g=Te.charCodeAt(0),A=Te.charCodeAt(1),g){case ce:break;case L:if(A===oe||A===he){Ye+=Te+s.charAt(R);break}default:if(Te.charCodeAt(je-1)===V)break;Ve+=Ke(Te,g,A,Te.charCodeAt(2))}}O=0,$e=0,z=0,we=0,Oe=0,Te="",C=s.charCodeAt(++R)}}switch(C){case J:case I:if(h+d+u+o+ve===0)switch($){case E:case X:case Y:case L:case ae:case _:case T:case ee:case Z:case Q:case V:case U:case B:case q:case W:break;default:if(z>0)$e=1}if(h===Z)h=0;else if(ge+O===0&&t!==te&&Te.length>0)we=1,Te+="\0";if(ye*We>0)Pe(Fe,Te,a,e,ke,be,Ve.length,t,i,t);be=1,ke++;break;case B:case W:if(h+d+u+o===0){be++;break}default:switch(be++,Re=s.charAt(R),C){case K:case M:if(d+o+h===0)switch(w){case U:case V:case K:case M:Re="";break;default:if(C!==M)Re=" "}break;case ce:Re="\\0";break;case re:Re="\\f";break;case se:Re="\\v";break;case P:if(d+h+o===0&&ge>0)Oe=1,we=1,Re="\f"+Re;break;case 108:if(d+h+o+pe===0&&z>0)switch(R-z){case 2:if(w===ne&&s.charCodeAt(R-3)===V)pe=w;case 8:if(m===le)pe=m}break;case V:if(d+h+o===0)z=R;break;case U:if(h+u+d+o===0)we=1,Re+="\r";break;case Y:case X:if(0===h)d=d===C?0:0===d?C:d;break;case G:if(d+h+u===0)o++;break;case H:if(d+h+u===0)o--;break;case E:if(d+h+o===0)u--;break;case D:if(d+h+o===0){if(0===O)switch(2*w+3*m){case 533:break;default:y=0,O=1}u++}break;case L:if(h+u+d+o+z+j===0)j=1;break;case T:case Z:if(d+o+u>0)break;switch(h){case 0:switch(2*C+3*s.charCodeAt(R+1)){case 235:h=Z;break;case 220:je=R,h=T}break;case T:if(C===Z&&w===T&&je+2!==R){if(33===s.charCodeAt(je+2))Ve+=s.substring(je,R+1);Re="",h=0}}}if(0===h){if(ge+d+o+j===0&&t!==te&&C!==B)switch(C){case U:case ae:case _:case ee:case E:case D:if(0===O){switch(w){case K:case M:case I:case J:Re+="\0";break;default:Re="\0"+Re+(C===U?"":"\0")}we=1}else switch(C){case D:if(z+7===R&&108===w)z=0;O=++y;break;case E:if(0==(O=--y))we=1,Re+="\0"}break;case K:case M:switch(w){case ce:case q:case W:case B:case U:case re:case K:case M:case I:case J:break;default:if(0===O)we=1,Re+="\0"}}if(Te+=Re,C!==M&&C!==K)$=C}}m=w,w=C,R++}if(je=Ve.length,me>0)if(0===je&&0===Xe.length&&0===a[0].length==false)if(t!==ie||1===a.length&&(ge>0?Ee:Ge)===a[0])je=a.join(",").length+2;if(je>0){if(f=0===ge&&t!==te?function(e){for(var a,c,s=0,t=e.length,i=Array(t);s<t;++s){for(var f=e[s].split(l),n="",o=0,h=0,u=0,d=0,b=f.length;o<b;++o){if(0===(h=(c=f[o]).length)&&b>1)continue;if(u=n.charCodeAt(n.length-1),d=c.charCodeAt(0),a="",0!==o)switch(u){case T:case ae:case _:case ee:case M:case D:break;default:a=" "}switch(d){case P:c=a+Ee;case ae:case _:case ee:case M:case E:case D:break;case G:c=a+c+Ee;break;case V:switch(2*c.charCodeAt(1)+3*c.charCodeAt(2)){case 530:if(Ce>0){c=a+c.substring(8,h-1);break}default:if(o<1||f[o-1].length<1)c=a+Ee+c}break;case U:a="";default:if(h>1&&c.indexOf(":")>0)c=a+c.replace(v,"$1"+Ee+"$2");else c=a+c+Ee}n+=c}i[s]=n.replace(r,"").trim()}return i}(a):a,ye>0)if(void 0!==(n=Pe(Se,Ve,f,e,ke,be,je,t,i,t))&&0===(Ve=n).length)return Ye+Ve+Xe;if(Ve=f.join(",")+"{"+Ve+"}",Ae*pe!=0){if(2===Ae&&!Le(Ve,2))pe=0;switch(pe){case le:Ve=Ve.replace(p,":"+N+"$1")+Ve;break;case ne:Ve=Ve.replace(k,"::"+F+"input-$1")+Ve.replace(k,"::"+N+"$1")+Ve.replace(k,":"+S+"input-$1")+Ve}pe=0}}return Ye+Ve+Xe}function Ie(e,a,c){var r=a.trim().split(o),s=r,t=r.length,i=e.length;switch(i){case 0:case 1:for(var f=0,n=0===i?"":e[0]+" ";f<t;++f)s[f]=Je(n,s[f],c,i).trim();break;default:f=0;var l=0;for(s=[];f<t;++f)for(var h=0;h<i;++h)s[l++]=Je(e[h]+" ",r[f],c,i).trim()}return s}function Je(e,a,c,r){var s=a,t=s.charCodeAt(0);if(t<33)t=(s=s.trim()).charCodeAt(0);switch(t){case P:switch(ge+r){case 0:case 1:if(0===e.trim().length)break;default:return s.replace(h,"$1"+e.trim())}break;case V:switch(s.charCodeAt(1)){case 103:if(Ce>0&&ge>0)return s.replace(u,"$1").replace(h,"$1"+Ge);break;default:return e.trim()+s.replace(h,"$1"+e.trim())}default:if(c*ge>0&&s.indexOf("\f")>0)return s.replace(h,(e.charCodeAt(0)===V?"":"$1")+e.trim())}return e+s}function Ke(e,a,c,r){var l,o=0,h=e+";",u=2*a+3*c+4*r;if(944===u)return function(e){var a=e.length,c=e.indexOf(":",9)+1,r=e.substring(0,c).trim(),s=e.substring(c,a-1).trim();switch(e.charCodeAt(9)*qe){case 0:break;case Q:if(110!==e.charCodeAt(10))break;default:for(var t=s.split((s="",f)),i=0,c=0,a=t.length;i<a;c=0,++i){for(var l=t[i],o=l.split(n);l=o[c];){var h=l.charCodeAt(0);if(1===qe&&(h>L&&h<90||h>96&&h<123||h===R||h===Q&&l.charCodeAt(1)!==Q))switch(isNaN(parseFloat(l))+(-1!==l.indexOf("("))){case 1:switch(l){case"infinite":case"alternate":case"backwards":case"running":case"normal":case"forwards":case"both":case"none":case"linear":case"ease":case"ease-in":case"ease-out":case"ease-in-out":case"paused":case"reverse":case"alternate-reverse":case"inherit":case"initial":case"unset":case"step-start":case"step-end":break;default:l+=De}}o[c++]=l}s+=(0===i?"":",")+o.join(" ")}}if(s=r+s+";",1===Ae||2===Ae&&Le(s,1))return F+s+s;return s}(h);else if(0===Ae||2===Ae&&!Le(h,1))return h;switch(u){case 1015:return 97===h.charCodeAt(10)?F+h+h:h;case 951:return 116===h.charCodeAt(3)?F+h+h:h;case 963:return 110===h.charCodeAt(5)?F+h+h:h;case 1009:if(100!==h.charCodeAt(4))break;case 969:case 942:return F+h+h;case 978:return F+h+N+h+h;case 1019:case 983:return F+h+N+h+S+h+h;case 883:if(h.charCodeAt(8)===Q)return F+h+h;if(h.indexOf("image-set(",11)>0)return h.replace(z,"$1"+F+"$2")+h;return h;case 932:if(h.charCodeAt(4)===Q)switch(h.charCodeAt(5)){case 103:return F+"box-"+h.replace("-grow","")+F+h+S+h.replace("grow","positive")+h;case 115:return F+h+S+h.replace("shrink","negative")+h;case 98:return F+h+S+h.replace("basis","preferred-size")+h}return F+h+S+h+h;case 964:return F+h+S+"flex-"+h+h;case 1023:if(99!==h.charCodeAt(8))break;return l=h.substring(h.indexOf(":",15)).replace("flex-","").replace("space-between","justify"),F+"box-pack"+l+F+h+S+"flex-pack"+l+h;case 1005:return t.test(h)?h.replace(s,":"+F)+h.replace(s,":"+N)+h:h;case 1e3:switch(o=(l=h.substring(13).trim()).indexOf("-")+1,l.charCodeAt(0)+l.charCodeAt(o)){case 226:l=h.replace(m,"tb");break;case 232:l=h.replace(m,"tb-rl");break;case 220:l=h.replace(m,"lr");break;default:return h}return F+h+S+l+h;case 1017:if(-1===h.indexOf("sticky",9))return h;case 975:switch(o=(h=e).length-10,u=(l=(33===h.charCodeAt(o)?h.substring(0,o):h).substring(e.indexOf(":",7)+1).trim()).charCodeAt(0)+(0|l.charCodeAt(7))){case 203:if(l.charCodeAt(8)<111)break;case 115:h=h.replace(l,F+l)+";"+h;break;case 207:case 102:h=h.replace(l,F+(u>102?"inline-":"")+"box")+";"+h.replace(l,F+l)+";"+h.replace(l,S+l+"box")+";"+h}return h+";";case 938:if(h.charCodeAt(5)===Q)switch(h.charCodeAt(6)){case 105:return l=h.replace("-items",""),F+h+F+"box-"+l+S+"flex-"+l+h;case 115:return F+h+S+"flex-item-"+h.replace(y,"")+h;default:return F+h+S+"flex-line-pack"+h.replace("align-content","").replace(y,"")+h}break;case 973:case 989:if(h.charCodeAt(3)!==Q||122===h.charCodeAt(4))break;case 931:case 953:if(true===j.test(e))if(115===(l=e.substring(e.indexOf(":")+1)).charCodeAt(0))return Ke(e.replace("stretch","fill-available"),a,c,r).replace(":fill-available",":stretch");else return h.replace(l,F+l)+h.replace(l,N+l.replace("fill-",""))+h;break;case 962:if(h=F+h+(102===h.charCodeAt(5)?S+h:"")+h,c+r===211&&105===h.charCodeAt(13)&&h.indexOf("transform",10)>0)return h.substring(0,h.indexOf(";",27)+1).replace(i,"$1"+F+"$2")+h}return h}function Le(e,a){var c=e.indexOf(1===a?":":"{"),r=e.substring(0,3!==a?c:10),s=e.substring(c+1,e.length-1);return Oe(2!==a?r:r.replace(O,"$1"),s,a)}function Me(e,a){var c=Ke(a,a.charCodeAt(0),a.charCodeAt(1),a.charCodeAt(2));return c!==a+";"?c.replace($," or ($1)").substring(4):"("+a+")"}function Pe(e,a,c,r,s,t,i,f,n,l){for(var o,h=0,u=a;h<ye;++h)switch(o=$e[h].call(Te,e,u,c,r,s,t,i,f,n,l)){case void 0:case false:case true:case null:break;default:u=o}switch(u){case void 0:case false:case true:case null:case a:break;default:return u}}function Qe(e,a,c,r){for(var s=a+1;s<c;++s)switch(r.charCodeAt(s)){case Z:if(e===T)if(r.charCodeAt(s-1)===T&&a+2!==s)return s+1;break;case I:if(e===Z)return s+1}return s}function Re(e){for(var a in e){var c=e[a];switch(a){case"keyframe":qe=0|c;break;case"global":Ce=0|c;break;case"cascade":ge=0|c;break;case"compress":we=0|c;break;case"semicolon":ve=0|c;break;case"preserve":me=0|c;break;case"prefix":if(Oe=null,!c)Ae=0;else if("function"!=typeof c)Ae=1;else Ae=2,Oe=c}}return Re}function Te(a,c){if(void 0!==this&&this.constructor===Te)return e(a);var s=a,t=s.charCodeAt(0);if(t<33)t=(s=s.trim()).charCodeAt(0);if(qe>0)De=s.replace(d,t===G?"":"-");if(t=1,1===ge)Ge=s;else Ee=s;var i,f=[Ge];if(ye>0)if(void 0!==(i=Pe(ze,c,f,f,ke,be,0,0,0,0))&&"string"==typeof i)c=i;var n=He(xe,f,c,0,0);if(ye>0)if(void 0!==(i=Pe(je,n,f,f,ke,be,n.length,0,0,0))&&"string"!=typeof(n=i))t=0;return De="",Ge="",Ee="",pe=0,ke=1,be=1,we*t==0?n:n.replace(r,"").replace(g,"").replace(A,"$1").replace(C,"$1").replace(w," ")}if(Te.use=function e(a){switch(a){case void 0:case null:ye=$e.length=0;break;default:switch(a.constructor){case Array:for(var c=0,r=a.length;c<r;++c)e(a[c]);break;case Function:$e[ye++]=a;break;case Boolean:We=0|!!a}}return e},Te.set=Re,void 0!==a)Re(a);return Te});
 
@@ -52436,216 +54216,7 @@ exports.PanelToggle = PanelToggle;
 var SidePanel = _styledComponents.default.div(_templateObject3(), MainPanel);
 
 exports.SidePanel = SidePanel;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/react/actions/editor-mode.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.gotoPanMode = exports.gotoConnectingOutputMode = exports.gotoConnectingInputMode = exports.gotoDragMode = exports.gotoRawMode = exports.gotoDeleteMode = exports.gotoAnimateMode = exports.gotoEditMode = exports.setEditorMode = void 0;
-
-var setEditorMode = function setEditorMode(mode) {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: mode,
-      substate: ''
-    }
-  };
-};
-
-exports.setEditorMode = setEditorMode;
-
-var gotoEditMode = function gotoEditMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit'
-    }
-  };
-};
-
-exports.gotoEditMode = gotoEditMode;
-
-var gotoAnimateMode = function gotoAnimateMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'animate'
-    }
-  };
-};
-
-exports.gotoAnimateMode = gotoAnimateMode;
-
-var gotoDeleteMode = function gotoDeleteMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit',
-      substate: 'delete'
-    }
-  };
-};
-
-exports.gotoDeleteMode = gotoDeleteMode;
-
-var gotoRawMode = function gotoRawMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit',
-      substate: 'raw'
-    }
-  };
-};
-
-exports.gotoRawMode = gotoRawMode;
-
-var gotoDragMode = function gotoDragMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit',
-      substate: 'dragging'
-    }
-  };
-};
-
-exports.gotoDragMode = gotoDragMode;
-
-var gotoConnectingInputMode = function gotoConnectingInputMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit',
-      substate: 'connecting_from_input'
-    }
-  };
-};
-
-exports.gotoConnectingInputMode = gotoConnectingInputMode;
-
-var gotoConnectingOutputMode = function gotoConnectingOutputMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit',
-      substate: 'connecting_from_output'
-    }
-  };
-};
-
-exports.gotoConnectingOutputMode = gotoConnectingOutputMode;
-
-var gotoPanMode = function gotoPanMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit',
-      substate: 'pan'
-    }
-  };
-};
-
-exports.gotoPanMode = gotoPanMode;
-},{}],"src/react/actions/rack.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.updateDrawingValues = exports.clearModules = exports.connectModules = exports.disconnectModuleInput = exports.setModulePosition = exports.setRawValue = exports.removeModule = exports.addModule = void 0;
-
-var addModule = function addModule(md) {
-  return {
-    type: 'ADD_MODULE',
-    payload: md
-  };
-};
-
-exports.addModule = addModule;
-
-var removeModule = function removeModule(moduleId) {
-  return {
-    type: 'REMOVE_MODULE',
-    payload: moduleId
-  };
-};
-
-exports.removeModule = removeModule;
-
-var setRawValue = function setRawValue(moduleId, inputKey, value) {
-  return {
-    type: 'SET_RAW_VALUE',
-    payload: {
-      moduleId: moduleId,
-      inputKey: inputKey,
-      value: value
-    }
-  };
-};
-
-exports.setRawValue = setRawValue;
-
-var setModulePosition = function setModulePosition(moduleId, position) {
-  return {
-    type: 'SET_MODULE_POSITION',
-    payload: {
-      moduleId: moduleId,
-      position: position
-    }
-  };
-};
-
-exports.setModulePosition = setModulePosition;
-
-var disconnectModuleInput = function disconnectModuleInput(moduleId, key) {
-  return {
-    type: 'DISCONNECT_MODULE_INPUT',
-    payload: {
-      moduleId: moduleId,
-      key: key
-    }
-  };
-};
-
-exports.disconnectModuleInput = disconnectModuleInput;
-
-var connectModules = function connectModules(inputModuleId, outputModuleId, inputKey, outputKey) {
-  return {
-    type: 'CONNECT_MODULES',
-    payload: {
-      inputModuleId: inputModuleId,
-      outputModuleId: outputModuleId,
-      inputKey: inputKey,
-      outputKey: outputKey
-    }
-  };
-};
-
-exports.connectModules = connectModules;
-
-var clearModules = function clearModules() {
-  return {
-    type: 'CLEAR_MODULES'
-  };
-};
-
-exports.clearModules = clearModules;
-
-var updateDrawingValues = function updateDrawingValues(moduleId, drawingValues) {
-  return {
-    type: 'UPDATE_DRAWING_VALUES',
-    payload: {
-      moduleId: moduleId,
-      drawingValues: drawingValues
-    }
-  };
-};
-
-exports.updateDrawingValues = updateDrawingValues;
-},{}],"src/react/components/common/index.js":[function(require,module,exports) {
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/react/components/common/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52714,7 +54285,76 @@ exports.Row = Row;
 var Column = _styledComponents.default.div(_templateObject4());
 
 exports.Column = Column;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/react/components/common/Accordian.js":[function(require,module,exports) {
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/react/actions/reset-time.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.toggleResetTime = void 0;
+
+var toggleResetTime = function toggleResetTime(state) {
+  return {
+    type: state ? 'RESET_TIME_OFF' : 'RESET_TIME_ON'
+  };
+};
+
+exports.toggleResetTime = toggleResetTime;
+},{}],"src/react/components/EditMode/State.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.actions = exports.selectors = void 0;
+
+var _rack = require("../../reducers/rack");
+
+var _globalOffset = require("../../reducers/global-offset");
+
+var _resetTime = require("../../reducers/reset-time");
+
+var editorModeActions = _interopRequireWildcard(require("../../actions/editor-mode"));
+
+var rackActions = _interopRequireWildcard(require("../../actions/rack"));
+
+var resetTimeActions = _interopRequireWildcard(require("../../actions/reset-time"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var selectors = _objectSpread({}, _globalOffset.selectors, _rack.selectors, _resetTime.selectors);
+
+exports.selectors = selectors;
+
+var actions = _objectSpread({}, rackActions, editorModeActions, resetTimeActions);
+
+exports.actions = actions;
+},{"../../reducers/rack":"src/react/reducers/rack.js","../../reducers/global-offset":"src/react/reducers/global-offset.js","../../reducers/reset-time":"src/react/reducers/reset-time.js","../../actions/editor-mode":"src/react/actions/editor-mode.js","../../actions/rack":"src/react/actions/rack.js","../../actions/reset-time":"src/react/actions/reset-time.js"}],"src/react/hooks/useKeydownEvent.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.useKeydownEvent = void 0;
+
+var _react = require("react");
+
+var useKeydownEvent = function useKeydownEvent(handler) {
+  var conditionals = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+  (0, _react.useEffect)(function () {
+    document.body.addEventListener('keydown', handler);
+    return function () {
+      return document.body.removeEventListener('keydown', handler);
+    };
+  }, conditionals);
+};
+
+exports.useKeydownEvent = useKeydownEvent;
+},{"react":"node_modules/react/index.js"}],"src/react/components/common/Accordian.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52841,7 +54481,6 @@ var computeModuleDefDrawingValues = function computeModuleDefDrawingValues(modul
   var inputKeys = Object.keys((0, _modules.findModule)(moduleDef.moduleName).inputs);
 
   if (inputKeys.length) {
-    longestWidth = ctx.measureText('In').width + margin;
     inputKeys.forEach(function (input, i) {
       var tw = ctx.measureText(input).width + margin * 1 + _constants.socketRadius * 2;
       longestWidth = longestWidth < tw ? tw : longestWidth;
@@ -52881,7 +54520,44 @@ var computeModuleDefDrawingValues = function computeModuleDefDrawingValues(modul
 };
 
 exports.computeModuleDefDrawingValues = computeModuleDefDrawingValues;
-},{"../constants":"src/constants.js","../modules":"src/modules/index.js"}],"src/util/copy-to-clipboard.js":[function(require,module,exports) {
+},{"../constants":"src/constants.js","../modules":"src/modules/index.js"}],"src/react/components/EditMode/create-module.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createModule = void 0;
+
+var _generateId = require("../../../util/generate-id");
+
+var _computeModuledefDrawingValues = require("../../../rack/compute-moduledef-drawing-values");
+
+var _vecLaFp = require("vec-la-fp");
+
+var _constants = require("../../../constants");
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var createModule = function createModule(moduleName, ctx, globalOffset) {
+  var md = {
+    name: (0, _generateId.generateId)(),
+    moduleName: moduleName,
+    inputs: {},
+    dv: null
+  };
+  var dv = (0, _computeModuledefDrawingValues.computeModuleDefDrawingValues)(md, ctx);
+  md.dv = _objectSpread({
+    p: (0, _vecLaFp.vAdd)(_constants.C, globalOffset.map(function (c) {
+      return c * -1;
+    }))
+  }, dv);
+  return md;
+};
+
+exports.createModule = createModule;
+},{"../../../util/generate-id":"src/util/generate-id.js","../../../rack/compute-moduledef-drawing-values":"src/rack/compute-moduledef-drawing-values.js","vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../../constants":"src/constants.js"}],"src/util/copy-to-clipboard.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -52944,64 +54620,31 @@ var copyToClipboard = function copyToClipboard(str) {
 };
 
 exports.copyToClipboard = copyToClipboard;
-},{}],"src/react/actions/reset-time.js":[function(require,module,exports) {
+},{}],"src/react/components/EditMode/View.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.toggleResetTime = void 0;
+exports.default = void 0;
 
-var toggleResetTime = function toggleResetTime(state) {
-  return {
-    type: state ? 'RESET_TIME_OFF' : 'RESET_TIME_ON'
-  };
-};
+var _react = _interopRequireDefault(require("react"));
 
-exports.toggleResetTime = toggleResetTime;
-},{}],"src/react/components/EditMode.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.EditMode = void 0;
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _constants = require("../../constants");
+var _useKeydownEvent = require("../../hooks/useKeydownEvent");
 
 var _ramda = require("ramda");
 
-var _modules = require("../../modules");
+var _modules = require("../../../modules");
 
-var _Accordian = require("./common/Accordian");
+var _Accordian = require("../common/Accordian");
 
-var _useActiveClasses3 = require("../hooks/useActiveClasses");
+var _useActiveClasses3 = require("../../hooks/useActiveClasses");
 
-var _generateId = require("../../util/generate-id");
+var _createModule = require("./create-module");
 
-var _computeModuledefDrawingValues = require("../../rack/compute-moduledef-drawing-values");
+var _copyToClipboard = require("../../../util/copy-to-clipboard");
 
-var _vecLaFp = require("vec-la-fp");
-
-var _copyToClipboard = require("../../util/copy-to-clipboard");
-
-var _util = require("../util");
-
-var _rack = require("../reducers/rack");
-
-var _globalOffset = require("../reducers/global-offset");
-
-var _resetTime = require("../reducers/reset-time");
-
-var editorModeActions = _interopRequireWildcard(require("../actions/editor-mode"));
-
-var rackActions = _interopRequireWildcard(require("../actions/rack"));
-
-var resetTimeActions = _interopRequireWildcard(require("../actions/reset-time"));
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -53011,32 +54654,10 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var groupedByTag = (0, _ramda.groupBy)(function (_ref) {
   var tag = _ref.tag;
   return tag;
 }, _modules.modules);
-
-var createModule = function createModule(moduleName, ctx, globalOffset) {
-  var md = {
-    name: (0, _generateId.generateId)(),
-    moduleName: moduleName,
-    inputs: {},
-    dv: null
-  };
-  var dv = (0, _computeModuledefDrawingValues.computeModuleDefDrawingValues)(md, ctx);
-  md.dv = _objectSpread({
-    p: (0, _vecLaFp.vAdd)(_constants.C, globalOffset.map(function (c) {
-      return c * -1;
-    }))
-  }, dv);
-  return md;
-};
-
-var connecter = (0, _util.connectSelectorsAndActions)(_objectSpread({}, _globalOffset.selectors, _rack.selectors, _resetTime.selectors), _objectSpread({}, rackActions, editorModeActions, resetTimeActions));
 
 var AddModules = function AddModules(_ref2) {
   var addModule = _ref2.addModule,
@@ -53064,14 +54685,14 @@ var AddModules = function AddModules(_ref2) {
       return _react.default.createElement(_Accordian.AccordionItem, {
         key: md.name,
         onClick: function onClick() {
-          addModule(createModule(md.name, ctx, globalOffset));
+          addModule((0, _createModule.createModule)(md.name, ctx, globalOffset));
         }
       }, md.name);
     })) : null);
   }));
 };
 
-var EditMode = connecter(function (props) {
+var _default = function _default(props) {
   var gotoDeleteMode = props.gotoDeleteMode,
       gotoRawMode = props.gotoRawMode,
       globalOffset = props.globalOffset,
@@ -53080,27 +54701,19 @@ var EditMode = connecter(function (props) {
       ctx = props.ctx,
       rack = props.rack,
       resetTime = props.resetTime,
-      toggleResetTime = props.toggleResetTime,
-      updateDrawingValues = props.updateDrawingValues;
-  (0, _react.useEffect)(function () {
-    var handler = function handler(e) {
-      switch (e.key) {
-        case 'r':
-          return gotoRawMode();
+      toggleResetTime = props.toggleResetTime;
+  (0, _useKeydownEvent.useKeydownEvent)(function (e) {
+    switch (e.key) {
+      case 'r':
+        return gotoRawMode();
 
-        case 'd':
-          return gotoDeleteMode();
+      case 'd':
+        return gotoDeleteMode();
 
-        default:
-          return;
-      }
-    };
-
-    document.body.addEventListener('keydown', handler);
-    return function () {
-      return document.body.removeEventListener('keydown', handler);
-    };
-  }, [gotoDeleteMode]);
+      default:
+        return;
+    }
+  });
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(AddModules, {
     ctx: ctx,
     addModule: addModule,
@@ -53135,9 +54748,55 @@ var EditMode = connecter(function (props) {
       return toggleResetTime(resetTime);
     }
   })));
+};
+
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../../hooks/useKeydownEvent":"src/react/hooks/useKeydownEvent.js","ramda":"node_modules/ramda/es/index.js","../../../modules":"src/modules/index.js","../common/Accordian":"src/react/components/common/Accordian.js","../../hooks/useActiveClasses":"src/react/hooks/useActiveClasses.js","./create-module":"src/react/components/EditMode/create-module.js","../../../util/copy-to-clipboard":"src/util/copy-to-clipboard.js"}],"src/react/components/EditMode/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
+exports.EditMode = void 0;
+
+var _State = require("./State");
+
+var _View = _interopRequireDefault(require("./View"));
+
+var _util = require("../../util");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var EditMode = (0, _util.connectSelectorsAndActions)(_State.selectors, _State.actions)(_View.default);
 exports.EditMode = EditMode;
-},{"react":"node_modules/react/index.js","../../constants":"src/constants.js","ramda":"node_modules/ramda/es/index.js","../../modules":"src/modules/index.js","./common/Accordian":"src/react/components/common/Accordian.js","../hooks/useActiveClasses":"src/react/hooks/useActiveClasses.js","../../util/generate-id":"src/util/generate-id.js","../../rack/compute-moduledef-drawing-values":"src/rack/compute-moduledef-drawing-values.js","vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../../util/copy-to-clipboard":"src/util/copy-to-clipboard.js","../util":"src/react/util.js","../reducers/rack":"src/react/reducers/rack.js","../reducers/global-offset":"src/react/reducers/global-offset.js","../reducers/reset-time":"src/react/reducers/reset-time.js","../actions/editor-mode":"src/react/actions/editor-mode.js","../actions/rack":"src/react/actions/rack.js","../actions/reset-time":"src/react/actions/reset-time.js"}],"src/react/components/DeleteMode.js":[function(require,module,exports) {
+},{"./State":"src/react/components/EditMode/State.js","./View":"src/react/components/EditMode/View.js","../../util":"src/react/util.js"}],"src/react/components/DeleteMode/View.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _useKeydownEvent = require("../../hooks/useKeydownEvent");
+
+var _common = require("../common");
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+var _default = function _default(_ref) {
+  var exitDeleteMode = _ref.exitDeleteMode;
+  (0, _useKeydownEvent.useKeydownEvent)(function (e) {
+    return e.key === 'Escape' ? exitDeleteMode() : null;
+  });
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_common.Row, null, _react.default.createElement(_common.SubTitle, null, "Delete mode"), _react.default.createElement("button", {
+    onClick: exitDeleteMode
+  }, "Exit Delete Mode")));
+};
+
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../../hooks/useKeydownEvent":"src/react/hooks/useKeydownEvent.js","../common":"src/react/components/common/index.js"}],"src/react/components/DeleteMode/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53145,31 +54804,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.DeleteMode = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _View = _interopRequireDefault(require("./View"));
 
-var _common = require("./common");
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-var DeleteMode = function DeleteMode(_ref) {
-  var exitDeleteMode = _ref.exitDeleteMode;
-  (0, _react.useEffect)(function () {
-    var handler = function handler(e) {
-      return e.key === 'Escape' ? exitDeleteMode() : null;
-    };
-
-    document.body.addEventListener('keydown', handler);
-    return function () {
-      return document.body.removeEventListener('keydown', handler);
-    };
-  }, [exitDeleteMode]);
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_common.Row, null, _react.default.createElement(_common.SubTitle, null, "Delete mode"), _react.default.createElement("button", {
-    onClick: exitDeleteMode
-  }, "Exit Delete Mode")));
-};
-
+var DeleteMode = _View.default;
 exports.DeleteMode = DeleteMode;
-},{"react":"node_modules/react/index.js","./common":"src/react/components/common/index.js"}],"src/react/actions/raw-value.js":[function(require,module,exports) {
+},{"./View":"src/react/components/DeleteMode/View.js"}],"src/react/actions/raw-value.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53185,28 +54826,41 @@ var setCurrentRawValue = function setCurrentRawValue(value) {
 };
 
 exports.setCurrentRawValue = setCurrentRawValue;
-},{}],"src/react/components/RawMode.js":[function(require,module,exports) {
+},{}],"src/react/components/RawMode/State.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.RawMode = void 0;
+exports.actions = exports.selectors = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _rawValue = require("../../reducers/raw-value");
 
-var _common = require("./common");
-
-var _rawValue = require("../reducers/raw-value");
-
-var rawValueActions = _interopRequireWildcard(require("../actions/raw-value"));
-
-var _util = require("../util");
+var rawValueActions = _interopRequireWildcard(require("../../actions/raw-value"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
-var connecter = (0, _util.connectSelectorsAndActions)(_rawValue.selectors, rawValueActions);
-var RawMode = connecter(function (_ref) {
+var selectors = _rawValue.selectors;
+exports.selectors = selectors;
+var actions = rawValueActions;
+exports.actions = actions;
+},{"../../reducers/raw-value":"src/react/reducers/raw-value.js","../../actions/raw-value":"src/react/actions/raw-value.js"}],"src/react/components/RawMode/View.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _useKeydownEvent = require("../../hooks/useKeydownEvent");
+
+var _common = require("../common");
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+var _default = function _default(_ref) {
   var exitRawMode = _ref.exitRawMode,
       setCurrentRawValue = _ref.setCurrentRawValue,
       rawValue = _ref.rawValue;
@@ -53214,23 +54868,16 @@ var RawMode = connecter(function (_ref) {
   (0, _react.useEffect)(function () {
     ref.current.focus();
   });
-  (0, _react.useEffect)(function () {
-    var handler = function handler(e) {
-      if (e.key === 'Escape') {
-        exitRawMode();
-      }
+  (0, _useKeydownEvent.useKeydownEvent)(function (e) {
+    if (e.key === 'Escape') {
+      exitRawMode();
+    }
 
-      if (document.activeElement !== ref.current) {
-        setCurrentRawValue('');
-        ref.current.focus();
-      }
-    };
-
-    document.body.addEventListener('keydown', handler);
-    return function () {
-      return document.body.removeEventListener('keydown', handler);
-    };
-  }, [exitRawMode]);
+    if (document.activeElement !== ref.current) {
+      setCurrentRawValue('');
+      ref.current.focus();
+    }
+  });
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_common.Row, null, _react.default.createElement(_common.SubTitle, null, "Raw mode"), _react.default.createElement("button", {
     onClick: exitRawMode
   }, "Exit Raw Mode"), _react.default.createElement("input", {
@@ -53240,23 +54887,42 @@ var RawMode = connecter(function (_ref) {
       return setCurrentRawValue(e.target.value);
     }
   })));
-});
-exports.RawMode = RawMode;
-},{"react":"node_modules/react/index.js","./common":"src/react/components/common/index.js","../reducers/raw-value":"src/react/reducers/raw-value.js","../actions/raw-value":"src/react/actions/raw-value.js","../util":"src/react/util.js"}],"src/react/components/ConnectionMode.js":[function(require,module,exports) {
+};
+
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../../hooks/useKeydownEvent":"src/react/hooks/useKeydownEvent.js","../common":"src/react/components/common/index.js"}],"src/react/components/RawMode/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ConnectionMode = void 0;
+exports.RawMode = void 0;
+
+var _util = require("../../util");
+
+var _State = require("./State");
+
+var _View = _interopRequireDefault(require("./View"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var RawMode = (0, _util.connectSelectorsAndActions)(_State.selectors, _State.actions)(_View.default);
+exports.RawMode = RawMode;
+},{"../../util":"src/react/util.js","./State":"src/react/components/RawMode/State.js","./View":"src/react/components/RawMode/View.js"}],"src/react/components/ConnectionMode/View.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _common = require("./common");
+var _common = require("../common");
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
-var ConnectionMode = function ConnectionMode(_ref) {
+var _default = function _default(_ref) {
   var cancel = _ref.cancel,
       connectingFromInput = _ref.connectingFromInput;
   (0, _react.useEffect)(function () {
@@ -53276,8 +54942,22 @@ var ConnectionMode = function ConnectionMode(_ref) {
   }, "Cancel"))));
 };
 
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../common":"src/react/components/common/index.js"}],"src/react/components/ConnectionMode/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ConnectionMode = void 0;
+
+var _View = _interopRequireDefault(require("./View"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ConnectionMode = _View.default;
 exports.ConnectionMode = ConnectionMode;
-},{"react":"node_modules/react/index.js","./common":"src/react/components/common/index.js"}],"node_modules/microcan-fp/dist/microcan.js":[function(require,module,exports) {
+},{"./View":"src/react/components/ConnectionMode/View.js"}],"node_modules/microcan-fp/dist/microcan.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 (function (global, factory) {
@@ -53531,76 +55211,6 @@ var global = arguments[3];
 
 })));
 
-},{}],"src/react/actions/drag-data.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.setDragData = void 0;
-
-var setDragData = function setDragData(moduleId, offset) {
-  return {
-    type: 'SET_DRAG_DATA',
-    payload: {
-      moduleId: moduleId,
-      offset: offset
-    }
-  };
-};
-
-exports.setDragData = setDragData;
-},{}],"src/react/actions/connecting-data.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.setConnectingData = void 0;
-
-var setConnectingData = function setConnectingData(moduleId, key) {
-  return {
-    type: 'SET_CONNECTING_DATA',
-    payload: {
-      moduleId: moduleId,
-      key: key
-    }
-  };
-};
-
-exports.setConnectingData = setConnectingData;
-},{}],"src/react/actions/pan-data.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.setPanPosition = void 0;
-
-var setPanPosition = function setPanPosition(position) {
-  return {
-    type: 'SET_PAN_POSITION',
-    payload: position
-  };
-};
-
-exports.setPanPosition = setPanPosition;
-},{}],"src/react/actions/global-offset.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.setGlobalOffset = void 0;
-
-var setGlobalOffset = function setGlobalOffset(position) {
-  return {
-    type: 'SET_GLOBAL_OFFSET',
-    payload: position
-  };
-};
-
-exports.setGlobalOffset = setGlobalOffset;
 },{}],"src/rack/module-tag-colors.js":[function(require,module,exports) {
 "use strict";
 
@@ -53638,12 +55248,41 @@ var getTagColor = function getTagColor(tag) {
     case 'Audio':
       return [137, 137, 137, 1];
 
+    case 'Feedback':
+      return [0xe5, 0xe5, 0x00, 1];
+
     default:
       return [0, 0, 0, 1];
   }
 };
 
 exports.getTagColor = getTagColor;
+},{}],"src/rack/draw-bezier.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.drawBezier = void 0;
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+var drawBezier = function drawBezier(ctx, p1, cp1, cp2, p2) {
+  var lineWidth = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 2;
+  ctx.beginPath();
+  ctx.moveTo.apply(ctx, _toConsumableArray(p1));
+  ctx.bezierCurveTo.apply(ctx, _toConsumableArray(cp1).concat(_toConsumableArray(cp2), _toConsumableArray(p2)));
+  ctx.lineWidth = lineWidth;
+  ctx.stroke();
+};
+
+exports.drawBezier = drawBezier;
 },{}],"src/rack/draw-rack.js":[function(require,module,exports) {
 "use strict";
 
@@ -53662,6 +55301,8 @@ var _moduleTagColors = require("./module-tag-colors");
 
 var _modules = require("../modules");
 
+var _drawBezier = require("./draw-bezier");
+
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
@@ -53678,7 +55319,7 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var drawOutputSockets = function drawOutputSockets(mc, ctx, translateToPosition) {
+var drawOutputSockets = function drawOutputSockets(mc, ctx, md, rack, translateToPosition) {
   return function (_ref) {
     var _ref2 = _slicedToArray(_ref, 2),
         key = _ref2[0],
@@ -53686,12 +55327,20 @@ var drawOutputSockets = function drawOutputSockets(mc, ctx, translateToPosition)
         text = _ref2$.text,
         socket = _ref2$.socket;
 
+    mc.fill([255, 255, 255, 1]);
     ctx.fillText.apply(ctx, [key].concat(_toConsumableArray(translateToPosition(text))));
+    var isConnected = rack.some(function (rMd) {
+      return Object.values(rMd.inputs).some(function (input) {
+        return input.type === 'connection' && input.module === md.name && input.property === key;
+      });
+    });
+    var color = isConnected ? [255, 255, 255, 0.5] : [0, 0, 0, 0.5];
+    mc.fill(color);
     mc.drawEllipse(mc.circle(_constants.socketRadius, translateToPosition(socket)));
   };
 };
 
-var drawInputSockets = function drawInputSockets(mc, ctx, translateToPosition, inputs) {
+var drawInputSockets = function drawInputSockets(mc, ctx, md, translateToPosition, inputs) {
   return function (_ref3) {
     var _ref4 = _slicedToArray(_ref3, 2),
         key = _ref4[0],
@@ -53699,9 +55348,15 @@ var drawInputSockets = function drawInputSockets(mc, ctx, translateToPosition, i
         text = _ref4$.text,
         socket = _ref4$.socket;
 
+    var isValue = md.inputs[key] && md.inputs[key].type === 'value';
+    var isConnection = md.inputs[key] && md.inputs[key].type === 'connection';
+    var isRequired = (0, _modules.findModule)(md.moduleName).inputs[key].required;
+    var color = isValue ? [0, 0, 255, 0.5] : isConnection ? [255, 255, 255, 0.5] : isRequired ? [255, 0, 0, 0.5] : [0, 0, 0, 0.5];
     var input = inputs[key];
-    var socketText = input && input.type === 'value' ? "".concat(key, "(").concat(input.value, ")") : key;
+    var socketText = isValue ? "".concat(key, "(").concat(input.value, ")") : key;
+    mc.fill([255, 255, 255, 1]);
     ctx.fillText.apply(ctx, [socketText].concat(_toConsumableArray(translateToPosition(text))));
+    mc.fill(color);
     mc.drawEllipse(mc.circle(_constants.socketRadius, translateToPosition(socket)));
   };
 };
@@ -53723,13 +55378,9 @@ var drawConnections = function drawConnections(mc, translateToPosition, globalTr
         var outputPos = (0, _vecLaFp.vAdd)(inputModule.dv.p, inputModule.dv.oup[inputProp].socket);
         var p1 = (0, _vecLaFp.vAdd)(translateToPosition(inputPos), [-_constants.socketRadius, 0]);
         var p2 = (0, _vecLaFp.vAdd)(globalTranslate(outputPos), [_constants.socketRadius, 0]);
-        var dist = (0, _vecLaFp.vDist)(p1, p2);
+        var dist = Math.abs(p1[0] - p2[0]);
         var bxOffset = dist / 2;
-        ctx.beginPath();
-        ctx.moveTo.apply(ctx, _toConsumableArray(p1));
-        ctx.bezierCurveTo.apply(ctx, _toConsumableArray((0, _vecLaFp.vAdd)(p1, [-bxOffset, 0])).concat(_toConsumableArray((0, _vecLaFp.vAdd)(p2, [bxOffset, 0])), _toConsumableArray(p2)));
-        ctx.lineWidth = 2;
-        ctx.stroke();
+        (0, _drawBezier.drawBezier)(ctx, p1, (0, _vecLaFp.vAdd)(p1, [-bxOffset, 0]), (0, _vecLaFp.vAdd)(p2, [bxOffset, 0]), p2);
       }
     } else if (inputObj.type === 'value') {
       var _inputPos = translateToPosition(inputPositions[inputKey].socket);
@@ -53742,6 +55393,8 @@ var drawConnections = function drawConnections(mc, translateToPosition, globalTr
 };
 
 var drawRack = function drawRack(rack, mc, ctx, globalTranslate) {
+  mc.background([0, 0, 0, 1]);
+  mc.strokeWeight(2);
   rack.forEach(function (md) {
     var translateToPosition = (0, _ramda.compose)(globalTranslate, (0, _vecLaFp.vAdd)(md.dv.p));
     Object.entries(md.inputs).forEach(drawConnections(mc, translateToPosition, globalTranslate, md.dv.inp, rack, ctx));
@@ -53777,7 +55430,7 @@ var drawRack = function drawRack(rack, mc, ctx, globalTranslate) {
     });
     mc.fill([255, 255, 255, 0.5]); // Module Title
 
-    ctx.fillText.apply(ctx, [moduleDef.moduleName].concat(_toConsumableArray(translateToPosition(textPosition)))); // Title box line
+    ctx.fillText.apply(ctx, ["".concat(moduleDef.moduleName, " (").concat(moduleDef.name, ")")].concat(_toConsumableArray(translateToPosition(textPosition)))); // Title box line
 
     mc.fill([255, 255, 255, 0.25]);
     mc.drawLine(mc.line(translateToPosition([0, 30]), translateToPosition([dx, 30])));
@@ -53786,13 +55439,13 @@ var drawRack = function drawRack(rack, mc, ctx, globalTranslate) {
     ctx.fillText.apply(ctx, ['In'].concat(_toConsumableArray(translateToPosition(inPosition)))); // Out
 
     ctx.fillText.apply(ctx, ['Out'].concat(_toConsumableArray(translateToPosition(outPosition))));
-    Object.entries(inputPositions).forEach(drawInputSockets(mc, ctx, translateToPosition, moduleDef.inputs));
-    Object.entries(outputPositions).forEach(drawOutputSockets(mc, ctx, translateToPosition));
+    Object.entries(inputPositions).forEach(drawInputSockets(mc, ctx, moduleDef, translateToPosition, moduleDef.inputs));
+    Object.entries(outputPositions).forEach(drawOutputSockets(mc, ctx, moduleDef, rack, translateToPosition));
   });
 };
 
 exports.drawRack = drawRack;
-},{"ramda":"node_modules/ramda/es/index.js","vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../constants":"src/constants.js","./module-tag-colors":"src/rack/module-tag-colors.js","../modules":"src/modules/index.js"}],"src/events/delete.js":[function(require,module,exports) {
+},{"ramda":"node_modules/ramda/es/index.js","vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../constants":"src/constants.js","./module-tag-colors":"src/rack/module-tag-colors.js","../modules":"src/modules/index.js","./draw-bezier":"src/rack/draw-bezier.js"}],"src/events/delete.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -54163,61 +55816,35 @@ var onMouseUp = function onMouseUp(_ref) {
 };
 
 exports.onMouseUp = onMouseUp;
-},{"./delete":"src/events/delete.js","./raw-value":"src/events/raw-value.js","./drag":"src/events/drag.js","./connect":"src/events/connect.js","./pan":"src/events/pan.js"}],"src/react/components/Canvas.js":[function(require,module,exports) {
+},{"./delete":"src/events/delete.js","./raw-value":"src/events/raw-value.js","./drag":"src/events/drag.js","./connect":"src/events/connect.js","./pan":"src/events/pan.js"}],"src/react/components/Canvas/View.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Canvas = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _constants = require("../../constants");
+var _constants = require("../../../constants");
 
 var _microcanFp = _interopRequireDefault(require("microcan-fp"));
 
-var _util = require("../util");
+var _time = require("../../../time");
 
-var _editorMode = require("../reducers/editor-mode");
+var _drawRack = require("../../../rack/draw-rack");
 
-var _rack = require("../reducers/rack");
+var _events = require("../../../events");
 
-var _globalOffset = require("../reducers/global-offset");
-
-var _rawValue = require("../reducers/raw-value");
-
-var _dragData = require("../reducers/drag-data");
-
-var _connectingData = require("../reducers/connecting-data");
-
-var _panData = require("../reducers/pan-data");
-
-var rackActions = _interopRequireWildcard(require("../actions/rack"));
-
-var dragActions = _interopRequireWildcard(require("../actions/drag-data"));
-
-var connectingActions = _interopRequireWildcard(require("../actions/connecting-data"));
-
-var editorModeActions = _interopRequireWildcard(require("../actions/editor-mode"));
-
-var panActions = _interopRequireWildcard(require("../actions/pan-data"));
-
-var globalOffsetActions = _interopRequireWildcard(require("../actions/global-offset"));
-
-var _time = require("../../time");
-
-var _drawRack = require("../../rack/draw-rack");
-
-var _events = require("../../events");
-
-var _computeModuledefDrawingValues = require("../../rack/compute-moduledef-drawing-values");
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+var _computeModuledefDrawingValues = require("../../../rack/compute-moduledef-drawing-values");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -54235,28 +55862,22 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var connecter = (0, _util.connectSelectorsAndActions)(_objectSpread({}, _editorMode.selectors, _rack.selectors, _globalOffset.selectors, _rawValue.selectors, _dragData.selectors, _connectingData.selectors, _panData.selectors), _objectSpread({}, rackActions, dragActions, editorModeActions, connectingActions, panActions, globalOffsetActions));
-
-var UnconnectedCanvas =
+var Canvas =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(UnconnectedCanvas, _React$Component);
+  _inherits(Canvas, _React$Component);
 
-  function UnconnectedCanvas(props) {
+  function Canvas(props) {
     var _this;
 
-    _classCallCheck(this, UnconnectedCanvas);
+    _classCallCheck(this, Canvas);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(UnconnectedCanvas).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Canvas).call(this, props));
     _this.ref = _react.default.createRef();
     return _this;
   }
 
-  _createClass(UnconnectedCanvas, [{
+  _createClass(Canvas, [{
     key: "shouldCompomentUpdate",
     value: function shouldCompomentUpdate() {
       return false;
@@ -54287,6 +55908,10 @@ function (_React$Component) {
       this.setInitialDrawingValuesForModules();
 
       var drawCycle = function drawCycle() {
+        var _this3$props = _this3.props,
+            rack = _this3$props.rack,
+            globalTranslate = _this3$props.globalTranslate;
+
         if (_this3.props.currentMode === 'animate') {
           try {
             _this3.props.animationFn();
@@ -54296,11 +55921,7 @@ function (_React$Component) {
 
           (0, _time.updateTime)();
         } else {
-          _this3.mc.background([0, 0, 0, 1]);
-
-          _this3.mc.strokeWeight(1);
-
-          (0, _drawRack.drawRack)(_this3.props.rack, _this3.mc, _this3.ctx, _this3.props.globalTranslate);
+          (0, _drawRack.drawRack)(rack, _this3.mc, _this3.ctx, globalTranslate);
         }
 
         requestAnimationFrame(drawCycle);
@@ -54333,54 +55954,183 @@ function (_React$Component) {
     }
   }]);
 
-  return UnconnectedCanvas;
+  return Canvas;
 }(_react.default.Component);
 
-var Canvas = connecter(UnconnectedCanvas);
-exports.Canvas = Canvas;
-},{"react":"node_modules/react/index.js","../../constants":"src/constants.js","microcan-fp":"node_modules/microcan-fp/dist/microcan.js","../util":"src/react/util.js","../reducers/editor-mode":"src/react/reducers/editor-mode.js","../reducers/rack":"src/react/reducers/rack.js","../reducers/global-offset":"src/react/reducers/global-offset.js","../reducers/raw-value":"src/react/reducers/raw-value.js","../reducers/drag-data":"src/react/reducers/drag-data.js","../reducers/connecting-data":"src/react/reducers/connecting-data.js","../reducers/pan-data":"src/react/reducers/pan-data.js","../actions/rack":"src/react/actions/rack.js","../actions/drag-data":"src/react/actions/drag-data.js","../actions/connecting-data":"src/react/actions/connecting-data.js","../actions/editor-mode":"src/react/actions/editor-mode.js","../actions/pan-data":"src/react/actions/pan-data.js","../actions/global-offset":"src/react/actions/global-offset.js","../../time":"src/time.js","../../rack/draw-rack":"src/rack/draw-rack.js","../../events":"src/events/index.js","../../rack/compute-moduledef-drawing-values":"src/rack/compute-moduledef-drawing-values.js"}],"src/react/components/App.js":[function(require,module,exports) {
+;
+var _default = Canvas;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../../../constants":"src/constants.js","microcan-fp":"node_modules/microcan-fp/dist/microcan.js","../../../time":"src/time.js","../../../rack/draw-rack":"src/rack/draw-rack.js","../../../events":"src/events/index.js","../../../rack/compute-moduledef-drawing-values":"src/rack/compute-moduledef-drawing-values.js"}],"src/react/actions/drag-data.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.App = void 0;
+exports.setDragData = void 0;
+
+var setDragData = function setDragData(moduleId, offset) {
+  return {
+    type: 'SET_DRAG_DATA',
+    payload: {
+      moduleId: moduleId,
+      offset: offset
+    }
+  };
+};
+
+exports.setDragData = setDragData;
+},{}],"src/react/actions/connecting-data.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.setConnectingData = void 0;
+
+var setConnectingData = function setConnectingData(moduleId, key) {
+  return {
+    type: 'SET_CONNECTING_DATA',
+    payload: {
+      moduleId: moduleId,
+      key: key
+    }
+  };
+};
+
+exports.setConnectingData = setConnectingData;
+},{}],"src/react/actions/pan-data.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.setPanPosition = void 0;
+
+var setPanPosition = function setPanPosition(position) {
+  return {
+    type: 'SET_PAN_POSITION',
+    payload: position
+  };
+};
+
+exports.setPanPosition = setPanPosition;
+},{}],"src/react/components/Canvas/State.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.actions = exports.selectors = void 0;
+
+var _editorMode = require("../../reducers/editor-mode");
+
+var _rack = require("../../reducers/rack");
+
+var _globalOffset = require("../../reducers/global-offset");
+
+var _rawValue = require("../../reducers/raw-value");
+
+var _dragData = require("../../reducers/drag-data");
+
+var _connectingData = require("../../reducers/connecting-data");
+
+var _panData = require("../../reducers/pan-data");
+
+var rackActions = _interopRequireWildcard(require("../../actions/rack"));
+
+var dragActions = _interopRequireWildcard(require("../../actions/drag-data"));
+
+var connectingActions = _interopRequireWildcard(require("../../actions/connecting-data"));
+
+var editorModeActions = _interopRequireWildcard(require("../../actions/editor-mode"));
+
+var panActions = _interopRequireWildcard(require("../../actions/pan-data"));
+
+var globalOffsetActions = _interopRequireWildcard(require("../../actions/global-offset"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var selectors = _objectSpread({}, _editorMode.selectors, _rack.selectors, _globalOffset.selectors, _rawValue.selectors, _dragData.selectors, _connectingData.selectors, _panData.selectors);
+
+exports.selectors = selectors;
+
+var actions = _objectSpread({}, rackActions, dragActions, editorModeActions, connectingActions, panActions, globalOffsetActions);
+
+exports.actions = actions;
+},{"../../reducers/editor-mode":"src/react/reducers/editor-mode.js","../../reducers/rack":"src/react/reducers/rack.js","../../reducers/global-offset":"src/react/reducers/global-offset.js","../../reducers/raw-value":"src/react/reducers/raw-value.js","../../reducers/drag-data":"src/react/reducers/drag-data.js","../../reducers/connecting-data":"src/react/reducers/connecting-data.js","../../reducers/pan-data":"src/react/reducers/pan-data.js","../../actions/rack":"src/react/actions/rack.js","../../actions/drag-data":"src/react/actions/drag-data.js","../../actions/connecting-data":"src/react/actions/connecting-data.js","../../actions/editor-mode":"src/react/actions/editor-mode.js","../../actions/pan-data":"src/react/actions/pan-data.js","../../actions/global-offset":"src/react/actions/global-offset.js"}],"src/react/components/Canvas/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Canvas = void 0;
+
+var _util = require("../../util");
+
+var _View = _interopRequireDefault(require("./View"));
+
+var _State = require("./State");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Canvas = (0, _util.connectSelectorsAndActions)(_State.selectors, _State.actions)(_View.default);
+exports.Canvas = Canvas;
+},{"../../util":"src/react/util.js","./View":"src/react/components/Canvas/View.js","./State":"src/react/components/Canvas/State.js"}],"src/react/components/App/toggle-open.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.toggleOpen = void 0;
+
+var toggleOpen = function toggleOpen(currentMode, setEditorMode) {
+  var nextMode = currentMode === 'animate' ? 'edit' : 'animate';
+  setEditorMode(nextMode);
+  return nextMode;
+};
+
+exports.toggleOpen = toggleOpen;
+},{}],"src/react/components/App/View.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _useStateFunction3 = require("../hooks/useStateFunction");
+var _useStateFunction3 = require("../../hooks/useStateFunction");
 
-var _generateAnimationFunction = require("../../generate-animation-function");
+var _compileAnimation = require("../../../compile-animation");
 
-var _util = require("../util");
+var _util = require("../../util");
 
-var _SidePanel = require("./SidePanel");
+var _SidePanel = require("../SidePanel");
 
-var editorModeActions = _interopRequireWildcard(require("../actions/editor-mode"));
+var _constants = require("../../../constants");
 
-var rackActions = _interopRequireWildcard(require("../actions/rack"));
+var _common = require("../common");
 
-var _editorMode2 = require("../reducers/editor-mode");
+var _EditMode = require("../EditMode");
 
-var _rack2 = require("../reducers/rack");
+var _DeleteMode = require("../DeleteMode");
 
-var _resetTime = require("../reducers/reset-time");
+var _RawMode = require("../RawMode");
 
-var _constants = require("../../constants");
+var _ConnectionMode = require("../ConnectionMode");
 
-var _common = require("./common");
+var _Canvas = require("../Canvas");
 
-var _EditMode = require("./EditMode");
+var _time = require("../../../time");
 
-var _DeleteMode = require("./DeleteMode");
+var _toggleOpen = require("./toggle-open");
 
-var _RawMode = require("./RawMode");
-
-var _ConnectionMode = require("./ConnectionMode");
-
-var _Canvas = require("./Canvas");
-
-var _time = require("../../time");
+var _vecLaFp = require("vec-la-fp");
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
@@ -54392,18 +56142,7 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var toggleOpen = function toggleOpen(currentMode, setEditorMode) {
-  var nextMode = currentMode === 'animate' ? 'edit' : 'animate';
-  setEditorMode(nextMode);
-  return nextMode;
-};
-
-var connecter = (0, _util.connectSelectorsAndActions)(_objectSpread({}, _editorMode2.selectors, _rack2.selectors, _resetTime.selectors), _objectSpread({}, editorModeActions, rackActions));
-var App = connecter(function (props) {
+var _default = function _default(props) {
   var _useStateFunction = (0, _useStateFunction3.useStateFunction)(function () {}),
       _useStateFunction2 = _slicedToArray(_useStateFunction, 2),
       animationFn = _useStateFunction2[0],
@@ -54422,7 +56161,9 @@ var App = connecter(function (props) {
   var gotoEditMode = props.gotoEditMode,
       setEditorMode = props.setEditorMode,
       rack = props.rack,
-      shouldResetTime = props.resetTime;
+      shouldResetTime = props.resetTime,
+      globalOffset = props.globalOffset,
+      setGlobalOffset = props.setGlobalOffset;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Canvas.Canvas, {
     animationFn: animationFn,
     setCtx: setCtx,
@@ -54448,18 +56189,49 @@ var App = connecter(function (props) {
     });
   }]])), _react.default.createElement(_SidePanel.PanelToggle, {
     onClick: function onClick() {
-      var nextMode = toggleOpen(props.currentMode, setEditorMode);
+      var nextMode = (0, _toggleOpen.toggleOpen)(props.currentMode, setEditorMode);
 
       if (nextMode === 'animate') {
-        if (shouldResetTime) (0, _time.resetTime)();
-        setAnimationFn((0, _generateAnimationFunction.generateAnimationFn)(rack, mc));
-        ctx.clearRect(0, 0, _constants.w, _constants.h);
+        (0, _compileAnimation.compile)(rack, mc).map(function (fn) {
+          if (shouldResetTime) (0, _time.resetTime)();
+          setAnimationFn(fn);
+          ctx.clearRect(0, 0, _constants.w, _constants.h);
+        }).orElse(function (_ref) {
+          var _ref2 = _slicedToArray(_ref, 2),
+              msg = _ref2[0],
+              md = _ref2[1];
+
+          alert(msg);
+          (0, _toggleOpen.toggleOpen)(props.currentMode, setEditorMode);
+          gotoEditMode();
+          var centerModuleOffset = (0, _vecLaFp.vSub)(_constants.C, md.dv.p);
+          setGlobalOffset(centerModuleOffset);
+        });
       }
     }
   }, props.isInAnimateMode ? '>' : '<')));
+};
+
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../../hooks/useStateFunction":"src/react/hooks/useStateFunction.js","../../../compile-animation":"src/compile-animation.js","../../util":"src/react/util.js","../SidePanel":"src/react/components/SidePanel.js","../../../constants":"src/constants.js","../common":"src/react/components/common/index.js","../EditMode":"src/react/components/EditMode/index.js","../DeleteMode":"src/react/components/DeleteMode/index.js","../RawMode":"src/react/components/RawMode/index.js","../ConnectionMode":"src/react/components/ConnectionMode/index.js","../Canvas":"src/react/components/Canvas/index.js","../../../time":"src/time.js","./toggle-open":"src/react/components/App/toggle-open.js","vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js"}],"src/react/components/App/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
+exports.App = void 0;
+
+var _State = require("./State");
+
+var _util = require("../../util");
+
+var _View = _interopRequireDefault(require("./View"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = (0, _util.connectSelectorsAndActions)(_State.selectors, _State.actions)(_View.default);
 exports.App = App;
-},{"react":"node_modules/react/index.js","../hooks/useStateFunction":"src/react/hooks/useStateFunction.js","../../generate-animation-function":"src/generate-animation-function.js","../util":"src/react/util.js","./SidePanel":"src/react/components/SidePanel.js","../actions/editor-mode":"src/react/actions/editor-mode.js","../actions/rack":"src/react/actions/rack.js","../reducers/editor-mode":"src/react/reducers/editor-mode.js","../reducers/rack":"src/react/reducers/rack.js","../reducers/reset-time":"src/react/reducers/reset-time.js","../../constants":"src/constants.js","./common":"src/react/components/common/index.js","./EditMode":"src/react/components/EditMode.js","./DeleteMode":"src/react/components/DeleteMode.js","./RawMode":"src/react/components/RawMode.js","./ConnectionMode":"src/react/components/ConnectionMode.js","./Canvas":"src/react/components/Canvas.js","../../time":"src/time.js"}],"src/index.js":[function(require,module,exports) {
+},{"./State":"src/react/components/App/State.js","../../util":"src/react/util.js","./View":"src/react/components/App/View.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -54477,7 +56249,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _reactDom.render)(_react.default.createElement(_reactRedux.Provider, {
   store: (0, _store.default)()
 }, _react.default.createElement(_App.App, null)), document.getElementById('app-main'));
-},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","./react/store":"src/react/store.js","react-dom":"node_modules/react-dom/index.js","./react/components/App":"src/react/components/App.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","./react/store":"src/react/store.js","react-dom":"node_modules/react-dom/index.js","./react/components/App":"src/react/components/App/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -54504,7 +56276,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53292" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60264" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
