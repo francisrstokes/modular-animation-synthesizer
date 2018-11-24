@@ -38,25 +38,28 @@
       },
       "strokeA": {
         "type": "value",
-        "value": 1
+        "value": 0
       },
       "fillR": {
-        "type": "value",
-        "value": 1
+        "type": "connection",
+        "module": "Dkp7uty",
+        "property": "nsinx"
       },
       "fillG": {
-        "type": "value",
-        "value": 1
+        "type": "connection",
+        "module": "T798zmw",
+        "property": "nsinx"
       },
       "fillB": {
-        "type": "value",
-        "value": 1
+        "type": "connection",
+        "module": "D3xnwwo",
+        "property": "nsinx"
       }
     },
     "dv": {
       "p": [
-        2075,
-        -353
+        2644,
+        -371
       ]
     }
   },
@@ -78,7 +81,7 @@
       },
       "fillA": {
         "type": "value",
-        "value": 0.75
+        "value": 0.3
       },
       "gateIn": {
         "type": "connection",
@@ -134,8 +137,8 @@
     },
     "dv": {
       "p": [
-        1633,
-        -577
+        1477,
+        -683
       ]
     }
   },
@@ -145,8 +148,8 @@
     "inputs": {},
     "dv": {
       "p": [
-        1426,
-        -478
+        1191,
+        -588
       ]
     }
   },
@@ -174,8 +177,8 @@
     },
     "dv": {
       "p": [
-        2428,
-        -686
+        2946,
+        -727
       ]
     }
   },
@@ -369,8 +372,8 @@
     },
     "dv": {
       "p": [
-        1311,
-        -804
+        1286,
+        -815
       ]
     }
   },
@@ -650,6 +653,214 @@
       "p": [
         -1428,
         -715
+      ]
+    }
+  },
+  {
+    "name": "Qh49ycn",
+    "moduleName": "LengthOf",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Xmqbm36",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        1754,
+        -408.5
+      ]
+    }
+  },
+  {
+    "name": "Jyv66qt",
+    "moduleName": "TrueTime",
+    "inputs": {},
+    "dv": {
+      "p": [
+        1811,
+        27.5
+      ]
+    }
+  },
+  {
+    "name": "Xvi5169",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "value",
+        "value": 3
+      },
+      "b": {
+        "type": "connection",
+        "module": "Qh49ycn",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        2018,
+        -158.5
+      ]
+    }
+  },
+  {
+    "name": "Wi53d5k",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "value",
+        "value": 2
+      },
+      "b": {
+        "type": "connection",
+        "module": "Qh49ycn",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        2013,
+        -249.5
+      ]
+    }
+  },
+  {
+    "name": "M3g68a3",
+    "moduleName": "Multiply",
+    "inputs": {
+      "a": {
+        "type": "value",
+        "value": 1
+      },
+      "b": {
+        "type": "connection",
+        "module": "Qh49ycn",
+        "property": "output"
+      }
+    },
+    "dv": {
+      "p": [
+        2015,
+        -340.5
+      ]
+    }
+  },
+  {
+    "name": "D3xnwwo",
+    "moduleName": "Wave",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Sf09gd9",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        2373,
+        -98.5
+      ]
+    }
+  },
+  {
+    "name": "T798zmw",
+    "moduleName": "Wave",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "Ansr9ql",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        2349,
+        -229.5
+      ]
+    }
+  },
+  {
+    "name": "Dkp7uty",
+    "moduleName": "Wave",
+    "inputs": {
+      "x": {
+        "type": "connection",
+        "module": "B68qika",
+        "property": "m"
+      }
+    },
+    "dv": {
+      "p": [
+        2396,
+        -359.5
+      ]
+    }
+  },
+  {
+    "name": "Sf09gd9",
+    "moduleName": "Add",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Xvi5169",
+        "property": "m"
+      },
+      "b": {
+        "type": "connection",
+        "module": "Jyv66qt",
+        "property": "t"
+      }
+    },
+    "dv": {
+      "p": [
+        2188,
+        -97.5
+      ]
+    }
+  },
+  {
+    "name": "Ansr9ql",
+    "moduleName": "Add",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "Wi53d5k",
+        "property": "m"
+      },
+      "b": {
+        "type": "connection",
+        "module": "Jyv66qt",
+        "property": "t"
+      }
+    },
+    "dv": {
+      "p": [
+        2184,
+        -216.5
+      ]
+    }
+  },
+  {
+    "name": "B68qika",
+    "moduleName": "Add",
+    "inputs": {
+      "a": {
+        "type": "connection",
+        "module": "M3g68a3",
+        "property": "m"
+      },
+      "b": {
+        "type": "connection",
+        "module": "Jyv66qt",
+        "property": "t"
+      }
+    },
+    "dv": {
+      "p": [
+        2200,
+        -335.5
       ]
     }
   }

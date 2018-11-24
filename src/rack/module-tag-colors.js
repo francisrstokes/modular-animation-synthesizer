@@ -9,6 +9,7 @@ export const getTagColor = tag => {
     case 'Interpolation': return [119, 0, 132, 1];
     case 'Random and Noise': return [108, 132, 83, 1];
     case 'Audio': return [137, 137, 137, 1];
+    case 'Feedback': return [0xe5, 0xe5, 0x00, 1];
     default: return [0,0,0,1];
   }
 };
