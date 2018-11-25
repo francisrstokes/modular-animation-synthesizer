@@ -1,6 +1,6 @@
 import {tagType, isStyleArray, isStyle} from '../../util/types';
 import {zip, transpose} from 'ramda';
-import {applyStyle} from '../../util/apply-style';
+import {applyStyle} from '../../util/drawing/apply-style';
 
 export const DrawEllipse = {
   name: 'DrawEllipse',

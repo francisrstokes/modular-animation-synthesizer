@@ -1,6 +1,6 @@
 import {zip} from 'ramda';
 import { isPolygon, isPolygonArray, isStyleArray, isStyle } from '../../util/types';
-import {applyStyle} from '../../util/apply-style';
+import {applyStyle} from '../../util/drawing/apply-style';
 
 export const DrawPolygon = {
   name: 'DrawPolygon',

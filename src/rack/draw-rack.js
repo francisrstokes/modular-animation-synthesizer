@@ -3,7 +3,7 @@ import {vAdd} from 'vec-la-fp';
 import {socketRadius} from '../constants';
 import { getTagColor } from './module-tag-colors';
 import { findModule } from '../modules';
-import { drawBezier } from './draw-bezier';
+import { drawBezier } from '../util/drawing/draw-bezier';
 
 const drawOutputSockets = (mc, ctx, md, rack, translateToPosition) => ([key, { text, socket }]) => {
   mc.fill([255, 255, 255, 1]);
