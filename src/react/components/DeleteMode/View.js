@@ -6,10 +6,8 @@ import {Row, SubTitle} from '../common';
 export default ({exitDeleteMode}) => {
   useKeydownEvent(e => (e.key === 'Escape') ? exitDeleteMode() : null);
 
-  return <React.Fragment>
-    <Row>
-      <SubTitle>Delete mode</SubTitle>
-      <button onClick={exitDeleteMode}>Exit Delete Mode</button>
-    </Row>
-  </React.Fragment>
+  return <Row>
+    <SubTitle>Delete mode</SubTitle>
+    <button onClick={exitDeleteMode}>Exit Delete Mode</button>
+  </Row>;
 };

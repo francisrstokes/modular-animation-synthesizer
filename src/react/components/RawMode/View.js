@@ -20,15 +20,13 @@ export default ({exitRawMode, setCurrentRawValue, rawValue}) => {
     }
   });
 
-  return <React.Fragment>
-    <Row>
-      <SubTitle>Raw mode</SubTitle>
-      <button onClick={exitRawMode}>Exit Raw Mode</button>
-      <input
-        ref={ref}
-        value={rawValue}
-        onChange={e => setCurrentRawValue(e.target.value)}
-      />
-    </Row>
-  </React.Fragment>
+  return <Row>
+    <SubTitle>Raw mode</SubTitle>
+    <button onClick={exitRawMode}>Exit Raw Mode</button>
+    <input
+      ref={ref}
+      value={rawValue}
+      onChange={e => setCurrentRawValue(e.target.value)}
+    />
+  </Row>
 }

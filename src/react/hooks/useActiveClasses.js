@@ -1,7 +1,8 @@
 import {useState} from 'react';
 
-export const useActiveClasses = (groupedByTag) => {
-  const [activeClasses, setActiveClasses] = useState(Object.keys(groupedByTag).reduce((acc, cur) => ({ ...acc, [cur]: '' }), {}));
+export const useActiveClasses = (keyedObject) => {
+  const keys = Object.keys(keyedObject);
+  const [activeClasses, setActiveClasses] = useState(keys.reduce((acc, cur) => ({ ...acc, [cur]: '' }), {}));
 
   return [
     activeClasses,

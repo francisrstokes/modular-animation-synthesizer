@@ -12,7 +12,7 @@ import {ConnectionMode} from '../ConnectionMode';
 import { Canvas } from '../Canvas';
 import { resetTime } from '../../../time';
 import {toggleOpen} from './toggle-open';
-import { vAdd, vSub, vScale } from 'vec-la-fp';
+import { vSub } from 'vec-la-fp';
 
 export default props => {
   const [animationFn, setAnimationFn] = useStateFunction(() => {});
@@ -24,7 +24,6 @@ export default props => {
     setEditorMode,
     rack,
     resetTime: shouldResetTime,
-    globalOffset,
     setGlobalOffset
   } = props;
 
