@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useKeydownEvent} from '../../hooks/useKeydownEvent';
 import {groupBy} from 'ramda';
 import { modules } from '../../../modules';
 import { AccordianTitle, AccordionList, AccordionItem } from '../common/Accordian';
+import {TabMenu, TabsContainer, Tab, TabContent} from '../common/TabMenu';
 import { useActiveClasses } from '../../hooks/useActiveClasses';
 import {createModule} from './create-module';
 import { copyToClipboard } from '../../../util/copy-to-clipboard';
+import {componentSwitch} from '../../util';
 
 const groupedByTag = groupBy(({tag}) => tag, modules);
 
@@ -58,32 +60,54 @@ export default props => {
     }
   });
 
-  return <React.Fragment>
-    <AddModules ctx={ctx} addModule={addModule} globalOffset={globalOffset} />
-    <br/>
-    <button onClick={gotoDeleteMode}>Delete Modules</button>
-    <button onClick={gotoRawMode}>Set raw values</button>
-    <br/>
-    <button onClick={() => {
-      const copy = JSON.parse(JSON.stringify(rack));
-      copy.forEach(md => {
-        const pos = md.dv.p;
-        delete md.dv;
-        delete md.module;
-        md.dv = { p: pos };
-      });
-      copyToClipboard(JSON.stringify(copy));
-    }}>Export</button>
-    <hr/>
-    <br/>
-    <button onClick={() => {
-      if (confirm('Are you sure you want to remove all modules?')) {
-        clearModules();
-      }
-    }}>Clear all modules</button>
-    <label>
-      Reset time on animate
-      <input type='checkbox' checked={resetTime} onChange={() => toggleResetTime(resetTime)}/>
-    </label>
-  </React.Fragment>
+  const [activeTab, setActiveTab] = useState('modules');
+
+  return <TabMenu>
+    <TabsContainer>
+      <Tab
+        className={activeTab === 'modules' ? 'active' : ''}
+        onClick={() => setActiveTab('modules')}
+      >Modules</Tab>
+      <Tab
+        className={activeTab === 'modes' ? 'active' : ''}
+        onClick={() => setActiveTab('modes')}
+      >Modes</Tab>
+      <Tab
+        className={activeTab === 'settings' ? 'active' : ''}
+        onClick={() => setActiveTab('settings')}
+      >Settings</Tab>
+    </TabsContainer>
+    <TabContent>
+    {componentSwitch([
+      [activeTab === 'modules', () => <AddModules ctx={ctx} addModule={addModule} globalOffset={globalOffset} />],
+      [activeTab === 'modes', () => <React.Fragment>
+          <button onClick={gotoDeleteMode}>Delete Modules</button>
+          <button onClick={gotoRawMode}>Set raw values</button>
+        </React.Fragment>],
+      [activeTab === 'settings', () => <React.Fragment>
+          <button onClick={() => {
+            const copy = JSON.parse(JSON.stringify(rack));
+            copy.forEach(md => {
+              const pos = md.dv.p;
+              delete md.dv;
+              delete md.module;
+              md.dv = { p: pos };
+            });
+            copyToClipboard(JSON.stringify(copy));
+          }}>Export</button>
+          <hr/>
+          <br/>
+          <button onClick={() => {
+            if (confirm('Are you sure you want to remove all modules?')) {
+              clearModules();
+            }
+          }}>Clear all modules</button>
+          <label>
+            Reset time on animate
+            <input type='checkbox' checked={resetTime} onChange={() => toggleResetTime(resetTime)}/>
+          </label>
+        </React.Fragment>]
+    ])}
+    </TabContent>
+  </TabMenu>
 };

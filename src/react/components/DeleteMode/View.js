@@ -1,5 +1,5 @@
 
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useKeydownEvent} from '../../hooks/useKeydownEvent';
 import {Row, SubTitle} from '../common';
 
