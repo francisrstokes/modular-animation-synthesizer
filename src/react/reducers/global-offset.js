@@ -1,5 +1,5 @@
-import {view, lensProp, compose} from 'ramda';
-import {vAdd, vAddAll} from 'vec-la-fp';
+import {view, lensProp} from 'ramda';
+import {vAdd, vAddAll,vSub} from 'vec-la-fp';
 
 const root = lensProp('globalOffset');
 
@@ -13,5 +13,6 @@ export default (state = [0, 0], action) => {
 
 export const selectors = {
   globalOffset: view(root),
-  globalTranslate: state => (...vs) => vAddAll([...vs, view(root, state)])
+  globalTranslate: state => (...vs) => vAddAll([...vs, view(root, state)]),
+  globalSubtract: state => v => vSub(v, view(root, state)),
 };

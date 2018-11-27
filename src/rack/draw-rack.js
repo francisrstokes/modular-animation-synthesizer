@@ -1,5 +1,5 @@
 import {compose} from 'ramda';
-import {vAdd} from 'vec-la-fp';
+import {vAdd, vScale, vAddAll} from 'vec-la-fp';
 import {socketRadius} from '../constants';
 import { getTagColor } from './module-tag-colors';
 import { findModule } from '../modules';
@@ -70,6 +70,7 @@ const drawConnections = (mc, translateToPosition, globalTranslate, inputPosition
 export const drawRack = (rack, mc, ctx, globalTranslate, selectionData) => {
   mc.background([0,0,0,1]);
   mc.strokeWeight(2);
+  mc.stroke([255, 255, 255, 1]);
   rack.forEach(md => {
     const translateToPosition = compose(globalTranslate, vAdd(md.dv.p));
     Object.entries(md.inputs).forEach(drawConnections(mc, translateToPosition, globalTranslate, md.dv.inp, rack, ctx));
@@ -141,5 +142,20 @@ export const drawRack = (rack, mc, ctx, globalTranslate, selectionData) => {
       const rect = regularRect(selectionData.selectionAreaStart, selectionData.selectionAreaEnd);
       mc.drawPolygon(mc.polygon(rect));
     }
+  }
+
+  if (selectionData.selectedModules.length > 0) {
+    const so = 10;
+    mc.strokeWeight(2);
+    mc.stroke([255, 255, 255, 0.75]);
+    mc.fill([0,0,0,0]);
+    rack.forEach(md => {
+      if (selectionData.selectedModules.includes(md.name)) {
+        const p1 = vAdd(md.dv.p, [-so/2, -so/2]);
+        const p2 = vAddAll([p1, md.dv.d, [so, so]]);
+        const rect = regularRect(p1, p2).map(v => globalTranslate(v));
+        mc.drawShape(mc.polygon(rect));
+      }
+    });
   }
 }
