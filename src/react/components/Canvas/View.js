@@ -6,6 +6,18 @@ import { drawRack } from '../../../rack/draw-rack';
 import {onMouseDown, onMouseUp, onMouseMove} from '../../../events';
 import { computeModuleDefDrawingValues } from '../../../rack/compute-moduledef-drawing-values';
 
+const getSelectionStruct = (props) => ({
+  isInSelectionMode: props.isInSelectionMode,
+
+  selectedModules: props.selectedModules,
+  numSelectedModules: props.numSelectedModules,
+  isInSelectionDrag: props.isInSelectionDrag,
+  isSelecting: props.isSelecting,
+  selectionDragOffset: props.selectionDragOffset,
+  selectionAreaStart: props.selectionAreaStart,
+  selectionAreaEnd: props.selectionAreaEnd,
+});
+
 class Canvas extends React.Component {
   constructor(props) {
     super(props);
@@ -47,7 +59,8 @@ class Canvas extends React.Component {
         }
         updateTime();
       } else {
-        drawRack(rack, this.mc, this.ctx, globalTranslate);
+        const selectionData = getSelectionStruct(this.props);
+        drawRack(rack, this.mc, this.ctx, globalTranslate, selectionData);
       }
       requestAnimationFrame(drawCycle);
     }

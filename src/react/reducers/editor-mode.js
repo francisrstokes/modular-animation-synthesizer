@@ -26,6 +26,7 @@ export const selectors = {
   isInDragMode: compose(equals('dragging'), view(substate)),
   isInRawMode: compose(equals('raw'), view(substate)),
   isInPanMode: compose(equals('pan'), view(substate)),
+  isInSelectionMode: compose(equals('selection'), view(substate)),
   isInConnectingInputMode: compose(equals('connecting_from_input'), view(substate)),
   isInConnectingOutputMode: compose(equals('connecting_from_output'), view(substate)),
   isInAnimateMode: compose(equals('animate'), view(mode)),

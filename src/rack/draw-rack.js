@@ -4,6 +4,7 @@ import {socketRadius} from '../constants';
 import { getTagColor } from './module-tag-colors';
 import { findModule } from '../modules';
 import { drawBezier } from '../util/drawing/draw-bezier';
+import { regularRect } from '../util/math-util';
 
 const drawOutputSockets = (mc, ctx, md, rack, translateToPosition) => ([key, { text, socket }]) => {
   mc.fill([255, 255, 255, 1]);
@@ -66,7 +67,7 @@ const drawConnections = (mc, translateToPosition, globalTranslate, inputPosition
   }
 }
 
-export const drawRack = (rack, mc, ctx, globalTranslate) => {
+export const drawRack = (rack, mc, ctx, globalTranslate, selectionData) => {
   mc.background([0,0,0,1]);
   mc.strokeWeight(2);
   rack.forEach(md => {
@@ -132,4 +133,13 @@ export const drawRack = (rack, mc, ctx, globalTranslate) => {
     Object.entries(inputPositions).forEach(drawInputSockets(mc, ctx, moduleDef, translateToPosition, moduleDef.inputs));
     Object.entries(outputPositions).forEach(drawOutputSockets(mc, ctx, moduleDef, rack, translateToPosition));
   });
+
+  if (selectionData.isInSelectionMode) {
+    if (selectionData.isSelecting) {
+      mc.fill([255, 255, 255, 0.1]);
+      mc.stroke([255, 255, 255, 0.5]);
+      const rect = regularRect(selectionData.selectionAreaStart, selectionData.selectionAreaEnd);
+      mc.drawPolygon(mc.polygon(rect));
+    }
+  }
 }

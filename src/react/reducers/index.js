@@ -7,6 +7,7 @@ import dragData from './drag-data';
 import connectingData from './connecting-data';
 import panData from './pan-data';
 import resetTime from './reset-time';
+import selectionMode from './selection-mode';
 
 export default combineReducers({
   globalOffset,
@@ -17,4 +18,5 @@ export default combineReducers({
   connectingData,
   panData,
   resetTime,
+  selectionMode
 });

@@ -43,6 +43,7 @@ export default props => {
   const {
     gotoDeleteMode,
     gotoRawMode,
+    gotoSelectionMode,
     globalOffset,
     clearModules,
     addModule,
@@ -56,6 +57,7 @@ export default props => {
     switch (e.key) {
       case 'r': return gotoRawMode();
       case 'd': return gotoDeleteMode();
+      case 's': return gotoSelectionMode();
       default: return;
     }
   });

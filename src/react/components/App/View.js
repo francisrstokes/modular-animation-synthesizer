@@ -13,6 +13,7 @@ import { Canvas } from '../Canvas';
 import { resetTime } from '../../../time';
 import {toggleOpen} from './toggle-open';
 import { vSub } from 'vec-la-fp';
+import { SelectionMode } from '../SelectionMode';
 
 export default props => {
   const [animationFn, setAnimationFn] = useStateFunction(() => {});
@@ -41,6 +42,7 @@ export default props => {
         {componentSwitch([
           [props.isInDeleteMode, () => <DeleteMode exitDeleteMode={gotoEditMode} />],
           [props.isInRawMode, () => <RawMode exitRawMode={gotoEditMode} />],
+          [props.isInSelectionMode, () => <SelectionMode exitSelectionMode={gotoEditMode} />],
           [props.isInConnectingInputMode || props.isInConnectingOutputMode, () => <ConnectionMode cancel={gotoEditMode} connectingFromInput={props.isInConnectingInputMode} />],
           [props.isInEditMode, () => <EditMode ctx={ctx} />]
         ])}

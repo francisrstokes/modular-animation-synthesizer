@@ -5,12 +5,14 @@ import {selectors as rawValueSelectors} from '../../reducers/raw-value';
 import {selectors as dragSelectors} from '../../reducers/drag-data';
 import {selectors as connectingSelectors} from '../../reducers/connecting-data';
 import {selectors as panSelectors} from '../../reducers/pan-data';
+import {selectors as selectionSelectors} from '../../reducers/selection-mode';
 import * as rackActions from '../../actions/rack';
 import * as dragActions from '../../actions/drag-data';
 import * as connectingActions from '../../actions/connecting-data';
 import * as editorModeActions from '../../actions/editor-mode';
 import * as panActions from '../../actions/pan-data';
 import * as globalOffsetActions from '../../actions/global-offset';
+import * as selectionActions from '../../actions/selection-mode';
 
 export const selectors = {
   ...editorModeSelectors,
@@ -19,7 +21,8 @@ export const selectors = {
   ...rawValueSelectors,
   ...dragSelectors,
   ...connectingSelectors,
-  ...panSelectors
+  ...panSelectors,
+  ...selectionSelectors
 };
 
 export const actions = {
@@ -28,5 +31,6 @@ export const actions = {
   ...editorModeActions,
   ...connectingActions,
   ...panActions,
-  ...globalOffsetActions
+  ...globalOffsetActions,
+  ...selectionActions
 };

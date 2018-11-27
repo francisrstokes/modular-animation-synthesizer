@@ -17,3 +17,5 @@ export const componentSwitch = (tests, fallback = () => null) => {
   }
   return fallback();
 };
+
+export const createAction = type => payload => ({ type, payload });

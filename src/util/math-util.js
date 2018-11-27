@@ -9,3 +9,10 @@ export const pointInCircle = (cp, r, p) => {
 };
 
 export const mapRange = (fromA,fromB,toA,toB,value) => (value-fromA)/(fromB-fromA) * (toB-toA) + toA;
+
+export const regularRect = ([x, y], [ex, ey]) => [
+  [x, y],
+  [ex, y],
+  [ex, ey],
+  [x, ey]
+];

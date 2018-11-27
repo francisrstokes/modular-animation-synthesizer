@@ -2,6 +2,12 @@
 
 ## To Pickup
 
+- Rewrite all reducers with lenses
+- Rewrite action creators to use createAction
+- Clean up all the math util / collision code to consistently use either polygons or x,y,w,h
+- Optimise topological sorting of graph using Khans Algorithm
+  - https://en.wikipedia.org/wiki/Topological_sorting#Kahn's_algorithm
+
 - Better, more descriptive names for inputs and outputs
 - Modal support
 - Better import and export

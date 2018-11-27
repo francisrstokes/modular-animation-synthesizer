@@ -1,3 +1,5 @@
+
+
 export const setEditorMode = mode => ({
   type: 'SET_EDITOR_MODE',
   payload: {
@@ -10,6 +12,14 @@ export const gotoEditMode = () => ({
   type: 'SET_EDITOR_MODE',
   payload: {
     mode: 'edit'
+  }
+});
+
+export const gotoSelectionMode = () => ({
+  type: 'SET_EDITOR_MODE',
+  payload: {
+    mode: 'edit',
+    substate: 'selection'
   }
 });
 

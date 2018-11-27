@@ -5,8 +5,8 @@
 // import r from '../../animations/audio-perlin.json';
 // import r from '../../animations/circle-grid.json';
 // import r from '../../animations/matrix-test.json';
-import r from '../../animations/visualizer.json';
-// import r from '../../animations/gravity-feedback.json';
+// import r from '../../animations/visualizer.json';
+import r from '../../animations/gravity-feedback.json';
 // import r from '../../animations/perlin-map.json';
 // import r from '../../animations/fractal-rotate.json';
 // import r from '../../animations/serpinsky.json';
