@@ -1,7 +1,6 @@
-export const setConnectingData = (moduleId, key) => ({
-  type: 'SET_CONNECTING_DATA',
-  payload: {
-    moduleId,
-    key
-  }
+import { createAction } from '../util';
+
+export const setConnectingData = (moduleId, key) => createAction('SET_CONNECTING_DATA')({
+  moduleId,
+  key
 });

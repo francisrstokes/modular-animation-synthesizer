@@ -1,7 +1,6 @@
-export const setDragData = (moduleId, offset) => ({
-  type: 'SET_DRAG_DATA',
-  payload: {
-    moduleId,
-    offset
-  }
+import { createAction } from '../util';
+
+export const setDragData = (moduleId, offset) => createAction('SET_DRAG_DATA')({
+  moduleId,
+  offset
 });

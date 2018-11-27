@@ -1,79 +1,49 @@
+import { createAction } from '../util';
 
-
-export const setEditorMode = mode => ({
-  type: 'SET_EDITOR_MODE',
-  payload: {
-    mode,
-    substate: ''
-  }
+export const setEditorMode = mode => createAction('SET_EDITOR_MODE')({
+  mode,
+  substate: ''
 });
 
-export const gotoEditMode = () => ({
-  type: 'SET_EDITOR_MODE',
-  payload: {
-    mode: 'edit'
-  }
+export const gotoEditMode = () => createAction('SET_EDITOR_MODE')({
+  mode: 'edit'
 });
 
-export const gotoSelectionMode = () => ({
-  type: 'SET_EDITOR_MODE',
-  payload: {
-    mode: 'edit',
-    substate: 'selection'
-  }
+export const gotoSelectionMode = () => createAction('SET_EDITOR_MODE')({
+  mode: 'edit',
+  substate: 'selection'
 });
 
-export const gotoAnimateMode = () => ({
-  type: 'SET_EDITOR_MODE',
-  payload: {
-    mode: 'animate'
-  }
+export const gotoAnimateMode = () => createAction('SET_EDITOR_MODE')({
+  mode: 'animate'
 });
 
-export const gotoDeleteMode = () => ({
-  type: 'SET_EDITOR_MODE',
-  payload: {
-    mode: 'edit',
-    substate: 'delete'
-  }
+export const gotoDeleteMode = () => createAction('SET_EDITOR_MODE')({
+  mode: 'edit',
+  substate: 'delete'
 });
 
-export const gotoRawMode = () => ({
-  type: 'SET_EDITOR_MODE',
-  payload: {
-    mode: 'edit',
-    substate: 'raw'
-  }
+export const gotoRawMode = () => createAction('SET_EDITOR_MODE')({
+  mode: 'edit',
+  substate: 'raw'
 });
 
-export const gotoDragMode = () => ({
-  type: 'SET_EDITOR_MODE',
-  payload: {
-    mode: 'edit',
-    substate: 'dragging'
-  }
+export const gotoDragMode = () => createAction('SET_EDITOR_MODE')({
+  mode: 'edit',
+  substate: 'dragging'
 });
 
-export const gotoConnectingInputMode = () => ({
-  type: 'SET_EDITOR_MODE',
-  payload: {
-    mode: 'edit',
-    substate: 'connecting_from_input'
-  }
+export const gotoConnectingInputMode = () => createAction('SET_EDITOR_MODE')({
+  mode: 'edit',
+  substate: 'connecting_from_input'
 });
 
-export const gotoConnectingOutputMode = () => ({
-  type: 'SET_EDITOR_MODE',
-  payload: {
-    mode: 'edit',
-    substate: 'connecting_from_output'
-  }
+export const gotoConnectingOutputMode = () => createAction('SET_EDITOR_MODE')({
+  mode: 'edit',
+  substate: 'connecting_from_output'
 });
 
-export const gotoPanMode = () => ({
-  type: 'SET_EDITOR_MODE',
-  payload: {
-    mode: 'edit',
-    substate: 'pan'
-  }
+export const gotoPanMode = () => createAction('SET_EDITOR_MODE')({
+  mode: 'edit',
+  substate: 'pan'
 });

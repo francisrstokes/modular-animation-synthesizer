@@ -40,6 +40,6 @@ export default (props) => {
       Number of selected modules: {props.selectedModules.length}
     </Row>
 
-    <Row><button onClick={exitSelectionMode}>Exit Selection Mode</button></Row>
+    <Row><button onClick={props.exitSelectionMode}>Exit Selection Mode</button></Row>
   </Column>
 };

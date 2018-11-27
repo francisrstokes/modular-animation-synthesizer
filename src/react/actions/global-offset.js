@@ -1,4 +1,3 @@
-export const setGlobalOffset = position => ({
-  type: 'SET_GLOBAL_OFFSET',
-  payload: position
-});
+import { createAction } from '../util';
+
+export const setGlobalOffset = createAction('SET_GLOBAL_OFFSET');
