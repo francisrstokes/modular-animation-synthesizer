@@ -22288,6 +22288,11 @@ var selectors = {
 
       return (0, _vecLaFp.vAddAll)(vs.concat([(0, _ramda.view)(root, state)]));
     };
+  },
+  globalSubtract: function globalSubtract(state) {
+    return function (v) {
+      return (0, _vecLaFp.vSub)(v, (0, _ramda.view)(root, state));
+    };
   }
 };
 exports.selectors = selectors;
@@ -22342,6 +22347,7 @@ var selectors = {
   isInDragMode: (0, _ramda.compose)((0, _ramda.equals)('dragging'), (0, _ramda.view)(substate)),
   isInRawMode: (0, _ramda.compose)((0, _ramda.equals)('raw'), (0, _ramda.view)(substate)),
   isInPanMode: (0, _ramda.compose)((0, _ramda.equals)('pan'), (0, _ramda.view)(substate)),
+  isInSelectionMode: (0, _ramda.compose)((0, _ramda.equals)('selection'), (0, _ramda.view)(substate)),
   isInConnectingInputMode: (0, _ramda.compose)((0, _ramda.equals)('connecting_from_input'), (0, _ramda.view)(substate)),
   isInConnectingOutputMode: (0, _ramda.compose)((0, _ramda.equals)('connecting_from_output'), (0, _ramda.view)(substate)),
   isInAnimateMode: (0, _ramda.compose)((0, _ramda.equals)('animate'), (0, _ramda.view)(mode)),
@@ -22349,29 +22355,185 @@ var selectors = {
   currentSubstate: (0, _ramda.view)(substate)
 };
 exports.selectors = selectors;
-},{"ramda":"node_modules/ramda/es/index.js"}],"animations/visualizer.json":[function(require,module,exports) {
+},{"ramda":"node_modules/ramda/es/index.js"}],"animations/gravity-feedback.json":[function(require,module,exports) {
 module.exports = [{
-  "name": "Tl6lzjp",
-  "moduleName": "Polygon",
+  "name": "Ryne2zb",
+  "moduleName": "FeedbackIn",
   "inputs": {
-    "sides": {
+    "key": {
+      "type": "value",
+      "value": 1
+    },
+    "x": {
       "type": "connection",
-      "module": "Timyfzs",
-      "property": "round"
+      "module": "Uzguevb",
+      "property": "output"
     }
   },
   "dv": {
-    "p": [1057, 747]
+    "p": [2385, 145.5]
   }
 }, {
-  "name": "F5pd039",
-  "moduleName": "Spectrum",
+  "name": "Oo73kam",
+  "moduleName": "FeedbackOut",
+  "inputs": {
+    "key": {
+      "type": "value",
+      "value": 1
+    },
+    "initial": {
+      "type": "value",
+      "value": [0, 0]
+    }
+  },
+  "dv": {
+    "p": [670, 453.5]
+  }
+}, {
+  "name": "Oagt2ay",
+  "moduleName": "Constant",
+  "inputs": {
+    "x": {
+      "type": "value",
+      "value": 0.12
+    }
+  },
+  "dv": {
+    "p": [360, 228.5]
+  }
+}, {
+  "name": "F65w036",
+  "moduleName": "VectorTranslate",
+  "inputs": {
+    "tv": {
+      "type": "connection",
+      "module": "Oo73kam",
+      "property": "x"
+    },
+    "v": {
+      "type": "connection",
+      "module": "Xuhafnq",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [883, 350.5]
+  }
+}, {
+  "name": "Ibml8hu",
+  "moduleName": "FeedbackIn",
+  "inputs": {
+    "key": {
+      "type": "value",
+      "value": 2
+    },
+    "x": {
+      "type": "connection",
+      "module": "Egyzm6x",
+      "property": "output"
+    }
+  },
+  "dv": {
+    "p": [2200, 315.5]
+  }
+}, {
+  "name": "Vjud0m0",
+  "moduleName": "FeedbackOut",
+  "inputs": {
+    "initial": {
+      "type": "connection",
+      "module": "Asa5dmh",
+      "property": "output"
+    },
+    "key": {
+      "type": "value",
+      "value": 2
+    }
+  },
+  "dv": {
+    "p": [671, 587.5]
+  }
+}, {
+  "name": "Hbchqfa",
+  "moduleName": "Screen",
   "inputs": {},
   "dv": {
-    "p": [-212, 786]
+    "p": [42, 612.5]
   }
 }, {
-  "name": "Pbbq2we",
+  "name": "Asa5dmh",
+  "moduleName": "Vectorize",
+  "inputs": {
+    "x": {
+      "type": "connection",
+      "module": "Si4dyhx",
+      "property": "m"
+    },
+    "y": {
+      "type": "value",
+      "value": 0
+    }
+  },
+  "dv": {
+    "p": [462, 603.5]
+  }
+}, {
+  "name": "Si4dyhx",
+  "moduleName": "Multiply",
+  "inputs": {
+    "a": {
+      "type": "connection",
+      "module": "Hbchqfa",
+      "property": "width"
+    },
+    "b": {
+      "type": "value",
+      "value": 0.5
+    }
+  },
+  "dv": {
+    "p": [276, 611.5]
+  }
+}, {
+  "name": "K0w30vz",
+  "moduleName": "VectorTranslate",
+  "inputs": {
+    "v": {
+      "type": "connection",
+      "module": "F65w036",
+      "property": "output"
+    },
+    "tv": {
+      "type": "connection",
+      "module": "Vjud0m0",
+      "property": "x"
+    }
+  },
+  "dv": {
+    "p": [1141, 443.5]
+  }
+}, {
+  "name": "Rrad9de",
+  "moduleName": "Style",
+  "inputs": {
+    "fillR": {
+      "type": "value",
+      "value": 1
+    },
+    "fillG": {
+      "type": "value",
+      "value": 1
+    },
+    "fillB": {
+      "type": "value",
+      "value": 1
+    }
+  },
+  "dv": {
+    "p": [1412, 735.5]
+  }
+}, {
+  "name": "Wlxl99g",
   "moduleName": "DrawBackground",
   "inputs": {
     "fillR": {
@@ -22388,642 +22550,169 @@ module.exports = [{
     },
     "gateIn": {
       "type": "connection",
-      "module": "Qisk8gd",
+      "module": "Egyzm6x",
       "property": "output"
     },
     "fillA": {
       "type": "value",
-      "value": 0.05
+      "value": 0.02
     }
   },
   "dv": {
-    "p": [2632, 362]
+    "p": [2096, 490.5]
   }
 }, {
-  "name": "Btzm9ru",
-  "moduleName": "Style",
-  "inputs": {
-    "strokeWeight": {
-      "type": "value",
-      "value": 3
-    },
-    "strokeR": {
-      "type": "connection",
-      "module": "Wydjdyu",
-      "property": "m"
-    },
-    "strokeG": {
-      "type": "connection",
-      "module": "W0dhefi",
-      "property": "m"
-    },
-    "strokeB": {
-      "type": "connection",
-      "module": "G1e1gak",
-      "property": "m"
-    },
-    "fillB": {
-      "type": "connection",
-      "module": "G1e1gak",
-      "property": "m"
-    },
-    "fillG": {
-      "type": "connection",
-      "module": "W0dhefi",
-      "property": "m"
-    },
-    "fillR": {
-      "type": "connection",
-      "module": "Wydjdyu",
-      "property": "m"
-    }
-  },
-  "dv": {
-    "p": [478, 1253]
-  }
-}, {
-  "name": "Aq0qsk3",
-  "moduleName": "Power",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "F5pd039",
-      "property": "highestMid"
-    },
-    "b": {
-      "type": "value",
-      "value": 5
-    }
-  },
-  "dv": {
-    "p": [459, 718]
-  }
-}, {
-  "name": "Acxhlsz",
-  "moduleName": "Mix",
-  "inputs": {
-    "value": {
-      "type": "connection",
-      "module": "Aq0qsk3",
-      "property": "m"
-    },
-    "toA": {
-      "type": "value",
-      "value": 20
-    },
-    "toB": {
-      "type": "value",
-      "value": 3
-    }
-  },
-  "dv": {
-    "p": [624, 732]
-  }
-}, {
-  "name": "Akengam",
-  "moduleName": "Power",
-  "inputs": {
-    "b": {
-      "type": "value",
-      "value": 5
-    },
-    "a": {
-      "type": "connection",
-      "module": "F5pd039",
-      "property": "highestLow"
-    }
-  },
-  "dv": {
-    "p": [472, 597]
-  }
-}, {
-  "name": "Knuf3wv",
-  "moduleName": "Mix",
-  "inputs": {
-    "value": {
-      "type": "connection",
-      "module": "Akengam",
-      "property": "m"
-    },
-    "toA": {
-      "type": "value",
-      "value": 20
-    },
-    "toB": {
-      "type": "value",
-      "value": 3
-    }
-  },
-  "dv": {
-    "p": [649, 581]
-  }
-}, {
-  "name": "Teyq0ap",
-  "moduleName": "Polygon",
-  "inputs": {
-    "sides": {
-      "type": "connection",
-      "module": "A5p7ffd",
-      "property": "round"
-    }
-  },
-  "dv": {
-    "p": [1060, 613]
-  }
-}, {
-  "name": "C6kbf4s",
-  "moduleName": "VectorScale",
-  "inputs": {
-    "scale": {
-      "type": "connection",
-      "module": "W6brfrb",
-      "property": "output"
-    },
-    "v": {
-      "type": "connection",
-      "module": "Tl6lzjp",
-      "property": "points"
-    }
-  },
-  "dv": {
-    "p": [1297, 755]
-  }
-}, {
-  "name": "Ji6hn6t",
-  "moduleName": "TrueTime",
-  "inputs": {
-    "divisor": {
-      "type": "value",
-      "value": 10
-    }
-  },
-  "dv": {
-    "p": [476, 907]
-  }
-}, {
-  "name": "Vbdhx61",
-  "moduleName": "SinMap",
-  "inputs": {
-    "value": {
-      "type": "connection",
-      "module": "Ji6hn6t",
-      "property": "t"
-    },
-    "toA": {
-      "type": "value",
-      "value": 75
-    },
-    "toB": {
-      "type": "value",
-      "value": 200
-    }
-  },
-  "dv": {
-    "p": [766, 888]
-  }
-}, {
-  "name": "W6brfrb",
-  "moduleName": "Vectorize",
-  "inputs": {
-    "x": {
-      "type": "connection",
-      "module": "Vbdhx61",
-      "property": "output"
-    },
-    "y": {
-      "type": "connection",
-      "module": "Vbdhx61",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [1008, 881]
-  }
-}, {
-  "name": "Eicpboh",
-  "moduleName": "VectorScale",
-  "inputs": {
-    "scale": {
-      "type": "connection",
-      "module": "Wkygi4j",
-      "property": "output"
-    },
-    "v": {
-      "type": "connection",
-      "module": "Teyq0ap",
-      "property": "points"
-    }
-  },
-  "dv": {
-    "p": [1290, 626]
-  }
-}, {
-  "name": "Xozsxtx",
-  "moduleName": "CosMap",
-  "inputs": {
-    "value": {
-      "type": "connection",
-      "module": "Ji6hn6t",
-      "property": "t"
-    },
-    "toA": {
-      "type": "value",
-      "value": 50
-    },
-    "toB": {
-      "type": "value",
-      "value": 100
-    }
-  },
-  "dv": {
-    "p": [772, 1016]
-  }
-}, {
-  "name": "Wkygi4j",
-  "moduleName": "Vectorize",
-  "inputs": {
-    "x": {
-      "type": "connection",
-      "module": "Xozsxtx",
-      "property": "output"
-    },
-    "y": {
-      "type": "connection",
-      "module": "Xozsxtx",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [1001, 1020]
-  }
-}, {
-  "name": "Qisk8gd",
-  "moduleName": "VectorTranslate",
-  "inputs": {
-    "multiply": {
-      "type": "value",
-      "value": 1
-    },
-    "v": {
-      "type": "connection",
-      "module": "Wbh57tb",
-      "property": "output"
-    },
-    "tv": {
-      "type": "connection",
-      "module": "Brx0e8r",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [2357, 387]
-  }
-}, {
-  "name": "Kkmyr5i",
-  "moduleName": "VectorTranslate",
-  "inputs": {
-    "v": {
-      "type": "connection",
-      "module": "Pbbq2we",
-      "property": "gateOut"
-    },
-    "tv": {
-      "type": "connection",
-      "module": "Iub1uu7",
-      "property": "center"
-    }
-  },
-  "dv": {
-    "p": [2913, 227]
-  }
-}, {
-  "name": "Iub1uu7",
-  "moduleName": "Screen",
-  "inputs": {},
-  "dv": {
-    "p": [2608, 203]
-  }
-}, {
-  "name": "H2wfvpr",
-  "moduleName": "TrueTime",
-  "inputs": {},
-  "dv": {
-    "p": [1068, 462]
-  }
-}, {
-  "name": "Wbh57tb",
-  "moduleName": "VectorRotate",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "H2wfvpr",
-      "property": "t"
-    },
-    "v": {
-      "type": "connection",
-      "module": "R15tsoy",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [2051, 385]
-  }
-}, {
-  "name": "Brx0e8r",
-  "moduleName": "VectorRotate",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "H22d2w0",
-      "property": "t"
-    },
-    "v": {
-      "type": "connection",
-      "module": "Av6vpmg",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [2036, 573]
-  }
-}, {
-  "name": "H22d2w0",
-  "moduleName": "TrueTime",
-  "inputs": {
-    "divisor": {
-      "type": "value",
-      "value": 2
-    }
-  },
-  "dv": {
-    "p": [1309, 909]
-  }
-}, {
-  "name": "Timyfzs",
-  "moduleName": "Round",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "Acxhlsz",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [853, 732]
-  }
-}, {
-  "name": "A5p7ffd",
-  "moduleName": "Round",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "Knuf3wv",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [872, 587]
-  }
-}, {
-  "name": "Fvh2nt1",
+  "name": "Tuirgul",
   "moduleName": "DrawEllipse",
   "inputs": {
+    "v": {
+      "type": "connection",
+      "module": "Wlxl99g",
+      "property": "gateOut"
+    },
     "style": {
       "type": "connection",
-      "module": "Btzm9ru",
+      "module": "Rrad9de",
       "property": "style"
     },
     "r": {
       "type": "value",
-      "value": [2, 2]
-    },
+      "value": [10, 10]
+    }
+  },
+  "dv": {
+    "p": [2379, 504.5]
+  }
+}, {
+  "name": "Ttsbguu",
+  "moduleName": "Unvectorize",
+  "inputs": {
     "v": {
       "type": "connection",
-      "module": "Ig03vwt",
+      "module": "K0w30vz",
       "property": "output"
     }
   },
   "dv": {
-    "p": [3523, 315]
+    "p": [1400, 445.5]
   }
 }, {
-  "name": "Ig03vwt",
-  "moduleName": "Flatten",
+  "name": "Egyzm6x",
+  "moduleName": "Vectorize",
   "inputs": {
+    "y": {
+      "type": "connection",
+      "module": "Rh0ehm9",
+      "property": "m"
+    },
     "x": {
       "type": "connection",
-      "module": "Kkmyr5i",
-      "property": "output"
+      "module": "Ttsbguu",
+      "property": "x"
     }
   },
   "dv": {
-    "p": [3171, 223]
+    "p": [1842, 427.5]
   }
 }, {
-  "name": "W0dhefi",
-  "moduleName": "Power",
+  "name": "Rh0ehm9",
+  "moduleName": "Mod",
   "inputs": {
     "a": {
       "type": "connection",
-      "module": "F5pd039",
-      "property": "highestMid"
+      "module": "Ttsbguu",
+      "property": "y"
     },
     "b": {
-      "type": "value",
-      "value": 5
-    }
-  },
-  "dv": {
-    "p": [176, 1170]
-  }
-}, {
-  "name": "G1e1gak",
-  "moduleName": "Power",
-  "inputs": {
-    "a": {
       "type": "connection",
-      "module": "F5pd039",
-      "property": "highestHigh"
-    },
-    "b": {
-      "type": "value",
-      "value": 6
+      "module": "Xgzz9sc",
+      "property": "height"
     }
   },
   "dv": {
-    "p": [169, 1269]
+    "p": [1633, 521.5]
   }
 }, {
-  "name": "Wydjdyu",
-  "moduleName": "Power",
-  "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "F5pd039",
-      "property": "highestLow"
-    },
-    "b": {
-      "type": "value",
-      "value": 4
-    }
-  },
-  "dv": {
-    "p": [186, 1072]
-  }
-}, {
-  "name": "Nnvm6we",
-  "moduleName": "Spectrum",
+  "name": "Xgzz9sc",
+  "moduleName": "Screen",
   "inputs": {},
   "dv": {
-    "p": [811, 225]
+    "p": [1388, 557.5]
   }
 }, {
-  "name": "Eibpdpc",
-  "moduleName": "Power",
+  "name": "Is0pqzs",
+  "moduleName": "Step",
   "inputs": {
-    "a": {
-      "type": "connection",
-      "module": "Nnvm6we",
-      "property": "highestLow"
-    },
-    "b": {
+    "invert": {
       "type": "value",
-      "value": 10
+      "value": 1
+    },
+    "n": {
+      "type": "connection",
+      "module": "Ttsbguu",
+      "property": "y"
+    },
+    "edge": {
+      "type": "connection",
+      "module": "Xgzz9sc",
+      "property": "height"
     }
   },
   "dv": {
-    "p": [1007, 246]
+    "p": [1594, 337.5]
   }
 }, {
-  "name": "P4x1eit",
-  "moduleName": "Vectorize",
-  "inputs": {
-    "x": {
-      "type": "connection",
-      "module": "Lvx49do",
-      "property": "output"
-    },
-    "y": {
-      "type": "connection",
-      "module": "Lvx49do",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [1419, 252]
-  }
-}, {
-  "name": "Lvx49do",
-  "moduleName": "Mix",
-  "inputs": {
-    "value": {
-      "type": "connection",
-      "module": "Eibpdpc",
-      "property": "m"
-    },
-    "toA": {
-      "type": "value",
-      "value": -5
-    },
-    "toB": {
-      "type": "value",
-      "value": 5
-    }
-  },
-  "dv": {
-    "p": [1196, 240]
-  }
-}, {
-  "name": "R15tsoy",
-  "moduleName": "VectorScale",
-  "inputs": {
-    "v": {
-      "type": "connection",
-      "module": "Eicpboh",
-      "property": "output"
-    },
-    "scale": {
-      "type": "connection",
-      "module": "P4x1eit",
-      "property": "output"
-    }
-  },
-  "dv": {
-    "p": [1697, 357]
-  }
-}, {
-  "name": "Vxkrgwm",
-  "moduleName": "Power",
-  "inputs": {
-    "b": {
-      "type": "value",
-      "value": 7
-    },
-    "a": {
-      "type": "connection",
-      "module": "Nnvm6we",
-      "property": "highestHigh"
-    }
-  },
-  "dv": {
-    "p": [1008, 345]
-  }
-}, {
-  "name": "Dj3fix2",
-  "moduleName": "Mix",
-  "inputs": {
-    "value": {
-      "type": "connection",
-      "module": "Vxkrgwm",
-      "property": "m"
-    },
-    "toA": {
-      "type": "value",
-      "value": -3
-    },
-    "toB": {
-      "type": "value",
-      "value": 3
-    }
-  },
-  "dv": {
-    "p": [1196, 344]
-  }
-}, {
-  "name": "Fs67c7w",
+  "name": "M0dlb8b",
   "moduleName": "Vectorize",
   "inputs": {
     "y": {
       "type": "connection",
-      "module": "Dj3fix2",
+      "module": "Is0pqzs",
       "property": "output"
     },
     "x": {
       "type": "connection",
-      "module": "Dj3fix2",
+      "module": "Is0pqzs",
       "property": "output"
     }
   },
   "dv": {
-    "p": [1420, 355]
+    "p": [1869, 299.5]
   }
 }, {
-  "name": "Av6vpmg",
+  "name": "Uzguevb",
   "moduleName": "VectorScale",
   "inputs": {
     "scale": {
       "type": "connection",
-      "module": "C6kbf4s",
+      "module": "M0dlb8b",
       "property": "output"
     },
     "v": {
       "type": "connection",
-      "module": "Fs67c7w",
+      "module": "F65w036",
       "property": "output"
     }
   },
   "dv": {
-    "p": [1671, 560]
+    "p": [2071, 179.5]
+  }
+}, {
+  "name": "Xuhafnq",
+  "moduleName": "Vectorize",
+  "inputs": {
+    "y": {
+      "type": "connection",
+      "module": "Oagt2ay",
+      "property": "output"
+    },
+    "x": {
+      "type": "value",
+      "value": 0
+    }
+  },
+  "dv": {
+    "p": [629, 296.5]
   }
 }];
 },{}],"src/rack/rack.js":[function(require,module,exports) {
@@ -23034,7 +22723,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.rack = void 0;
 
-var _visualizer = _interopRequireDefault(require("../../animations/visualizer.json"));
+var _gravityFeedback = _interopRequireDefault(require("../../animations/gravity-feedback.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23045,7 +22734,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // import r from '../../animations/audio-perlin.json';
 // import r from '../../animations/circle-grid.json';
 // import r from '../../animations/matrix-test.json';
-// import r from '../../animations/gravity-feedback.json';
+// import r from '../../animations/visualizer.json';
 // import r from '../../animations/perlin-map.json';
 // import r from '../../animations/fractal-rotate.json';
 // import r from '../../animations/serpinsky.json';
@@ -23057,10 +22746,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // import r from '../../animations/bubbles.json';
 // import r from '../../animations/style-test.json';
 // import r from '../../animations/diamonds-falling.json';
-var rack = _visualizer.default; // export const rack = [];
+var rack = _gravityFeedback.default; // export const rack = [];
 
 exports.rack = rack;
-},{"../../animations/visualizer.json":"animations/visualizer.json"}],"src/util/check-for-cycles.js":[function(require,module,exports) {
+},{"../../animations/gravity-feedback.json":"animations/gravity-feedback.json"}],"src/util/check-for-cycles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -23520,6 +23209,73 @@ var selectors = {
   resetTime: (0, _ramda.view)(root)
 };
 exports.selectors = selectors;
+},{"ramda":"node_modules/ramda/es/index.js"}],"src/react/reducers/selection-mode.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.selectors = exports.default = void 0;
+
+var _ramda = require("ramda");
+
+var root = (0, _ramda.lensProp)('selectionMode');
+var selectedModulesL = (0, _ramda.lensProp)('selectedModules');
+var isSelectingL = (0, _ramda.lensProp)('isSelecting');
+var clipboardL = (0, _ramda.lensProp)('clipboard');
+var selectionAreaStartL = (0, _ramda.compose)((0, _ramda.lensProp)('selectionArea'), (0, _ramda.lensProp)('start'));
+var selectionAreaEndL = (0, _ramda.compose)((0, _ramda.lensProp)('selectionArea'), (0, _ramda.lensProp)('end'));
+var initialState = {
+  selectedModules: [],
+  isSelecting: false,
+  selectionArea: {
+    start: [0, 0],
+    end: [0, 0]
+  },
+  clipboard: []
+};
+
+var _default = function _default() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case 'ADD_TO_SELECTION':
+      return (0, _ramda.over)(selectedModulesL, (0, _ramda.append)(action.payload), state);
+
+    case 'SET_SELECTION':
+      return (0, _ramda.over)(selectedModulesL, (0, _ramda.always)(action.payload), state);
+
+    case 'CLEAR_SELECTION':
+      return (0, _ramda.over)(selectedModulesL, (0, _ramda.always)([]), state);
+
+    case 'START_SELECTION':
+      return (0, _ramda.compose)((0, _ramda.over)(selectionAreaStartL, (0, _ramda.always)(action.payload)), (0, _ramda.over)(selectionAreaEndL, (0, _ramda.always)(action.payload)), (0, _ramda.over)(isSelectingL, (0, _ramda.always)(true)))(state);
+
+    case 'UPDATE_SELECTION':
+      return (0, _ramda.over)(selectionAreaEndL, (0, _ramda.always)(action.payload), state);
+
+    case 'END_SELECTION':
+      return (0, _ramda.over)(isSelectingL, (0, _ramda.always)(false), state);
+
+    case 'COPY_SELECTION':
+      return (0, _ramda.over)(clipboardL, (0, _ramda.always)((0, _ramda.view)(selectedModulesL, state)), state);
+
+    default:
+      return state;
+  }
+};
+
+exports.default = _default;
+var selectors = {
+  selectedModules: (0, _ramda.view)((0, _ramda.compose)(root, selectedModulesL)),
+  numSelectedModules: (0, _ramda.compose)(_ramda.length, (0, _ramda.view)((0, _ramda.compose)(root, selectedModulesL))),
+  isSelecting: (0, _ramda.view)((0, _ramda.compose)(root, isSelectingL)),
+  selectionAreaStart: (0, _ramda.view)((0, _ramda.compose)(root, selectionAreaStartL)),
+  selectionAreaEnd: (0, _ramda.view)((0, _ramda.compose)(root, selectionAreaEndL)),
+  clipboard: (0, _ramda.view)((0, _ramda.compose)(root, clipboardL))
+};
+exports.selectors = selectors;
 },{"ramda":"node_modules/ramda/es/index.js"}],"src/react/reducers/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -23546,6 +23302,8 @@ var _panData = _interopRequireDefault(require("./pan-data"));
 
 var _resetTime = _interopRequireDefault(require("./reset-time"));
 
+var _selectionMode = _interopRequireDefault(require("./selection-mode"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _default = (0, _redux.combineReducers)({
@@ -23556,11 +23314,12 @@ var _default = (0, _redux.combineReducers)({
   dragData: _dragData.default,
   connectingData: _connectingData.default,
   panData: _panData.default,
-  resetTime: _resetTime.default
+  resetTime: _resetTime.default,
+  selectionMode: _selectionMode.default
 });
 
 exports.default = _default;
-},{"redux":"node_modules/redux/es/redux.js","./global-offset":"src/react/reducers/global-offset.js","./editor-mode":"src/react/reducers/editor-mode.js","./rack":"src/react/reducers/rack.js","./raw-value":"src/react/reducers/raw-value.js","./drag-data":"src/react/reducers/drag-data.js","./connecting-data":"src/react/reducers/connecting-data.js","./pan-data":"src/react/reducers/pan-data.js","./reset-time":"src/react/reducers/reset-time.js"}],"src/react/store.js":[function(require,module,exports) {
+},{"redux":"node_modules/redux/es/redux.js","./global-offset":"src/react/reducers/global-offset.js","./editor-mode":"src/react/reducers/editor-mode.js","./rack":"src/react/reducers/rack.js","./raw-value":"src/react/reducers/raw-value.js","./drag-data":"src/react/reducers/drag-data.js","./connecting-data":"src/react/reducers/connecting-data.js","./pan-data":"src/react/reducers/pan-data.js","./reset-time":"src/react/reducers/reset-time.js","./selection-mode":"src/react/reducers/selection-mode.js"}],"src/react/store.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45430,273 +45189,13 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"src/react/actions/editor-mode.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"src/react/util.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.gotoPanMode = exports.gotoConnectingOutputMode = exports.gotoConnectingInputMode = exports.gotoDragMode = exports.gotoRawMode = exports.gotoDeleteMode = exports.gotoAnimateMode = exports.gotoEditMode = exports.setEditorMode = void 0;
-
-var setEditorMode = function setEditorMode(mode) {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: mode,
-      substate: ''
-    }
-  };
-};
-
-exports.setEditorMode = setEditorMode;
-
-var gotoEditMode = function gotoEditMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit'
-    }
-  };
-};
-
-exports.gotoEditMode = gotoEditMode;
-
-var gotoAnimateMode = function gotoAnimateMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'animate'
-    }
-  };
-};
-
-exports.gotoAnimateMode = gotoAnimateMode;
-
-var gotoDeleteMode = function gotoDeleteMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit',
-      substate: 'delete'
-    }
-  };
-};
-
-exports.gotoDeleteMode = gotoDeleteMode;
-
-var gotoRawMode = function gotoRawMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit',
-      substate: 'raw'
-    }
-  };
-};
-
-exports.gotoRawMode = gotoRawMode;
-
-var gotoDragMode = function gotoDragMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit',
-      substate: 'dragging'
-    }
-  };
-};
-
-exports.gotoDragMode = gotoDragMode;
-
-var gotoConnectingInputMode = function gotoConnectingInputMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit',
-      substate: 'connecting_from_input'
-    }
-  };
-};
-
-exports.gotoConnectingInputMode = gotoConnectingInputMode;
-
-var gotoConnectingOutputMode = function gotoConnectingOutputMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit',
-      substate: 'connecting_from_output'
-    }
-  };
-};
-
-exports.gotoConnectingOutputMode = gotoConnectingOutputMode;
-
-var gotoPanMode = function gotoPanMode() {
-  return {
-    type: 'SET_EDITOR_MODE',
-    payload: {
-      mode: 'edit',
-      substate: 'pan'
-    }
-  };
-};
-
-exports.gotoPanMode = gotoPanMode;
-},{}],"src/react/actions/rack.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.updateDrawingValues = exports.clearModules = exports.connectModules = exports.disconnectModuleInput = exports.setModulePosition = exports.setRawValue = exports.removeModule = exports.addModule = void 0;
-
-var addModule = function addModule(md) {
-  return {
-    type: 'ADD_MODULE',
-    payload: md
-  };
-};
-
-exports.addModule = addModule;
-
-var removeModule = function removeModule(moduleId) {
-  return {
-    type: 'REMOVE_MODULE',
-    payload: moduleId
-  };
-};
-
-exports.removeModule = removeModule;
-
-var setRawValue = function setRawValue(moduleId, inputKey, value) {
-  return {
-    type: 'SET_RAW_VALUE',
-    payload: {
-      moduleId: moduleId,
-      inputKey: inputKey,
-      value: value
-    }
-  };
-};
-
-exports.setRawValue = setRawValue;
-
-var setModulePosition = function setModulePosition(moduleId, position) {
-  return {
-    type: 'SET_MODULE_POSITION',
-    payload: {
-      moduleId: moduleId,
-      position: position
-    }
-  };
-};
-
-exports.setModulePosition = setModulePosition;
-
-var disconnectModuleInput = function disconnectModuleInput(moduleId, key) {
-  return {
-    type: 'DISCONNECT_MODULE_INPUT',
-    payload: {
-      moduleId: moduleId,
-      key: key
-    }
-  };
-};
-
-exports.disconnectModuleInput = disconnectModuleInput;
-
-var connectModules = function connectModules(inputModuleId, outputModuleId, inputKey, outputKey) {
-  return {
-    type: 'CONNECT_MODULES',
-    payload: {
-      inputModuleId: inputModuleId,
-      outputModuleId: outputModuleId,
-      inputKey: inputKey,
-      outputKey: outputKey
-    }
-  };
-};
-
-exports.connectModules = connectModules;
-
-var clearModules = function clearModules() {
-  return {
-    type: 'CLEAR_MODULES'
-  };
-};
-
-exports.clearModules = clearModules;
-
-var updateDrawingValues = function updateDrawingValues(moduleId, drawingValues) {
-  return {
-    type: 'UPDATE_DRAWING_VALUES',
-    payload: {
-      moduleId: moduleId,
-      drawingValues: drawingValues
-    }
-  };
-};
-
-exports.updateDrawingValues = updateDrawingValues;
-},{}],"src/react/actions/global-offset.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.setGlobalOffset = void 0;
-
-var setGlobalOffset = function setGlobalOffset(position) {
-  return {
-    type: 'SET_GLOBAL_OFFSET',
-    payload: position
-  };
-};
-
-exports.setGlobalOffset = setGlobalOffset;
-},{}],"src/react/components/App/State.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.actions = exports.selectors = void 0;
-
-var editorModeActions = _interopRequireWildcard(require("../../actions/editor-mode"));
-
-var rackActions = _interopRequireWildcard(require("../../actions/rack"));
-
-var globalOffsetActions = _interopRequireWildcard(require("../../actions/global-offset"));
-
-var _editorMode2 = require("../../reducers/editor-mode");
-
-var _rack2 = require("../../reducers/rack");
-
-var _resetTime = require("../../reducers/reset-time");
-
-var _globalOffset2 = require("../../reducers/global-offset");
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var selectors = _objectSpread({}, _editorMode2.selectors, _rack2.selectors, _resetTime.selectors, _globalOffset2.selectors);
-
-exports.selectors = selectors;
-
-var actions = _objectSpread({}, editorModeActions, rackActions, globalOffsetActions);
-
-exports.actions = actions;
-},{"../../actions/editor-mode":"src/react/actions/editor-mode.js","../../actions/rack":"src/react/actions/rack.js","../../actions/global-offset":"src/react/actions/global-offset.js","../../reducers/editor-mode":"src/react/reducers/editor-mode.js","../../reducers/rack":"src/react/reducers/rack.js","../../reducers/reset-time":"src/react/reducers/reset-time.js","../../reducers/global-offset":"src/react/reducers/global-offset.js"}],"src/react/util.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.componentSwitch = exports.connectSelectorsAndActions = void 0;
+exports.createAction = exports.componentSwitch = exports.connectSelectorsAndActions = void 0;
 
 var _reactRedux = require("react-redux");
 
@@ -45756,7 +45255,226 @@ var componentSwitch = function componentSwitch(tests) {
 };
 
 exports.componentSwitch = componentSwitch;
-},{"react-redux":"node_modules/react-redux/es/index.js","ramda":"node_modules/ramda/es/index.js"}],"src/react/hooks/useStateFunction.js":[function(require,module,exports) {
+
+var createAction = function createAction(type) {
+  return function (payload) {
+    return {
+      type: type,
+      payload: payload
+    };
+  };
+};
+
+exports.createAction = createAction;
+},{"react-redux":"node_modules/react-redux/es/index.js","ramda":"node_modules/ramda/es/index.js"}],"src/react/actions/editor-mode.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.gotoPanMode = exports.gotoConnectingOutputMode = exports.gotoConnectingInputMode = exports.gotoDragMode = exports.gotoRawMode = exports.gotoDeleteMode = exports.gotoAnimateMode = exports.gotoSelectionMode = exports.gotoEditMode = exports.setEditorMode = void 0;
+
+var _util = require("../util");
+
+var setEditorMode = function setEditorMode(mode) {
+  return (0, _util.createAction)('SET_EDITOR_MODE')({
+    mode: mode,
+    substate: ''
+  });
+};
+
+exports.setEditorMode = setEditorMode;
+
+var gotoEditMode = function gotoEditMode() {
+  return (0, _util.createAction)('SET_EDITOR_MODE')({
+    mode: 'edit'
+  });
+};
+
+exports.gotoEditMode = gotoEditMode;
+
+var gotoSelectionMode = function gotoSelectionMode() {
+  return (0, _util.createAction)('SET_EDITOR_MODE')({
+    mode: 'edit',
+    substate: 'selection'
+  });
+};
+
+exports.gotoSelectionMode = gotoSelectionMode;
+
+var gotoAnimateMode = function gotoAnimateMode() {
+  return (0, _util.createAction)('SET_EDITOR_MODE')({
+    mode: 'animate'
+  });
+};
+
+exports.gotoAnimateMode = gotoAnimateMode;
+
+var gotoDeleteMode = function gotoDeleteMode() {
+  return (0, _util.createAction)('SET_EDITOR_MODE')({
+    mode: 'edit',
+    substate: 'delete'
+  });
+};
+
+exports.gotoDeleteMode = gotoDeleteMode;
+
+var gotoRawMode = function gotoRawMode() {
+  return (0, _util.createAction)('SET_EDITOR_MODE')({
+    mode: 'edit',
+    substate: 'raw'
+  });
+};
+
+exports.gotoRawMode = gotoRawMode;
+
+var gotoDragMode = function gotoDragMode() {
+  return (0, _util.createAction)('SET_EDITOR_MODE')({
+    mode: 'edit',
+    substate: 'dragging'
+  });
+};
+
+exports.gotoDragMode = gotoDragMode;
+
+var gotoConnectingInputMode = function gotoConnectingInputMode() {
+  return (0, _util.createAction)('SET_EDITOR_MODE')({
+    mode: 'edit',
+    substate: 'connecting_from_input'
+  });
+};
+
+exports.gotoConnectingInputMode = gotoConnectingInputMode;
+
+var gotoConnectingOutputMode = function gotoConnectingOutputMode() {
+  return (0, _util.createAction)('SET_EDITOR_MODE')({
+    mode: 'edit',
+    substate: 'connecting_from_output'
+  });
+};
+
+exports.gotoConnectingOutputMode = gotoConnectingOutputMode;
+
+var gotoPanMode = function gotoPanMode() {
+  return (0, _util.createAction)('SET_EDITOR_MODE')({
+    mode: 'edit',
+    substate: 'pan'
+  });
+};
+
+exports.gotoPanMode = gotoPanMode;
+},{"../util":"src/react/util.js"}],"src/react/actions/rack.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.updateDrawingValues = exports.connectModules = exports.disconnectModuleInput = exports.setModulePosition = exports.setRawValue = exports.clearModules = exports.removeModule = exports.addModule = void 0;
+
+var _util = require("../util");
+
+var addModule = (0, _util.createAction)('ADD_MODULE');
+exports.addModule = addModule;
+var removeModule = (0, _util.createAction)('REMOVE_MODULE');
+exports.removeModule = removeModule;
+var clearModules = (0, _util.createAction)('CLEAR_MODULES');
+exports.clearModules = clearModules;
+
+var setRawValue = function setRawValue(moduleId, inputKey, value) {
+  return (0, _util.createAction)('SET_RAW_VALUE')({
+    moduleId: moduleId,
+    inputKey: inputKey,
+    value: value
+  });
+};
+
+exports.setRawValue = setRawValue;
+
+var setModulePosition = function setModulePosition(moduleId, position) {
+  return (0, _util.createAction)('SET_MODULE_POSITION')({
+    moduleId: moduleId,
+    position: position
+  });
+};
+
+exports.setModulePosition = setModulePosition;
+
+var disconnectModuleInput = function disconnectModuleInput(moduleId, key) {
+  return (0, _util.createAction)('DISCONNECT_MODULE_INPUT')({
+    moduleId: moduleId,
+    key: key
+  });
+};
+
+exports.disconnectModuleInput = disconnectModuleInput;
+
+var connectModules = function connectModules(inputModuleId, outputModuleId, inputKey, outputKey) {
+  return (0, _util.createAction)('CONNECT_MODULES')({
+    inputModuleId: inputModuleId,
+    outputModuleId: outputModuleId,
+    inputKey: inputKey,
+    outputKey: outputKey
+  });
+};
+
+exports.connectModules = connectModules;
+
+var updateDrawingValues = function updateDrawingValues(moduleId, drawingValues) {
+  return (0, _util.createAction)('UPDATE_DRAWING_VALUES')({
+    moduleId: moduleId,
+    drawingValues: drawingValues
+  });
+};
+
+exports.updateDrawingValues = updateDrawingValues;
+},{"../util":"src/react/util.js"}],"src/react/actions/global-offset.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.setGlobalOffset = void 0;
+
+var _util = require("../util");
+
+var setGlobalOffset = (0, _util.createAction)('SET_GLOBAL_OFFSET');
+exports.setGlobalOffset = setGlobalOffset;
+},{"../util":"src/react/util.js"}],"src/react/components/App/State.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.actions = exports.selectors = void 0;
+
+var editorModeActions = _interopRequireWildcard(require("../../actions/editor-mode"));
+
+var rackActions = _interopRequireWildcard(require("../../actions/rack"));
+
+var globalOffsetActions = _interopRequireWildcard(require("../../actions/global-offset"));
+
+var _editorMode2 = require("../../reducers/editor-mode");
+
+var _rack2 = require("../../reducers/rack");
+
+var _resetTime = require("../../reducers/reset-time");
+
+var _globalOffset2 = require("../../reducers/global-offset");
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var selectors = _objectSpread({}, _editorMode2.selectors, _rack2.selectors, _resetTime.selectors, _globalOffset2.selectors);
+
+exports.selectors = selectors;
+
+var actions = _objectSpread({}, editorModeActions, rackActions, globalOffsetActions);
+
+exports.actions = actions;
+},{"../../actions/editor-mode":"src/react/actions/editor-mode.js","../../actions/rack":"src/react/actions/rack.js","../../actions/global-offset":"src/react/actions/global-offset.js","../../reducers/editor-mode":"src/react/reducers/editor-mode.js","../../reducers/rack":"src/react/reducers/rack.js","../../reducers/reset-time":"src/react/reducers/reset-time.js","../../reducers/global-offset":"src/react/reducers/global-offset.js"}],"src/react/hooks/useStateFunction.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -47408,7 +47126,7 @@ var _Screen = require("./Screen");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.mapRange = exports.pointInCircle = exports.pointInRect = void 0;
+exports.regularRect = exports.mapRange = exports.pointInCircle = exports.pointInRect = void 0;
 
 var _vecLaFp = require("vec-la-fp");
 
@@ -47449,6 +47167,20 @@ var mapRange = function mapRange(fromA, fromB, toA, toB, value) {
 };
 
 exports.mapRange = mapRange;
+
+var regularRect = function regularRect(_ref7, _ref8) {
+  var _ref9 = _slicedToArray(_ref7, 2),
+      x = _ref9[0],
+      y = _ref9[1];
+
+  var _ref10 = _slicedToArray(_ref8, 2),
+      ex = _ref10[0],
+      ey = _ref10[1];
+
+  return [[x, y], [ex, y], [ex, ey], [x, ey]];
+};
+
+exports.regularRect = regularRect;
 },{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js"}],"src/modules/interpolation/CosMap.js":[function(require,module,exports) {
 "use strict";
 
@@ -49374,7 +49106,7 @@ var DrawBackground = {
   }
 };
 exports.DrawBackground = DrawBackground;
-},{}],"src/util/apply-style.js":[function(require,module,exports) {
+},{}],"src/util/drawing/apply-style.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -49401,7 +49133,7 @@ var _types = require("../../util/types");
 
 var _ramda = require("ramda");
 
-var _applyStyle = require("../../util/apply-style");
+var _applyStyle = require("../../util/drawing/apply-style");
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -49781,7 +49513,7 @@ var DrawEllipse = {
   }
 };
 exports.DrawEllipse = DrawEllipse;
-},{"../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js","../../util/apply-style":"src/util/apply-style.js"}],"src/modules/drawing/DrawLine.js":[function(require,module,exports) {
+},{"../../util/types":"src/util/types.js","ramda":"node_modules/ramda/es/index.js","../../util/drawing/apply-style":"src/util/drawing/apply-style.js"}],"src/modules/drawing/DrawLine.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -49793,7 +49525,7 @@ var _ramda = require("ramda");
 
 var _types = require("../../util/types");
 
-var _applyStyle = require("../../util/apply-style");
+var _applyStyle = require("../../util/drawing/apply-style");
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -49877,7 +49609,7 @@ var DrawLine = {
   }
 };
 exports.DrawLine = DrawLine;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js","../../util/apply-style":"src/util/apply-style.js"}],"src/modules/drawing/DrawPolygon.js":[function(require,module,exports) {
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js","../../util/drawing/apply-style":"src/util/drawing/apply-style.js"}],"src/modules/drawing/DrawPolygon.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -49889,7 +49621,7 @@ var _ramda = require("ramda");
 
 var _types = require("../../util/types");
 
-var _applyStyle = require("../../util/apply-style");
+var _applyStyle = require("../../util/drawing/apply-style");
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -49955,7 +49687,7 @@ var DrawPolygon = {
   }
 };
 exports.DrawPolygon = DrawPolygon;
-},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js","../../util/apply-style":"src/util/apply-style.js"}],"src/modules/drawing/Style.js":[function(require,module,exports) {
+},{"ramda":"node_modules/ramda/es/index.js","../../util/types":"src/util/types.js","../../util/drawing/apply-style":"src/util/drawing/apply-style.js"}],"src/modules/drawing/Style.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -54300,7 +54032,31 @@ var toggleResetTime = function toggleResetTime(state) {
 };
 
 exports.toggleResetTime = toggleResetTime;
-},{}],"src/react/components/EditMode/State.js":[function(require,module,exports) {
+},{}],"src/react/actions/selection-mode.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.copySelection = exports.clearSelection = exports.setSelection = exports.addToSelection = exports.stopSelection = exports.updateSelection = exports.startSelection = void 0;
+
+var _util = require("../util");
+
+var startSelection = (0, _util.createAction)('START_SELECTION');
+exports.startSelection = startSelection;
+var updateSelection = (0, _util.createAction)('UPDATE_SELECTION');
+exports.updateSelection = updateSelection;
+var stopSelection = (0, _util.createAction)('END_SELECTION');
+exports.stopSelection = stopSelection;
+var addToSelection = (0, _util.createAction)('ADD_TO_SELECTION');
+exports.addToSelection = addToSelection;
+var setSelection = (0, _util.createAction)('SET_SELECTION');
+exports.setSelection = setSelection;
+var clearSelection = (0, _util.createAction)('CLEAR_SELECTION');
+exports.clearSelection = clearSelection;
+var copySelection = (0, _util.createAction)('COPY_SELECTION');
+exports.copySelection = copySelection;
+},{"../util":"src/react/util.js"}],"src/react/components/EditMode/State.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -54314,11 +54070,15 @@ var _globalOffset = require("../../reducers/global-offset");
 
 var _resetTime = require("../../reducers/reset-time");
 
+var _selectionMode = require("../../reducers/selection-mode");
+
 var editorModeActions = _interopRequireWildcard(require("../../actions/editor-mode"));
 
 var rackActions = _interopRequireWildcard(require("../../actions/rack"));
 
 var resetTimeActions = _interopRequireWildcard(require("../../actions/reset-time"));
+
+var _selectionMode2 = require("../../actions/selection-mode");
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
@@ -54326,14 +54086,17 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var selectors = _objectSpread({}, _globalOffset.selectors, _rack.selectors, _resetTime.selectors);
+var selectors = _objectSpread({}, _globalOffset.selectors, _rack.selectors, _resetTime.selectors, _selectionMode.selectors);
 
 exports.selectors = selectors;
 
-var actions = _objectSpread({}, rackActions, editorModeActions, resetTimeActions);
+var actions = _objectSpread({}, rackActions, editorModeActions, resetTimeActions, {
+  copySelection: _selectionMode2.copySelection,
+  setSelection: _selectionMode2.setSelection
+});
 
 exports.actions = actions;
-},{"../../reducers/rack":"src/react/reducers/rack.js","../../reducers/global-offset":"src/react/reducers/global-offset.js","../../reducers/reset-time":"src/react/reducers/reset-time.js","../../actions/editor-mode":"src/react/actions/editor-mode.js","../../actions/rack":"src/react/actions/rack.js","../../actions/reset-time":"src/react/actions/reset-time.js"}],"src/react/hooks/useKeydownEvent.js":[function(require,module,exports) {
+},{"../../reducers/rack":"src/react/reducers/rack.js","../../reducers/global-offset":"src/react/reducers/global-offset.js","../../reducers/reset-time":"src/react/reducers/reset-time.js","../../reducers/selection-mode":"src/react/reducers/selection-mode.js","../../actions/editor-mode":"src/react/actions/editor-mode.js","../../actions/rack":"src/react/actions/rack.js","../../actions/reset-time":"src/react/actions/reset-time.js","../../actions/selection-mode":"src/react/actions/selection-mode.js"}],"src/react/hooks/useKeydownEvent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -54409,6 +54172,67 @@ exports.AccordionList = AccordionList;
 var AccordionItem = _styledComponents.default.li(_templateObject3());
 
 exports.AccordionItem = AccordionItem;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/react/components/common/TabMenu.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.TabContent = exports.Tab = exports.TabsContainer = exports.TabMenu = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  ", "\n  ", "\n  font-weight: bold;\n  font-size: 22px;\n  align-items: center;\n  justify-content: center;\n  cursor: pointer;\n\n  &.active {\n    background-color: #eee;\n  }\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  ", "\n  ", "\n  justify-content: space-evenly;\n  background-color: #ccc;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  ", "\n  ", "\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var df = 'display:flex;';
+var row = 'flex-direction:row;';
+var col = 'flex-direction:column;';
+
+var TabMenu = _styledComponents.default.div(_templateObject(), df, col);
+
+exports.TabMenu = TabMenu;
+
+var TabsContainer = _styledComponents.default.div(_templateObject2(), df, row);
+
+exports.TabsContainer = TabsContainer;
+
+var Tab = _styledComponents.default.div(_templateObject3(), df, row);
+
+exports.Tab = Tab;
+var TabContent = TabMenu;
+exports.TabContent = TabContent;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/react/hooks/useActiveClasses.js":[function(require,module,exports) {
 "use strict";
 
@@ -54431,8 +54255,10 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var useActiveClasses = function useActiveClasses(groupedByTag) {
-  var _useState = (0, _react.useState)(Object.keys(groupedByTag).reduce(function (acc, cur) {
+var useActiveClasses = function useActiveClasses(keyedObject) {
+  var keys = Object.keys(keyedObject);
+
+  var _useState = (0, _react.useState)(keys.reduce(function (acc, cur) {
     return _objectSpread({}, acc, _defineProperty({}, cur, ''));
   }, {})),
       _useState2 = _slicedToArray(_useState, 2),
@@ -54628,7 +54454,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _useKeydownEvent = require("../../hooks/useKeydownEvent");
 
@@ -54638,13 +54464,23 @@ var _modules = require("../../../modules");
 
 var _Accordian = require("../common/Accordian");
 
+var _TabMenu = require("../common/TabMenu");
+
 var _useActiveClasses3 = require("../../hooks/useActiveClasses");
 
 var _createModule = require("./create-module");
 
 var _copyToClipboard = require("../../../util/copy-to-clipboard");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _util = require("../../util");
+
+var _vecLaFp = require("vec-la-fp");
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -54695,63 +54531,166 @@ var AddModules = function AddModules(_ref2) {
 var _default = function _default(props) {
   var gotoDeleteMode = props.gotoDeleteMode,
       gotoRawMode = props.gotoRawMode,
+      gotoSelectionMode = props.gotoSelectionMode,
       globalOffset = props.globalOffset,
       clearModules = props.clearModules,
       addModule = props.addModule,
       ctx = props.ctx,
       rack = props.rack,
       resetTime = props.resetTime,
-      toggleResetTime = props.toggleResetTime;
+      toggleResetTime = props.toggleResetTime,
+      copySelection = props.copySelection,
+      removeModule = props.removeModule,
+      setSelection = props.setSelection,
+      selectedModules = props.selectedModules;
   (0, _useKeydownEvent.useKeydownEvent)(function (e) {
     switch (e.key) {
+      case 'Backspace':
+        {
+          return selectedModules.map(removeModule);
+        }
+
       case 'r':
         return gotoRawMode();
 
       case 'd':
         return gotoDeleteMode();
 
+      case 's':
+        return gotoSelectionMode();
+
+      case 'c':
+        {
+          if (e.metaKey) {
+            copySelection();
+          }
+
+          break;
+        }
+
+      case 'v':
+        {
+          if (e.metaKey) {
+            var originalNewTuples = selectedModules.map(function (mId) {
+              var original = rack.find(function (_ref5) {
+                var name = _ref5.name;
+                return name === mId;
+              });
+              var newPosition = (0, _vecLaFp.vSub)(globalOffset, original.dv.p);
+              var newModule = (0, _createModule.createModule)(original.moduleName, ctx, newPosition);
+              return [original, newModule];
+            });
+            var moduleIdMapping = (0, _ramda.fromPairs)(originalNewTuples.map(function (_ref6) {
+              var _ref7 = _slicedToArray(_ref6, 2),
+                  md = _ref7[0],
+                  newMd = _ref7[1];
+
+              return [md.name, newMd.name];
+            })); // Remap the internal connections
+
+            originalNewTuples.forEach(function (_ref8) {
+              var _ref9 = _slicedToArray(_ref8, 2),
+                  md = _ref9[0],
+                  newMd = _ref9[1];
+
+              Object.entries(md.inputs).forEach(function (_ref10) {
+                var _ref11 = _slicedToArray(_ref10, 2),
+                    inputKey = _ref11[0],
+                    con = _ref11[1];
+
+                if (con.type === 'connection' && con.module in moduleIdMapping) {
+                  newMd.inputs[inputKey] = _objectSpread({}, con);
+                  newMd.inputs[inputKey].module = moduleIdMapping[con.module];
+                } else if (con.type === 'value') {
+                  newMd.inputs[inputKey] = _objectSpread({}, con);
+                }
+              });
+            }); // Add new modules and set them as the selection
+
+            var newModules = originalNewTuples.map(function (_ref12) {
+              var _ref13 = _slicedToArray(_ref12, 2),
+                  _ = _ref13[0],
+                  x = _ref13[1];
+
+              return x;
+            });
+            newModules.forEach(addModule);
+            var newIds = newModules.map((0, _ramda.prop)('name'));
+            setSelection(newIds);
+          }
+
+          break;
+        }
+
       default:
         return;
     }
-  });
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(AddModules, {
-    ctx: ctx,
-    addModule: addModule,
-    globalOffset: globalOffset
-  }), _react.default.createElement("br", null), _react.default.createElement("button", {
-    onClick: gotoDeleteMode
-  }, "Delete Modules"), _react.default.createElement("button", {
-    onClick: gotoRawMode
-  }, "Set raw values"), _react.default.createElement("br", null), _react.default.createElement("button", {
+  }, [selectedModules]);
+
+  var _useState = (0, _react.useState)('modules'),
+      _useState2 = _slicedToArray(_useState, 2),
+      activeTab = _useState2[0],
+      setActiveTab = _useState2[1];
+
+  return _react.default.createElement(_TabMenu.TabMenu, null, _react.default.createElement(_TabMenu.TabsContainer, null, _react.default.createElement(_TabMenu.Tab, {
+    className: activeTab === 'modules' ? 'active' : '',
     onClick: function onClick() {
-      var copy = JSON.parse(JSON.stringify(rack));
-      copy.forEach(function (md) {
-        var pos = md.dv.p;
-        delete md.dv;
-        delete md.module;
-        md.dv = {
-          p: pos
-        };
-      });
-      (0, _copyToClipboard.copyToClipboard)(JSON.stringify(copy));
+      return setActiveTab('modules');
     }
-  }, "Export"), _react.default.createElement("hr", null), _react.default.createElement("br", null), _react.default.createElement("button", {
+  }, "Modules"), _react.default.createElement(_TabMenu.Tab, {
+    className: activeTab === 'modes' ? 'active' : '',
     onClick: function onClick() {
-      if (confirm('Are you sure you want to remove all modules?')) {
-        clearModules();
+      return setActiveTab('modes');
+    }
+  }, "Modes"), _react.default.createElement(_TabMenu.Tab, {
+    className: activeTab === 'settings' ? 'active' : '',
+    onClick: function onClick() {
+      return setActiveTab('settings');
+    }
+  }, "Settings")), _react.default.createElement(_TabMenu.TabContent, null, (0, _util.componentSwitch)([[activeTab === 'modules', function () {
+    return _react.default.createElement(AddModules, {
+      ctx: ctx,
+      addModule: addModule,
+      globalOffset: globalOffset
+    });
+  }], [activeTab === 'modes', function () {
+    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("button", {
+      onClick: gotoDeleteMode
+    }, "Delete Modules"), _react.default.createElement("button", {
+      onClick: gotoRawMode
+    }, "Set raw values"));
+  }], [activeTab === 'settings', function () {
+    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("button", {
+      onClick: function onClick() {
+        var copy = JSON.parse(JSON.stringify(rack));
+        copy.forEach(function (md) {
+          var pos = md.dv.p;
+          delete md.dv;
+          delete md.module;
+          md.dv = {
+            p: pos
+          };
+        });
+        (0, _copyToClipboard.copyToClipboard)(JSON.stringify(copy));
       }
-    }
-  }, "Clear all modules"), _react.default.createElement("label", null, "Reset time on animate", _react.default.createElement("input", {
-    type: "checkbox",
-    checked: resetTime,
-    onChange: function onChange() {
-      return toggleResetTime(resetTime);
-    }
-  })));
+    }, "Export"), _react.default.createElement("hr", null), _react.default.createElement("br", null), _react.default.createElement("button", {
+      onClick: function onClick() {
+        if (confirm('Are you sure you want to remove all modules?')) {
+          clearModules();
+        }
+      }
+    }, "Clear all modules"), _react.default.createElement("label", null, "Reset time on animate", _react.default.createElement("input", {
+      type: "checkbox",
+      checked: resetTime,
+      onChange: function onChange() {
+        return toggleResetTime(resetTime);
+      }
+    })));
+  }]])));
 };
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../../hooks/useKeydownEvent":"src/react/hooks/useKeydownEvent.js","ramda":"node_modules/ramda/es/index.js","../../../modules":"src/modules/index.js","../common/Accordian":"src/react/components/common/Accordian.js","../../hooks/useActiveClasses":"src/react/hooks/useActiveClasses.js","./create-module":"src/react/components/EditMode/create-module.js","../../../util/copy-to-clipboard":"src/util/copy-to-clipboard.js"}],"src/react/components/EditMode/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../../hooks/useKeydownEvent":"src/react/hooks/useKeydownEvent.js","ramda":"node_modules/ramda/es/index.js","../../../modules":"src/modules/index.js","../common/Accordian":"src/react/components/common/Accordian.js","../common/TabMenu":"src/react/components/common/TabMenu.js","../../hooks/useActiveClasses":"src/react/hooks/useActiveClasses.js","./create-module":"src/react/components/EditMode/create-module.js","../../../util/copy-to-clipboard":"src/util/copy-to-clipboard.js","../../util":"src/react/util.js","vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js"}],"src/react/components/EditMode/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -54777,22 +54716,22 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _useKeydownEvent = require("../../hooks/useKeydownEvent");
 
 var _common = require("../common");
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _default = function _default(_ref) {
   var exitDeleteMode = _ref.exitDeleteMode;
   (0, _useKeydownEvent.useKeydownEvent)(function (e) {
     return e.key === 'Escape' ? exitDeleteMode() : null;
   });
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_common.Row, null, _react.default.createElement(_common.SubTitle, null, "Delete mode"), _react.default.createElement("button", {
+  return _react.default.createElement(_common.Row, null, _react.default.createElement(_common.SubTitle, null, "Delete mode"), _react.default.createElement("button", {
     onClick: exitDeleteMode
-  }, "Exit Delete Mode")));
+  }, "Exit Delete Mode"));
 };
 
 exports.default = _default;
@@ -54818,15 +54757,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.setCurrentRawValue = void 0;
 
-var setCurrentRawValue = function setCurrentRawValue(value) {
-  return {
-    type: 'SET_CURRENT_RAW_VALUE',
-    payload: value
-  };
-};
+var _util = require("../util");
 
+var setCurrentRawValue = (0, _util.createAction)('SET_CURRENT_RAW_VALUE');
 exports.setCurrentRawValue = setCurrentRawValue;
-},{}],"src/react/components/RawMode/State.js":[function(require,module,exports) {
+},{"../util":"src/react/util.js"}],"src/react/components/RawMode/State.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -54878,7 +54813,7 @@ var _default = function _default(_ref) {
       ref.current.focus();
     }
   });
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_common.Row, null, _react.default.createElement(_common.SubTitle, null, "Raw mode"), _react.default.createElement("button", {
+  return _react.default.createElement(_common.Row, null, _react.default.createElement(_common.SubTitle, null, "Raw mode"), _react.default.createElement("button", {
     onClick: exitRawMode
   }, "Exit Raw Mode"), _react.default.createElement("input", {
     ref: ref,
@@ -54886,7 +54821,7 @@ var _default = function _default(_ref) {
     onChange: function onChange(e) {
       return setCurrentRawValue(e.target.value);
     }
-  })));
+  }));
 };
 
 exports.default = _default;
@@ -54937,9 +54872,9 @@ var _default = function _default(_ref) {
       return document.body.removeEventListener('keydown', handler);
     };
   }, [cancel]);
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_common.Row, null, _react.default.createElement(_common.Column, null, _react.default.createElement(_common.SubTitle, null, "Connecting from ", connectingFromInput ? 'input' : 'output', " to ", !connectingFromInput ? 'input' : 'output'), connectingFromInput ? 'Click an output to complete the connection' : 'Click an input to complete the connection', _react.default.createElement("button", {
+  return _react.default.createElement(_common.Row, null, _react.default.createElement(_common.Column, null, _react.default.createElement(_common.SubTitle, null, "Connecting from ", connectingFromInput ? 'input' : 'output', " to ", !connectingFromInput ? 'input' : 'output'), connectingFromInput ? 'Click an output to complete the connection' : 'Click an input to complete the connection', _react.default.createElement("button", {
     onClick: cancel
-  }, "Cancel"))));
+  }, "Cancel")));
 };
 
 exports.default = _default;
@@ -55257,7 +55192,7 @@ var getTagColor = function getTagColor(tag) {
 };
 
 exports.getTagColor = getTagColor;
-},{}],"src/rack/draw-bezier.js":[function(require,module,exports) {
+},{}],"src/util/drawing/draw-bezier.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55301,7 +55236,9 @@ var _moduleTagColors = require("./module-tag-colors");
 
 var _modules = require("../modules");
 
-var _drawBezier = require("./draw-bezier");
+var _drawBezier = require("../util/drawing/draw-bezier");
+
+var _mathUtil = require("../util/math-util");
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
@@ -55392,9 +55329,10 @@ var drawConnections = function drawConnections(mc, translateToPosition, globalTr
   };
 };
 
-var drawRack = function drawRack(rack, mc, ctx, globalTranslate) {
+var drawRack = function drawRack(rack, mc, ctx, globalTranslate, selectionData) {
   mc.background([0, 0, 0, 1]);
   mc.strokeWeight(2);
+  mc.stroke([255, 255, 255, 1]);
   rack.forEach(function (md) {
     var translateToPosition = (0, _ramda.compose)(globalTranslate, (0, _vecLaFp.vAdd)(md.dv.p));
     Object.entries(md.inputs).forEach(drawConnections(mc, translateToPosition, globalTranslate, md.dv.inp, rack, ctx));
@@ -55442,10 +55380,38 @@ var drawRack = function drawRack(rack, mc, ctx, globalTranslate) {
     Object.entries(inputPositions).forEach(drawInputSockets(mc, ctx, moduleDef, translateToPosition, moduleDef.inputs));
     Object.entries(outputPositions).forEach(drawOutputSockets(mc, ctx, moduleDef, rack, translateToPosition));
   });
+
+  if (selectionData.isInSelectionMode) {
+    if (selectionData.isSelecting) {
+      mc.fill([255, 255, 255, 0.1]);
+      mc.stroke([255, 255, 255, 0.5]);
+      var rect = (0, _mathUtil.regularRect)(selectionData.selectionAreaStart, selectionData.selectionAreaEnd);
+      mc.drawPolygon(mc.polygon(rect));
+    }
+  }
+
+  if (selectionData.selectedModules.length > 0) {
+    var so = 10;
+    mc.strokeWeight(2);
+    mc.stroke([255, 255, 255, 0.75]);
+    mc.fill([0, 0, 0, 0]);
+    rack.forEach(function (md) {
+      if (selectionData.selectedModules.includes(md.name)) {
+        var p1 = (0, _vecLaFp.vAdd)(md.dv.p, [-so / 2, -so / 2]);
+        var p2 = (0, _vecLaFp.vAddAll)([p1, md.dv.d, [so, so]]);
+
+        var _rect = (0, _mathUtil.regularRect)(p1, p2).map(function (v) {
+          return globalTranslate(v);
+        });
+
+        mc.drawShape(mc.polygon(_rect));
+      }
+    });
+  }
 };
 
 exports.drawRack = drawRack;
-},{"ramda":"node_modules/ramda/es/index.js","vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../constants":"src/constants.js","./module-tag-colors":"src/rack/module-tag-colors.js","../modules":"src/modules/index.js","./draw-bezier":"src/rack/draw-bezier.js"}],"src/events/delete.js":[function(require,module,exports) {
+},{"ramda":"node_modules/ramda/es/index.js","vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../constants":"src/constants.js","./module-tag-colors":"src/rack/module-tag-colors.js","../modules":"src/modules/index.js","../util/drawing/draw-bezier":"src/util/drawing/draw-bezier.js","../util/math-util":"src/util/math-util.js"}],"src/events/delete.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55548,16 +55514,21 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
-var mousedown = function mousedown(_ref, clickPosition) {
-  var rack = _ref.rack,
-      globalTranslate = _ref.globalTranslate,
-      gotoDragMode = _ref.gotoDragMode,
-      setDragData = _ref.setDragData;
+var mousedown = function mousedown(props, clickPosition) {
+  var rack = props.rack,
+      globalTranslate = props.globalTranslate,
+      gotoDragMode = props.gotoDragMode,
+      setDragData = props.setDragData,
+      selectedModules = props.selectedModules;
   return _toConsumableArray(rack).reverse().some(function (md) {
     var pos = globalTranslate(md.dv.p);
     var dim = [md.dv.d[0], 30];
 
     if ((0, _mathUtil.pointInRect)(pos, dim, clickPosition)) {
+      if (!selectedModules.includes(md.name)) {
+        props.setSelection([md.name]);
+      }
+
       gotoDragMode();
       setDragData(md.name, (0, _vecLaFp.vSub)(clickPosition, pos));
       return true;
@@ -55573,13 +55544,13 @@ var mousemove = function mousemove(props, clickPosition) {
       globalOffset = props.globalOffset,
       draggedModuleId = props.draggedModuleId,
       dragOffset = props.dragOffset,
-      setModulePosition = props.setModulePosition;
+      setModulePosition = props.setModulePosition,
+      selectedModules = props.selectedModules;
 
   if (isInDragMode) {
-    var _rack$find = rack.find(function (md) {
+    var draggedModule = rack.find(function (md) {
       return md.name === draggedModuleId;
-    }),
-        moduleId = _rack$find.name;
+    });
 
     var _clickPosition = _slicedToArray(clickPosition, 2),
         x = _clickPosition[0],
@@ -55589,7 +55560,14 @@ var mousemove = function mousemove(props, clickPosition) {
         gx = _globalOffset[0],
         gy = _globalOffset[1];
 
-    setModulePosition(moduleId, (0, _vecLaFp.vSub)([x - gx, y - gy], dragOffset));
+    var diff = [x - gx, y - gy];
+    selectedModules.forEach(function (mId) {
+      var cMd = rack.find(function (md) {
+        return md.name === mId;
+      });
+      var offsetFromDraggedModule = mId !== draggedModuleId ? (0, _vecLaFp.vSub)(cMd.dv.p, draggedModule.dv.p) : [0, 0];
+      setModulePosition(mId, (0, _vecLaFp.vAdd)((0, _vecLaFp.vSub)(diff, dragOffset), offsetFromDraggedModule));
+    });
   }
 };
 
@@ -55751,7 +55729,41 @@ var move = function move(_ref2, clickPosition) {
 };
 
 exports.move = move;
-},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js"}],"src/events/index.js":[function(require,module,exports) {
+},{"vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js"}],"src/events/selection.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.end = exports.move = exports.start = void 0;
+
+var start = function start(props, clickPosition) {
+  if (props.isInSelectionMode && !props.isSelecting) {
+    props.startSelection(clickPosition);
+    return true;
+  }
+};
+
+exports.start = start;
+
+var move = function move(props, clickPosition) {
+  if (props.isInSelectionMode && props.isSelecting) {
+    props.updateSelection(clickPosition);
+    return true;
+  }
+};
+
+exports.move = move;
+
+var end = function end(props, clickPosition) {
+  if (props.isInSelectionMode && props.isSelecting) {
+    props.stopSelection();
+    return true;
+  }
+};
+
+exports.end = end;
+},{}],"src/events/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55769,9 +55781,12 @@ var _connect = require("./connect");
 
 var _pan = require("./pan");
 
+var _selection = require("./selection");
+
 var onMouseDown = function onMouseDown(props) {
   return function (e) {
     var clickPosition = [e.clientX, e.clientY];
+    if ((0, _selection.start)(props, clickPosition)) return;
     if ((0, _delete.mousedown)(props, clickPosition)) return;
     if ((0, _rawValue.mousedown)(props, clickPosition)) return;
 
@@ -55795,6 +55810,7 @@ exports.onMouseDown = onMouseDown;
 var onMouseMove = function onMouseMove(props) {
   return function (e) {
     var clickPosition = [e.clientX, e.clientY];
+    (0, _selection.move)(props, clickPosition);
     (0, _drag.mousemove)(props, clickPosition);
     (0, _pan.move)(props, clickPosition);
   };
@@ -55802,21 +55818,24 @@ var onMouseMove = function onMouseMove(props) {
 
 exports.onMouseMove = onMouseMove;
 
-var onMouseUp = function onMouseUp(_ref) {
-  var isInEditMode = _ref.isInEditMode,
-      currentSubstate = _ref.currentSubstate,
-      gotoEditMode = _ref.gotoEditMode;
+var onMouseUp = function onMouseUp(props) {
   return function () {
+    var isInEditMode = props.isInEditMode,
+        currentSubstate = props.currentSubstate,
+        gotoEditMode = props.gotoEditMode;
+
     if (isInEditMode) {
       if (['dragging', 'pan'].includes(currentSubstate)) {
         gotoEditMode();
       }
+
+      (0, _selection.end)(props);
     }
   };
 };
 
 exports.onMouseUp = onMouseUp;
-},{"./delete":"src/events/delete.js","./raw-value":"src/events/raw-value.js","./drag":"src/events/drag.js","./connect":"src/events/connect.js","./pan":"src/events/pan.js"}],"src/react/components/Canvas/View.js":[function(require,module,exports) {
+},{"./delete":"src/events/delete.js","./raw-value":"src/events/raw-value.js","./drag":"src/events/drag.js","./connect":"src/events/connect.js","./pan":"src/events/pan.js","./selection":"src/events/selection.js"}],"src/react/components/Canvas/View.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55861,6 +55880,19 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var getSelectionStruct = function getSelectionStruct(props) {
+  return {
+    isInSelectionMode: props.isInSelectionMode,
+    selectedModules: props.selectedModules,
+    numSelectedModules: props.numSelectedModules,
+    isInSelectionDrag: props.isInSelectionDrag,
+    isSelecting: props.isSelecting,
+    selectionDragOffset: props.selectionDragOffset,
+    selectionAreaStart: props.selectionAreaStart,
+    selectionAreaEnd: props.selectionAreaEnd
+  };
+};
 
 var Canvas =
 /*#__PURE__*/
@@ -55921,7 +55953,8 @@ function (_React$Component) {
 
           (0, _time.updateTime)();
         } else {
-          (0, _drawRack.drawRack)(rack, _this3.mc, _this3.ctx, globalTranslate);
+          var selectionData = getSelectionStruct(_this3.props);
+          (0, _drawRack.drawRack)(rack, _this3.mc, _this3.ctx, globalTranslate, selectionData);
         }
 
         requestAnimationFrame(drawCycle);
@@ -55968,18 +56001,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.setDragData = void 0;
 
+var _util = require("../util");
+
 var setDragData = function setDragData(moduleId, offset) {
-  return {
-    type: 'SET_DRAG_DATA',
-    payload: {
-      moduleId: moduleId,
-      offset: offset
-    }
-  };
+  return (0, _util.createAction)('SET_DRAG_DATA')({
+    moduleId: moduleId,
+    offset: offset
+  });
 };
 
 exports.setDragData = setDragData;
-},{}],"src/react/actions/connecting-data.js":[function(require,module,exports) {
+},{"../util":"src/react/util.js"}],"src/react/actions/connecting-data.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55987,18 +56019,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.setConnectingData = void 0;
 
+var _util = require("../util");
+
 var setConnectingData = function setConnectingData(moduleId, key) {
-  return {
-    type: 'SET_CONNECTING_DATA',
-    payload: {
-      moduleId: moduleId,
-      key: key
-    }
-  };
+  return (0, _util.createAction)('SET_CONNECTING_DATA')({
+    moduleId: moduleId,
+    key: key
+  });
 };
 
 exports.setConnectingData = setConnectingData;
-},{}],"src/react/actions/pan-data.js":[function(require,module,exports) {
+},{"../util":"src/react/util.js"}],"src/react/actions/pan-data.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56006,15 +56037,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.setPanPosition = void 0;
 
-var setPanPosition = function setPanPosition(position) {
-  return {
-    type: 'SET_PAN_POSITION',
-    payload: position
-  };
-};
+var _util = require("../util");
 
+var setPanPosition = (0, _util.createAction)('SET_PAN_POSITION');
 exports.setPanPosition = setPanPosition;
-},{}],"src/react/components/Canvas/State.js":[function(require,module,exports) {
+},{"../util":"src/react/util.js"}],"src/react/components/Canvas/State.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56036,6 +56063,8 @@ var _connectingData = require("../../reducers/connecting-data");
 
 var _panData = require("../../reducers/pan-data");
 
+var _selectionMode = require("../../reducers/selection-mode");
+
 var rackActions = _interopRequireWildcard(require("../../actions/rack"));
 
 var dragActions = _interopRequireWildcard(require("../../actions/drag-data"));
@@ -56048,20 +56077,22 @@ var panActions = _interopRequireWildcard(require("../../actions/pan-data"));
 
 var globalOffsetActions = _interopRequireWildcard(require("../../actions/global-offset"));
 
+var selectionActions = _interopRequireWildcard(require("../../actions/selection-mode"));
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var selectors = _objectSpread({}, _editorMode.selectors, _rack.selectors, _globalOffset.selectors, _rawValue.selectors, _dragData.selectors, _connectingData.selectors, _panData.selectors);
+var selectors = _objectSpread({}, _editorMode.selectors, _rack.selectors, _globalOffset.selectors, _rawValue.selectors, _dragData.selectors, _connectingData.selectors, _panData.selectors, _selectionMode.selectors);
 
 exports.selectors = selectors;
 
-var actions = _objectSpread({}, rackActions, dragActions, editorModeActions, connectingActions, panActions, globalOffsetActions);
+var actions = _objectSpread({}, rackActions, dragActions, editorModeActions, connectingActions, panActions, globalOffsetActions, selectionActions);
 
 exports.actions = actions;
-},{"../../reducers/editor-mode":"src/react/reducers/editor-mode.js","../../reducers/rack":"src/react/reducers/rack.js","../../reducers/global-offset":"src/react/reducers/global-offset.js","../../reducers/raw-value":"src/react/reducers/raw-value.js","../../reducers/drag-data":"src/react/reducers/drag-data.js","../../reducers/connecting-data":"src/react/reducers/connecting-data.js","../../reducers/pan-data":"src/react/reducers/pan-data.js","../../actions/rack":"src/react/actions/rack.js","../../actions/drag-data":"src/react/actions/drag-data.js","../../actions/connecting-data":"src/react/actions/connecting-data.js","../../actions/editor-mode":"src/react/actions/editor-mode.js","../../actions/pan-data":"src/react/actions/pan-data.js","../../actions/global-offset":"src/react/actions/global-offset.js"}],"src/react/components/Canvas/index.js":[function(require,module,exports) {
+},{"../../reducers/editor-mode":"src/react/reducers/editor-mode.js","../../reducers/rack":"src/react/reducers/rack.js","../../reducers/global-offset":"src/react/reducers/global-offset.js","../../reducers/raw-value":"src/react/reducers/raw-value.js","../../reducers/drag-data":"src/react/reducers/drag-data.js","../../reducers/connecting-data":"src/react/reducers/connecting-data.js","../../reducers/pan-data":"src/react/reducers/pan-data.js","../../reducers/selection-mode":"src/react/reducers/selection-mode.js","../../actions/rack":"src/react/actions/rack.js","../../actions/drag-data":"src/react/actions/drag-data.js","../../actions/connecting-data":"src/react/actions/connecting-data.js","../../actions/editor-mode":"src/react/actions/editor-mode.js","../../actions/pan-data":"src/react/actions/pan-data.js","../../actions/global-offset":"src/react/actions/global-offset.js","../../actions/selection-mode":"src/react/actions/selection-mode.js"}],"src/react/components/Canvas/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56094,7 +56125,147 @@ var toggleOpen = function toggleOpen(currentMode, setEditorMode) {
 };
 
 exports.toggleOpen = toggleOpen;
-},{}],"src/react/components/App/View.js":[function(require,module,exports) {
+},{}],"src/react/components/SelectionMode/State.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.actions = exports.selectors = void 0;
+
+var _selectionMode = require("../../reducers/selection-mode");
+
+var _rack = require("../../reducers/rack");
+
+var _globalOffset = require("../../reducers/global-offset");
+
+var selectionActions = _interopRequireWildcard(require("../../actions/selection-mode"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var selectors = _objectSpread({}, _selectionMode.selectors, _globalOffset.selectors, {
+  rack: _rack.selectors.rack
+});
+
+exports.selectors = selectors;
+var actions = selectionActions;
+exports.actions = actions;
+},{"../../reducers/selection-mode":"src/react/reducers/selection-mode.js","../../reducers/rack":"src/react/reducers/rack.js","../../reducers/global-offset":"src/react/reducers/global-offset.js","../../actions/selection-mode":"src/react/actions/selection-mode.js"}],"src/react/hooks/useUpdateEffect.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.useUpdateEffect = void 0;
+
+var _react = require("react");
+
+var useUpdateEffect = function useUpdateEffect(fn) {
+  var conditions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+  var ref = (0, _react.useRef)(false);
+  (0, _react.useEffect)(function () {
+    if (ref.current) {
+      fn();
+    } else {
+      ref.current = true;
+    }
+  }, conditions);
+};
+
+exports.useUpdateEffect = useUpdateEffect;
+},{"react":"node_modules/react/index.js"}],"src/react/components/SelectionMode/View.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _useUpdateEffect = require("../../hooks/useUpdateEffect");
+
+var _useKeydownEvent = require("../../hooks/useKeydownEvent");
+
+var _common = require("../common");
+
+var _mathUtil = require("../../../util/math-util");
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var useSelectionEnd = function useSelectionEnd(props) {
+  (0, _useUpdateEffect.useUpdateEffect)(function () {
+    if (!props.isSelecting) {
+      var _props$globalSubtract = props.globalSubtract(props.selectionAreaStart),
+          _props$globalSubtract2 = _slicedToArray(_props$globalSubtract, 2),
+          x = _props$globalSubtract2[0],
+          y = _props$globalSubtract2[1];
+
+      var _props$globalSubtract3 = props.globalSubtract(props.selectionAreaEnd),
+          _props$globalSubtract4 = _slicedToArray(_props$globalSubtract3, 2),
+          ex = _props$globalSubtract4[0],
+          ey = _props$globalSubtract4[1];
+
+      var selectionWh = [ex - x, ey - y];
+      var modules = props.rack.filter(function (md) {
+        return (0, _mathUtil.pointInRect)([x, y], selectionWh, md.dv.p);
+      }).map(function (md) {
+        return md.name;
+      });
+      props.setSelection(modules);
+      props.exitSelectionMode();
+    }
+  }, [props.isSelecting]);
+};
+
+var _default = function _default(props) {
+  (0, _useKeydownEvent.useKeydownEvent)(function (e) {
+    if (e.key === 'Escape') {
+      if (props.selectedModules.length > 0) {
+        props.clearSelection();
+      } else {
+        props.exitSelectionMode();
+      }
+    }
+  });
+  useSelectionEnd(props);
+  return _react.default.createElement(_common.Column, null, _react.default.createElement(_common.Row, null, _react.default.createElement(_common.SubTitle, null, "Selection mode")), _react.default.createElement(_common.Row, null, "Number of selected modules: ", props.selectedModules.length), _react.default.createElement(_common.Row, null, _react.default.createElement("button", {
+    onClick: props.exitSelectionMode
+  }, "Exit Selection Mode")));
+};
+
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../../hooks/useUpdateEffect":"src/react/hooks/useUpdateEffect.js","../../hooks/useKeydownEvent":"src/react/hooks/useKeydownEvent.js","../common":"src/react/components/common/index.js","../../../util/math-util":"src/util/math-util.js"}],"src/react/components/SelectionMode/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.SelectionMode = void 0;
+
+var _util = require("../../util");
+
+var _State = require("./State");
+
+var _View = _interopRequireDefault(require("./View"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SelectionMode = (0, _util.connectSelectorsAndActions)(_State.selectors, _State.actions)(_View.default);
+exports.SelectionMode = SelectionMode;
+},{"../../util":"src/react/util.js","./State":"src/react/components/SelectionMode/State.js","./View":"src/react/components/SelectionMode/View.js"}],"src/react/components/App/View.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56132,6 +56303,8 @@ var _toggleOpen = require("./toggle-open");
 
 var _vecLaFp = require("vec-la-fp");
 
+var _SelectionMode = require("../SelectionMode");
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
@@ -56162,7 +56335,6 @@ var _default = function _default(props) {
       setEditorMode = props.setEditorMode,
       rack = props.rack,
       shouldResetTime = props.resetTime,
-      globalOffset = props.globalOffset,
       setGlobalOffset = props.setGlobalOffset;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Canvas.Canvas, {
     animationFn: animationFn,
@@ -56177,6 +56349,10 @@ var _default = function _default(props) {
   }], [props.isInRawMode, function () {
     return _react.default.createElement(_RawMode.RawMode, {
       exitRawMode: gotoEditMode
+    });
+  }], [props.isInSelectionMode, function () {
+    return _react.default.createElement(_SelectionMode.SelectionMode, {
+      exitSelectionMode: gotoEditMode
     });
   }], [props.isInConnectingInputMode || props.isInConnectingOutputMode, function () {
     return _react.default.createElement(_ConnectionMode.ConnectionMode, {
@@ -56213,7 +56389,7 @@ var _default = function _default(props) {
 };
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../../hooks/useStateFunction":"src/react/hooks/useStateFunction.js","../../../compile-animation":"src/compile-animation.js","../../util":"src/react/util.js","../SidePanel":"src/react/components/SidePanel.js","../../../constants":"src/constants.js","../common":"src/react/components/common/index.js","../EditMode":"src/react/components/EditMode/index.js","../DeleteMode":"src/react/components/DeleteMode/index.js","../RawMode":"src/react/components/RawMode/index.js","../ConnectionMode":"src/react/components/ConnectionMode/index.js","../Canvas":"src/react/components/Canvas/index.js","../../../time":"src/time.js","./toggle-open":"src/react/components/App/toggle-open.js","vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js"}],"src/react/components/App/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../../hooks/useStateFunction":"src/react/hooks/useStateFunction.js","../../../compile-animation":"src/compile-animation.js","../../util":"src/react/util.js","../SidePanel":"src/react/components/SidePanel.js","../../../constants":"src/constants.js","../common":"src/react/components/common/index.js","../EditMode":"src/react/components/EditMode/index.js","../DeleteMode":"src/react/components/DeleteMode/index.js","../RawMode":"src/react/components/RawMode/index.js","../ConnectionMode":"src/react/components/ConnectionMode/index.js","../Canvas":"src/react/components/Canvas/index.js","../../../time":"src/time.js","./toggle-open":"src/react/components/App/toggle-open.js","vec-la-fp":"node_modules/vec-la-fp/dist/vec.module.js","../SelectionMode":"src/react/components/SelectionMode/index.js"}],"src/react/components/App/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56276,7 +56452,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60264" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56278" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
