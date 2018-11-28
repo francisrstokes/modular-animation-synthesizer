@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useKeydownEvent} from '../../hooks/useKeydownEvent';
-import {groupBy} from 'ramda';
+import {groupBy, fromPairs, prop} from 'ramda';
 import { modules } from '../../../modules';
 import { AccordianTitle, AccordionList, AccordionItem } from '../common/Accordian';
 import {TabMenu, TabsContainer, Tab, TabContent} from '../common/TabMenu';
@@ -8,6 +8,7 @@ import { useActiveClasses } from '../../hooks/useActiveClasses';
 import {createModule} from './create-module';
 import { copyToClipboard } from '../../../util/copy-to-clipboard';
 import {componentSwitch} from '../../util';
+import { vScale, vAdd, vSub } from 'vec-la-fp';
 
 const groupedByTag = groupBy(({tag}) => tag, modules);
 
@@ -50,17 +51,62 @@ export default props => {
     ctx,
     rack,
     resetTime,
-    toggleResetTime
+    toggleResetTime,
+    copySelection,
+    removeModule,
+    setSelection,
+    selectedModules
   } = props;
 
   useKeydownEvent(e => {
     switch (e.key) {
+      case 'Backspace': {
+        return selectedModules.map(removeModule);
+      }
       case 'r': return gotoRawMode();
       case 'd': return gotoDeleteMode();
       case 's': return gotoSelectionMode();
+      case 'c': {
+        if (e.metaKey) {
+          copySelection();
+        }
+        break;
+      }
+      case 'v': {
+        if (e.metaKey) {
+          const originalNewTuples = selectedModules.map(mId => {
+            const original = rack.find(({name}) => name === mId);
+            const newPosition = vSub(globalOffset, original.dv.p);
+            const newModule = createModule(original.moduleName, ctx, newPosition);
+            return [original, newModule];
+          });
+
+          const moduleIdMapping = fromPairs(originalNewTuples.map(([md, newMd]) => [md.name, newMd.name]));
+
+          // Remap the internal connections
+          originalNewTuples.forEach(([md, newMd]) => {
+            Object.entries(md.inputs).forEach(([inputKey, con]) => {
+              if (con.type === 'connection' && con.module in moduleIdMapping) {
+                newMd.inputs[inputKey] = {...con};
+                newMd.inputs[inputKey].module = moduleIdMapping[con.module];
+              } else if (con.type === 'value') {
+                newMd.inputs[inputKey] = {...con};
+              }
+            });
+          });
+
+          // Add new modules and set them as the selection
+          const newModules = originalNewTuples.map(([_, x]) => x);
+          newModules.forEach(addModule);
+
+          const newIds = newModules.map(prop('name'));
+          setSelection(newIds);
+        }
+        break;
+      }
       default: return;
     }
-  });
+  }, [selectedModules]);
 
   const [activeTab, setActiveTab] = useState('modules');
 
