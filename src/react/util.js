@@ -19,3 +19,11 @@ export const componentSwitch = (tests, fallback = () => null) => {
 };
 
 export const createAction = type => payload => ({ type, payload });
+
+export const reduceReducers = (reducers) =>
+  (state = {}, action) => {
+    const final = reducers.reduce((s, fn) => {
+      return fn(s, action)
+    }, state);
+    return final;
+  };

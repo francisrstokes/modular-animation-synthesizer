@@ -1,4 +1,4 @@
-import {view, lensProp, compose} from 'ramda';
+import {view, lensProp, compose, set, defaultTo} from 'ramda';
 
 const root = lensProp('connectingData');
 
@@ -9,11 +9,8 @@ const initialValue = {
 
 export default (state = initialValue, action) => {
   switch (action.type) {
-    case 'SET_CONNECTING_DATA': return {
-      moduleId: action.payload.moduleId,
-      key: action.payload.key
-    }
-    default: return state;
+    case 'SET_CONNECTING_DATA': return set(root, action.payload, state);
+    default: return set(root, defaultTo(initialValue, view(root, state)), state);
   }
 };
 

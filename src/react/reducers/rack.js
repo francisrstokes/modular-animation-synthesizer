@@ -1,5 +1,5 @@
-import {reduce, compose, view, lensProp, omit, append} from 'ramda';
-import {rack as initialState} from '../../rack/rack';
+import {reduce, compose, view, lensProp, omit, append, set, defaultTo} from 'ramda';
+import {rack as initialValue} from '../../rack/rack';
 import { checkForCycles } from '../../util/check-for-cycles';
 
 const root = lensProp('rack');
@@ -16,30 +16,28 @@ const filterDisconnect = moduleId => md => {
   }
 };
 
-export default (state = initialState, action) => {
+export default (state = initialValue, action) => {
   switch (action.type) {
-    case 'ADD_MODULE': {
-      return append(action.payload, state);
-    }
+    case 'ADD_MODULE': return set(root, append(action.payload, view(root, state)), state);
 
     case 'REMOVE_MODULE': {
       const moduleId = action.payload;
-      return state
+      return set(root, view(root, state)
         .filter(md => md.name !== moduleId)
-        .filter(filterDisconnect(moduleId));
+        .filter(filterDisconnect(moduleId)), state);
     }
 
-    case 'CLEAR_MODULES': return [];
+    case 'CLEAR_MODULES': return set(root, [], state);
 
     case 'DISCONNECT_MODULE': {
       const moduleId = action.payload;
-      return state.filter(filterDisconnect(moduleId));
+      return set(root, view(root, state).filter(filterDisconnect(moduleId)), state);
     }
 
     case 'SET_RAW_VALUE': {
       const {moduleId, inputKey, value} = action.payload;
 
-      return state.map(md => {
+      return set(root, view(root, state).map(md => {
         if (md.name !== moduleId) return md;
         return {
           ...md,
@@ -48,13 +46,13 @@ export default (state = initialState, action) => {
             [inputKey]: {type: 'value', value}
           }
         }
-      })
+      }), state);
     }
 
     case 'SET_MODULE_POSITION': {
       const {moduleId, position} = action.payload;
 
-      return state.map(md => {
+      return set(root, view(root, state).map(md => {
         if (md.name !== moduleId) return md;
         return {
           ...md,
@@ -63,19 +61,19 @@ export default (state = initialState, action) => {
             p: position
           }
         }
-      });
+      }), state);
     }
 
     case 'DISCONNECT_MODULE_INPUT': {
       const {moduleId, key} = action.payload;
 
-      return state.map(md => {
+      return set(root, view(root, state).map(md => {
         if (md.name !== moduleId) return md;
         return {
           ...md,
           inputs: omit([key], md.inputs)
         }
-      });
+      }), state);
     }
 
     case 'CONNECT_MODULES': {
@@ -86,7 +84,7 @@ export default (state = initialState, action) => {
         outputKey
       } = action.payload;
 
-      const newRack = state.map(md => {
+      const newRack = view(root, state).map(md => {
         if (md.name !== inputModuleId) return md;
         return {
           ...md,
@@ -103,14 +101,14 @@ export default (state = initialState, action) => {
 
       if (checkForCycles(newRack)) {
         alert('Action results in a cycle');
-        return state;
+        return set(root, state, state);
       }
 
-      return newRack;
+      return set(root, newRack, state);
     }
 
     case 'UPDATE_DRAWING_VALUES': {
-      return state.map(md => {
+      return set(root, view(root, state).map(md => {
         if (md.name !== action.payload.moduleId) return md;
         return {
           ...md,
@@ -119,10 +117,10 @@ export default (state = initialState, action) => {
             ...action.payload.drawingValues
           }
         }
-      });
+      }), state);
     }
 
-    default: return state;
+    default: return set(root, defaultTo(initialValue, view(root, state)), state);
   }
 };
 

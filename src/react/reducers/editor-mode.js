@@ -1,35 +1,32 @@
-import {view, lensProp, compose, equals} from 'ramda';
+import {view, lensProp, compose, equals, set, defaultTo} from 'ramda';
 
 const root = lensProp('editorMode');
-const mode = compose(root, lensProp('mode'));
-const substate = compose(root, lensProp('substate'));
+const modeL = compose(root, lensProp('mode'));
+const substateL = compose(root, lensProp('substate'));
 
-const initialState = {
+const initialValue = {
   mode: 'edit',
   substate: ''
 };
 
-export default (state = initialState, action) => {
+export default (state = initialValue, action) => {
   switch (action.type) {
-    case 'SET_EDITOR_MODE': {
-      const {mode, substate = ''} = action.payload;
-      return {mode, substate};
-    }
-    default: return state;
+    case 'SET_EDITOR_MODE': return set(root, action.payload, state);
+    default: return set(root, defaultTo(initialValue, view(root, state)), state);
   }
 };
 
 export const selectors = {
-  isInEditMode: compose(equals('edit'), view(mode)),
-  isInPureEditMode: state => compose(equals('edit'), view(mode))(state) && compose(equals(''), view(substate))(state),
-  isInDeleteMode: compose(equals('delete'), view(substate)),
-  isInDragMode: compose(equals('dragging'), view(substate)),
-  isInRawMode: compose(equals('raw'), view(substate)),
-  isInPanMode: compose(equals('pan'), view(substate)),
-  isInSelectionMode: compose(equals('selection'), view(substate)),
-  isInConnectingInputMode: compose(equals('connecting_from_input'), view(substate)),
-  isInConnectingOutputMode: compose(equals('connecting_from_output'), view(substate)),
-  isInAnimateMode: compose(equals('animate'), view(mode)),
-  currentMode: view(mode),
-  currentSubstate: view(substate),
+  isInEditMode: compose(equals('edit'), view(modeL)),
+  isInPureEditMode: state => compose(equals('edit'), view(modeL))(state) && compose(equals(''), view(substateL))(state),
+  isInDeleteMode: compose(equals('delete'), view(substateL)),
+  isInDragMode: compose(equals('dragging'), view(substateL)),
+  isInRawMode: compose(equals('raw'), view(substateL)),
+  isInPanMode: compose(equals('pan'), view(substateL)),
+  isInSelectionMode: compose(equals('selection'), view(substateL)),
+  isInConnectingInputMode: compose(equals('connecting_from_input'), view(substateL)),
+  isInConnectingOutputMode: compose(equals('connecting_from_output'), view(substateL)),
+  isInAnimateMode: compose(equals('animate'), view(modeL)),
+  currentMode: view(modeL),
+  currentSubstate: view(substateL),
 };

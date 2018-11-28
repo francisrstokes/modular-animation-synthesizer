@@ -6,7 +6,8 @@ export const setEditorMode = mode => createAction('SET_EDITOR_MODE')({
 });
 
 export const gotoEditMode = () => createAction('SET_EDITOR_MODE')({
-  mode: 'edit'
+  mode: 'edit',
+  substate: ''
 });
 
 export const gotoSelectionMode = () => createAction('SET_EDITOR_MODE')({
@@ -15,7 +16,8 @@ export const gotoSelectionMode = () => createAction('SET_EDITOR_MODE')({
 });
 
 export const gotoAnimateMode = () => createAction('SET_EDITOR_MODE')({
-  mode: 'animate'
+  mode: 'animate',
+  substate: ''
 });
 
 export const gotoDeleteMode = () => createAction('SET_EDITOR_MODE')({

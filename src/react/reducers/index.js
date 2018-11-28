@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';
+import { reduceReducers } from '../util';
 import globalOffset from './global-offset';
 import editorMode from './editor-mode';
 import rack from './rack';
@@ -9,7 +9,7 @@ import panData from './pan-data';
 import resetTime from './reset-time';
 import selectionMode from './selection-mode';
 
-export default combineReducers({
+export default reduceReducers([
   globalOffset,
   editorMode,
   rack,
@@ -19,4 +19,4 @@ export default combineReducers({
   panData,
   resetTime,
   selectionMode
-});
+]);

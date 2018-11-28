@@ -1,13 +1,13 @@
-import {lensProp, compose, view, over, length, append, always} from 'ramda';
+import {lensProp, compose, view, set, length, append, defaultTo} from 'ramda';
 
 const root = lensProp('selectionMode');
-const selectedModulesL = lensProp('selectedModules');
-const isSelectingL = lensProp('isSelecting');
-const clipboardL = lensProp('clipboard');
-const selectionAreaStartL = compose(lensProp('selectionArea'), lensProp('start'));
-const selectionAreaEndL = compose(lensProp('selectionArea'), lensProp('end'));
+const selectedModulesL = compose(root, lensProp('selectedModules'));
+const isSelectingL = compose(root, lensProp('isSelecting'));
+const clipboardL = compose(root, lensProp('clipboard'));
+const selectionAreaStartL = compose(root, lensProp('selectionArea'), lensProp('start'));
+const selectionAreaEndL = compose(root, lensProp('selectionArea'), lensProp('end'));
 
-const initialState = {
+const initialValue = {
   selectedModules: [],
   isSelecting: false,
   selectionArea: {
@@ -17,28 +17,28 @@ const initialState = {
   clipboard: []
 };
 
-export default (state = initialState, action) => {
+export default (state = initialValue, action) => {
   switch (action.type) {
-    case 'ADD_TO_SELECTION': return over(selectedModulesL, append(action.payload), state);
-    case 'SET_SELECTION': return over(selectedModulesL, always(action.payload), state);
-    case 'CLEAR_SELECTION': return over(selectedModulesL, always([]), state);
+    case 'ADD_TO_SELECTION': return set(selectedModulesL, append(action.payload, view(selectedModulesL, state)), state);
+    case 'SET_SELECTION': return set(selectedModulesL, action.payload, state);
+    case 'CLEAR_SELECTION': return set(selectedModulesL, [], state);
     case 'START_SELECTION': return compose(
-      over(selectionAreaStartL, always(action.payload)),
-      over(selectionAreaEndL, always(action.payload)),
-      over(isSelectingL, always(true)),
+      set(selectionAreaStartL, action.payload),
+      set(selectionAreaEndL, action.payload),
+      set(isSelectingL, true),
     )(state);
-    case 'UPDATE_SELECTION': return over(selectionAreaEndL, always(action.payload), state);
-    case 'END_SELECTION': return over(isSelectingL, always(false), state);
-    case 'COPY_SELECTION': return over(clipboardL, always(view(selectedModulesL, state)), state)
-    default: return state;
+    case 'UPDATE_SELECTION': return set(selectionAreaEndL, action.payload, state);
+    case 'END_SELECTION': return set(isSelectingL, false, state);
+    case 'COPY_SELECTION': return set(clipboardL, view(selectedModulesL, state), state)
+    default: return set(root, defaultTo(initialValue, view(root, state)), state);
   }
 };
 
 export const selectors = {
-  selectedModules: view(compose(root, selectedModulesL)),
-  numSelectedModules: compose(length, view(compose(root, selectedModulesL))),
-  isSelecting: view(compose(root, isSelectingL)),
-  selectionAreaStart: view(compose(root, selectionAreaStartL)),
-  selectionAreaEnd: view(compose(root, selectionAreaEndL)),
-  clipboard: view(compose(root, clipboardL)),
+  selectedModules: view(selectedModulesL),
+  numSelectedModules: compose(length, view(selectedModulesL)),
+  isSelecting: view(isSelectingL),
+  selectionAreaStart: view(selectionAreaStartL),
+  selectionAreaEnd: view(selectionAreaEndL),
+  clipboard: view(clipboardL),
 };

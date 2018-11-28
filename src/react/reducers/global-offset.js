@@ -1,13 +1,14 @@
-import {view, lensProp} from 'ramda';
+import {view, lensProp, set, defaultTo} from 'ramda';
 import {vAdd, vAddAll,vSub} from 'vec-la-fp';
 
 const root = lensProp('globalOffset');
+const initialValue = [0, 0];
 
-export default (state = [0, 0], action) => {
+export default (state, action) => {
   switch (action.type) {
-    case 'ADD_GLOBAL_OFFSET': return vAdd(state, action.payload);
-    case 'SET_GLOBAL_OFFSET': return action.payload;
-    default: return state;
+    case 'ADD_GLOBAL_OFFSET': return set(root, vAdd(view(root, state), action.payload), state);
+    case 'SET_GLOBAL_OFFSET': return set(root, action.payload, state);
+    default: return set(root, defaultTo(initialValue, view(root, state)), state);
   }
 };
 

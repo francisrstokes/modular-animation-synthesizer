@@ -1,12 +1,13 @@
-import {view, lensProp} from 'ramda';
+import {view, lensProp, set, defaultTo} from 'ramda';
 
 const root = lensProp('resetTime');
+const initialValue = false;
 
-export default (state = false, action) => {
+export default (state, action) => {
   switch (action.type) {
-    case 'RESET_TIME_ON': return true;
-    case 'RESET_TIME_OFF': return false;
-    default: return state;
+    case 'RESET_TIME_ON': return set(root, true, state);
+    case 'RESET_TIME_OFF': return set(root, false, state);
+    default: return set(root, defaultTo(initialValue, view(root, state)), state);
   }
 };
 
