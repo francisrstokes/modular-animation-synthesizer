@@ -1,16 +1,17 @@
 import {view, lensProp, set, defaultTo} from 'ramda';
+import * as L from 'partial.lenses';
 
-const root = lensProp('resetTime');
+const root = L.prop('resetTime');
 const initialValue = false;
 
 export default (state, action) => {
   switch (action.type) {
-    case 'RESET_TIME_ON': return set(root, true, state);
-    case 'RESET_TIME_OFF': return set(root, false, state);
-    default: return set(root, defaultTo(initialValue, view(root, state)), state);
+    case 'RESET_TIME_ON': return L.set(root, true, state);
+    case 'RESET_TIME_OFF': return L.set(root, false, state);
+    default: return L.set(root, defaultTo(initialValue, L.get(root, state)), state);
   }
 };
 
 export const selectors = {
-  resetTime: view(root)
+  resetTime: L.get(root)
 };

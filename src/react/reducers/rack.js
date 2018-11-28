@@ -1,79 +1,75 @@
-import {reduce, compose, view, lensProp, omit, append, set, defaultTo} from 'ramda';
+import {reduce, compose, omit, append, defaultTo, merge, not, map, reject} from 'ramda';
+import * as L from 'partial.lenses';
 import {rack as initialValue} from '../../rack/rack';
 import { checkForCycles } from '../../util/check-for-cycles';
 
-const root = lensProp('rack');
+const byModuleId = id => md => md.name === id;
+const createConnection = (moduleId, key) => ({
+  type: 'connection',
+  module: moduleId,
+  property: key
+});
 
-const filterDisconnect = moduleId => md => {
+const root = L.prop('rack');
+
+const disconnectModule = moduleId => md => {
   return {
     ...md,
-    inputs: Object.entries(md.inputs).reduce((acc, [_, input]) => {
-      if (input.type === 'connection' && input.module === moduleId) {
-        return acc;
-      }
-      return {...acc, input};
-    }, {})
+    inputs: reject(input => input.type === 'connection' && input.module === moduleId, md.inputs)
   }
 };
 
 export default (state = initialValue, action) => {
   switch (action.type) {
-    case 'ADD_MODULE': return set(root, append(action.payload, view(root, state)), state);
+    case 'ADD_MODULE': return L.set(root, append(action.payload, L.get(root, state)), state);
 
     case 'REMOVE_MODULE': {
       const moduleId = action.payload;
-      return set(root, view(root, state)
-        .filter(md => md.name !== moduleId)
-        .filter(filterDisconnect(moduleId)), state);
+      const withoutModuleL = L.compose(
+        root,
+        L.filter(compose(not, byModuleId(moduleId)))
+      );
+
+      const filteredRack = compose(
+        L.modify(L.elems, disconnectModule(moduleId)),
+        L.get(withoutModuleL)
+      )(state);
+
+      return L.set(root, filteredRack, state);
     }
 
-    case 'CLEAR_MODULES': return set(root, [], state);
-
-    case 'DISCONNECT_MODULE': {
-      const moduleId = action.payload;
-      return set(root, view(root, state).filter(filterDisconnect(moduleId)), state);
-    }
+    case 'CLEAR_MODULES': return L.set(root, [], state);
 
     case 'SET_RAW_VALUE': {
       const {moduleId, inputKey, value} = action.payload;
-
-      return set(root, view(root, state).map(md => {
-        if (md.name !== moduleId) return md;
-        return {
-          ...md,
-          inputs: {
-            ...md.inputs,
-            [inputKey]: {type: 'value', value}
-          }
-        }
-      }), state);
+      const pathL = L.compose(
+        root,
+        L.find(byModuleId(moduleId)),
+        L.prop('inputs'),
+        L.prop(inputKey)
+      );
+      return L.set(pathL, {type: 'value', value}, state);
     }
 
     case 'SET_MODULE_POSITION': {
       const {moduleId, position} = action.payload;
-
-      return set(root, view(root, state).map(md => {
-        if (md.name !== moduleId) return md;
-        return {
-          ...md,
-          dv: {
-            ...md.dv,
-            p: position
-          }
-        }
-      }), state);
+      const pathL = L.compose(
+        root,
+        L.find(byModuleId(moduleId)),
+        L.prop('dv'),
+        L.prop('p')
+      );
+      return L.set(pathL, position, state);
     }
 
     case 'DISCONNECT_MODULE_INPUT': {
       const {moduleId, key} = action.payload;
-
-      return set(root, view(root, state).map(md => {
-        if (md.name !== moduleId) return md;
-        return {
-          ...md,
-          inputs: omit([key], md.inputs)
-        }
-      }), state);
+      const pathL = L.compose(
+        root,
+        L.find(byModuleId(moduleId)),
+        L.prop('inputs')
+      );
+      return L.modify(pathL, omit([key]), state);
     }
 
     case 'CONNECT_MODULES': {
@@ -84,69 +80,37 @@ export default (state = initialValue, action) => {
         outputKey
       } = action.payload;
 
-      const newRack = view(root, state).map(md => {
-        if (md.name !== inputModuleId) return md;
-        return {
-          ...md,
-          inputs: {
-            ...md.inputs,
-            [inputKey]: {
-              type: 'connection',
-              module: outputModuleId,
-              property: outputKey
-            }
-          }
-        };
-      });
+      const pathL = L.compose(
+        root,
+        L.find(byModuleId(inputModuleId)),
+        L.prop('inputs'),
+        L.prop(inputKey)
+      );
 
-      if (checkForCycles(newRack)) {
+      const newRack = L.set(pathL, createConnection(outputModuleId, outputKey), state);
+
+      if (checkForCycles(L.get(root, newRack))) {
         alert('Action results in a cycle');
-        return set(root, state, state);
+        return state;
       }
 
-      return set(root, newRack, state);
+      return newRack;
     }
 
     case 'UPDATE_DRAWING_VALUES': {
-      return set(root, view(root, state).map(md => {
-        if (md.name !== action.payload.moduleId) return md;
-        return {
-          ...md,
-          dv: {
-            p: md.dv.p,
-            ...action.payload.drawingValues
-          }
-        }
-      }), state);
+      const pathL = L.compose(
+        root,
+        L.find(byModuleId(action.payload.moduleId)),
+        L.prop('dv')
+      );
+
+      return L.modify(pathL, merge(action.payload.drawingValues), state);
     }
 
-    default: return set(root, defaultTo(initialValue, view(root, state)), state);
+    default: return L.set(root, defaultTo(initialValue, L.get(root, state)), state);
   }
 };
 
-const selectConnectionsAndValues = compose(
-  reduce((acc, md) => {
-    Object.entries(md.inputs).forEach(([key, value]) => {
-      if (value.type === 'value') {
-        acc.values.push({
-          inputModule: md.name,
-          inputProperty: key
-        });
-      } else if (value.type === 'connection') {
-        acc.connections.push({
-          inputModule: md.name,
-          inputProperty: key,
-          outputModule: value.module,
-          outputProperty: value.property
-        });
-      }
-    })
-    return acc;
-  }, {connections: [], values: []}),
-  view(root)
-)
-
 export const selectors = {
-  rack: view(root),
-  connections: selectConnectionsAndValues
+  rack: L.get(root),
 };

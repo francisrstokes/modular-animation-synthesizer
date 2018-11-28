@@ -1,8 +1,9 @@
-import {view, lensProp, compose, set, defaultTo} from 'ramda';
+import {defaultTo} from 'ramda';
+import * as L from 'partial.lenses';
 
-const root = lensProp('dragData');
-const draggedModuleIdL = compose(root, lensProp('moduleId'));
-const dragOffsetL = compose(root, lensProp('offset'));
+const root = L.prop('dragData');
+const draggedModuleIdL = L.compose(root, L.prop('moduleId'));
+const dragOffsetL = L.compose(root, L.prop('offset'));
 
 const initialValue = {
   moduleId: null,
@@ -11,12 +12,12 @@ const initialValue = {
 
 export default (state = initialValue, action) => {
   switch (action.type) {
-    case 'SET_DRAG_DATA': return set(root, action.payload, state);
-    default: return set(root, defaultTo(initialValue, view(root, state)), state);
+    case 'SET_DRAG_DATA': return L.set(root, action.payload, state);
+    default: return L.set(root, defaultTo(initialValue, L.get(root, state)), state);
   }
 };
 
 export const selectors = {
-  draggedModuleId: view(draggedModuleIdL),
-  dragOffset: view(dragOffsetL),
+  draggedModuleId: L.get(draggedModuleIdL),
+  dragOffset: L.get(dragOffsetL),
 };
